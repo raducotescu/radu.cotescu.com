@@ -24,12 +24,12 @@
 	<div class="menu">
 		<h3>Overview</h3>
 		<ul>
-			<li><a href="http://radu.cotescu.com/resume/#" title="Contact information">Contact information</a></li>
-			<li><a href="http://radu.cotescu.com/resume/#summary" title="Summary">Summary</a></li>
-			<li><a href="http://radu.cotescu.com/resume/#skills" title="Skills">Skills</a></li>
-			<li><a href="http://radu.cotescu.com/resume/#experience" title="Experience">Experience</a></li>
-			<li><a href="http://radu.cotescu.com/resume/#education" title="Education">Education</a></li>
-			<li><a href="http://radu.cotescu.com/resume/#publications" title="Publications">Publications</a></li>
+			<li><a href="#" title="Contact information">Contact information</a></li>
+			<li><a href="#summary" title="Summary">Summary</a></li>
+			<li><a href="#skills" title="Skills">Skills</a></li>
+			<li><a href="#experience" title="Experience">Experience</a></li>
+			<li><a href="#education" title="Education">Education</a></li>
+			<li><a href="#publications" title="Publications">Publications</a></li>
 		</ul>
 	</div>
 	<div class="wrapper">
