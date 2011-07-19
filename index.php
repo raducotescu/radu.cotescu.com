@@ -4,20 +4,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Radu Cotescu's resume</title>
 	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<link rel="stylesheet" href="style_print.css" type="text/css" media="print" />
 	<link rel="shortcut icon" type="image/x-icon" href="http://radu.cotescu.com/favicon.ico"/>
 	<meta name="description" content="a = b + a - (b = a); I do this often. Do you want to hire me? Check my resume!"/>
 	<meta name="keywords" content="radu, cotescu, resume, cv, java, oracle, linux, ubuntu, linux, software, developer, engineer, bash, virtualization, python, c, c++"/>
 	<script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-8815189-1']);
-	_gaq.push(['_trackPageview']);
-	_gaq.push(['_trackPageLoadTime']);
-
-	(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-8815189-1']);
+		_gaq.push(['_trackPageview']);
+		_gaq.push(['_trackPageLoadTime']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
 	</script>
 </head>
 <body>
