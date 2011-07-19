@@ -47,7 +47,9 @@
 					<ul>
 
 						<li class="adr">
-							<span class="locality">Southampton</span>, <span class="country-name">United Kingdom</span>
+							<address>
+								<span class="locality">Southampton</span>, <span class="country-name">United Kingdom</span>
+							</address>
 						</li>
 						<li>
 							<a class="email" href="javascript:noSpam1('radu', 'cotescu.com')" title="Email Radu Cotescu">moc.ucsetoc@udar</a>
@@ -99,7 +101,7 @@
 
 				   <li class="experience vevent vcard">
 						<h4 class="title">Student Software Engineer</h4>
-						<h5 class="org summary"><a href="http://www.oracle.com/" title="Oracle" class=".institution">Oracle</a></h5>
+						<h5 class="org summary"><a href="http://www.oracle.com/" title="Oracle">Oracle</a></h5>
 						<p class="organization-details">(10,001 or more employees; ORCL; Public Company; Computer Software)</p>
 						<p class="period">
 							<abbr class="dtstart" title="2009-04-06">April 2009</abbr> - <abbr class="dtstamp" title="2009-10-06">October 2009</abbr>
