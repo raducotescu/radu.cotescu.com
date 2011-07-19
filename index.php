@@ -64,6 +64,7 @@
 				<p class="summary">
 					Software Engineer, aspiring to become an Oracle Certified Master Java SE Developer, with a passion for Java, Python, *nix and all other geek stuff out there. Passionate Linux (Ubuntu) power user, strongly commited to the open-source world.
 				</p>
+				<br />
 				<p class="summary">
 					Gained experience in systems' theory, structural and object oriented programming, numerical algorithms for solving great complexity equation systems, database design and implementation, software engineering and development, robotic control systems.
 				</p>			
