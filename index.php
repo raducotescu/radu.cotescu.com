@@ -26,7 +26,6 @@
 	<div class="menu">
 		<h3>Overview</h3>
 		<ul>
-			<li><a href="#" title="Contact information">CONTACT INFORMATION</a></li>
 			<li><a href="#" title="Summary">SUMMARY</a></li>
 			<li><a href="#skills" title="Skills">SKILLS</a></li>
 			<li><a href="#experience" title="Experience">EXPERIENCE</a></li>
