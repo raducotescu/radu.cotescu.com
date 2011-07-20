@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+html {
+	overflow-y: scroll;
+}
+
 body {
     background: url("dot.png") repeat scroll 0 0 transparent;
     color: #333333;
@@ -12,10 +16,9 @@ body {
 }
 
 .bottom {
-    bottom: 0;
+    width: 144px;
     height: 40px;
-    margin-left: 2px;
-    position: fixed;
+	margin: 10px auto 0px;
 }
 
 .menu {
@@ -59,20 +62,60 @@ body {
     background-color: #FFFFFF;
 }
 
+.menu_js {
+	display: none;
+	height: 18px;
+	margin-top: 2px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 2px;
+	position: relative;
+}
+
+.menu_js ul {
+    list-style-type: none;
+}
+
+.menu_js ul li {
+    float: left;
+    text-align: center;
+    height: 18px;
+	padding-left: 30px;
+}
+
+.menu_js a {
+    color: #333333;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.menu_js a:hover {
+	color: #F37421;
+    text-decoration: none;    
+}
+
+.menu_js a:focus {
+	outline: 0;
+}
+
+#selected {
+	color: #F37421;
+}
+
 .wrapper {
     background: url("bk_main_wrapper.png") repeat scroll 0 0 transparent;
-    margin: 30px auto 30px;
+	margin: 30px auto 0px;
+    width: 880px;
     overflow: hidden;
-    width: 980px;
 }
 
 .hresume {
     background-color: #FFFFFF;
-    margin: 10px;
+	margin: 10px;
     padding: 30px;
     text-align: justify;
-    width: 900px;
-    overflow: hidden;
 }
 
 .hresume a {
@@ -154,4 +197,9 @@ abbr {
 a.email {
        direction:rtl;
        unicode-bidi:bidi-override;
+}
+
+.print {
+	position: absolute;
+	right: 30px;
 }

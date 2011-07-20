@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+html {
+	overflow-y: scroll;
+}
+
 body {
     background: url("dot.png") repeat scroll 0 0 transparent;
     color: #333333;
@@ -11,24 +15,26 @@ body {
     font-weight: normal;
 }
 
-.menu, .bottom {
-	display: none
+.bottom, .menu, .menu_js {
+	display: none !important;
+}
+
+#selected {
+	color: #F37421;
 }
 
 .wrapper {
     background: url("bk_main_wrapper.png") repeat scroll 0 0 transparent;
-    margin: 30px auto 30px;
+	margin: 30px auto 0px;
+    width: 880px;
     overflow: hidden;
-    width: 980px;
 }
 
 .hresume {
     background-color: #FFFFFF;
-    margin: 10px;
+	margin: 10px;
     padding: 30px;
     text-align: justify;
-    width: 900px;
-    overflow: hidden;
 }
 
 .hresume a {
@@ -61,7 +67,8 @@ body {
 
 .container {
     clear: both;
-    padding-top: 20px;    
+    padding-top: 20px; 
+    display:block !important;   
 }
 
 .container ul {

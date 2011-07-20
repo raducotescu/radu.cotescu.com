@@ -8,6 +8,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="http://radu.cotescu.com/favicon.ico"/>
 	<meta name="description" content="a = b + a - (b = a); I do this often. Do you want to hire me? Check my resume!"/>
 	<meta name="keywords" content="radu, cotescu, resume, cv, java, oracle, linux, ubuntu, linux, software, developer, engineer, bash, virtualization, python, c, c++"/>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-8815189-1']);
@@ -30,14 +31,24 @@
 			<li><a href="#experience" title="Experience">Experience</a></li>
 			<li><a href="#education" title="Education">Education</a></li>
 			<li><a href="#publications" title="Publications">Publications</a></li>
+
 		</ul>
 	</div>
 	<div class="wrapper">
-		<div class="hresume">
+		<div class="menu_js">
+			<ul>
+				<li><a href="#" title="Summary" id="selected">Summary</a></li>
+				<li><a href="#skills" title="Skills">Skills</a></li>
+				<li><a href="#experience" title="Experience">Experience</a></li>
+				<li><a href="#education" title="Education">Education</a></li>
+				<li><a href="#publications" title="Publications">Publications</a></li>
+				<li class="print"><a onclick="window.print()" title="Print full version">Print</a></li>
+			</ul>
+		</div>
+			<div class="hresume">
 			<div class="contact vcard">
 				<div class="nameAndTitle">
 					<h1 class="fn" id="radu-cotescu">
-
 						<span class="given-name">Radu</span> <span class="family-name">Cotescu</span> 
 					</h1>
 					<h2 class="title">Software Engineer</h2>
@@ -63,13 +74,15 @@
 			</div>
 			<div id="summary" class="container">
 				<h3>Summary</h3>
+				<div>
 				<p class="summary">
 					Software Engineer, aspiring to become an Oracle Certified Master Java SE Developer, with a passion for Java, Python, *nix and all other geek stuff out there. Passionate Linux (Ubuntu) power user, strongly commited to the open-source world.
 				</p>
 				<br />
 				<p class="summary">
 					Gained experience in systems' theory, structural and object oriented programming, numerical algorithms for solving great complexity equation systems, database design and implementation, software engineering and development, robotic control systems.
-				</p>			
+				</p>
+				</div>			
 			</div>
 			<div id="skills" class="container">
 				<h3>Skills</h3>
@@ -98,7 +111,6 @@
 			<div id="experience" class="container">
 				<h3>Experience</h3>
 				<ol>
-
 				   <li class="experience vevent vcard">
 						<h4 class="title">Student Software Engineer</h4>
 						<h5 class="org summary"><a href="http://www.oracle.com/" title="Oracle">Oracle</a></h5>
@@ -290,5 +302,28 @@
 		</a>
 	</div>
 	<script type="text/javascript" src="noSpam.js"></script>
+	<script>
+	jQuery(document).ready(function(){
+		$('.menu').hide();
+		$('.menu_js').show();
+		$('.hresume').css('margin-top', '0px');
+		$('.container').not('#summary').hide();
+		$('.menu_js a').click(function(event) {
+			event.preventDefault();
+  			var link = this.href;
+			var selected = link.substring(link.lastIndexOf('#') + 1, link.length);
+			$('#selected').removeAttr('id');
+			if($('#'+selected).not('#summary').is(':visible')) {
+				$('#'+selected).slideUp();
+				$('.menu_js a').first().attr('id', 'selected');
+				
+			} else {
+				$('.container').not('#summary').slideUp();
+				if(this.parentNode.className != "print") this.id="selected";
+	  			$('#'+selected).not('#summary').slideDown();
+			}
+		});
+	});
+	</script>
 </body>
 </html>
