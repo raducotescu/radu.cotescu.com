@@ -26,7 +26,7 @@ body {
 .wrapper {
     background: url("bk_main_wrapper.png") repeat scroll 0 0 transparent;
 	margin: 30px auto 0px;
-    width: 880px;
+    width: 980px;
     overflow: hidden;
 }
 
