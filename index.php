@@ -94,7 +94,9 @@
 				<h3>Skills</h3>
 				<ul>
 					<li>good knowledge of <a href="http://en.wikipedia.org/wiki/Java_%28programming_language%29" rel="tag" title="Java">Java</a>, <a href="http://en.wikipedia.org/wiki/C_%28programming_language%29" rel="tag" title="C">C</a> and <a href="http://en.wikipedia.org/wiki/C%2B%2B" rel="tag" title="C++">C++</a> programming languages</li>
-					<li>experience in working with <a href="http://en.wikipedia.org/wiki/Oracle_Application_Server" title="iAS" rel="tag">Oracle Application Server</a> and <a href="http://en.wikipedia.org/wiki/TopLink" title="Oracle TopLink" rel="tag">Oracle TopLink</a> (JPA) framework</li>
+					<li>good experience in working with <a href="http://en.wikipedia.org/wiki/Oracle_Application_Server" title="iAS" rel="tag">Oracle Application Server</a> and <a href="http://en.wikipedia.org/wiki/TopLink" title="Oracle TopLink" rel="tag">Oracle TopLink</a> (JPA) framework</li>
+					<li>good experience in working with <a href="http://en.wikipedia.org/wiki/EclipseLink" title="EclipseLink" rel="tag">EclipseLink</a> (JPA) framework</li>
+					<li>good experience in working with <a href="http://en.wikipedia.org/wiki/Apache_Maven" title="Apache Maven" rel="tag">Apache Maven</a></li>
 					<li>good knowledge of the <a href="http://struts.apache.org/2.x/" title="Struts2" rel="tag">Struts2</a> framework</li>
 					<li>experience in working with <a href="http://tomcat.apache.org/" title="Apache Tomcat" rel="tag">Apache Tomcat</a> servlets container</li>
 					<li>basic competences using <a href="http://www.python.org/" rel="tag" title="Python">Python</a></li>
@@ -102,16 +104,19 @@
 					<li>familiar with <a href="http://jquery.com/" title="jQuery" rel="tag">jQuery</a> JavaScript framework</li>
 					<li>good <a href="http://www.w3.org/Style/CSS/" rel="tag" title="CSS">CSS</a> skills</li>
 					<li>good <a href="http://en.wikipedia.org/wiki/XHTML" rel="tag" title="HTML / XHTML">HTML / XHTML</a> skills</li>
-					<li>good <a href="http://en.wikipedia.org/wiki/Bash" rel="tag" title="bash scripting">bash scripting</a> skills</li>
-					<li>good knowledge of Linux: <a href="http://www.ubuntu.com/" rel="tag" title="Ubuntu">Ubuntu</a>, <a href="http://www.oracle.com/technologies/linux/index.html" rel="tag" title="Oracle Enterprise Linux">Oracle Enterprise Linux</a>, <a href="http://www.redhat.com/" rel="tag" title="Red Hat Enterprise Linux">Red Hat Enterprise Linux</a> and <a href="http://www.busybox.net/" rel="tag" title="BusyBox">BusyBox</a>, The Swiss Army Knife of Embedded Linux</li>
+					<li>excellent <a href="http://en.wikipedia.org/wiki/Bash" rel="tag" title="bash scripting">bash scripting</a> skills</li>
+					<li>good exposure to Linux: <a href="http://www.ubuntu.com/" rel="tag" title="Ubuntu">Ubuntu</a>, <a href="http://www.oracle.com/technologies/linux/index.html" rel="tag" title="Oracle Enterprise Linux">Oracle Enterprise Linux</a>, <a href="http://www.redhat.com/" rel="tag" title="Red Hat Enterprise Linux">Red Hat Enterprise Linux</a> and <a href="http://www.busybox.net/" rel="tag" title="BusyBox">BusyBox</a>, The Swiss Army Knife of Embedded Linux</li>
 					<li>good knowledge of using and administering <a href="http://subversion.tigris.org/" rel="tag" title="subversion">subversion</a></li>
 					<li>good knowledge of using and administering <a href="http://git-scm.com/" rel="tag" title="GIT">GIT</a> with gitosis</li>
 					<li>good knowledge of database modeling and implementation, experience with <a href="http://www.oracle.com/" rel="tag">Oracle</a>, <a href="http://www.mysql.com/" rel="tag" title="MySQL">MySQL</a> and <a href="http://www.postgresql.org/" rel="tag" title="PostgreSQL">PostgreSQL</a></li>
 					<li>good knowledge of <a href="http://en.wikipedia.org/wiki/Platform_virtualization" rel="tag" title="virtualization">virtualization</a> tools like <a href="http://www.vmware.com/products/server/" rel="tag" title="VMware Server">VMware Server</a>, <a href="http://www.vmware.com/products/player/" rel="tag" title="VMware Player">VMware Player</a>, <a href="http://www.virtualbox.org/" rel="tag" title="VirtualBox">VirtualBox</a></li>
 					<li>familiar with <a href="http://en.wikipedia.org/wiki/Model-view-controller" rel="tag" title="MVC frameworks">MVC frameworks</a> like <a href="http://djangoproject.com/" rel="tag" title="Django Python Framework">Django</a></li>
 					<li>familiar with <a href="http://en.wikipedia.org/wiki/Design_pattern_(computer_science)" rel="tag" title="design patterns">design patterns</a></li>
-					<li>fluent English speaker (8 out of 9 band score on <a href="http://www.ielts.org/" rel="tag" title="International English Language Testing System">IELTS</a>, Academic Module)</li>
 					<li>owner of a technology oriented blog</li>
+					<li>fluent English speaker (8 out of 9 band score on <a href="http://www.ielts.org/" rel="tag" title="International English Language Testing System">IELTS</a>, Academic Module)</li>
+					<li>excellent communication skills</li>
+					<li>attention for details</li>
+					<li>good teamwork skills</li>
 				</ul>
 			</div>
 			<div id="experience" class="container">
