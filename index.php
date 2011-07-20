@@ -56,18 +56,24 @@
 				<div class="contactData">
 					<h3>Contact information</h3>
 					<ul>
-
 						<li class="adr">
 							<address>
-								<span class="locality">Southampton</span>, <span class="country-name">United Kingdom</span>
+								<div class="street-address">
+									Mercury Point, B104
+									<br />
+									20 Duke Street
+								</div>
+								<span class="locality">Southampton</span>, <span class="region">Hampshire</spane>, <span class="country-name">United Kingdom</span>
 							</address>
 						</li>
 						<li>
 							<a class="email" href="javascript:noSpam1('radu', 'cotescu.com')" title="Email Radu Cotescu">moc.ucsetoc@udar</a>
 						</li>
 						<li>
-
 							<a class="url website" rel="me" href="http://radu.cotescu.com/" title="Radu Cotescu&#39;s professional blog">http://radu.cotescu.com</a>
+						</li>
+						<li>
+							<span class="tel">+44 794 950 7309</span>
 						</li>
 					</ul>
 				</div>
