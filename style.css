@@ -10,7 +10,7 @@ html {
 body {
     background: url("dot.png") repeat scroll 0 0 transparent;
     color: #333333;
-    font-family: Verdana, Arial, sans-serif;
+	font-family: 'Play', sans-serif;
     font-size: 14px;
     font-weight: normal;
 }
@@ -64,35 +64,35 @@ body {
 
 .menu_js {
 	display: none;
+	font-family: 'Play', sans-serif;
 	height: 18px;
-	margin-top: 2px;
 	margin-left: 10px;
 	margin-right: 10px;
-	margin-bottom: 2px;
 	position: relative;
 }
 
 .menu_js ul {
     list-style-type: none;
+    margin-left: 30px;
 }
 
 .menu_js ul li {
     float: left;
-    text-align: center;
+    text-align: left;
     height: 18px;
-	padding-left: 30px;
+    margin-right: 20px;
 }
 
 .menu_js a {
     color: #333333;
-    font-size: 13px;
     text-decoration: none;
     font-weight: bold;
 }
 
 
 .menu_js a:hover {
-	color: #F37421;
+	color: #FFFFFF;
+	background-color: #F37421;
     text-decoration: none;    
 }
 
@@ -100,8 +100,10 @@ body {
 	outline: 0;
 }
 
-#selected {
-	color: #F37421;
+#selected, #selected a {
+	color: #FFFFFF;
+	background-color: #F37421;
+	border: none;
 }
 
 .wrapper {
@@ -112,9 +114,8 @@ body {
 }
 
 .hresume {
-    background-color: #FFFFFF;
+    background-color: #FDFDFD;
 	margin: 10px;
-    padding: 30px;
     text-align: justify;
 }
 
@@ -136,6 +137,19 @@ body {
     float: left;
 }
 
+.contact {
+	height: 80px;
+    padding: 30px 30px 0px 30px;
+}
+
+#summary {
+	padding: 30px 30px 10px 30px;
+}
+
+.contact, #summary {
+	background-color: #FAFAFA;
+}
+
 .contactData {
     float: right;
     width: 300px;
@@ -148,7 +162,7 @@ body {
 
 .container {
     clear: both;
-    padding-top: 20px;    
+    padding: 15px 30px 30px 30px;  
 }
 
 .container ul {
@@ -201,5 +215,5 @@ a.email {
 
 .print {
 	position: absolute;
-	right: 30px;
+	right: 10px;
 }

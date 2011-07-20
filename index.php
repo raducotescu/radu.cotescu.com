@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Radu Cotescu's resume</title>
 	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="style_print.css" type="text/css" media="print" />
 	<link rel="shortcut icon" type="image/x-icon" href="http://radu.cotescu.com/favicon.ico"/>
 	<meta name="description" content="a = b + a - (b = a); I do this often. Do you want to hire me? Check my resume!"/>
@@ -25,24 +26,24 @@
 	<div class="menu">
 		<h3>Overview</h3>
 		<ul>
-			<li><a href="#" title="Contact information">Contact information</a></li>
-			<li><a href="#summary" title="Summary">Summary</a></li>
-			<li><a href="#skills" title="Skills">Skills</a></li>
-			<li><a href="#experience" title="Experience">Experience</a></li>
-			<li><a href="#education" title="Education">Education</a></li>
-			<li><a href="#publications" title="Publications">Publications</a></li>
+			<li><a href="#" title="Contact information">CONTACT INFORMATION</a></li>
+			<li><a href="#" title="Summary">SUMMARY</a></li>
+			<li><a href="#skills" title="Skills">SKILLS</a></li>
+			<li><a href="#experience" title="Experience">EXPERIENCE</a></li>
+			<li><a href="#education" title="Education">EDUCATION</a></li>
+			<li><a href="#publications" title="Publications">PUBLICATIONS</a></li>
 
 		</ul>
 	</div>
 	<div class="wrapper">
 		<div class="menu_js">
 			<ul>
-				<li><a href="#" title="Summary" id="selected">Summary</a></li>
-				<li><a href="#skills" title="Skills">Skills</a></li>
-				<li><a href="#experience" title="Experience">Experience</a></li>
-				<li><a href="#education" title="Education">Education</a></li>
-				<li><a href="#publications" title="Publications">Publications</a></li>
-				<li class="print"><a onclick="window.print()" title="Print full version">Print</a></li>
+				<li id="selected"><a href="#" title="Summary">SUMMARY</a></li>
+				<li><a href="#skills" title="Skills">SKILLS</a></li>
+				<li><a href="#experience" title="Experience">EXPERIENCE</a></li>
+				<li><a href="#education" title="Education">EDUCATION</a></li>
+				<li><a href="#publications" title="Publications">PUBLICATIONS</a></li>
+				<li class="print"><a href="#print" onclick="window.print()" title="Print full version">PRINT</a></li>
 			</ul>
 		</div>
 			<div class="hresume">
@@ -314,13 +315,17 @@
 			var selected = link.substring(link.lastIndexOf('#') + 1, link.length);
 			$('#selected').removeAttr('id');
 			if($('#'+selected).not('#summary').is(':visible')) {
-				$('#'+selected).slideUp();
-				$('.menu_js a').first().attr('id', 'selected');
+				$('#'+selected).slideUp(300);
+				$('.menu_js li').first().attr('id', 'selected');
 				
 			} else {
-				$('.container').not('#summary').slideUp();
-				if(this.parentNode.className != "print") this.id="selected";
-	  			$('#'+selected).not('#summary').slideDown();
+				$('.container').not('#summary').slideUp(300);
+				if(selected != "print") {
+					this.parentNode.id="selected";
+				} else {
+					$('.menu_js li').first().attr('id', 'selected');
+				}
+	  			$('#'+selected).not('#summary').slideDown(600);
 			}
 		});
 	});
