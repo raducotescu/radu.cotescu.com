@@ -63,11 +63,15 @@
 									<br />
 									20 Duke Street
 								</div>
-								<span class="locality">Southampton</span>, <span class="region">Hampshire</spane>, <span class="country-name">United Kingdom</span>
+								<span class="locality">Southampton</span>, <span class="region">Hampshire</span>
+								<br />
+								<span class="postal-code">SO14 3ET</span>
+								<br />
+								<span class="country-name">United Kingdom</span>
 							</address>
 						</li>
 						<li>
-							<a class="email" href="javascript:noSpam1('radu', 'cotescu.com')" title="Email Radu Cotescu">moc.ucsetoc@udar</a>
+							<a class="email" href="javascript:noSpam1('radu', 'cotescu.com')" title="Send Radu an email">moc.ucsetoc@udar</a>
 						</li>
 						<li>
 							<a class="url website" rel="me" href="http://radu.cotescu.com/" title="Radu Cotescu&#39;s professional blog">http://radu.cotescu.com</a>
