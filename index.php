@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Radu Cotescu's resume</title>
 	<link rel="stylesheet" href="style.css" type="text/css"/>
-	<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="style_print.css" type="text/css" media="print" />
 	<link rel="shortcut icon" type="image/x-icon" href="http://radu.cotescu.com/favicon.ico"/>
 	<meta name="description" content="a = b + a - (b = a); I do this often. Do you want to hire me? Check my resume!"/>
@@ -58,11 +58,11 @@
 					<ul>
 						<li class="adr">
 							<address>
-								<div class="street-address">
+								<span class="street-address">
 									Mercury Point, B104
 									<br />
 									20 Duke Street
-								</div>
+								</span>
 								<span class="locality">Southampton</span>, <span class="region">Hampshire</span>
 								<br />
 								<span class="postal-code">SO14 3ET</span>
@@ -318,7 +318,7 @@
 		</a>
 	</div>
 	<script type="text/javascript" src="noSpam.js"></script>
-	<script>
+	<script type="text/javascript">
 	jQuery(document).ready(function(){
 		$('.menu').hide();
 		$('.menu_js').show();
