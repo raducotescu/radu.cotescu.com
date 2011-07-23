@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Radu Cotescu's resume</title>
 	<link rel="stylesheet" href="style.css" type="text/css"/>
-	<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="style_print.css" type="text/css" media="print" />
 	<link rel="shortcut icon" type="image/x-icon" href="http://radu.cotescu.com/favicon.ico"/>
 	<meta name="description" content="a = b + a - (b = a); I do this often. Do you want to hire me? Check my resume!"/>
@@ -58,11 +58,11 @@
 					<ul>
 						<li class="adr">
 							<address>
-								<div class="street-address">
+								<span class="street-address">
 									Mercury Point, B104
 									<br />
 									20 Duke Street
-								</div>
+								</span>
 								<span class="locality">Southampton</span>, <span class="region">Hampshire</span>
 								<br />
 								<span class="postal-code">SO14 3ET</span>
@@ -75,6 +75,7 @@
 						</li>
 						<li>
 							<a class="url website" rel="me" href="http://radu.cotescu.com/" title="Radu Cotescu&#39;s professional blog">http://radu.cotescu.com</a>
+							<a rel="author" href="http://radu.cotescu.com/+" style="display:none"></a>
 						</li>
 						<li>
 							<span class="tel">+44 794 950 7309</span>
@@ -97,27 +98,27 @@
 			<div id="skills" class="container">
 				<h3>Skills</h3>
 				<ul>
-					<li>good knowledge of <a href="http://en.wikipedia.org/wiki/Java_%28programming_language%29" rel="tag" title="Java">Java</a>, <a href="http://en.wikipedia.org/wiki/C_%28programming_language%29" rel="tag" title="C">C</a> and <a href="http://en.wikipedia.org/wiki/C%2B%2B" rel="tag" title="C++">C++</a> programming languages</li>
-					<li>good experience in working with <a href="http://en.wikipedia.org/wiki/Oracle_Application_Server" title="iAS" rel="tag">Oracle Application Server</a> and <a href="http://en.wikipedia.org/wiki/TopLink" title="Oracle TopLink" rel="tag">Oracle TopLink</a> (JPA) framework</li>
-					<li>good experience in working with <a href="http://en.wikipedia.org/wiki/EclipseLink" title="EclipseLink" rel="tag">EclipseLink</a> (JPA) framework</li>
-					<li>good experience in working with <a href="http://en.wikipedia.org/wiki/Apache_Maven" title="Apache Maven" rel="tag">Apache Maven</a></li>
-					<li>good knowledge of the <a href="http://struts.apache.org/2.x/" title="Struts2" rel="tag">Struts2</a> framework</li>
-					<li>experience in working with <a href="http://tomcat.apache.org/" title="Apache Tomcat" rel="tag">Apache Tomcat</a> servlets container</li>
-					<li>basic competences using <a href="http://www.python.org/" rel="tag" title="Python">Python</a></li>
-					<li>good <a href="http://en.wikipedia.org/wiki/Javascript" rel="tag" title="JavaScript">JavaScript</a> skills</li>
-					<li>familiar with <a href="http://jquery.com/" title="jQuery" rel="tag">jQuery</a> JavaScript framework</li>
-					<li>good <a href="http://www.w3.org/Style/CSS/" rel="tag" title="CSS">CSS</a> skills</li>
-					<li>good <a href="http://en.wikipedia.org/wiki/XHTML" rel="tag" title="HTML / XHTML">HTML / XHTML</a> skills</li>
-					<li>excellent <a href="http://en.wikipedia.org/wiki/Bash" rel="tag" title="bash scripting">bash scripting</a> skills</li>
-					<li>good exposure to Linux: <a href="http://www.ubuntu.com/" rel="tag" title="Ubuntu">Ubuntu</a>, <a href="http://www.oracle.com/technologies/linux/index.html" rel="tag" title="Oracle Enterprise Linux">Oracle Enterprise Linux</a>, <a href="http://www.redhat.com/" rel="tag" title="Red Hat Enterprise Linux">Red Hat Enterprise Linux</a> and <a href="http://www.busybox.net/" rel="tag" title="BusyBox">BusyBox</a>, The Swiss Army Knife of Embedded Linux</li>
-					<li>good knowledge of using and administering <a href="http://subversion.tigris.org/" rel="tag" title="subversion">subversion</a></li>
-					<li>good knowledge of using and administering <a href="http://git-scm.com/" rel="tag" title="GIT">GIT</a> with gitosis</li>
-					<li>good knowledge of database modeling and implementation, experience with <a href="http://www.oracle.com/" rel="tag">Oracle</a>, <a href="http://www.mysql.com/" rel="tag" title="MySQL">MySQL</a> and <a href="http://www.postgresql.org/" rel="tag" title="PostgreSQL">PostgreSQL</a></li>
-					<li>good knowledge of <a href="http://en.wikipedia.org/wiki/Platform_virtualization" rel="tag" title="virtualization">virtualization</a> tools like <a href="http://www.vmware.com/products/server/" rel="tag" title="VMware Server">VMware Server</a>, <a href="http://www.vmware.com/products/player/" rel="tag" title="VMware Player">VMware Player</a>, <a href="http://www.virtualbox.org/" rel="tag" title="VirtualBox">VirtualBox</a></li>
-					<li>familiar with <a href="http://en.wikipedia.org/wiki/Model-view-controller" rel="tag" title="MVC frameworks">MVC frameworks</a> like <a href="http://djangoproject.com/" rel="tag" title="Django Python Framework">Django</a></li>
-					<li>familiar with <a href="http://en.wikipedia.org/wiki/Design_pattern_(computer_science)" rel="tag" title="design patterns">design patterns</a></li>
+					<li>good knowledge of <a href="http://en.wikipedia.org/wiki/Java_%28programming_language%29" rel="tag" class="skill" title="Java">Java</a>, <a href="http://en.wikipedia.org/wiki/C_%28programming_language%29" rel="tag" class="skill" title="C">C</a> and <a href="http://en.wikipedia.org/wiki/C%2B%2B" rel="tag" class="skill" title="C++">C++</a> programming languages</li>
+					<li>good experience in working with <a href="http://en.wikipedia.org/wiki/Oracle_Application_Server" title="iAS" rel="tag" class="skill">Oracle Application Server</a> and <a href="http://en.wikipedia.org/wiki/TopLink" title="Oracle TopLink" rel="tag" class="skill">Oracle TopLink</a> (JPA) framework</li>
+					<li>good experience in working with <a href="http://en.wikipedia.org/wiki/EclipseLink" title="EclipseLink" rel="tag" class="skill">EclipseLink</a> (JPA) framework</li>
+					<li>good experience in working with <a href="http://en.wikipedia.org/wiki/Apache_Maven" title="Apache Maven" rel="tag" class="skill">Apache Maven</a></li>
+					<li>good knowledge of the <a href="http://struts.apache.org/2.x/" title="Struts2" rel="tag" class="skill">Struts2</a> framework</li>
+					<li>experience in working with <a href="http://tomcat.apache.org/" title="Apache Tomcat" rel="tag" class="skill">Apache Tomcat</a> servlets container</li>
+					<li>basic competences using <a href="http://www.python.org/" rel="tag" class="skill" title="Python">Python</a></li>
+					<li>good <a href="http://en.wikipedia.org/wiki/Javascript" rel="tag" class="skill" title="JavaScript">JavaScript</a> skills</li>
+					<li>familiar with <a href="http://jquery.com/" title="jQuery" rel="tag" class="skill">jQuery</a> JavaScript framework</li>
+					<li>good <a href="http://www.w3.org/Style/CSS/" rel="tag" class="skill" title="CSS">CSS</a> skills</li>
+					<li>good <a href="http://en.wikipedia.org/wiki/XHTML" rel="tag" class="skill" title="HTML / XHTML">HTML / XHTML</a> skills</li>
+					<li>excellent <a href="http://en.wikipedia.org/wiki/Bash" rel="tag" class="skill" title="bash scripting">bash scripting</a> skills</li>
+					<li>good exposure to Linux: <a href="http://www.ubuntu.com/" rel="tag" class="skill" title="Ubuntu">Ubuntu</a>, <a href="http://www.oracle.com/technologies/linux/index.html" rel="tag" class="skill" title="Oracle Enterprise Linux">Oracle Enterprise Linux</a>, <a href="http://www.redhat.com/" rel="tag" class="skill" title="Red Hat Enterprise Linux">Red Hat Enterprise Linux</a> and <a href="http://www.busybox.net/" rel="tag" class="skill" title="BusyBox">BusyBox</a>, The Swiss Army Knife of Embedded Linux</li>
+					<li>good knowledge of using and administering <a href="http://subversion.tigris.org/" rel="tag" class="skill" title="subversion">subversion</a></li>
+					<li>good knowledge of using and administering <a href="http://git-scm.com/" rel="tag" class="skill" title="GIT">GIT</a> with gitosis</li>
+					<li>good knowledge of database modeling and implementation, experience with <a href="http://www.oracle.com/" rel="tag" class="skill">Oracle</a>, <a href="http://www.mysql.com/" rel="tag" class="skill" title="MySQL">MySQL</a> and <a href="http://www.postgresql.org/" rel="tag" class="skill" title="PostgreSQL">PostgreSQL</a></li>
+					<li>good knowledge of <a href="http://en.wikipedia.org/wiki/Platform_virtualization" rel="tag" class="skill" title="virtualization">virtualization</a> tools like <a href="http://www.vmware.com/products/server/" rel="tag" class="skill" title="VMware Server">VMware Server</a>, <a href="http://www.vmware.com/products/player/" rel="tag" class="skill" title="VMware Player">VMware Player</a>, <a href="http://www.virtualbox.org/" rel="tag" class="skill" title="VirtualBox">VirtualBox</a></li>
+					<li>familiar with <a href="http://en.wikipedia.org/wiki/Model-view-controller" rel="tag" class="skill" title="MVC frameworks">MVC frameworks</a> like <a href="http://djangoproject.com/" rel="tag" class="skill" title="Django Python Framework">Django</a></li>
+					<li>familiar with <a href="http://en.wikipedia.org/wiki/Design_pattern_(computer_science)" rel="tag" class="skill" title="design patterns">design patterns</a></li>
 					<li>owner of a technology oriented blog</li>
-					<li>fluent English speaker (8 out of 9 band score on <a href="http://www.ielts.org/" rel="tag" title="International English Language Testing System">IELTS</a>, Academic Module)</li>
+					<li>fluent English speaker (8 out of 9 band score on <a href="http://www.ielts.org/" rel="tag" class="skill" title="International English Language Testing System">IELTS</a>, Academic Module)</li>
 					<li>excellent communication skills</li>
 					<li>attention for details</li>
 					<li>good teamwork skills</li>
@@ -128,7 +129,7 @@
 				<ol>
 				   <li class="experience vevent vcard">
 						<h4 class="title">Student Software Engineer</h4>
-						<h5 class="org summary"><a href="http://www.oracle.com/" title="Oracle">Oracle</a></h5>
+						<h5 class="org fn summary"><a href="http://www.oracle.com/" title="Oracle">Oracle</a></h5>
 						<p class="organization-details">(10,001 or more employees; ORCL; Public Company; Computer Software)</p>
 						<p class="period">
 							<abbr class="dtstart" title="2009-04-06">April 2009</abbr> - <abbr class="dtstamp" title="2009-10-06">October 2009</abbr>
@@ -139,7 +140,7 @@
 					</li>
 				   <li class="experience vevent vcard">
 						<h4 class="title">Intern</h4>
-						<h5 class="org summary"><a href="http://www.oracle.com/" title="Oracle">Oracle</a></h5>
+						<h5 class="org fn summary"><a href="http://www.oracle.com/" title="Oracle">Oracle</a></h5>
 						<p class="organization-details">(10,001 or more employees; ORCL; Public Company; Computer Software)</p>
 						<p class="period">
 							<abbr class="dtstart" title="2008-07-07">July 2008</abbr> - <abbr class="dtstamp" title="2008-10-06">October 2008</abbr>
@@ -150,7 +151,7 @@
 					</li>
 					<li class="experience vevent vcard">
 						<h4 class="title">Vice Chairman Public Relations at EESTEC Bucharest</h4>
-						<h5 class="org summary"><a href="http://www.eestec.ro/" title="EESTEC">EESTEC</a></h5>
+						<h5 class="org fn summary"><a href="http://www.eestec.ro/" title="EESTEC">EESTEC</a></h5>
 						<p class="organization-details">(Non-Profit Organization Management industry)</p>
 						<p class="period">
 							<abbr class="dtstart" title="2008-03-10">March 2008</abbr> - <abbr class="dtstamp" title="2008-05-19">May 2008</abbr>
@@ -162,7 +163,7 @@
 					</li>
 					<li class="experience vevent vcard">
 						<h4 class="title">Junior Member at EESTEC Bucharest</h4>
-						<h5 class="org summary"><a href="http://www.eestec.ro/" title="EESTEC">EESTEC</a></h5>
+						<h5 class="org fn summary"><a href="http://www.eestec.ro/" title="EESTEC">EESTEC</a></h5>
 						<p class="organization-details">(Non-Profit Organization Management industry)</p>
 						<p class="period">
 							<abbr class="dtstart" title="2008-11-05">November 2007</abbr> - <abbr class="dtstamp" title="2008-03-10">March 2008</abbr>
@@ -177,7 +178,7 @@
 				<h3>Education</h3>
 				<ol class="vcalendar">
 					<li class="education vevent vcard">
-						<h4 class="org">
+						<h4 class="org fn summary">
 							<a href="http://www.soton.ac.uk" title="University of Southampton">University of Southampton</a>,
 							<a href="http://www.ecs.soton.ac.uk/" title="School of Electronics and Computer Science">School of Electronics and Computer Science</a>
 						</h4>
@@ -200,7 +201,7 @@
 						</div>
 					</li>
 					<li class="education vevent vcard">
-						<h4 class="org">
+						<h4 class="org fn summary">
 							<a href="http://education.oracle.com" title="Oracle University">Oracle University</a>
 						</h4>
 						<p class="date"><abbr class="dtstart" title="2009-07-13">July 2009</abbr> - <abbr class="dtend" title="2009-07-17">July 2009</abbr></p>
@@ -221,7 +222,7 @@
 						</div>
 					</li>
 					<li class="education vevent vcard">
-						<h4 class="org">
+						<h4 class="org fn summary">
 							<a href="http://www.pub.ro" title='University "Politehnica" of Bucharest'>University "Politehnica" of Bucharest</a>,
 							<a href="http://acs.pub.ro" title="Automatic Control and Computers Faculty">Automatic Control and Computers Faculty</a>
 						</h4>
@@ -232,7 +233,7 @@
 						</p>
 					</li>
 					<li class="education vevent vcard">
-						<h4 class="org">
+						<h4 class="org fn summary">
 							Cisco Systems Networking Academy, Bucharest Academy of Economic Studies
 						</h4>
 						<p class="date"><abbr class="dtstart" title="2006-10-10">October 2006</abbr> - <abbr class="dtend" title="2007-01-14">January 2007</abbr></p>
@@ -242,7 +243,7 @@
 						</p>
 					</li>
 					<li class="education vevent vcard">
-						<h4 class="org">
+						<h4 class="org fn summary">
 							Oracle Internet Academy, "Cantemir Vodă" National College, Bucharest
 						</h4>
 						<p class="date"><abbr class="dtstart" title="2005-01-08">January 2005</abbr> - <abbr class="dtend" title="2005-06-09">June 2005</abbr></p>
@@ -317,7 +318,7 @@
 		</a>
 	</div>
 	<script type="text/javascript" src="noSpam.js"></script>
-	<script>
+	<script type="text/javascript">
 	jQuery(document).ready(function(){
 		$('.menu').hide();
 		$('.menu_js').show();
