@@ -325,14 +325,13 @@
 		$('.hresume').css('margin-top', '0px');
 		$('.container').not('#summary').hide();
 		$('.menu_js a').click(function(event) {
-			event.preventDefault();
   			var link = this.href;
 			var selected = link.substring(link.lastIndexOf('#') + 1, link.length);
 			$('#selected').removeAttr('id');
 			if($('#'+selected).not('#summary').is(':visible')) {
 				$('#'+selected).slideUp(300);
 				$('.menu_js li').first().attr('id', 'selected');
-				
+				window.location = "./#";
 			} else {
 				$('.container').not('#summary').slideUp(300);
 				if(selected != "print") {
