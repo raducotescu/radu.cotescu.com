@@ -74,8 +74,7 @@
 							<a class="email" href="javascript:noSpam1('radu', 'cotescu.com')" title="Send Radu an email">moc.ucsetoc@udar</a>
 						</li>
 						<li>
-							<a class="url website" rel="me" href="http://radu.cotescu.com/" title="Radu Cotescu&#39;s professional blog">http://radu.cotescu.com</a>
-							<a rel="author" href="http://radu.cotescu.com/about" style="display:none"></a>
+							<a class="url website" rel="author" href="http://radu.cotescu.com/" title="Radu Cotescu&#39;s professional blog">http://radu.cotescu.com</a>
 						</li>
 						<li>
 							<span class="tel">+44 794 950 7309</span>
