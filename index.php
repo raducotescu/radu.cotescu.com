@@ -324,6 +324,20 @@
 		$('.menu_js').show();
 		$('.hresume').css('margin-top', '0px');
 		$('.container').not('#summary').hide();
+		if ($(window.location.hash).length > 0) {
+			var hash = window.location.hash;
+			$('#selected').removeAttr('id');
+			if (hash == '#skills') {
+				$('.menu_js a[href="#skills"]').parent().attr('id', 'selected');
+			} else if (hash == '#experience') {
+				$('.menu_js a[href="#experience"]').parent().attr('id', 'selected');
+			} else if (hash == '#education') {
+				$('.menu_js a[href="#education"]').parent().attr('id', 'selected');
+			} else if (hash == '#publications') {
+				$('.menu_js a[href="#publications"]').parent().attr('id', 'selected');
+			}
+			$(hash).slideDown(600);
+		}
 		$('.menu_js a').click(function(event) {
 			event.preventDefault();
   			var link = this.href;
@@ -332,11 +346,12 @@
 			if($('#'+selected).not('#summary').is(':visible')) {
 				$('#'+selected).slideUp(300);
 				$('.menu_js li').first().attr('id', 'selected');
-				
+				window.location = "./#";
 			} else {
 				$('.container').not('#summary').slideUp(300);
 				if(selected != "print") {
 					this.parentNode.id="selected";
+					window.location = "./#" + selected;
 				} else {
 					$('.menu_js li').first().attr('id', 'selected');
 				}
