@@ -75,7 +75,7 @@
 						</li>
 						<li>
 							<a class="url website" rel="me" href="http://radu.cotescu.com/" title="Radu Cotescu&#39;s professional blog">http://radu.cotescu.com</a>
-							<a rel="author" href="http://radu.cotescu.com/+" style="display:none"></a>
+							<a rel="author" href="http://radu.cotescu.com/about" style="display:none"></a>
 						</li>
 						<li>
 							<span class="tel">+44 794 950 7309</span>
