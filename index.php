@@ -106,7 +106,7 @@
 					<li>experience in working with <a href="http://tomcat.apache.org/" title="Apache Tomcat" rel="tag" class="skill">Apache Tomcat</a> servlets container</li>
 					<li>basic competences using <a href="http://www.python.org/" rel="tag" class="skill" title="Python">Python</a></li>
 					<li>good <a href="http://en.wikipedia.org/wiki/Javascript" rel="tag" class="skill" title="JavaScript">JavaScript</a> skills</li>
-					<li>familiar with <a href="http://jquery.com/" title="jQuery" rel="tag" class="skill">jQuery</a> JavaScript framework</li>
+					<li>familiar with <a href="http://jquery.com/" title="jQuery" rel="tag" class="skill">jQuery</a> JavaScript library</li>
 					<li>good <a href="http://www.w3.org/Style/CSS/" rel="tag" class="skill" title="CSS">CSS</a> skills</li>
 					<li>good <a href="http://en.wikipedia.org/wiki/XHTML" rel="tag" class="skill" title="HTML / XHTML">HTML / XHTML</a> skills</li>
 					<li>excellent <a href="http://en.wikipedia.org/wiki/Bash" rel="tag" class="skill" title="bash scripting">bash scripting</a> skills</li>
