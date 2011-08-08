@@ -146,7 +146,7 @@
 							<abbr class="dtstart" title="2008-07-07">July 2008</abbr> - <abbr class="dtstamp" title="2008-10-06">October 2008</abbr>
 						</p>
 						<p class="description">
-							During my internship in the Siebel CRM LABs Team I have implemented, developed and administered CELWiki, a collaborative wiki that provides useful information for Service Engineers in solving Service Requests for Siebel clients. Built on top of a LAMP architecture (Linux - Oracle Enterprise Linux, Apache, MySQL and PHP), CELWiki contains tested and verified tutorials for configuring a multitude of software products like LDAPs, web servers, FTP servers, database servers, Linux environments, Windows environments, virtualization tools, etc.
+							During my internship in the Siebel CRM LABs Team I have implemented, developed and administered CELWiki, a collaborative wiki that provides useful information for Service Engineers in solving Service Requests for Siebel clients. Built on top of a LAMP architecture (Linux - Oracle Enterprise Linux, Apache, MySQL and PHP), CELWiki provides engineers with tutorials for configuring a multitude of software products like LDAPs, web servers, FTP servers, database servers, Linux environments, Windows environments, virtualization tools, etc.
 						</p>
 					</li>
 					<li class="experience vevent vcard">
