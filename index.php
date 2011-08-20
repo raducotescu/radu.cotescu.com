@@ -59,15 +59,16 @@
 						<li class="adr">
 							<address>
 								<span class="street-address">
-									Mercury Point, B104
+									Nicolae Grigorescu 29 Blvd.,
 									<br />
-									20 Duke Street
+									Y9D, Apt. 13,
+									<br />
 								</span>
-								<span class="locality">Southampton</span>, <span class="region">Hampshire</span>
+								<span class="locality">Bucharest</span>, Sector 3
 								<br />
-								<span class="postal-code">SO14 3ET</span>
+								<span class="postal-code">030437</span>
 								<br />
-								<span class="country-name">United Kingdom</span>
+								<span class="country-name">Romania</span>
 							</address>
 						</li>
 						<li>
@@ -78,7 +79,7 @@
 							<a rel="author" href="https://plus.google.com/114474556850700711159" style="display:none">Google+</a>
 						</li>
 						<li>
-							<span class="tel">+44 794 950 7309</span>
+							<span class="tel">+40 744 406 353</span>
 						</li>
 					</ul>
 				</div>
