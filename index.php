@@ -128,6 +128,17 @@
 			<div id="experience" class="container">
 				<h3>Experience</h3>
 				<ol>
+					<li class="experience vevent vcard">
+						<h4 class="title">Software Developer</h4>
+						<h5 class="org fn summary"><a href="http://www.oracle.com/" title="Oracle">Oracle</a></h5>
+						<p class="organization-details">(10,001 or more employees; ORCL; Public Company; Computer Software)</p>
+						<p class="period">
+							<abbr class="dtstart" title="2011-10-03">October 2011</abbr> - <abbr class="dtstamp" title="<?php echo date('Y-m-d'); ?>">present</abbr>
+						</p>
+						<p class="description">
+							Engineer in the Oracle Communities team.		
+						</p>
+					</li>
 				   <li class="experience vevent vcard">
 						<h4 class="title">Student Software Engineer</h4>
 						<h5 class="org fn summary"><a href="http://www.oracle.com/" title="Oracle">Oracle</a></h5>
