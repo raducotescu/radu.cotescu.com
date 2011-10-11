@@ -136,7 +136,7 @@
 							<abbr class="dtstart" title="2011-10-03">October 2011</abbr> - <abbr class="dtstamp" title="<?php echo date('Y-m-d'); ?>">present</abbr>
 						</p>
 						<p class="description">
-							Engineer in the Oracle Communities team.		
+							A member of the My Oracle Support Communities team, I develop software that integrates several of Oracle's internal portal applications to create a unified experience across the organization.
 						</p>
 					</li>
 				   <li class="experience vevent vcard">
