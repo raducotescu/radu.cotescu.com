@@ -191,6 +191,30 @@
 				<ol class="vcalendar">
 					<li class="education vevent vcard">
 						<h4 class="org fn summary">
+							<a href="http://education.oracle.com" title="Oracle University">Oracle University</a>
+						</h4>
+						<p class="date"><abbr class="dtstart" title="2011-12-19">December 2011</abbr> - <abbr class="dtend" title="2011-12-23">December 2011</abbr></p>
+
+						<p class="description">
+							I have attended the course "<a href="http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getCourseDesc?dc=D58682GC20">Oracle WebLogic Server 11g: Administration Essentials Ed 2</a>". Main topics and concepts:
+						</p>
+						<div class="modules">
+							<ul>
+								<li>Backup and recover from various failures</li>
+								<li>Monitor application server using GUI and command-line tools such as automation scripts</li>
+								<li>Describe the architecture of WebLogic Server including domains, servers and machines</li>
+								<li>Install, configure and use WebLogic Server</li>
+								<li>Perform routine Oracle WebLogic Server administration functions</li>
+								<li>Set up a cluster of servers and distribute applications and resources to the cluster</li>
+								<li>Configure Oracle HTTP Server as the Web-tier front end for Oracle WebLogic Server instances and clusters</li>
+								<li>Deploy different types of Java EE applications to Oracle WebLogic Server</li>
+								<li>Deploy and manage large-scale Java EE applications to servers or clusters through the entire development and production lifecycle</li>
+								<li>Configure basic resource and application security</li>
+							</ul>	
+						</div>
+					</li>
+					<li class="education vevent vcard">
+						<h4 class="org fn summary">
 							<a href="http://www.soton.ac.uk" title="University of Southampton">University of Southampton</a>,
 							<a href="http://www.ecs.soton.ac.uk/" title="School of Electronics and Computer Science">School of Electronics and Computer Science</a>
 						</h4>
