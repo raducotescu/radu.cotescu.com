@@ -193,6 +193,36 @@
 						<h4 class="org fn summary">
 							<a href="http://education.oracle.com" title="Oracle University">Oracle University</a>
 						</h4>
+						<p class="date"><abbr class="dtstart" title="2012-01-16">January 2012</abbr> - <abbr class="dtend" title="2012-01-20">January 2012</abbr></p>
+
+						<p class="description">
+							I have attended the course "<a href="http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getCourseDesc?dc=D58686GC20">Oracle WebLogic Server 11g: Advanced Administration Ed 2</a>". Main topics and concepts:
+						</p>
+						<div class="modules">
+							<ul>
+								<li>Configure and monitor server network channels</li>
+								<li>Define a JDBC data source for load balancing and failover</li>
+								<li>Configure JMS to guarantee message delivery</li>
+								<li>Configure JMS load balancing and failover in a cluster</li>
+								<li>Configure JMS store and forward features</li>
+								<li>Create custom domain and extension templates</li>
+								<li>Bridge WebLogic JMS to an external JMS provider</li>
+								<li>Configure automatic server migration in a cluster</li>
+								<li>Replicate HTTP sessions using multiple clusters</li>
+								<li>Integrate WebLogic Server with an external LDAP server</li>
+								<li>Integrate WebLogic Server with a database security store</li>
+								<li>Tune a Java VM for performance</li>
+								<li>Tune server subsystems for performance</li>
+								<li>Define server work managers</li>
+								<li>Apply techniques to diagnose and troubleshoot server problems</li>
+								<li>Trigger SNMP notifications from WebLogic Server</li>
+							</ul>
+						</div>
+					</li>
+					<li class="education vevent vcard">
+						<h4 class="org fn summary">
+							<a href="http://education.oracle.com" title="Oracle University">Oracle University</a>
+						</h4>
 						<p class="date"><abbr class="dtstart" title="2011-12-19">December 2011</abbr> - <abbr class="dtend" title="2011-12-23">December 2011</abbr></p>
 
 						<p class="description">
@@ -307,7 +337,7 @@
 							<cite>Dictionaries in OpenOffice.org</cite>,
 							<cite>Math</cite>,
 							<cite>Macros and API</cite>,
-		                    <cite>Tips for Microsoft Office users migrating to OpenOffice.org</cite>.
+							<cite>Tips for Microsoft Office users migrating to OpenOffice.org</cite>.
 						</p>
 					</li>
 					<li>
