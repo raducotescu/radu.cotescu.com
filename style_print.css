@@ -8,7 +8,6 @@ html {
 }
 
 body {
-    background: url("dot.png") repeat scroll 0 0 transparent;
     color: #333333;
 	font-family: 'Play', sans-serif;
     font-size: 14px;
@@ -19,89 +18,6 @@ body {
 	display: none !important;
 }
 
-
-.bottom {
-    width: 144px;
-    height: 40px;
-	margin: 10px auto 0px;
-}
-
-.menu {
-    float: left;
-    width: 200px;    
-    position: fixed;
-    top: 30px;
-    left: 5px;
-    text-align: left;
-}
-
-.menu ul {
-    list-style-type: none;
-    margin-left: 2px;
-}
-
-.menu ul li {
-    float: left;
-    clear: left;
-    width: 190px;
-}
-
-.menu a {
-    color: #333333;
-    width: 190px;
-    display: inline-block;
-    text-decoration: none;
-}
-
-.menu a:hover {
-    color: #F37421;
-    text-decoration: none;
-    background-color: #FFFFFF;
-}
-
-.menu a:focus {
-	outline: 0;
-}
-
-.menu_js {
-	display: none;
-	font-family: 'Play', sans-serif;
-	margin-left: 10px;
-	margin-right: 10px;
-	position: relative;
-	overflow: hidden;
-}
-
-.menu_js ul {
-    list-style-type: none;
-    margin-left: 30px;
-}
-
-.menu_js ul li {
-    float: left;
-    text-align: left;
-    margin-right: 20px;
-    margin-top: 1px;
-    margin-bottom: 1px;
-}
-
-.menu_js a {
-    color: #333333;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-
-.menu_js a:hover {
-	color: #FFFFFF;
-	background-color: #F37421;
-    text-decoration: none;    
-}
-
-.menu_js a:focus {
-	outline: 0;
-}
-
 #selected, #selected a {
 	color: #FFFFFF;
 	background-color: #F37421;
@@ -109,14 +25,12 @@ body {
 }
 
 .wrapper {
-    background: url("bk_main_wrapper.png") repeat scroll 0 0 transparent;
 	margin: 30px auto 0px;
-    width: 980px;
+    width: 7.5in;
     overflow: hidden;
 }
 
 .hresume {
-    background-color: #FDFDFD;
 	margin: 10px;
     text-align: justify;
 }
@@ -124,10 +38,6 @@ body {
 .hresume a {
     color: blue;
     text-decoration: none;
-}
-
-.hresume a:hover {
-    text-decoration: underline;
 }
 
 .org a {
@@ -146,10 +56,6 @@ body {
 
 #summary {
 	padding: 30px 30px 10px 30px;
-}
-
-.contact, #summary {
-	background-color: #FAFAFA;
 }
 
 .contactData {
@@ -219,4 +125,3 @@ a.email {
 	position: absolute;
 	right: 10px;
 }
-

@@ -30,6 +30,7 @@
 			<li><a href="#skills" title="Skills">SKILLS</a></li>
 			<li><a href="#experience" title="Experience">EXPERIENCE</a></li>
 			<li><a href="#education" title="Education">EDUCATION</a></li>
+			<li><a href="#courses" title="Courses">COURSES</a></li>
 			<li><a href="#publications" title="Publications">PUBLICATIONS</a></li>
 
 		</ul>
@@ -41,6 +42,7 @@
 				<li><a href="#skills" title="Skills">SKILLS</a></li>
 				<li><a href="#experience" title="Experience">EXPERIENCE</a></li>
 				<li><a href="#education" title="Education">EDUCATION</a></li>
+				<li><a href="#courses" title="Courses">COURSES</a></li>
 				<li><a href="#publications" title="Publications">PUBLICATIONS</a></li>
 				<li class="print"><a href="#print" onclick="window.print()" title="Print full version">PRINT</a></li>
 			</ul>
@@ -189,6 +191,46 @@
 			<div id="education" class="container">
 				<h3>Education</h3>
 				<ol class="vcalendar">
+					
+					<li class="education vevent vcard">
+						<h4 class="org fn summary">
+							<a href="http://www.soton.ac.uk" title="University of Southampton">University of Southampton</a>,
+							<a href="http://www.ecs.soton.ac.uk/" title="School of Electronics and Computer Science">School of Electronics and Computer Science</a>
+						</h4>
+						<p class="date"><abbr class="dtstart" title="2010-10-04">October 2010</abbr> - <abbr class="dtend" title="2011-09-30">September 2011</abbr></p>
+						<p class="description">
+							MSc, Software Engineering
+						</p>
+						<div class="modules">
+							<ul>
+								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6008">Research Methods in Computing</a></li>
+								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6013">Agile and Object Oriented Development</a></li>
+								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6038">Safety Critical Systems</a></li>
+								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6039">Software Project Management &amp; Quality Assurance</a></li>
+								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6003">Enterprise Web Development</a></li>
+								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6017">Advanced Topics on Web Services</a></li>
+								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6004">Formal Design of Systems</a></li>
+								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6035">From Aspect-Oriented Programming to Program Generation</a></li>
+								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6051">Social Networking Technologies</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="education vevent vcard">
+						<h4 class="org fn summary">
+							<a href="http://www.pub.ro" title='University "Politehnica" of Bucharest'>University "Politehnica" of Bucharest</a>,
+							<a href="http://acs.pub.ro" title="Automatic Control and Computers Faculty">Automatic Control and Computers Faculty</a>
+						</h4>
+						<p class="date"><abbr class="dtstart" title="2006-10-01">October 2006</abbr> - <abbr class="dtend" title="2010-07-14">July 2010</abbr></p>
+
+						<p class="description">
+							BEng, Automatic Control and Applied Informatics
+						</p>
+					</li>
+				</ol>
+			</div>
+			<div id="courses"  class="container">
+				<h3>Courses</h3>
+				<ol class="vcalendar">
 					<li class="education vevent vcard">
 						<h4 class="org fn summary">
 							<a href="http://education.oracle.com" title="Oracle University">Oracle University</a>
@@ -245,29 +287,6 @@
 					</li>
 					<li class="education vevent vcard">
 						<h4 class="org fn summary">
-							<a href="http://www.soton.ac.uk" title="University of Southampton">University of Southampton</a>,
-							<a href="http://www.ecs.soton.ac.uk/" title="School of Electronics and Computer Science">School of Electronics and Computer Science</a>
-						</h4>
-						<p class="date"><abbr class="dtstart" title="2010-10-04">October 2010</abbr> - <abbr class="dtend" title="2011-09-30">September 2011</abbr></p>
-						<p class="description">
-							MSc, Software Engineering
-						</p>
-						<div class="modules">
-							<ul>
-								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6008">Research Methods in Computing</a></li>
-								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6013">Agile and Object Oriented Development</a></li>
-								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6038">Safety Critical Systems</a></li>
-								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6039">Software Project Management &amp; Quality Assurance</a></li>
-								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6003">Enterprise Web Development</a></li>
-								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6017">Advanced Topics on Web Services</a></li>
-								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6004">Formal Design of Systems</a></li>
-								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6035">From Aspect-Oriented Programming to Program Generation</a></li>
-								<li><a href="http://www.ecs.soton.ac.uk/admissions/pg/msc/syllabus.php?session=1011&amp;unit=COMP6051">Social Networking Technologies</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="education vevent vcard">
-						<h4 class="org fn summary">
 							<a href="http://education.oracle.com" title="Oracle University">Oracle University</a>
 						</h4>
 						<p class="date"><abbr class="dtstart" title="2009-07-13">July 2009</abbr> - <abbr class="dtend" title="2009-07-17">July 2009</abbr></p>
@@ -286,17 +305,6 @@
 								<li>Working with Oracle JDeveloper 10.1.3.2</li>
 							</ul>	
 						</div>
-					</li>
-					<li class="education vevent vcard">
-						<h4 class="org fn summary">
-							<a href="http://www.pub.ro" title='University "Politehnica" of Bucharest'>University "Politehnica" of Bucharest</a>,
-							<a href="http://acs.pub.ro" title="Automatic Control and Computers Faculty">Automatic Control and Computers Faculty</a>
-						</h4>
-						<p class="date"><abbr class="dtstart" title="2006-10-01">October 2006</abbr> - <abbr class="dtend" title="2010-07-14">July 2010</abbr></p>
-
-						<p class="description">
-							BEng, Automatic Control and Applied Informatics
-						</p>
 					</li>
 					<li class="education vevent vcard">
 						<h4 class="org fn summary">
