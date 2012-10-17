@@ -1,0 +1,711 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Java, HTTPS and REST web services using Apache CXF - Radu Cotescu's professional blog</title>
+  <meta name="author" content="Radu Cotescu">
+
+  
+  <meta name="description" content="Learn how to implement security in your Apache CXF RESTweb services in order to test your API.">
+  <meta name="keywords" content="rest, web, services, security, apache, cxf, truststore, https, certificate, authority, code, how">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://raducotescu.github.com/radu/java-https-rest-services-apache-cxf">
+  <link href="/favicon.ico" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.cotescu.com/raducotescu" rel="alternate" title="Radu Cotescu's professional blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8815189-1']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_trackPageLoadTime']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <div class="top-nav">
+    <ul>
+        <li><a href="/" title="Home">127.0.0.1</a></li>
+        <li><a href="/about/" title="About">About</a></li>
+        <li><a href="/privacy-policy/" title="Privacy Policy">Privacy Policy</a></li>
+        <li><a href="/calendar/" title="Calendar">Calendar</a></li>
+        <li><a href="/resume/" title="Resume">Resume</a></li>
+    </ul>
+  </div>
+  <header role="banner"><hgroup>
+  <h1><a href="/">Radu Cotescu's professional blog</a></h1>
+  
+    <h2>g33k w17h pa45510n</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss email">
+  <li><a href="http://feeds.cotescu.com/raducotescu" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+    <li><a href="http://feedburner.google.com/fb/a/mailverify?uri=raducotescu" rel="subscribe-email" title="subscribe via email">Email</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:raducotescu.github.com/radu" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/category/-com">.com</a></li>
+  <li><a href="/category/code">Code</a></li>
+  <li><a href="/category/java">Java</a></li>
+  <li><a href="/category/python">Python</a></li>
+  <li><a href="/category/how-to">How To</a></li>
+  <li><a href="/category/linux">Linux</a></li>
+  <li><a href="/category/ubuntu">Ubuntu</a></li>
+  <li><a href="/category/oracle">Oracle</a></li>
+  <li><a href="/category/reviews">Reviews</a></li>
+  <li><a href="/category/virtualization">Virtualization</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Java, HTTPS and REST Web Services Using Apache CXF</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-16T23:39:23+02:00" pubdate data-updated="true">Dec 16<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><strong>Securing REST web services</strong> is a very debated topic on the Internet. Because REST represents an architecture, and not a protocol - like SOAP -, there aren&#8217;t any specifications dealing with security, leaving this aspect as a design decision for the software engineers / developers. Still, if you search the web to find out what are the approaches, you&#8217;ll see that most of the results suggest you use <strong><a href="http://en.wikipedia.org/wiki/Basic_access_authentication">basic authentication</a> over <a href="http://en.wikipedia.org/wiki/HTTP_Secure">HTTPS</a></strong>.</p>
+
+<p>The basic authentication is a trivial way of authenticating HTTP requests directly by the web server, without any added effort for the developer. Since REST isn&#8217;t very pretentious (it uses the well known HTTP methods for accessing resources), leaving the authentication to the web server is a natural thing to do. Still, this doesn&#8217;t mean that your REST API is secure. You merely separate users that should have access to your API from users that should be denied access. Enabling HTTPS on the server is the next step that needs to be followed, so that all the requests are secured. This avoids the classical man-in-the-middle attack and also assures that the credentials sent by the users aren&#8217;t visible to the whole world (although they are BASE64 encoded by the basic authentication mechanism, decoding them is a child&#8217;s play).</p>
+
+<h2>A practical example</h2>
+
+<p>For the next paragraphs, I will be very specific (the title should have already told you this). To add something more, let&#8217;s assume you use <strong>Maven</strong> (because you&#8217;re a real developer) and <strong>Jetty</strong> (only for testing - I assume that for production you use a proper server, like Tomcat). Enabling HTTPS on any other server shouldn&#8217;t be much different.</p>
+
+<h3><code>pom.xml</code></h3>
+
+<p>To enable HTTPS and basic user authentication on Jetty by using Maven, you would have to use an additional plug-in for generating keystores, unless you already have a keystore that you would like to use, in which case you should not keep it in the <code>target</code> folder of your project. The following section of <code>pom.xml</code> should do the trick:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;plugin&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;artifactId&gt;</span>keytool-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;executions&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;execution&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;phase&gt;</span>generate-resources<span class="nt">&lt;/phase&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;id&gt;</span>clean<span class="nt">&lt;/id&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;goals&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;goal&gt;</span>clean<span class="nt">&lt;/goal&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;/goals&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/execution&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;execution&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;phase&gt;</span>generate-resources<span class="nt">&lt;/phase&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;id&gt;</span>genkey<span class="nt">&lt;/id&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;goals&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;goal&gt;</span>genkey<span class="nt">&lt;/goal&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;/goals&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/execution&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/executions&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;configuration&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;keystore&gt;</span>${project.build.directory}/jetty-ssl.keystore<span class="nt">&lt;/keystore&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;dname&gt;</span>cn=server_host_name<span class="nt">&lt;/dname&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;keypass&gt;</span>jetty6<span class="nt">&lt;/keypass&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;storepass&gt;</span>jetty6<span class="nt">&lt;/storepass&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;alias&gt;</span>jetty6<span class="nt">&lt;/alias&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;keyalg&gt;</span>RSA<span class="nt">&lt;/keyalg&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/configuration&gt;</span>
+</span><span class='line'><span class="nt">&lt;/plugin&gt;</span>
+</span><span class='line'>  <span class="c">&lt;!-- Jetty support for testing --&gt;</span>
+</span><span class='line'><span class="nt">&lt;plugin&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;groupId&gt;</span>org.mortbay.jetty<span class="nt">&lt;/groupId&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;artifactId&gt;</span>maven-jetty-plugin<span class="nt">&lt;/artifactId&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;executions&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;execution&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;id&gt;</span>start-jetty<span class="nt">&lt;/id&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;phase&gt;</span>pre-integration-test<span class="nt">&lt;/phase&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;goals&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;goal&gt;</span>run<span class="nt">&lt;/goal&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;/goals&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;configuration&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;scanIntervalSeconds&gt;</span>0<span class="nt">&lt;/scanIntervalSeconds&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;daemon&gt;</span>true<span class="nt">&lt;/daemon&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;/configuration&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/execution&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;execution&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;id&gt;</span>stop-jetty<span class="nt">&lt;/id&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;phase&gt;</span>post-integration-test<span class="nt">&lt;/phase&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;goals&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;goal&gt;</span>stop<span class="nt">&lt;/goal&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;/goals&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/execution&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/executions&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;configuration&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;stopKey&gt;</span>foo<span class="nt">&lt;/stopKey&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;stopPort&gt;</span>9999<span class="nt">&lt;/stopPort&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;scanIntervalSeconds&gt;</span>2<span class="nt">&lt;/scanIntervalSeconds&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;contextPath&gt;</span>/restws<span class="nt">&lt;/contextPath&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;userRealms&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;userRealm</span> <span class="na">implementation=</span><span class="s">&quot;org.mortbay.jetty.security.HashUserRealm&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;name&gt;</span>name_of_realm<span class="nt">&lt;/name&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;config&gt;</span>src/main/resources/sec.properties<span class="nt">&lt;/config&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;/userRealm&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/userRealms&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;connectors&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;connector</span> <span class="na">implementation=</span><span class="s">&quot;org.mortbay.jetty.nio.SelectChannelConnector&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;port&gt;</span>8080<span class="nt">&lt;/port&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;maxIdleTime&gt;</span>60000<span class="nt">&lt;/maxIdleTime&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;/connector&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;connector</span> <span class="na">implementation=</span><span class="s">&quot;org.mortbay.jetty.security.SslSocketConnector&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;port&gt;</span>8443<span class="nt">&lt;/port&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;maxIdleTime&gt;</span>60000<span class="nt">&lt;/maxIdleTime&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;keystore&gt;</span>${project.build.directory}/jetty-ssl.keystore<span class="nt">&lt;/keystore&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;password&gt;</span>jetty6<span class="nt">&lt;/password&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;keyPassword&gt;</span>jetty6<span class="nt">&lt;/keyPassword&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;/connector&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/connectors&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/configuration&gt;</span>
+</span><span class='line'><span class="nt">&lt;/plugin&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The highlighted lines indicate the user <strong>realm</strong>. This is a file which describes to the server who are your users and what roles are they assigned. The specified file contains records of this form:</p>
+
+<p><code>
+user: password,role
+</code></p>
+
+<h3><code>web.xml</code></h3>
+
+<p>Now you must configure your web application to accept HTTPS encrypted content. This is done in the <strong>web.xml</strong> file, by adding the following lines of code:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;security-constraint&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;web-resource-collection&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;web-resource-name&gt;</span>application_name<span class="nt">&lt;/web-resource-name&gt;</span>
+</span><span class='line'>  <span class="c">&lt;!-- all URLs are protected --&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;url-pattern&gt;</span>/*<span class="nt">&lt;/url-pattern&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/web-resource-collection&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;auth-constraint&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;role-name&gt;</span>user<span class="nt">&lt;/role-name&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/auth-constraint&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;user-data-constraint&gt;</span>
+</span><span class='line'>      <span class="c">&lt;!-- redirect all requests to HTTPS --&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;transport-guarantee&gt;</span>CONFIDENTIAL<span class="nt">&lt;/transport-guarantee&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/user-data-constraint&gt;</span>
+</span><span class='line'><span class="nt">&lt;/security-constraint&gt;</span>
+</span><span class='line'><span class="nt">&lt;login-config&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;auth-method&gt;</span>BASIC<span class="nt">&lt;/auth-method&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;realm-name&gt;</span>name_of_realm<span class="nt">&lt;/realm-name&gt;</span>
+</span><span class='line'><span class="nt">&lt;/login-config&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>REST web services and Apache CXF</h3>
+
+<p>So, everything is set up and working. Well, almost. If your REST web services also include some client code, you might encounter an exception with the following message:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">javax</span><span class="o">.</span><span class="na">net</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">SSLHandshakeException</span><span class="o">:</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">validator</span><span class="o">.</span><span class="na">ValidatorException</span><span class="o">:</span> <span class="n">PKIX</span> <span class="n">path</span> <span class="n">building</span> <span class="nl">failed:</span> <span class="n">sun</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">provider</span><span class="o">.</span><span class="na">certpath</span><span class="o">.</span><span class="na">SunCertPathBuilderException</span><span class="o">:</span> <span class="n">unable</span> <span class="n">to</span> <span class="n">find</span> <span class="n">valid</span> <span class="n">certification</span> <span class="n">path</span> <span class="n">to</span> <span class="n">requested</span> <span class="n">target</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The exception is thrown because the certificate your server uses is not from a known <strong>Certificate Authority</strong>. If you have studied the POM example, you&#8217;d see that the certificate is generated at every execution of the <code>install</code> goal. Moreover, the certificate is self-signed. From here we have two solutions:</p>
+
+<ol>
+<li><p>try to create a single key store and save it in the <code>src</code> folder, configuring the server to use the file from this location; then start the server and use the program written by Andreas Sterbenz which you can find <a href="http://blogs.sun.com/andreas/entry/no_more_unable_to_find">here</a>; grab the certificate and move the resulted file into the security folder of your JRE (on Linux this should be <code>/usr/lib/jvm/java-6-sun/jre/lib/security/</code>); although this will work okay on your machine, if your project should be accessed by multiple developers, each member of the team has to add that certificate to his/hers JVM (which is not quite nice);</p></li>
+<li><p>create an<strong> alternative <code>TrustStore</code></strong> used only by your application; this is by far the most elegant solution, which adds some more code to the application but doesn&#8217;t force your team members to add dummy certificates to their JVM.</p></li>
+</ol>
+
+
+<h4>Implementing the <code>TrustStore</code></h4>
+
+<p>The class implementing the <code>X509TrustManager</code> is trivial:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FakeTrustManager</span> <span class="kd">implements</span> <span class="n">javax</span><span class="o">.</span><span class="na">net</span><span class="o">.</span><span class="na">ssl</span><span class="o">.</span><span class="na">X509TrustManager</span> <span class="o">{</span>
+</span><span class='line'>  <span class="kd">public</span> <span class="n">java</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">cert</span><span class="o">.</span><span class="na">X509Certificate</span><span class="o">[]</span> <span class="nf">getAcceptedIssuers</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">checkClientTrusted</span><span class="o">(</span><span class="n">java</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">cert</span><span class="o">.</span><span class="na">X509Certificate</span><span class="o">[]</span> <span class="n">certs</span><span class="o">,</span>
+</span><span class='line'>          <span class="n">String</span> <span class="n">authType</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">checkServerTrusted</span><span class="o">(</span><span class="n">java</span><span class="o">.</span><span class="na">security</span><span class="o">.</span><span class="na">cert</span><span class="o">.</span><span class="na">X509Certificate</span><span class="o">[]</span> <span class="n">certs</span><span class="o">,</span>
+</span><span class='line'>          <span class="n">String</span> <span class="n">authType</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To make all your <strong>Apache CXF REST</strong> <strong>clients</strong> use the new trust store, it is necessary to create a static method in an utility class that sets everything up for the clients:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setClientAuthentication</span><span class="o">(</span><span class="n">Object</span> <span class="n">client</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>  <span class="n">Properties</span> <span class="n">p</span> <span class="o">=</span> <span class="n">PropertiesLoader</span>
+</span><span class='line'>          <span class="o">.</span><span class="na">getPropertiesFromFile</span><span class="o">(</span><span class="s">&quot;config.properties&quot;</span><span class="o">);</span>
+</span><span class='line'>  <span class="n">ClientConfiguration</span> <span class="n">config</span> <span class="o">=</span> <span class="n">WebClient</span><span class="o">.</span><span class="na">getConfig</span><span class="o">(</span><span class="n">client</span><span class="o">);</span>
+</span><span class='line'>  <span class="n">HTTPConduit</span> <span class="n">httpConduit</span> <span class="o">=</span> <span class="o">(</span><span class="n">HTTPConduit</span><span class="o">)</span> <span class="n">config</span><span class="o">.</span><span class="na">getConduit</span><span class="o">();</span>
+</span><span class='line'>  <span class="k">if</span> <span class="o">(</span><span class="n">p</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">&quot;user.name&quot;</span><span class="o">)</span> <span class="o">!=</span> <span class="kc">null</span>
+</span><span class='line'>          <span class="o">&amp;&amp;</span> <span class="n">p</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">&quot;user.password&quot;</span><span class="o">)</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">AuthorizationPolicy</span> <span class="n">authorization</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AuthorizationPolicy</span><span class="o">();</span>
+</span><span class='line'>      <span class="n">authorization</span><span class="o">.</span><span class="na">setUserName</span><span class="o">(</span><span class="n">p</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">&quot;user.name&quot;</span><span class="o">));</span>
+</span><span class='line'>      <span class="n">authorization</span><span class="o">.</span><span class="na">setPassword</span><span class="o">(</span><span class="n">p</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">&quot;user.password&quot;</span><span class="o">));</span>
+</span><span class='line'>      <span class="n">httpConduit</span><span class="o">.</span><span class="na">setAuthorization</span><span class="o">(</span><span class="n">authorization</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  <span class="n">TLSClientParameters</span> <span class="n">tlsParams</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TLSClientParameters</span><span class="o">();</span>
+</span><span class='line'>  <span class="n">TrustManager</span><span class="o">[]</span> <span class="n">trustAllCerts</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TrustManager</span><span class="o">[]</span> <span class="o">{</span> <span class="k">new</span> <span class="n">FakeTrustManager</span><span class="o">()</span> <span class="o">};</span>
+</span><span class='line'>  <span class="n">tlsParams</span><span class="o">.</span><span class="na">setTrustManagers</span><span class="o">(</span><span class="n">trustAllCerts</span><span class="o">);</span>
+</span><span class='line'>  <span class="c1">// disables verification of the common name (the host for which the certificate has been issued)</span>
+</span><span class='line'>  <span class="n">tlsParams</span><span class="o">.</span><span class="na">setDisableCNCheck</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+</span><span class='line'>  <span class="n">httpConduit</span><span class="o">.</span><span class="na">setTlsClientParameters</span><span class="o">(</span><span class="n">tlsParams</span><span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The properties file you see loaded in the previous code output contains the username and password for authentication, but it&#8217;s different from the realm. This is because the realm would be harder to parse, although the information is still plain text. Although it might seem redundant to have the username and password in two files, the realm can actually hold users belonging to different roles - therefore the parsing effort.</p>
+
+<p>The <code>PropertiesLoader</code> class is not standard, but again it&#8217;s something trivial:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">import</span> <span class="nn">java.net.URL</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">java.util.Properties</span><span class="o">;</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PropertiesLoader</span> <span class="o">{</span>
+</span><span class='line'>  <span class="kd">public</span> <span class="kd">static</span> <span class="n">Properties</span> <span class="nf">getPropertiesFromFile</span><span class="o">(</span><span class="n">String</span> <span class="n">propertiesFile</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">Properties</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Properties</span><span class="o">();</span>
+</span><span class='line'>      <span class="n">ClassLoader</span> <span class="n">loader</span> <span class="o">=</span> <span class="n">PropertiesLoader</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getClassLoader</span><span class="o">();</span>
+</span><span class='line'>      <span class="k">if</span> <span class="o">(</span><span class="n">loader</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">loader</span> <span class="o">=</span> <span class="n">ClassLoader</span><span class="o">.</span><span class="na">getSystemClassLoader</span><span class="o">();</span>
+</span><span class='line'>      <span class="o">}</span>
+</span><span class='line'>      <span class="n">URL</span> <span class="n">url</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="na">getResource</span><span class="o">(</span><span class="n">propertiesFile</span><span class="o">);</span>
+</span><span class='line'>      <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">p</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="n">url</span><span class="o">.</span><span class="na">openStream</span><span class="o">());</span>
+</span><span class='line'>      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Could not load configuration file: &quot;</span>
+</span><span class='line'>                  <span class="o">+</span> <span class="n">propertiesFile</span><span class="o">);</span>
+</span><span class='line'>      <span class="o">}</span>
+</span><span class='line'>      <span class="k">return</span> <span class="n">p</span><span class="o">;</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Having done all this, your clients should now work as expected. Just remember that the <code>FakeTrustStore</code> is to be used <em>only</em> for testing purposes.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Radu Cotescu</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-16T23:39:23+02:00" pubdate data-updated="true">Dec 16<span>th</span>, 2010</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/category/code/'>Code</a>, <a class='category' href='/category/how-to/'>How To</a>, <a class='category' href='/category/java/'>Java</a>, <a class='category' href='/category/web-services/'>Web Services</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  	<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://raducotescu.github.com/radu/java-https-rest-services-apache-cxf/" data-via="raducotescu" data-counturl="http://raducotescu.github.com/radu/java-https-rest-services-apache-cxf/" >Tweet</a>
+  	
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+  
+  
+  	<div class="g-plusone" data-size="medium"></div>
+  	
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+    
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/ubuntu-internet-connection-sharing-wireless/" title="Previous Post: Ubuntu and Internet Connection Sharing via a wireless card">&laquo; Ubuntu and Internet Connection Sharing via a wireless card</a>
+      
+      
+        <a class="basic-alignment right" href="/ssh-brute-force-attacks/" title="Next Post: How to secure your SSH server from brute-force attacks">How to secure your SSH server from brute-force attacks &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section style="margin-bottom: 30px">
+    <div id="google-ads-comments" style="margin: 0 auto auto; text-align: center">
+      <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-8659561010253809";
+        /* NearCommentsBox468x60 */
+        google_ad_slot = "0858986716";
+        google_ad_width = 468;
+        google_ad_height = 60;
+      //-->
+      </script>
+      <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+    </div>
+  </section>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    
+
+<script type="text/javascript">
+      var disqus_shortname = 'raducotescu';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://raducotescu.github.com/radu/java-https-rest-services-apache-cxf/';
+        var disqus_url = 'http://raducotescu.github.com/radu/java-https-rest-services-apache-cxf/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/tools-required-for-opening-a-macbook-pro/">Tools required for opening a MacBook Pro</a>
+      </li>
+    
+      <li class="post">
+        <a href="/the-switch-to-mac-from-ubuntu/">Switching to Mac from Ubuntu</a>
+      </li>
+    
+      <li class="post">
+        <a href="/migrating-your-ubuntu-machine-to-a-ssd-drive/">Migrating your Ubuntu machine to a SSD drive</a>
+      </li>
+    
+      <li class="post">
+        <a href="/why-awk-is-better-than-cut/">Why awk is better than cut</a>
+      </li>
+    
+      <li class="post">
+        <a href="/bash-old-kernel-artefacts/">Bash one-liner for removing old kernel artefacts</a>
+      </li>
+    
+  </ul>
+</section>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8659561010253809";
+/* Sidebar250x250 */
+google_ad_slot = "8430472643";
+google_ad_width = 250;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<section>
+  <h1>Latest Tweets</h1>
+    <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <script>
+    new TWTR.Widget({
+      version: 2,
+      type: 'profile',
+      rpp: 5,
+      interval: 30000,
+      width: 250,
+      height: 370,
+      theme: {
+        shell: {
+          background: '#cfcfcf',
+          color: '#ffffff'
+        },
+        tweets: {
+          background: '#e8e8e8',
+          color: '#4b4b4b',
+          links: '#0182eb'
+        }
+      },
+      features: {
+        scrollbar: false,
+        loop: false,
+        live: true,
+        behavior: 'all'
+      }
+    }).render().setUser('raducotescu').start();
+    </script>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/114474556850700711159?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  &copy; 2009 - 2012 - Radu Cotescu -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+</body>
+</html>

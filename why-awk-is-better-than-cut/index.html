@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Radu Cotescu's professional blog</title>
+  <title>Why awk is better than cut - Radu Cotescu's professional blog</title>
   <meta name="author" content="Radu Cotescu">
 
   
-  <meta name="description" content="A passionate g33k sharing his experience about programming, Linux, virtualization and other computer related stuff.">
-  <meta name="keywords" content="radu,cotescu,java,python,ubuntu,linux,oracle,programming,software,engineering">
+  <meta name="description" content="Awk seems to be a better choice for extracting data from files than cut. Check out these examples.">
+  <meta name="keywords" content="awk,cut,bash,script,parse,extract,data,unix,tools">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://raducotescu.github.com/radu">
+  <link rel="canonical" href="http://raducotescu.github.com/radu/why-awk-is-better-than-cut">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -93,158 +93,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/tools-required-for-opening-a-macbook-pro/">Tools Required for Opening a MacBook Pro</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-04T01:45:00+03:00" pubdate data-updated="true">Jun 4<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Last week my final MacBook Pro arrived. Since at Adobe we are forced to encrypt our hard-drives in order to protect our work (in case our machines get stolen) the IT team decided to provide us with SSD drives for our portable computers. The advantages are numerous:</p>
-
-<ul>
-<li><p>improved IO performance (encryption comes with a cost - I really wouldn&#8217;t like to use it on a mechanical drive)</p></li>
-<li><p>reduced power consumption</p></li>
-<li><p>reduced operation noise (only the fans and the optical unit contain moving parts)</p></li>
-<li><p>less dissipated heat</p></li>
-</ul>
-
-
-<p>Because I was in hurry to get the new machine set-up I decided to install the new SSD by myself. After all, it wasn&#8217;t the first time I tore a computer apart. Big mistake&#8230;</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/tools-required-for-opening-a-macbook-pro/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/the-switch-to-mac-from-ubuntu/">Switching to Mac From Ubuntu</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-20T23:39:00+03:00" pubdate data-updated="true">May 20<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When I joined Adobe I was given the chance of choosing between using a Lenovo ThinkPad or a MacBook Pro as my
-development machine. Since I really dislike the design of the ThinkPads and also because I really wanted to try a Mac
-for a longer period of time I accepted the challenge. My previous experiences with a Mac were limited to only a few
-occasions when I had to perform some specific tasks - mostly while dishing Apple and Mac because it took me at least
-twice the time I needed to complete the same tasks on a machine running Ubuntu.</p>
-
-<p>After 10 days of using only the MacBook as my main computer (even at home), I can&#8217;t say that I really miss using Ubuntu.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/the-switch-to-mac-from-ubuntu/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/migrating-your-ubuntu-machine-to-a-ssd-drive/">Migrating Your Ubuntu Machine to a SSD Drive</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-11T23:10:00+03:00" pubdate data-updated="true">May 11<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>SSD drives have finally become affordable and more reliable than they used to be. Partly this was sure helped by the price boost of the traditional hard-disks manufactured in Thailand (I think everybody still reminds the <a href="http://en.wikipedia.org/wiki/2011_Thailand_flood" title="2011 Thailand flood">floods</a> from the summer of 2011). The competition helped the development of innovative solutions and after 4 years since their mass-consumption breakthrough they have managed to become a standard on ultrabooks and premium laptops.</p>
-
-<p>Because the price / GB of the classic mechanical hard-disk was so low (as low as US$0.05 per GB for 3.5 inch drives and US$0.10 per GB for 2.5 inch drives), producers started to offer larger drives for the same money. Unfortunately SSD technologies cannot and probably will not evolve the same way due to memory degradations once the chip size decreases. In particular this led to higher prices for the same disk size, making SSDs more attractive for boot / OS drives instead of plain storage ones.</p>
-
-<p>Migrating a current OS installation usually has to take into consideration that the SSD destination disk might not be able to fully accommodate the previously stored data. The following paragraphs will describe what solutions can be employed in order to successfully migrate an Ubuntu installation (or any other Linux distribution) to a SSD drive.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/migrating-your-ubuntu-machine-to-a-ssd-drive/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/why-awk-is-better-than-cut/">Why Awk Is Better Than Cut</a></h1>
+      <h1 class="entry-title">Why Awk Is Better Than Cut</h1>
     
     
       <p class="meta">
@@ -267,7 +121,7 @@ twice the time I needed to complete the same tasks on a machine running Ubuntu.<
   </header>
 
 
-  <div class="entry-content"><p>I am currently working with some text files from which I have to extract some data. Generally, when you have to do this kind of work on a *nix machine, you use <code>cut</code> or <code>awk</code>. However, even for simple tasks <code>cut</code> is superseded by the mighty <code>awk</code>. Let&#8217;s look at the following examples which are closely related to the data that I&#8217;m working with. Assume we have the following text file:</p>
+<div class="entry-content"><p>I am currently working with some text files from which I have to extract some data. Generally, when you have to do this kind of work on a *nix machine, you use <code>cut</code> or <code>awk</code>. However, even for simple tasks <code>cut</code> is superseded by the mighty <code>awk</code>. Let&#8217;s look at the following examples which are closely related to the data that I&#8217;m working with. Assume we have the following text file:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -349,22 +203,16 @@ twice the time I needed to complete the same tasks on a machine running Ubuntu.<
 
 <p>Happy Bash parsing!</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/bash-old-kernel-artefacts/">Bash One-liner for Removing Old Kernel Artefacts</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Radu Cotescu</span></span>
+
+      
 
 
 
@@ -376,38 +224,115 @@ twice the time I needed to complete the same tasks on a machine running Ubuntu.<
   
 
 
-<time datetime="2011-07-29T14:13:57+03:00" pubdate data-updated="true">Jul 29<span>th</span>, 2011</time>
-        
-      </p>
+<time datetime="2011-08-01T12:45:40+03:00" pubdate data-updated="true">Aug 1<span>st</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/category/code/'>Code</a>, <a class='category' href='/category/linux/'>Linux</a>, <a class='category' href='/category/ubuntu/'>Ubuntu</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
+      <div class="sharing">
+  
+  	<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://raducotescu.github.com/radu/why-awk-is-better-than-cut/" data-via="raducotescu" data-counturl="http://raducotescu.github.com/radu/why-awk-is-better-than-cut/" >Tweet</a>
+  	
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
 
 
-  <div class="entry-content"><p>Since now I have 4 virtual machines to administer for my dissertation project, I have to find ways to do sysadmin stuff as quickly as possible and to concentrate my efforts on software development. If you ever did a kernel update you would know that a kernel upgrade will not remove the old kernel artefacts, specifically the old headers and the Linux image. While this is a good technique for avoiding incompatibilities of some binaries with the new kernel versions, therefore allowing you to test that everything is working as expected, old kernel images occupy an important amount of space (around 256 MB / release). When your system has a limited amount of storage allocated to it, this might become a problem.</p>
+  
+  
+  	<div class="g-plusone" data-size="medium"></div>
+  	
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
 
-<p>The process of removing the unused images requires a few keystrokes and some user input, needing a great deal of attention not to remove the currently running kernel or - in case you are extremely inattentive - all the kernel images from your system. To semi-automate this task, you can use the following Bash one-liner:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get purge <span class="k">$(</span>dpkg -l | grep <span class="s2">&quot;^ii&quot;</span> | awk <span class="s1">&#39;{print $2}&#39;</span> | egrep -e <span class="s2">&quot;^linux-headers-[0-9]|^linux-image-[0-9]&quot;</span> | egrep -v <span class="sb">`</span>uname -r | cut -d<span class="s2">&quot;-&quot;</span> -f1,2<span class="sb">`</span><span class="k">)</span>
-</span></code></pre></td></tr></table></div></figure>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+    
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 
-<p>Run this line only after you have booted into your new kernel, otherwise you&#8217;ll remove the upgrade.</p>
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/bash-old-kernel-artefacts/" title="Previous Post: Bash one-liner for removing old kernel artefacts">&laquo; Bash one-liner for removing old kernel artefacts</a>
+      
+      
+        <a class="basic-alignment right" href="/migrating-your-ubuntu-machine-to-a-ssd-drive/" title="Next Post: Migrating your Ubuntu machine to a SSD drive">Migrating your Ubuntu machine to a SSD drive &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-      <a class="prev" href="/page/2/">&larr; Older</a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <section style="margin-bottom: 30px">
+    <div id="google-ads-comments" style="margin: 0 auto auto; text-align: center">
+      <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-8659561010253809";
+        /* NearCommentsBox468x60 */
+        google_ad_slot = "0858986716";
+        google_ad_width = 468;
+        google_ad_height = 60;
+      //-->
+      </script>
+      <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+    </div>
+  </section>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+    
+
+<script type="text/javascript">
+      var disqus_shortname = 'raducotescu';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://raducotescu.github.com/radu/why-awk-is-better-than-cut/';
+        var disqus_url = 'http://raducotescu.github.com/radu/why-awk-is-better-than-cut/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+  </section>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -495,6 +420,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
   
 </aside>
+
 
     </div>
   </div>

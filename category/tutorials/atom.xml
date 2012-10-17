@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tutorials | Radu Cotescu's professional blog]]></title>
+  <link href="http://raducotescu.github.com/radu/category/tutorials/atom.xml" rel="self"/>
+  <link href="http://raducotescu.github.com/radu/"/>
+  <updated>2012-10-18T00:17:11+03:00</updated>
+  <id>http://raducotescu.github.com/radu/</id>
+  <author>
+    <name><![CDATA[Radu Cotescu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to install Ubuntu Desktop Edition]]></title>
+    <link href="http://raducotescu.github.com/radu/how-to-install-ubuntu-desktop-edition/"/>
+    <updated>2009-06-24T23:00:48+03:00</updated>
+    <id>http://raducotescu.github.com/radu/how-to-install-ubuntu-desktop-edition</id>
+    <content type="html"><![CDATA[<p>This is tutorial number 1 in the series of <a href="http://radu.cotescu.com/linux-tutorials-for-windows-users/">Linux tutorials for Windows users</a>: <strong>How to install Ubuntu Desktop</strong> <strong>Edition</strong>. Even if the process itself is pretty simple (there are only some clicks to be made and a form to complete), there are some things that need to be made clear for the new user and, of course, there are some useful tips. Let's proceed.</p>
+
+<p>The first step is getting your brand new Linux (<strong>Ubuntu</strong>) <code>.iso</code> image that you will burn on a CD that we are gonna use for the install process. To do that, just go to <a href="http://www.ubuntu.com/getubuntu/download">http://www.ubuntu.com/getubuntu/download</a>. Here you will have several download options. For the purpose of this tutorial, choose the <strong>Desktop Edition</strong> tab, click the radio button for <strong>Ubuntu 9.04 Desktop (the latest version)</strong> and then choose the architecture that fits your machine. Throughout this tutorial I will use the 32bit version, but that mustn't stop you from choosing the 64bit version if your machine is able to cope with that. Choose the nearest mirror and then wait for the download to complete. Check that the md5 hash of the <code>.iso</code> file is the same with the one provided by Canonical <a href="https://help.ubuntu.com/community/UbuntuHashes">here</a>. More details on how to obtain the md5 hash for your file are <a href="https://help.ubuntu.com/community/HowToMD5SUM">here</a>. Burn it!</p>
+
+<p>Here comes the nice part. Set the boot options from BIOS so that your PC would boot first from the optical drive. Insert your new Ubuntu CD and restart. From now on I will explain the process using screenshots. After Ubuntu boots your system, you will be asked to choose your language for the next screens.</p>
+
+<p><img src="/uploads/wpuploads/2009/06/Ubuntu-boot-screen.png" alt="Ubuntu boot screen" /></p>
+
+<p>On the next screen you are presented with the disc options:</p>
+
+<p><img src="/uploads/wpuploads/2009/06/Ubuntu-disc-options.png" alt="Ubuntu disc options" /></p>
+
+<p>Let me explain them a bit</p>
+
+<ol>
+<li><p><strong>Try Ubuntu without any change to your computer</strong> means that you will boot your Linux entirely from the CD, without any information written to your hard disk. This option is usually for people who want to just test Ubuntu but I must warn you that because your OS will be run from an optical drive, responsiveness will be affected. Also you cannot install packages, therefore this option will not provide you the full functionality of Ubuntu.</p></li>
+<li><p><strong>Install Ubuntu</strong> is a self descriptive option that we will consider in the next part.</p></li>
+<li><p><strong>Check disc for defects</strong> is an useful option, especially if you have downloaded an <code>.iso</code> file and burn it on a CD as the download may provide a corrupted file or the burn process might not be perfect. It actually compares md5 hashes of important files with hashes stored on the CD, in a file.</p></li>
+<li><p><strong>Test memory</strong> is a way to assure that your RAM works ok.</p></li>
+<li><p><strong>Boot from first hard disk</strong> is the way to quit the Ubuntu disc menu and go to your previous OS.</p></li>
+</ol>
+
+
+<p>The other options (the <strong>F</strong> buttons) are pretty easy to understand. <strong>Modes</strong> and <strong>Other Options </strong>provide more advanced info that is not needed now. So we want to <strong>install Ubuntu</strong>. This thing is done in 7 easy steps, but rest assured, I will help you to get it done.</p>
+
+<p>At the <strong>Welcome screen</strong> you are required to choose the language for your system.</p>
+
+<p><img src="/uploads/wpuploads/2009/06/Ubuntu-welcome.png" alt="Ubuntu welcome" /></p>
+
+<p>Then you should choose your location and set your timezone. This thing also automatically sets the servers for your updates so it's better to pick your real location so that you can benefit of the full speed of this process of keeping your system up to date.</p>
+
+<p><img src="/uploads/wpuploads/2009/06/Ubuntu-time-and-location.png" alt="Ubuntu time and location" /></p>
+
+<p>Now it's time to set your primary keyboard layout. Other layouts can be added later.</p>
+
+<p><img src="/uploads/wpuploads/2009/06/Ubuntu-keyboard-layout.png" alt="Ubuntu keyboard layout" /></p>
+
+<p>Now comes the more challenging part of partitioning your hard disk for Linux. For this tutorial I am using a virtual machine which has no other operating system on it. If you are installing Ubuntu in a dual boot configuration (meaning with other OS on the machine), Ubuntu will detect the other partitions and will still ask you how would you like to partition the space. If you have another OS on the machine, Ubuntu will present you three options for partitioning your hard drive:</p>
+
+<ol>
+<li><p><strong>Use the entire disk</strong> (this will wipe off your other OS);</p></li>
+<li><p><strong>Specify your partitions manually</strong> (the thing that we will do, even if it's a more advanced thing);</p></li>
+<li><p><strong>Guided install / Install them side by side </strong>(this will try to install Linux on the partition that has the most free space, by creating another<strong> </strong>Linux partition from the free space; this option is available only if there is another OS on the machine).</p></li>
+</ol>
+
+
+<p>We will pick option number 2.</p>
+
+<p><img src="/uploads/wpuploads/2009/06/Ubuntu-disk-space.png" alt="Ubuntu disk space" /></p>
+
+<p>Linux has two important partition types. The first one is called <strong>swap</strong> (guess where this name comes from?!) and the other one is the basic Linux File System (ext2, ext3 or ext4 generally) which is used for data. If you would like to use the hibernating function of your new Linux system, then your swap partition must be the same size as your RAM. For this machine I have set a 512 MB RAM size so, in consequence, the swap partition will be set at 512 MB. Then you must specify the partitions for your data.</p>
+
+<p>From now on you must know some basic stuff about <em>nix systems (Unix and Linux). Every device on a </em>nix machine is handled as a file / folder. Therefore the concept of partition is a bit different from the Windows sense. Here there are no drive letters, but devices like /dev/hda (or hdb, hdc, sda sdb - the final letter indicates you that there are more than one hard disk in the machine), or devices like /dev/hda1 (hda2, hda3, sda 1, sda2 - where the number represents the partition on a physical hard disk). HD_letter<em> stands for IDE drives while SD_letter</em> stands for SATA drives.</p>
+
+<p>Because of the fact that everything is a file / folder, you can set your different folders to be mounted from whatever partition you like. The term mount (unmount) designates the operation of attaching (deattaching) a folder (location) to the system. There are some important locations in Linux / Unix that should be explained:</p>
+
+<p><strong>/</strong>
+this is the parent of all files and folders (devices, partitions, etc.) on a Linux machine. It's called root. <strong>Do not confuse it with the user root!</strong></p>
+
+<p><strong>/bin</strong>
+the <strong>bin</strong> directory contains several useful commands that are used by both the system administrator as well as non-privileged users. This directory usually contains the shells like bash, csh etc. as well as much used commands like cp, mv, rm, cat, ls. There also is /usr/bin, which contains other user binaries. These binaries on the other hand are not essential for the user. The binaries in /bin however, a user cannot do without.</p>
+
+<p><strong>/boot</strong>
+this directory contains the system.map file as well as the Linux kernel. grub (the boot manager) places the boot sector backups in this directory.</p>
+
+<p><strong>/dev</strong>
+This is a very interesting directory that highlights one important characteristic of the Linux filesystem stated earlier - everything is a file or a directory.</p>
+
+<p><strong>/etc</strong>
+This directory contains all the configuration files for your system, usually in the form of <code>_filename_.conf</code></p>
+
+<p><strong>/home</strong>
+Linux is a multi-user environment so each user is also assigned a specific directory which is accessible only to them and the system
+administrator. These are the user home directories, which can be found under <code>/home/username</code>. This directory also contains the user specific settings for programs.</p>
+
+<p><strong>/lib</strong>
+This contains all the shared libraries that are required by system programs. Windows equivalent to a shared library would be a DLL file.</p>
+
+<p><strong>/lost+found</strong>
+Linux should always go through a proper shutdown. Sometimes your system might crash or a power failure might take the machine down. Either way, at the next boot, a lengthy file system check using <code>e2fsck</code> will be done. <code>e2fsck</code> will go through the system and try to recover any corrupt files that it finds. The result of this recovery operation will be placed in this directory. The files recovered are not likely to be complete or make much sense but there always is a chance that something worthwhile is recovered.</p>
+
+<p><strong>/mnt</strong>
+This is a generic mount point under which you mount your file systems or devices. Mounting is the process by which you make a file system available to the system. After mounting your files will be accessible under the mount-point. This directory usually contains mount points or sub-directories where you mount your floppy and your CD. You can also create additional mount-points here if you want. There is no limitation to creating a mount-point anywhere on your system but convention says that you do not litter your file system with mount-points.</p>
+
+<p><strong>/opt</strong>
+This directory contains all the software and add-on packages that are not part of the default installation. Again, this directory is not used very often as it's mostly a standard in Unix installations.</p>
+
+<p><strong>/proc</strong>
+This is a special directory on your system that identifies all your processes in real time.</p>
+
+<p><strong>/root</strong>
+We talked about user home directories earlier and well this one is the home directory of the user root. This is not to be confused with the system root, which is directory at the highest level in the file system.</p>
+
+<p><strong>/tmp</strong>
+This directory contains mostly files that are required temporarily. Many programs use this to create lock files and for temporary storage of data. On some systems, this directory is cleared out at boot or at shutdown.</p>
+
+<p><strong>/usr</strong>
+This is one of the most important directories in the system as it contains all the user binaries. X and its supporting libraries can be found here. User programs like telnet, ftp etc are also placed here. /usr/doc contains useful system documentation. <code>/usr/src/linux</code> contains the source code for the Linux kernel.</p>
+
+<p><strong>/var</strong>
+This directory contains spooling data like mail and also the output from the printer daemon. The system logs are also kept here in
+<code>/var/log/messages</code></p>
+
+<p>After all this, you must now choose your mount points and to create your partitions. I suggest a minimum 3 partition style: one is <strong>swap</strong>, one is <strong>/</strong> and another is <strong>/home</strong> (in case your systems fails bad, you still have your user files in the <code>/home/_yourusername_</code> folder on another partition than the OS) . If your hard disk is empty, you must first create a new partition table and then the partitions. Else you just need to create the partitions. You have the option of choosing between different types of partitions (primary or logical - more about it <a href="http://en.wikipedia.org/wiki/Disk_partitioning">here</a>), different file systems and mount points. If you use the model I have presented earlier, your hard disk should look like this (minus the partition sizes):</p>
+
+<p><img src="/uploads/wpuploads/2009/06/Ubuntu-partitions.png" alt="Ubuntu partitions" /></p>
+
+<p>I recommend using a minimum 4GB partition for the <strong>/</strong> folder and using the <strong>ext3</strong> file system for your partitions. <strong>ext2</strong> doesn't have journaling, <strong>ext4</strong> isn't yet completly bug free but it will be at the next release (9.10) and <strong>reiserFS</strong> (the direct competitor of <strong>ext3</strong>) is a bit slow at booting, the performance being comparable with the one of <strong>ext3</strong> afterwards.</p>
+
+<p>Then Ubuntu would like to know more about you:</p>
+
+<p><img src="/uploads/wpuploads/2009/06/Ubuntu-who-are-you.png" alt="Ubuntu who are you" /></p>
+
+<p>For obvious security reasons I recommend you to check the <strong>Require a password to log in</strong> radio button.</p>
+
+<p>You are ready to install Ubuntu. The 6th step was skipped as there wasn't another OS on the machine. If it were, Ubuntu would have asked you if you would have liked to migrate some of the settings.</p>
+
+<p><img src="/uploads/wpuploads/2009/06/Ubuntu-ready-to-install.png" alt="Ubuntu ready to install" /></p>
+
+<p>Here we go:</p>
+
+<p><img src="/uploads/wpuploads/2009/06/Ubuntu-installing.png" alt="Ubuntu installing" /></p>
+
+<p>After the install is done remove the disk from the optical unit, reboot your machine and log in to your brand new Ubuntu machine. I will let Ubuntu surprise you with its desktop.</p>
+
+<p>You will see by playing with your new OS that you do not need to install drivers unless there are some proprietary ones available for your hardware (Nvidia graphics usually) and that you have plenty of software installed from the start. I dare you to study your Ubuntu desktop. The next tutorial will handle <strong>how to configure your fresh installed Ubuntu</strong>: connecting to the internet using other methods than DHCP, installing different software packages, tuning up the system for more speed, profiling your machine and many others that should be done to enjoy style, performance and stability.</p>
+
+<p>Kudos to you for following this tutorial!</p>
+]]></content>
+  </entry>
+  
+</feed>

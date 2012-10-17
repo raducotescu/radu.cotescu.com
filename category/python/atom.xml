@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Python | Radu Cotescu's professional blog]]></title>
+  <link href="http://raducotescu.github.com/radu/category/python/atom.xml" rel="self"/>
+  <link href="http://raducotescu.github.com/radu/"/>
+  <updated>2012-10-18T00:17:11+03:00</updated>
+  <id>http://raducotescu.github.com/radu/</id>
+  <author>
+    <name><![CDATA[Radu Cotescu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Put your latest tweet as Pidgin's status on Ubuntu (Linux)]]></title>
+    <link href="http://raducotescu.github.com/radu/put-your-latest-tweet-as-pidgin-status-on-ubuntu-linux/"/>
+    <updated>2009-12-22T01:27:37+02:00</updated>
+    <id>http://raducotescu.github.com/radu/put-your-latest-tweet-as-pidgin-status-on-ubuntu-linux</id>
+    <content type="html"><![CDATA[<p>Twitter became a trend nowadays when almost everything important is being found out via this social-networking micro-blogging service. And now with Google's real time search-results that includes tweets too, Twitter is recognised as a powerful platform by even the Internet's giant. Since your (and mine too) online presence might include a few tweets a day, in a moment of total boredom, I decided to write a simple Python script that would update your Pidgin's status with the latest tweet from your account.</p>
+
+<p>Using the same principle as the script I wrote for <a href="http://radu.cotescu.com/python-and-pidgin-status-on-ubuntu-linux/">updating Pidgin's status with a random post from your blog's feed</a>, this new script uses as well a feed (the one provided by Twitter to every user), only that this time only the latest tweet will be set as status. Replies are ignored and therefore if your latest Twitter interaction is a reply, the script will search for the latest tweet which is <em>doh</em> not a reply. Because hash-tags represented a problem when trying to set Pidgin's status the hash signs (#) are eliminated.</p>
+
+<p>To properly use the script, the following steps should be followed:</p>
+
+<ol>
+<li><p>download the script from <a href="https://github.com/raducotescu/pidgin-status-scripts/tarball/master">here</a> and save it to your <code>~/bin</code> directory (if the directory doesn't exist, create it)</p></li>
+<li><p>make it executable</p>
+
+<pre><code> chmod +x twitterize_pidgin_status.py
+</code></pre></li>
+<li><p>setting your DBUS session parameters requires exporting some variables to your environment. You can use the included <code>export_x_info.sh</code> script by saving it to the same <code>~/bin</code> directory; make it executable and add it via <em>System – Preferences – Startup Applications</em> to the list of programs that start at log in. This way you’ll always be sure the needed variables are available;</p></li>
+<li><p>edit your crontab to make the script check for updates as often as you wish (every 5 minutes in this example)</p>
+
+<pre><code> SHELL=/bin/bash
+ DISPLAY=:0.0
+ */5 * * * * source ~/.Xdbus; ~/bin/twitterize_pidgin_status.py your_twitter_feed
+</code></pre></li>
+</ol>
+
+
+<p>Now the only thing that remains to do is to tweet. Have fun!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Python and Pidgin's status on Ubuntu (Linux)]]></title>
+    <link href="http://raducotescu.github.com/radu/python-and-pidgin-status-on-ubuntu-linux/"/>
+    <updated>2009-08-26T18:01:43+03:00</updated>
+    <id>http://raducotescu.github.com/radu/python-and-pidgin-status-on-ubuntu-linux</id>
+    <content type="html"><![CDATA[<p><a href="http://motane.lu">Tudor</a> has found a <a href="http://blog.motane.lu/2009/08/21/advertising-blog-entries-on-pidgins-status/">better solution</a> to advertise one's blog posts with the help of Pidgin and a little bit of Python. I did argue with him a bit regarding the number of requests made (you can see that in the comments on his blog post) but finally I would agree that his solution was better than mine, only that I felt the need to improve it a bit. This still needs to set DBUS session parameters at log in time, and thanks to <a href="http://earlruby.org">Earl Ruby</a> this can be done easily too.</p>
+
+<p>The script is pretty simple and I made it write a log to <code>stdout</code>, which with the help of <code>cron</code> can be piped to any file you want. Knock yourself out:</p>
+
+<p>``` python</p>
+
+<h1>!/usr/bin/python</h1>
+
+<h1>pidgin_status_change.py</h1>
+
+<p>"""                                                                   <br/>
+Handy script for changing Pidgin's status with a post from a feed passed as argument.
+Usage:</p>
+
+<pre><code>    python pidgin_status_change.py your_feed_link                                
+</code></pre>
+
+<p>Authors:</p>
+
+<pre><code>    Tudor Barbu,    http://motane.lu
+    Radu Cotescu,   http://radu.cotescu.com
+</code></pre>
+
+<p>"""</p>
+
+<p>import commands
+import feedparser
+import random  <br/>
+import os
+import sys
+import time</p>
+
+<h1>feed url</h1>
+
+<p>FEED = []</p>
+
+<p>def setFeed():</p>
+
+<pre><code>    if sys.argv is not None and len( sys.argv ) &lt; 3:
+            global FEED
+            FEED = sys.argv[1]
+</code></pre>
+
+<p>def changeStatus():</p>
+
+<pre><code>    if len( FEED ) is not None:
+            if commands.getoutput('pidof pidgin') is not None:
+                    feed = feedparser.parse( FEED )
+                    index = random.randint( 0, len( feed['items'] ) - 1 )
+                    print time.strftime("%d-%m-%Y, %H:%M:%S", time.localtime())
+                    print """\tStatus:\n\t%s\n\t%s""" % ( feed['items'][index].title.encode("utf-8"), feed['items'][index].link.encode("utf-8") )
+                    status = 'purple-remote "setstatus?status=available&amp;message=%s %s"' % ( feed['items'][index].title, feed['items'][index].link )
+                    os.system(status.encode("utf-8"))
+</code></pre>
+
+<p>setFeed()
+changeStatus()</p>
+
+<h1>EOF</h1>
+
+<p>```</p>
+
+<p>Setting your DBUS session parameters requires exporting some variables to your environment. Take the script below and add it via <em>System - Preferences - Startup Applications</em> to the list of programs that start at log in. This way you'll always be sure the needed variables are available.</p>
+
+<p>``` bash</p>
+
+<h1>!/bin/bash</h1>
+
+<h1>Export the dbus session address on startup so it can be used by cron</h1>
+
+<p>touch $HOME/.Xdbus
+chmod 600 $HOME/.Xdbus
+env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.Xdbus
+echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.Xdbus</p>
+
+<h1>Export XAUTHORITY value on startup so it can be used by cron</h1>
+
+<p>env | grep XAUTHORITY >> $HOME/.Xdbus
+echo 'export XAUTHORITY' >> $HOME/.Xdbus
+```</p>
+
+<p>Then you only need to set <code>cron</code> to do the job:</p>
+
+<p><code>bash
+SHELL=/bin/bash
+DISPLAY=:0.0
+*/5 * * * * source ~/.Xdbus; /home/radu/scripts/pidgin_python/pidgin_status_change.py http://feeds2.feedburner.com/raducotescu &gt;&gt; /home/radu/crontab.log
+</code></p>
+
+<p>You can download everything from <a href="https://github.com/raducotescu/pidgin-status-scripts/tarball/master">here</a>.</p>
+
+<p>Happy blogging!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Python programmers, unite!]]></title>
+    <link href="http://raducotescu.github.com/radu/python-programmers-unite/"/>
+    <updated>2009-02-12T10:26:19+02:00</updated>
+    <id>http://raducotescu.github.com/radu/python-programmers-unite</id>
+    <content type="html"><![CDATA[<p><a href="http://python.org"><img src="http://www.python.org/community/logos/python-logo-master-v3-TM.png?w=300" alt="Python Logo" /></a>I have recently discovered <a href="http://python.org">Python</a> and by recently I mean a few months (3 and a half). The discovery has been made after I was supposed to do a web application for a course at my faculty and it has been based on the fact that I wanted another programming language that would do the trick besides PHP. The only reason for not choosing PHP is its ugly syntax (mixing code with HTML) and the fact that everybody uses it. That might not be a very good criteria to chose from (because of the community support) but I am known to be stubborn as a mule. I have also discovered <a href="http://www.djangoproject.com">Django</a>, a web framework written in Python. The project went smooth and everything turned fine.</p>
+
+<p>My pal <a href="http://motane.lu">Tudor</a> has become a ZCE (Zend Certified Engineer) 2-3 weeks ago and he is very proud of that. He is what some of you may call a PHP guru, working for a great outsourcing company, <a href="http://www.zitec.com/zitec-team.html">Zitec</a> (working as of May 2009 at <a href="http://www.ninespices.com/">Ninespices</a>). We tend to sting ourselves from time to time with geeky remarks like "Python's better than your sucky PHP" or "Gaython is okay for you" but after our egos have cooled down, Tudor said something true and realistic: Python doesn't have a company that invests marketing and money behind it, like Zend does for PHP.</p>
+
+<p>Of course, <a href="http://www.python.org/about/success/usa/">Python is used by NASA</a>, <a href="http://www.google.com">Google</a> for Gmail, Google Groups and Google Maps, <a href="http://www.yahoo.com">Yahoo</a> for Yahoo Groups, in  <a href="http://en.wikipedia.org/wiki/Houdini_%28software%29">Houdini</a>, <a href="http://en.wikipedia.org/wiki/Maya_%28software%29">Maya</a>, <a href="http://en.wikipedia.org/wiki/Softimage_XSI">Softimage XSI</a>, <a href="http://en.wikipedia.org/wiki/TrueSpace">TrueSpace</a>, <a href="http://en.wikipedia.org/wiki/Poser">Poser</a>, <a href="http://en.wikipedia.org/wiki/Modo_%28software%29">Modo</a>, <a href="http://en.wikipedia.org/wiki/Nuke_%28software%29">Nuke</a> and <a href="http://en.wikipedia.org/wiki/Blender_%28software%29">Blender</a>. It is also used in <a href="http://en.wikipedia.org/wiki/GIMP">GIMP</a>, <a href="http://en.wikipedia.org/wiki/Krita">Krita</a>, <a href="http://en.wikipedia.org/wiki/Inkscape">Inkscape</a>, <a href="http://en.wikipedia.org/wiki/Scribus">Scribus</a> and <a href="http://en.wikipedia.org/wiki/Paint_Shop_Pro">Paint Shop Pro</a>, it ships with most Linux distros, NetBSD, OpenBSD, MacOSX. Ananconda for <a href="http://www.redhat.com">Red Hat</a> and <a href="http://www.fedoraproject.org">Fedora</a> is written in it and so is Portage for <a href="http://www.gentoo.org/">Gentoo</a>, it's even ported to <a href="http://www.symbian.com/index.asp">Symbian</a> and is in use by <a href="http://www.python.org/about/success/">many many others</a>. But that doesn't suffice!</p>
+
+<p>Java has Sun Microsystems. C# has Microsoft for backup. Python needs somebody who can invest in it more than just using it for great projects and writing a standard. I mean certifications, an official IDE (even though there are quite a few IDEs that support it like Eric, Quanta, Eclipse with the PyDev plug-in and others), manuals (not just a collection of docs; there is actually a <a href="http://docs.python.org/tutorial/">well written tutorial</a>) and literature around it to support its growth in popularity. Its coolness itself won't do the trick because in order for somebody to write in Python, they must know about it in the first place.</p>
+
+<p>I will not list here all the brilliant things that Python has (and I must assure you that there are many). This is not my role. I just want to signal a problem that can be resolved easily and of which results we (programmers around the world) can all benefit from. As the title says, Python programmers, unite! Let's do something to grow <a href="http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html">Python's popularity</a>, let's start building a certification system, let's make it attractive to companies (both IT ones and potential customers). We have a lot of advantages over the competition. We just need to use them in an intelligent manner.</p>
+
+<p>I hope that my cry will be heard!</p>
+]]></content>
+  </entry>
+  
+</feed>
