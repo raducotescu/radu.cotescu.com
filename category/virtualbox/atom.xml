@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: VirtualBox | Radu Cotescu's professional blog]]></title>
+  <link href="http://radu.cotescu.com/category/virtualbox/atom.xml" rel="self"/>
+  <link href="http://radu.cotescu.com/"/>
+  <updated>2012-11-28T12:11:22+02:00</updated>
+  <id>http://radu.cotescu.com/</id>
+  <author>
+    <name><![CDATA[Radu Cotescu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu 10.10 and VirtualBox Guest Additions]]></title>
+    <link href="http://radu.cotescu.com/ubuntu-virtualbox-additions/"/>
+    <updated>2010-10-12T12:00:06+03:00</updated>
+    <id>http://radu.cotescu.com/ubuntu-virtualbox-additions</id>
+    <content type="html"><![CDATA[<p>Two days ago Ubuntu 10.10 was released. Since I don't want to upgrade yet to the new release - I am currently running 10.04 - I decided to try Maverick (the code name for the latest release) in a VirtualBox virtual machine.</p>
+
+<p>The installation process went fine (it's just point and click) and I do like the new wizard's screens. Usually the next step for any virtual machine would be to install VirtualBox Guest Additions in order to be able to use higher resolutions, mouse integration, seamless integration and all the other geeky goodies. From my previous experiences, to install the Guest Additions into a virtual guest, one was supposed to click on <em>Devices » Install Guest Additions...</em> in VirtualBox's guest window and then to launch the autorun script from the virtual CD. Well, that used to work until now.</p>
+
+<p>For Ubuntu 10.10 the process has to be slightly altered for a successful installation of the additions. This means that once you install Ubuntu in your VM you have to make sure that two other packages are installed in your guest before you use the instructions provided in the previous paragraph. The packages are <code>build-essential</code> and the linux headers for your running kernel. To install these two packages the quickest way would be to open a terminal (the GUI alternatives would be Ubuntu Software Centre and Synaptic Package Manager, but it will take you longer) and issue the following commands:</p>
+
+<p><code>bash
+sudo apt-get update
+sudo apt-get install build-essential linux-headers-`uname -r`
+</code></p>
+
+<p>Remember that <em><strong>these two packages have to be installed in your guest</strong></em>. Afterwards you proceed with the usual way of installing the additions.</p>
+
+<p>Have fun!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using VirtualBox for virtualizing servers]]></title>
+    <link href="http://radu.cotescu.com/virtualbox-virtual-servers/"/>
+    <updated>2010-05-27T01:07:56+03:00</updated>
+    <id>http://radu.cotescu.com/virtualbox-virtual-servers</id>
+    <content type="html"><![CDATA[<p><a href="http://virtualbox.org"><img src="/uploads/wpuploads/2010/05/vbox-300x225.png" alt="Oracle VirtualBox" /></a>A considerable amount of my diploma project runs on several virtual machines, due to the lack of multiple physical machines required for the job. Of course, <a href="http://radu.cotescu.com/geeks-and-their-computers/">Riker</a> isn't tailored for production regarding this project, but it was built specifically to allow me to develop the code without restrictions. For a load under 10 users I think it would do the job quite okay. You might be asking yourself what kind of project it is if an Intel Core i7 930 processor couldn't handle the job. I'm not going to tell you... Yet.</p>
+
+<p>Because of the way <a href="http://radu.cotescu.com/category/vitualization/vmware/">VMware Server</a> works on the last kernels from Ubuntu this tool couldn't have offered me the stability and performance I need. And because I really like to use my graphics card to decode HD content, Xen or VMware ESXi weren't an option either. What was left? VirtualBox is made for desktop virtualization. Still, the ease of use of this product and the fact that it never ever failed for my needs made me actually consider it could be up for the job. Of course, the only problem I had was daemonizing it somehow so that I could run the virtual machines without necessarily being logged in. It actually crossed my mind a few times to write some scripts which would rely on the CLI tools that VirtualBox provides, but the lack of time always made me think twice before this.</p>
+
+<p>At some point in time though, I discovered <a href="http://vboxtool.sourceforge.net/">VBoxTool</a>, which coincidentally is nothing more than a collection of wrapper scripts written in BASH which help you daemonize the hypervisor. How cool is that? Provided that you set up a configuration file and add an init script to the desired runlevels (all this by following proper written explanations directly from the author), this "facade framework" (design pattern pun intended) will automatically start/resume the desired virtual machines and will shutdown/suspend them together with your host. I had to modify about four lines of code to alter a bit the behaviour for shutdown so that my VMs would always get suspended instead of turned off, but that's almost nothing.</p>
+
+<p>The VMs that are on most of the time both run Ubuntu Server 10.04 64bit: one with 2 GB of RAM and Oracle 11G, the other with 128 MB hosting an internal repository under <a href="http://en.wikipedia.org/wiki/Nginx">nginx</a> (which is a <em>very</em> fast web server). They both work great and my host doesn't at all feel sluggish. Actually all these three machines (host + 2 guests) run incredibly well. The maximum sustained throughput I achieved using the virtualized repository was 60 MB/s which is pretty impressive. I haven't tried yet to test the DB engine with a consistent load (a great number of queries directed to it simultaneously) but I will get that chance near the end of June when I'll perform some load testing on my application.</p>
+
+<p>By the way, nine days ago VirtualBox 3.2 has been released (the first release of VB since Oracle acquired Sun) and a bunch of <a href="http://www.virtualbox.org/wiki/Changelog">new features</a> have seen daylight. Check it out.</p>
+
+<p>Considering that there's a reliable way of running virtualized servers into a daemonized VirtualBox, do you still want to puzzle yourself with VMware Server's erratic behaviour?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[VirtualBox USB support]]></title>
+    <link href="http://radu.cotescu.com/virtualbox-usb-support/"/>
+    <updated>2009-07-31T21:44:03+03:00</updated>
+    <id>http://radu.cotescu.com/virtualbox-usb-support</id>
+    <content type="html"><![CDATA[<p>Recently I became a fan of VirtualBox, the virtualization platform from Sun Microsystems. It's robust, it has an extremely small memory foot-print comparing it to other similar virtual managers and it has some great features. You can find more about it on its <a href="http://www.virtualbox.org/">homepage</a>.</p>
+
+<p>Yesterday I have updated VirtualBox from 2.2.4 to 3.1. Unfortunately, the USB support failed to work despite the fact that I did install VirtualBox Guest Additions to my guest machines. The solution to fix it is pretty simple:</p>
+
+<ol>
+<li><p>add your user to the <code>vboxusers</code> group:</p>
+
+<pre><code> useradd -G vboxusers yourusername
+</code></pre></li>
+<li><p>check the group id (the number that appears in the output):</p>
+
+<pre><code> grep vboxusers /etc/group
+</code></pre></li>
+<li><p>add the following line in <code>/etc/fstab</code> (you need <code>sudo</code> access):</p>
+
+<pre><code> none /proc/bus/usb usbfs devgid=xxx,devmode=664 0 0
+</code></pre>
+
+<p>where <em>xxx</em> stands for the group id</p></li>
+<li><p>remount all the devices in <code>fstab</code></p>
+
+<pre><code> sudo mount -a
+</code></pre>
+
+<p>or if this doesn't work simply reboot your machine.</p></li>
+</ol>
+
+
+<p>Afterwards all should work like a charm.</p>
+]]></content>
+  </entry>
+  
+</feed>

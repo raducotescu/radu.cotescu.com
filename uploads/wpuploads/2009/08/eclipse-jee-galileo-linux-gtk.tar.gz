@@ -1,0 +1,185 @@
+7974
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Eclipse downloads - mirror selection</title><meta name="author" content="Denis Roy" />
+	<meta name="keywords" content="" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="/eclipse.org-common/yui/2.6.0/build/reset-fonts-grids/reset-fonts-grids.css" />
+	<link rel="stylesheet" type="text/css" href="/eclipse.org-common/yui/2.6.0/build/menu/assets/skins/sam/menu.css" />
+	<link rel="stylesheet" type="text/css" href="/eclipse.org-common/themes/Nova/css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="/eclipse.org-common/themes/Nova/css/layout.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/eclipse.org-common/themes/Nova/css/header.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/eclipse.org-common/themes/Nova/css/footer.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/eclipse.org-common/themes/Nova/css/visual.css" media="screen" />
+	<!--[if IE]> 	<link rel="stylesheet" type="text/css" href="/eclipse.org-common/themes/Nova/css/ie_style.css" media="screen"/> <![endif]-->
+	<!--[if IE 6]> 	<link rel="stylesheet" type="text/css" href="/eclipse.org-common/themes/Nova/css/ie6_style.css" media="screen"/> <![endif]-->
+	<!-- Dependencies --> 
+	<!-- Source File -->
+	</head>
+
+<body>
+	<div id="novaWrapper">		<div id="clearHeader">
+			<div id="logo">
+					<div id="promotion">
+	<a href="/helios/friends.php"><img src="/home/promotions/friends-helios/promo.jpg" alt="Eclipse.org"/></a>
+	</div>
+			</div>
+			<div id="otherSites">
+				<div id="sites">
+				<ul id="sitesUL">
+					<li><a href='http://marketplace.eclipse.org'><img alt="Eclipse Marketplace" src="http://dev.eclipse.org/custom_icons/marketplace.png"/>&nbsp;<div>Eclipse Marketplace</div></a></li>
+					<li><a href='http://live.eclipse.org'><img alt="Eclipse Live" src="http://dev.eclipse.org/custom_icons/audio-input-microphone-bw.png"/>&nbsp;<div>Eclipse Live</div></a></li>
+		    		<li><a href='https://bugs.eclipse.org/bugs/'><img alt="Bugzilla" src="http://dev.eclipse.org/custom_icons/system-search-bw.png"/>&nbsp;<div>Bugzilla</div></a></li>
+		    		<li><a href='http://www.eclipse.org/forums/'><img alt="Forums" src="http://dev.eclipse.org/large_icons/apps/internet-group-chat.png"/>&nbsp;<div>Eclipse Forums</div></a></li>
+		    		<li><a href='http://www.planeteclipse.org/'><img alt="Planet Eclipse" src="http://dev.eclipse.org/large_icons/devices/audio-card.png"/>&nbsp;<div>Planet Eclipse</div></a></li>
+		    		<li><a href='http://wiki.eclipse.org/'><img alt="Eclipse Wiki" src="http://dev.eclipse.org/custom_icons/accessories-text-editor-bw.png"/>&nbsp;<div>Eclipse Wiki</div></a></li>
+		    		<li><a href='http://portal.eclipse.org'><img alt="MyFoundation Portal" src="http://dev.eclipse.org/custom_icons/preferences-system-network-proxy-bw.png"/><div>My Foundation Portal</div></a></li>
+		    	</ul>
+		    	</div>
+			</div>		
+		</div>
+
+	<div id="header">			
+		<div id="menu">
+			<ul>
+						<li><a href="/" target="_self">Home</a></li> 
+			<li><a href="/downloads/" target="_self">Downloads</a></li> 
+			<li><a href="/users/" target="_self">Users</a></li> 
+			<li><a href="/membership/" target="_self">Members</a></li> 
+			<li><a href="/committers/" target="_self">Committers</a></li> 
+			<li><a href="/resources/" target="_self">Resources</a></li> 
+			<li><a href="/projects/" target="_self">Projects</a></li> 
+			<li><a href="/org/" target="_self">About Us</a></li> 
+				</ul>
+		</div>
+
+		<div id="search">
+				<form action="http://www.google.com/cse" id="searchbox_017941334893793413703:sqfrdtd112s">
+			 	<input type="hidden" name="cx" value="017941334893793413703:sqfrdtd112s" />
+		  		<input id="searchBox" type="text" name="q" size="25" />
+		  		<input id="searchButton" type="submit" name="sa" value="Search" />
+				</form>
+			<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_017941334893793413703%3Asqfrdtd112s&lang=en"></script>			
+		</div>
+	</div>
+		<div id="novaContent" class="faux">		<br style="clear:both;height:1em;"/>
+	<div id="leftcol">
+<ul id="leftnav">
+<li class="separator"><a class="separator" href="/downloads/">
+				Downloads Home<img src="/eclipse.org-common/themes/Nova/images/separator.png"/></a></li>
+<li><a href="http://build.eclipse.org/technology/phoenix/torrents/" target="_self">Bit Torrents</a></li>
+<li><a href="index_project.php" target="_self">By project</a></li>
+<li><a href="index_topic.php" target="_self">By topic</a></li>
+<li><a href="http://wiki.eclipse.org/CVS_Howto" target="_self">Source code</a></li>
+<li><a href="http://www.eclipse.org/downloads/packages/" target="_self">More Packages</a></li>
+</ul>
+	<style> form { display:inline; }</style>
+		<br/><br/>
+		<div style="padding-left:10px;">
+		<h3>Give Back to Eclipse</h3>
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="7577704">
+			<input type="image" src="http://www.eclipse.org/friends/images/donate5.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="11342083">
+			<input type="image" src="http://www.eclipse.org/friends/images/donate15.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="11342063">
+			<input type="image" src="http://www.eclipse.org/friends/images/donate25.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+		<br/>
+		<a href="/donate/">Donate $35 or more and Become a Friend of Eclipse!</a>
+		<img src="http://www.eclipse.org/friends/images/donateHeader.png"/>		
+		<p style="padding:5px 0px;font-size:10px;color:#888">The Eclipse Foundation is a not-for-profit organization, not a charitable organization, so we are unable to provide charitable tax receipts.<br>Amounts shown are in US dollars.</p>
+		</div>
+	
+</div>
+	<style> .filename { color:#000; } .distrologo { padding-right: 15px; } </style>
+<div id="midcolumn">
+	<h1>Eclipse downloads - mirror selection</h1>
+	<p> All downloads are provided under the terms and conditions of the <a href="/legal/epl/notice.php">Eclipse Foundation  
+Software User Agreement</a> unless otherwise specified.<br /><br />
+			<font size="+1"><b>Download</b> <span class="filename">eclipse-jee-galileo-linux-gtk.tar.gz</span> <b>from:</b></font><br /><br />
+	<a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://www.gtlib.gatech.edu/pub/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=337"><img align="left" src="http://dev.eclipse.org/huge_icons/actions/go-bottom.png" alt="Download" /></a>
+	<a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://www.gtlib.gatech.edu/pub/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=337">[United States] Georgia Tech Software Library (http)</a><br />
+	<br /><a href="http://build.eclipse.org/technology/phoenix/torrents/jee/eclipse-jee-galileo-linux-gtk.tar.gz.torrent"><img align="left" src="http://dev.eclipse.org/small_icons/categories/applications-internet.png" alt="Torrent" /><font size="+1"> &#160;BitTorrent is available</a> for this file.<br />
+	<br />...or pick a mirror site below.</p><br />	<div class="homeitem3col">
+		<h3>Friends of Eclipse Mirror</h3><h4>Canada</h4>
+			<ul><li style="list-style-image:url(/donate/images/starbullet.jpg);">Friends of Eclipse Mirror <img src="/donate/images/starbullet.jpg" /> <a href="/donate">Become a Friend!</a> <img src="/donate/images/starbullet.jpg" /> <a href="http://dev.eclipse.org/site_login">Friends login</a></li></ul>
+	</div>		<div class="homeitem3col" style="float:center;">
+			<h3>Please choose a mirror close to you</h3>
+<h4>North America</h4><ul><li>[United States] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://ftp.osuosl.org/pub/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=272" target=''>OSU Open Source Lab (http)</a><li>[United States] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://mirrors.xmission.com/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=518" target=''>XMission Internet (http)</a><li>[United States] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://mirror.cc.columbia.edu/pub/software/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=454" target=''>Columbia University (http)</a><li>[United States] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://mirrors.ibiblio.org/pub/mirrors/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=187" target=''>ibiblio (http)</a><li>[United States] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://mirrors.med.harvard.edu/eclipse//technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=530" target=''>Harvard Medical School Research IT Group (http)</a><li>[United States] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://mirror.cc.vt.edu/pub/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=504" target=''>Virginia Tech (http)</a><li>[United States] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://d2u376ub0heus3.cloudfront.net/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=581" target=''>Amazon AWS (http)</a><li>[United States] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://mirror.cs.rit.edu/mirrors/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=483" target=''>Rochester Institute of Technology, Department of Computer Science  (http)</a><li>[United States] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://eclipse.unixheads.org/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=480" target=''>Unixheads.org (http)</a><li>[United States] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://carroll.aset.psu.edu/pub/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=546" target=''>The Pennsylvania State University (http)</a><li>[United States] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://ftp.ussg.iu.edu/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=346" target=''>Indiana University (http)</a><li>[United States] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://ftp.cse.buffalo.edu/pub/Eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=68" target=''>University of Buffalo CSE Department (ftp)</a><li>[United States] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://eclipse.mirrors.tds.net/pub/eclipse.org/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=52" target=''>TDS Internet Services (ftp)</a><li>[Canada] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://mirror.csclub.uwaterloo.ca/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=492" target=''>University of Waterloo Computer Science Club (http)</a></ul>
+<h4>Europe</h4><ul><li>[Bulgaria] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://mirrors.linux-bg.org/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=498" target=''>Linux For Bulgarians (http)</a><li>[Switzerland] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://mirror.switch.ch/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=63" target=''>SWITCHmirror (http)</a><li>[Russian Federation] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://mirror.tspu.ru/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1029" target=''>Tomsk State Pedagogical University (ftp)</a><li>[Greece] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://ftp.ntua.gr/pub/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=529" target=''>National Technical University of Athens (ftp)</a><li>[Germany] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://mirror.selfnet.de/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1002" target=''>Selfnet e.V. (ftp)</a><li>[Romania] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://ftp.roedu.net/mirrors/eclipse.org//technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1006" target=''>National Agency ARNIEC - RoEduNet (ftp)</a><li>[Germany] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://mirror.netcologne.de/eclipse//technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=580" target=''>NetCologne GmbH (ftp)</a><li>[United Kingdom] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=96" target=''>UK Mirror Service (http)</a><li>[Norway] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://ftp.uninett.no/pub/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=303" target=''>University of Oslo / UNINETT (ftp)</a><li>[Poland] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://ftp.man.poznan.pl/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=488" target=''>Poznan Supercomputing and Networking Center (http)</a><li>[Ireland] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://ftp.heanet.ie/pub/eclipse//technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=491" target=''>HEAnet (http)</a><li>[Italy] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://rm.mirror.garr.it/mirrors/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=189" target=''>GARR/CILEA (ftp)</a><li>[Germany] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://ftp.wh2.tu-dresden.de/pub/mirrors/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=324" target=''>AG-DSN Sekt. Wundtstrasse, TU-Dresden (http)</a><li>[Poland] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://ftp.man.szczecin.pl/pub/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=403" target=''>Szczecin University of Technology (ftp)</a><li>[Belgium] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://eclipse.mirror.kangaroot.net/pub/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=468" target=''>Kangaroot Linux Solutions (ftp)</a><li>[France] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://eclipse.ialto.org/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=514" target=''>Ialto (ftp)</a><li>[Bulgaria] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://eclipse.saplabs.bg/eclipse//technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=501" target=''>SAP Labs Bulgaria (ftp)</a><li>[Sweden] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://ftp.ing.umu.se/mirror/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=494" target=''>ING-net Umea University (ftp)</a><li>[Portugal] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://ftp.inescn.pt/pub/util/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=112" target=''>INESC Porto (ftp)</a><li>[France] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://d2u376ub0heus3.cloudfront.net/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1032" target=''>Amazon AWS (http)</a><li>[Greece] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://ftp.cc.uoc.gr/mirrors/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1019" target=''>University of Crete (ftp)</a><li>[Italy] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://www.rcp-vision.com/eclipse/eclipseMirror/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1023" target=''>RCP Vision (http)</a><li>[Germany] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=17" target=''>University of Applied Sciences Esslingen (http)</a><li>[Germany] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://eclipsemirror.yoxos.com/eclipse.org/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=200" target=''>Innoopract Informationssysteme GmbH (http)</a><li>[Norway] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://eclipse.uib.no/pub/eclipse//technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1042" target=''>University of Bergen (ftp)</a><li>[Germany] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://d2u376ub0heus3.cloudfront.net/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1001" target=''>Amazon AWS (http)</a><li>[Romania] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://ftp.roedu.net/pub/mirrors/eclipse.org/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=306" target=''>Romanian Education Network (http)</a><li>[Czech Republic] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://ftp.sh.cvut.cz/MIRRORS/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=302" target=''>Sillicon Hill Mirror (ftp)</a><li>[Italy] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://eclipse.mirror.garr.it/mirrors/eclipse//technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1039" target=''>GARR (http)</a><li>[Portugal] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://mirrors.fe.up.pt/pub/eclipse//technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1038" target=''>Universidade do Porto - Faculdade de Engenharia (http)</a><li>[Belgium] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://eclipse.a3-system.be/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=490" target=''>A3 system (http)</a><li>[Poland] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://mirrors.code-house.org/download.eclipse.org/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=573" target=''>Code-House (http)</a><li>[Turkey] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://ftp.ulak.net.tr/eclipse/eclipseMirror/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=330" target=''>Turkish Academic Network And Information Center (ftp)</a></ul>
+<h4>Asia</h4><ul><li>[Japan] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://ftp.jaist.ac.jp/pub/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=105" target=''>Japan Advanced Institute of Science and Technology (ftp)</a><li>[Malaysia] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://mirror.upm.edu.my/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1037" target=''>Universiti Putra Malaysia (http)</a><li>[Indonesia] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://kambing.ui.ac.id/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1012" target=''>University of Indonesia (ftp)</a><li>[Israel] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://mirrors.nsa.co.il/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=321" target=''>NSA Internet & Security Ltd. (http)</a><li>[Thailand] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://mirror.in.th/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=342" target=''>Thai National Mirror (http)</a><li>[Taiwan] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://ftp.cs.pu.edu.tw/pub/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=554" target=''>Providence University (ftp)</a><li>[China] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://d2u376ub0heus3.cloudfront.net/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1000" target=''>Amazon AWS (http)</a><li>[Korea, Republic Of] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://d2u376ub0heus3.cloudfront.net/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1033" target=''>Amazon AWS (http)</a><li>[Taiwan] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://eclipse.stu.edu.tw/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=448" target=''>Computer Center, Shu-Te University (http)</a><li>[Japan] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://d2u376ub0heus3.cloudfront.net/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1031" target=''>Amazon AWS (http)</a><li>[China] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://download.actuatechina.com/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=385" target=''>Actuate Shanghai (http)</a><li>[Korea, Republic Of] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://ftp.kaist.ac.kr/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=466" target=''>KAIST (ftp)</a><li>[Japan] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://ftp.yz.yamagata-u.ac.jp/pub/eclipse//technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=533" target=''>Yamagata University (http)</a><li>[Korea, Republic Of] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://ftp.daum.net/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=441" target=''>Daum Communications Corp. (http)</a><li>[Taiwan] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://eclipse.stu.edu.tw/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=75" target=''>Computer Center, Shu-Te University (http)</a></ul>
+<h4>South America</h4><ul><li>[Brazil] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=ftp://linorg.usp.br/eclipse/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1008" target=''>University of Sao Paulo (ftp)</a><li>[Brazil] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://espelhos.edugraf.ufsc.br/eclipse//technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=575" target=''>Edugraf - INE - CTC - UFSC (http)</a><li>[Brazil] <a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=576" target=''>C3SL - Federal University of Parana (http)</a></div>		<div class="homeitem3col">
+			<h3>Main Download Site</h3>
+				<h4>Canada</h4>
+				<ul><li><a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&url=http://download.eclipse.org/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&mirror_id=1">Main eclipse.org downloads area (http)</a></li></ul>
+		</div>			<br><div align="center">
+				<script type="text/javascript"><!--
+				google_ad_client = "pub-6797025590085056";
+				/* 468x60, created 5/28/08 */
+				google_ad_slot = "9054930060";
+				google_ad_width = 468;
+				google_ad_height = 60;
+				//-->
+				</script>
+				<script type="text/javascript"
+				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
+			</div><br>			<hr class="clearer" />
+	
+	
+	</div>
+			
+	<div id="rightcolumn"><br><br><div class="sideitem"><h6>Featured Member</h6><div style="text-align:center;"><a href="/membership/showMember.php?member_id=655" rel="nofollow"><img width="120" height=""  src="/membership/scripts/get_image.php?size=small&id=655" style="padding:5px;" alt="CA" title="CA"></a></div></div>
+	<div class="sideitem">
+			<h6>Filter</h6>
+			<ul><li><a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&protocol=http">HTTP mirrors only</a> (<a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&protocol=http&format=xml">xml</a>)</li>
+<li><a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&protocol=ftp">FTP mirrors only</a> (<a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&protocol=ftp&format=xml">xml</a>)</li>
+<li><a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz">All mirrors</a> (<a href="download.php?file=/technology/epp/downloads/release/galileo/R/eclipse-jee-galileo-linux-gtk.tar.gz&format=xml">xml</a>)</li></ul>
+		</div>
+		<div class="sideitem">
+			<h6>Related Links</h6>
+			<ul><li><a href="/donate">Friends of Eclipse</a></li><li><a href="mir_request.php">Becoming a mirror site</a></li><li><a href="http://help.eclipse.org/galileo/index.jsp?topic=/org.eclipse.platform.doc.user/tasks/tasks-129.htm">Updating and installing Eclipse components</a></li><li><a href="/newsgroups">Eclipse newsgroups</a></li></ul>
+		</div>
+</div>
+408
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		var pageTracker = _gat._getTracker("UA-910670-2");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+		</script>		
+
+		<br style="clear:both;height:1em;"/>&nbsp;
+		</div> 		
+		<div id="clearFooter"></div>
+			<div id="footer">
+			<ul id="footernav">
+				<li><a href="/">Home</a></li>
+				<li><a href="/legal/privacy.php">Privacy Policy</a></li>
+				<li><a href="/legal/termsofuse.php">Terms of Use</a></li>
+				<li><a href="/legal/copyright.php">Copyright Agent</a></li>
+				<li><a href="/legal/">Legal</a></li>
+				<li><a href="/org/foundation/contact.php">Contact Us</a></li>
+			</ul>
+			<span id="copyright">Copyright &copy; 2010 The Eclipse Foundation. All Rights Reserved.</span>
+		</div>
+	</div> </body>		
+</html>
+
+0
+

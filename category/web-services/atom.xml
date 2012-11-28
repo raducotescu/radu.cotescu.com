@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Web Services | Radu Cotescu's professional blog]]></title>
+  <link href="http://radu.cotescu.com/category/web-services/atom.xml" rel="self"/>
+  <link href="http://radu.cotescu.com/"/>
+  <updated>2012-11-28T12:11:22+02:00</updated>
+  <id>http://radu.cotescu.com/</id>
+  <author>
+    <name><![CDATA[Radu Cotescu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Java, HTTPS and REST web services using Apache CXF]]></title>
+    <link href="http://radu.cotescu.com/java-https-rest-services-apache-cxf/"/>
+    <updated>2010-12-16T23:39:23+02:00</updated>
+    <id>http://radu.cotescu.com/java-https-rest-services-apache-cxf</id>
+    <content type="html"><![CDATA[<p><strong>Securing REST web services</strong> is a very debated topic on the Internet. Because REST represents an architecture, and not a protocol - like SOAP -, there aren't any specifications dealing with security, leaving this aspect as a design decision for the software engineers / developers. Still, if you search the web to find out what are the approaches, you'll see that most of the results suggest you use <strong><a href="http://en.wikipedia.org/wiki/Basic_access_authentication">basic authentication</a> over <a href="http://en.wikipedia.org/wiki/HTTP_Secure">HTTPS</a></strong>.</p>
+
+<p>The basic authentication is a trivial way of authenticating HTTP requests directly by the web server, without any added effort for the developer. Since REST isn't very pretentious (it uses the well known HTTP methods for accessing resources), leaving the authentication to the web server is a natural thing to do. Still, this doesn't mean that your REST API is secure. You merely separate users that should have access to your API from users that should be denied access. Enabling HTTPS on the server is the next step that needs to be followed, so that all the requests are secured. This avoids the classical man-in-the-middle attack and also assures that the credentials sent by the users aren't visible to the whole world (although they are BASE64 encoded by the basic authentication mechanism, decoding them is a child's play).</p>
+
+<h2>A practical example</h2>
+
+<p>For the next paragraphs, I will be very specific (the title should have already told you this). To add something more, let's assume you use <strong>Maven</strong> (because you're a real developer) and <strong>Jetty</strong> (only for testing - I assume that for production you use a proper server, like Tomcat). Enabling HTTPS on any other server shouldn't be much different.</p>
+
+<h3><code>pom.xml</code></h3>
+
+<p>To enable HTTPS and basic user authentication on Jetty by using Maven, you would have to use an additional plug-in for generating keystores, unless you already have a keystore that you would like to use, in which case you should not keep it in the <code>target</code> folder of your project. The following section of <code>pom.xml</code> should do the trick:</p>
+
+<p>``` xml
+<plugin></p>
+
+<pre><code>&lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+&lt;artifactId&gt;keytool-maven-plugin&lt;/artifactId&gt;
+&lt;executions&gt;
+    &lt;execution&gt;
+        &lt;phase&gt;generate-resources&lt;/phase&gt;
+        &lt;id&gt;clean&lt;/id&gt;
+        &lt;goals&gt;
+            &lt;goal&gt;clean&lt;/goal&gt;
+        &lt;/goals&gt;
+    &lt;/execution&gt;
+    &lt;execution&gt;
+        &lt;phase&gt;generate-resources&lt;/phase&gt;
+        &lt;id&gt;genkey&lt;/id&gt;
+        &lt;goals&gt;
+            &lt;goal&gt;genkey&lt;/goal&gt;
+        &lt;/goals&gt;
+    &lt;/execution&gt;
+&lt;/executions&gt;
+&lt;configuration&gt;
+    &lt;keystore&gt;${project.build.directory}/jetty-ssl.keystore&lt;/keystore&gt;
+    &lt;dname&gt;cn=server_host_name&lt;/dname&gt;
+    &lt;keypass&gt;jetty6&lt;/keypass&gt;
+    &lt;storepass&gt;jetty6&lt;/storepass&gt;
+    &lt;alias&gt;jetty6&lt;/alias&gt;
+    &lt;keyalg&gt;RSA&lt;/keyalg&gt;
+&lt;/configuration&gt;
+</code></pre>
+
+<p></plugin></p>
+
+<pre><code>&lt;!-- Jetty support for testing --&gt;
+</code></pre>
+
+<p><plugin></p>
+
+<pre><code>&lt;groupId&gt;org.mortbay.jetty&lt;/groupId&gt;
+&lt;artifactId&gt;maven-jetty-plugin&lt;/artifactId&gt;
+&lt;executions&gt;
+    &lt;execution&gt;
+        &lt;id&gt;start-jetty&lt;/id&gt;
+        &lt;phase&gt;pre-integration-test&lt;/phase&gt;
+        &lt;goals&gt;
+            &lt;goal&gt;run&lt;/goal&gt;
+        &lt;/goals&gt;
+        &lt;configuration&gt;
+            &lt;scanIntervalSeconds&gt;0&lt;/scanIntervalSeconds&gt;
+            &lt;daemon&gt;true&lt;/daemon&gt;
+        &lt;/configuration&gt;
+    &lt;/execution&gt;
+    &lt;execution&gt;
+        &lt;id&gt;stop-jetty&lt;/id&gt;
+        &lt;phase&gt;post-integration-test&lt;/phase&gt;
+        &lt;goals&gt;
+            &lt;goal&gt;stop&lt;/goal&gt;
+        &lt;/goals&gt;
+    &lt;/execution&gt;
+&lt;/executions&gt;
+&lt;configuration&gt;
+    &lt;stopKey&gt;foo&lt;/stopKey&gt;
+    &lt;stopPort&gt;9999&lt;/stopPort&gt;
+    &lt;scanIntervalSeconds&gt;2&lt;/scanIntervalSeconds&gt;
+    &lt;contextPath&gt;/restws&lt;/contextPath&gt;
+    &lt;userRealms&gt;
+        &lt;userRealm implementation="org.mortbay.jetty.security.HashUserRealm"&gt;
+            &lt;name&gt;name_of_realm&lt;/name&gt;
+            &lt;config&gt;src/main/resources/sec.properties&lt;/config&gt;
+        &lt;/userRealm&gt;
+    &lt;/userRealms&gt;
+    &lt;connectors&gt;
+        &lt;connector implementation="org.mortbay.jetty.nio.SelectChannelConnector"&gt;
+            &lt;port&gt;8080&lt;/port&gt;
+            &lt;maxIdleTime&gt;60000&lt;/maxIdleTime&gt;
+        &lt;/connector&gt;
+        &lt;connector implementation="org.mortbay.jetty.security.SslSocketConnector"&gt;
+            &lt;port&gt;8443&lt;/port&gt;
+            &lt;maxIdleTime&gt;60000&lt;/maxIdleTime&gt;
+            &lt;keystore&gt;${project.build.directory}/jetty-ssl.keystore&lt;/keystore&gt;
+            &lt;password&gt;jetty6&lt;/password&gt;
+            &lt;keyPassword&gt;jetty6&lt;/keyPassword&gt;
+        &lt;/connector&gt;
+    &lt;/connectors&gt;
+&lt;/configuration&gt;
+</code></pre>
+
+<p></plugin>
+```</p>
+
+<p>The highlighted lines indicate the user <strong>realm</strong>. This is a file which describes to the server who are your users and what roles are they assigned. The specified file contains records of this form:</p>
+
+<p><code>
+user: password,role
+</code></p>
+
+<h3><code>web.xml</code></h3>
+
+<p>Now you must configure your web application to accept HTTPS encrypted content. This is done in the <strong>web.xml</strong> file, by adding the following lines of code:</p>
+
+<p>``` xml
+<security-constraint></p>
+
+<pre><code>&lt;web-resource-collection&gt;
+    &lt;web-resource-name&gt;application_name&lt;/web-resource-name&gt;
+&lt;!-- all URLs are protected --&gt;
+    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/web-resource-collection&gt;
+&lt;auth-constraint&gt;
+    &lt;role-name&gt;user&lt;/role-name&gt;
+&lt;/auth-constraint&gt;
+&lt;user-data-constraint&gt;
+    &lt;!-- redirect all requests to HTTPS --&gt;
+    &lt;transport-guarantee&gt;CONFIDENTIAL&lt;/transport-guarantee&gt;
+&lt;/user-data-constraint&gt;
+</code></pre>
+
+<p></security-constraint>
+<login-config></p>
+
+<pre><code>&lt;auth-method&gt;BASIC&lt;/auth-method&gt;
+&lt;realm-name&gt;name_of_realm&lt;/realm-name&gt;
+</code></pre>
+
+<p></login-config>
+```</p>
+
+<h3>REST web services and Apache CXF</h3>
+
+<p>So, everything is set up and working. Well, almost. If your REST web services also include some client code, you might encounter an exception with the following message:</p>
+
+<p><code>java
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+</code></p>
+
+<p>The exception is thrown because the certificate your server uses is not from a known <strong>Certificate Authority</strong>. If you have studied the POM example, you'd see that the certificate is generated at every execution of the <code>install</code> goal. Moreover, the certificate is self-signed. From here we have two solutions:</p>
+
+<ol>
+<li><p>try to create a single key store and save it in the <code>src</code> folder, configuring the server to use the file from this location; then start the server and use the program written by Andreas Sterbenz which you can find <a href="http://blogs.sun.com/andreas/entry/no_more_unable_to_find">here</a>; grab the certificate and move the resulted file into the security folder of your JRE (on Linux this should be <code>/usr/lib/jvm/java-6-sun/jre/lib/security/</code>); although this will work okay on your machine, if your project should be accessed by multiple developers, each member of the team has to add that certificate to his/hers JVM (which is not quite nice);</p></li>
+<li><p>create an<strong> alternative <code>TrustStore</code></strong> used only by your application; this is by far the most elegant solution, which adds some more code to the application but doesn't force your team members to add dummy certificates to their JVM.</p></li>
+</ol>
+
+
+<h4>Implementing the <code>TrustStore</code></h4>
+
+<p>The class implementing the <code>X509TrustManager</code> is trivial:</p>
+
+<p>``` java
+public class FakeTrustManager implements javax.net.ssl.X509TrustManager {</p>
+
+<pre><code>public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+    return null;
+}
+public void checkClientTrusted(java.security.cert.X509Certificate[] certs,
+        String authType) {
+}
+public void checkServerTrusted(java.security.cert.X509Certificate[] certs,
+        String authType) {
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>To make all your <strong>Apache CXF REST</strong> <strong>clients</strong> use the new trust store, it is necessary to create a static method in an utility class that sets everything up for the clients:</p>
+
+<p>``` java
+public static void setClientAuthentication(Object client) {</p>
+
+<pre><code>Properties p = PropertiesLoader
+        .getPropertiesFromFile("config.properties");
+ClientConfiguration config = WebClient.getConfig(client);
+HTTPConduit httpConduit = (HTTPConduit) config.getConduit();
+if (p.getProperty("user.name") != null
+        &amp;&amp; p.getProperty("user.password") != null) {
+    AuthorizationPolicy authorization = new AuthorizationPolicy();
+    authorization.setUserName(p.getProperty("user.name"));
+    authorization.setPassword(p.getProperty("user.password"));
+    httpConduit.setAuthorization(authorization);
+}
+TLSClientParameters tlsParams = new TLSClientParameters();
+TrustManager[] trustAllCerts = new TrustManager[] { new FakeTrustManager() };
+tlsParams.setTrustManagers(trustAllCerts);
+// disables verification of the common name (the host for which the certificate has been issued)
+tlsParams.setDisableCNCheck(true);
+httpConduit.setTlsClientParameters(tlsParams);
+</code></pre>
+
+<p>}
+```</p>
+
+<p>The properties file you see loaded in the previous code output contains the username and password for authentication, but it's different from the realm. This is because the realm would be harder to parse, although the information is still plain text. Although it might seem redundant to have the username and password in two files, the realm can actually hold users belonging to different roles - therefore the parsing effort.</p>
+
+<p>The <code>PropertiesLoader</code> class is not standard, but again it's something trivial:</p>
+
+<p>``` java
+import java.net.URL;
+import java.util.Properties;
+public class PropertiesLoader {</p>
+
+<pre><code>public static Properties getPropertiesFromFile(String propertiesFile) {
+    Properties p = new Properties();
+    ClassLoader loader = PropertiesLoader.class.getClassLoader();
+    if (loader == null) {
+        loader = ClassLoader.getSystemClassLoader();
+    }
+    URL url = loader.getResource(propertiesFile);
+    try {
+        p.load(url.openStream());
+    } catch (Exception e) {
+        System.err.println("Could not load configuration file: "
+                + propertiesFile);
+    }
+    return p;
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Having done all this, your clients should now work as expected. Just remember that the <code>FakeTrustStore</code> is to be used <em>only</em> for testing purposes.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to send null values in soapUI requests]]></title>
+    <link href="http://radu.cotescu.com/how-to-send-null-values-in-soapui-requests/"/>
+    <updated>2009-05-16T00:58:08+03:00</updated>
+    <id>http://radu.cotescu.com/how-to-send-null-values-in-soapui-requests</id>
+    <content type="html"><![CDATA[<p><a href="http://www.soapui.org/">soapUI</a> is a pretty useful web service testing tool that can help you generate a multitude of tests like load testing, functional testing, data consistency testing and many more. I have started using it for real two days ago when I needed to test some SOAP web services for work. The main issue that kept me from being more productive with this test platform was that nowhere in its documentation one can find how to send null values in a request.</p>
+
+<p>In the soapUI User Guide, in the "Working with Web Service Request" there is a tricky property called <em>Remove Empty Content</em>.</p>
+
+<blockquote><p><strong>Remove Empty Content</strong> : Removes empty elements/attributes from outgoing requests. This can be useful in Data Drive TestRequests which contain elements/attributes that not always contain data and should be removed in those cases.</p></blockquote>
+
+<p>What I understand from this property is that if I have an empty field that I would like not to be transmitted further into my request, setting this property to <em>true</em>, the field will be marked as null and transmitted like that. Well, the result isn't the one you would have expected. Doing like that will only bring you more and more frustrations as the only thing you will obtain will be a beautifully crafted server error complaining that some fields don't have proper values (the errors are more technical like "<em>invalid date format or argument</em>", "<em>value expected for ... field</em>").</p>
+
+<p>So, answering the question "<strong>How to send null data in a request with soapUI?</strong>", the thing that you should do is to mark the respective field like this:</p>
+
+<p><code>xml
+&lt;ns :field xmlns:field="http://www.w3.org/2001/XMLSchema-instance" field:nil="true" /&gt;
+</code></p>
+
+<p>or, assuming that you do not want to write this kind of attributes for many empty fields in a request, something like this:</p>
+
+<p>``` xml
+&lt;?xml version="1.0" encoding="utf-8"?>
+<soap :Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soapbody></p>
+
+<pre><code>&lt;parenttag&gt;
+    &lt;childtag1&gt;value&lt;/childtag1&gt;
+    &lt;childtag2 xsi:nil="true" /&gt;
+    &lt;childtag2 xsi:nil="true" /&gt;
+&lt;/parenttag&gt;
+</code></pre>
+
+<p></soapbody>
+</soap>
+```</p>
+
+<p>Enjoy!</p>
+]]></content>
+  </entry>
+  
+</feed>

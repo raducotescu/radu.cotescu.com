@@ -1,0 +1,510 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Radu Cotescu's professional blog</title>
+  <meta name="author" content="Radu Cotescu">
+
+  
+  <meta name="description" content="A passionate g33k sharing his experience about programming, Linux, virtualization and other computer related stuff.">
+  <meta name="keywords" content="radu,cotescu,java,python,ubuntu,linux,oracle,programming,software,engineering">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://radu.cotescu.com/page/19">
+  <link href="/favicon.ico" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.cotescu.com/raducotescu" rel="alternate" title="Radu Cotescu's professional blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8815189-1']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_trackPageLoadTime']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <div class="top-nav">
+    <ul>
+        <li><a href="/" title="Home">127.0.0.1</a></li>
+        <li><a href="/about/" title="About">About</a></li>
+        <li><a href="/privacy-policy/" title="Privacy Policy">Privacy Policy</a></li>
+        <li><a href="/calendar/" title="Calendar">Calendar</a></li>
+        <li><a href="/resume/" title="Resume">Resume</a></li>
+    </ul>
+  </div>
+  <header role="banner"><hgroup>
+  <h1><a href="/">Radu Cotescu's professional blog</a></h1>
+  
+    <h2>g33k w17h pa45510n</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss email">
+  <li><a href="http://feeds.cotescu.com/raducotescu" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+    <li><a href="http://feedburner.google.com/fb/a/mailverify?uri=raducotescu" rel="subscribe-email" title="subscribe via email">Email</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:radu.cotescu.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/category/-com">.com</a></li>
+  <li><a href="/category/code">Code</a></li>
+  <li><a href="/category/java">Java</a></li>
+  <li><a href="/category/python">Python</a></li>
+  <li><a href="/category/how-to">How To</a></li>
+  <li><a href="/category/linux">Linux</a></li>
+  <li><a href="/category/ubuntu">Ubuntu</a></li>
+  <li><a href="/category/oracle">Oracle</a></li>
+  <li><a href="/category/reviews">Reviews</a></li>
+  <li><a href="/category/virtualization">Virtualization</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/vsftpd-and-symbolic-links/">vsFTPd and Symbolic Links</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-23T18:20:59+03:00" pubdate data-updated="true">May 23<span>rd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://vsftpd.beasts.org/">vsFTPd</a> is probably the most secure FTP daemon that exists for *nix operating systems and that is shipped with a number of Linux distributions as the default FTP server. Given the fact that its purpose is offering an FTP daemon implementation with regards to security, there are some limitations.</p>
+
+<p>One of these limitations includes the use of symbolic links. vsFTPd doesn&#8217;t allow browsing symbolic link targets as long as their target is outside the user&#8217;s chroot. Let&#8217;s try the following scenario (based on my router&#8217;s configuration):</p>
+
+<ol>
+<li><p>we have this folder: /tmp/harddisk/music</p></li>
+<li><p>we have the following folder for <em>user</em>: /tmp/harddisk/ftp_pvt/<em>user</em></p></li>
+<li><p>we create a symbolic link inside <em>user</em>&#8217;s folder to point to the music folder:</p></li>
+</ol>
+
+
+<pre><code>ln -s /tmp/harddisk/music /tmp/harddisk/ftp_pvt/user/music
+</code></pre>
+
+<p>It seems like everything is okay. As long as the permissions for the folder music grants access for the right users, everybody following that symbolic link on the system should be able to do whatever he/she is allowed. But when trying to access that folder (following the symbolic link) via vsFTPd, the user will get:</p>
+
+<pre><code>Status:   Retrieving directory listing...
+Command:  CWD /disc0_3/ftp_pvt/user/music
+Response: 550 Failed to change directory.
+Error:    Failed to retrieve directory listing
+</code></pre>
+
+<p>So, what&#8217;s the solution besides the stupid one of copying the directory that you want to be accessed to a place where <em>user</em> has access? Simple. Mount! How? Well, like this:</p>
+
+<ol>
+<li><p>create a directory inside <em>user</em>&#8217;s chroot:</p>
+
+<pre><code> mkdir /tmp/harddisk/ftp_pvt/user/music
+</code></pre></li>
+<li><p>mount the folder you want <em>user</em> to access using the bind option:</p>
+
+<pre><code> mount --bind /tmp/harddisk/music /tmp/harddisk/ftp_pvt/user/music
+</code></pre></li>
+</ol>
+
+
+<p>Now you can properly give access to folders and files located outside of a user&#8217;s chroot without compromising security using vsFTPd. Any complaints?</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/bugs/">Bugs</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-22T17:58:31+03:00" pubdate data-updated="true">May 22<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Because all this week I have been a steady bug fixer (both at home and at work), this comic really rocks given the circumstances:</p>
+
+<p><a href="/uploads/wpuploads/2009/05/cnr.png"><img src="/uploads/wpuploads/2009/05/cnr.png" alt="" /></a></p>
+
+<p>via <a href="http://xkcd.com/583/">XCKD.com</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/how-to-install-vmware-server-201-on-ubuntu-904-jaunty-jackalope/">How to Install VMware Server 2.0.1 on Ubuntu 9.04 Jaunty Jackalope</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-16T11:48:37+03:00" pubdate data-updated="true">May 16<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I wrote a small script that will help you install VMware Server 2.0.1 (<strong>build 156745</strong>) on Ubuntu 9.04 and later without any efforts. The install script needs a patch file for this VMWare Server version that is automatically downloaded from my server.</p>
+
+<p>How to:</p>
+
+<ol>
+<li><p>Download your copy of <a href="https://www.vmware.com/freedownload/p/download.php?product=server20">VMware Server</a> (TAR image) and note the license key somewhere.</p></li>
+<li><p>Download <a href="https://github.com/raducotescu/vmware-server-ubuntu-9.04/tarball/master">my script</a> and run it from the same folder where you have downloaded VMware Server or provide it the path to that folder.</p></li>
+<li><p>Follow the on screen questions and answer them accordingly.</p></li>
+<li><p>Enjoy!</p></li>
+</ol>
+
+
+<p><strong>ATTENTION: Don&#8217;t try to install VMware Server with this script or without it on Ubuntu 9.10 because it won&#8217;t work. Some kernel sources on which VMware Server relied for module compilation have changed, thus resulting in failed attempts to build the corresponding modules.</strong></p>
+
+<p><strong>Click here if you want to <a href="http://radu.cotescu.com/how-to-install-vmware-server-2-0-x-on-ubuntu-9-10-karmic-koala/">install VMware Server 2.0.1 on Ubuntu 9.10</a>.</strong></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/how-to-send-null-values-in-soapui-requests/">How to Send Null Values in soapUI Requests</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-16T00:58:08+03:00" pubdate data-updated="true">May 16<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.soapui.org/">soapUI</a> is a pretty useful web service testing tool that can help you generate a multitude of tests like load testing, functional testing, data consistency testing and many more. I have started using it for real two days ago when I needed to test some SOAP web services for work. The main issue that kept me from being more productive with this test platform was that nowhere in its documentation one can find how to send null values in a request.</p>
+
+<p>In the soapUI User Guide, in the &#8220;Working with Web Service Request&#8221; there is a tricky property called <em>Remove Empty Content</em>.</p>
+
+<blockquote><p><strong>Remove Empty Content</strong> : Removes empty elements/attributes from outgoing requests. This can be useful in Data Drive TestRequests which contain elements/attributes that not always contain data and should be removed in those cases.</p></blockquote>
+
+<p>What I understand from this property is that if I have an empty field that I would like not to be transmitted further into my request, setting this property to <em>true</em>, the field will be marked as null and transmitted like that. Well, the result isn&#8217;t the one you would have expected. Doing like that will only bring you more and more frustrations as the only thing you will obtain will be a beautifully crafted server error complaining that some fields don&#8217;t have proper values (the errors are more technical like &#8221;<em>invalid date format or argument</em>&#8221;, &#8221;<em>value expected for &#8230; field</em>&#8221;).</p>
+
+<p>So, answering the question &#8221;<strong>How to send null data in a request with soapUI?</strong>&#8221;, the thing that you should do is to mark the respective field like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;ns</span> <span class="err">:field</span> <span class="na">xmlns:field=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="na">field:nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or, assuming that you do not want to write this kind of attributes for many empty fields in a request, something like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+</span><span class='line'><span class="nt">&lt;soap</span> <span class="err">:Envelope</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="na">xmlns:xsd=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema&quot;</span> <span class="na">xmlns:soap=</span><span class="s">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;soapbody&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;parenttag&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;childtag1&gt;</span>value<span class="nt">&lt;/childtag1&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;childtag2</span> <span class="na">xsi:nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;childtag2</span> <span class="na">xsi:nil=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/parenttag&gt;</span>
+</span><span class='line'><span class="nt">&lt;/soapbody&gt;</span>
+</span><span class='line'><span class="nt">&lt;/soap&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Enjoy!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/ubuntu-904-jaunty-jackalope-pros-and-cons/">Ubuntu 9.04 Jaunty Jackalope Pros and Cons</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-29T18:18:40+03:00" pubdate data-updated="true">Apr 29<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img src="/uploads/wpuploads/2009/04/ubuntu-old.png" alt="" /></p>
+
+<p>I am currently running Ubuntu 9.04 on two machines (as the single OS on my personal laptop and dual boot with Windows on my work desktop) and I will soon (by Sunday tops) have it installed on a third (my home desktop). This is probably my largest Ubuntu deployment, if I can call it like that and I would like to share my current user experience.</p>
+
+<h3>Pros:</h3>
+
+<ul>
+<li><p>the upgrade alone (on my laptop) skimmed three to four seconds off my boot time using ext3 partitions, reaching to a merely 21 second boot race. I have decided to not convert my drives to the new ext4 while it doesn&#8217;t become the Ubuntu default installation formatting system. This performance is achieved after setting the concurrency variable to shell, making a profile for my own start-up scripts and after setting my partitions to use the data=writeback option;</p></li>
+<li><p>with the upgrade to the new 2.6.28-11 kernel, my laptop&#8217;s Nvidia graphic card&#8217;s drivers have been successfully updated from 177 to 180.44. Even if the drivers were available before, they wouldn&#8217;t allow me to put my computer to stand-by and afterwards to wake it up;</p></li>
+<li><p>the notifications now are well structured (basically they look decent now), with a plus regarding the wireless connections;</p></li>
+<li><p>on my work desktop I have encountered a problem with the 8.10 version installation CD. My Dell Optiplex 755 has a DVD Writer SATA drive and Ubuntu 8.10 failed to install using a CD. I have tried this with a re-writeable disk burned at different speeds. The same problem was reported by many other on the web and from what I have managed to find out, most of the drives that had this issue were made by Samsung. The only viable way to install Ubuntu was using a stick. For this desktop I have decided that 9.04 should be installed from zero, as 8.10 wasn&#8217;t completely set up (I didn&#8217;t have the time). The installation was made from a CD with no problems. Everything worked like a charm. One nice thing to note is that the installation from a USB stick is done in approximately 6 minutes, comparing to 15 minutes for installing using a CD;</p></li>
+<li><p>the CPU frequency applet that you can add to your panels I think that now has the option of choosing how your processor scales its performance. I say &#8220;I think&#8221; because I don&#8217;t remember if this feature existed before or not;</p></li>
+<li><p>Ubuntu 9.04 comes with OpenOffice 3.0, instead of 2.4 by default. The most important functionality is the ability to open the new Open-XML standard documents from Microsoft Office 2007 (docx, xlsx, pptx).</p></li>
+</ul>
+
+
+<h3>Cons:</h3>
+
+<ul>
+<li><p>last night I experienced a strange stall on my laptop. I still haven&#8217;t found out the cause for that but it was an isolated experience;</p></li>
+<li><p>my laptop has a hardware switch for bluetooth and wifi. I have noticed that if I turn it off in 9.04 while my system is on, when I turn it back on my wireless card doesn&#8217;t reinitialize. It worked ok under 8.10. But if I put my laptop on standby after I set the switch to on and then I wake it up the card works. The bluetooth works ok though;</p></li>
+<li><p>The quick function buttons for starting my browser and my email client don&#8217;t work anymore (one of them worked under 8.10) but this really doesn&#8217;t affect me as I haven&#8217;t used those shortcuts anyway. I am happy that my multimedia buttons still work ok (these are useful, the others mentioned before aren&#8217;t).</p></li>
+</ul>
+
+
+<p>Except for the wifi thing, everything works incredibly well and that is the main reason for which I am using Ubuntu on so many machines. I am actually considering installing a 4th Ubuntu system, but this time in a virtual machine, only for testing purposes. Linux, and Ubuntu especially, has migrated very nicely from the g33kish operating system to a more mainstream market starting with the 8.04 release and continuing to improve in this way up to 9.04.</p>
+
+<p>P.S. The Windows at work is starting to be neglected as I can proudly say something that is written on <a href="http://radu.cotescu.com/wordpresswp-content/uploads/2009/04/UBN11005.jpg">one of the T-Shirts that I would like to have</a>: I do it with Ubuntu. :D</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/page/20/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/page/18/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/coloured-log-outputs/">Coloured log outputs on Unix/Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/java-common-sense/">A useful rant on how people write Java code</a>
+      </li>
+    
+      <li class="post">
+        <a href="/tools-required-for-opening-a-macbook-pro/">Tools required for opening a MacBook Pro</a>
+      </li>
+    
+      <li class="post">
+        <a href="/the-switch-to-mac-from-ubuntu/">Switching to Mac from Ubuntu</a>
+      </li>
+    
+      <li class="post">
+        <a href="/migrating-your-ubuntu-machine-to-a-ssd-drive/">Migrating your Ubuntu machine to a SSD drive</a>
+      </li>
+    
+  </ul>
+</section>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8659561010253809";
+/* Sidebar250x250 */
+google_ad_slot = "8430472643";
+google_ad_width = 250;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<section>
+  <h1>Latest Tweets</h1>
+    <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <script>
+    new TWTR.Widget({
+      version: 2,
+      type: 'profile',
+      rpp: 5,
+      interval: 30000,
+      width: 250,
+      height: 370,
+      theme: {
+        shell: {
+          background: '#cfcfcf',
+          color: '#ffffff'
+        },
+        tweets: {
+          background: '#e8e8e8',
+          color: '#4b4b4b',
+          links: '#0182eb'
+        }
+      },
+      features: {
+        scrollbar: false,
+        loop: false,
+        live: true,
+        behavior: 'all'
+      }
+    }).render().setUser('raducotescu').start();
+    </script>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/106725941266744510645?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  &copy; 2009 - 2012 - Radu Cotescu -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+</body>
+</html>

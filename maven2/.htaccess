@@ -1,0 +1,4 @@
+Options +Indexes
+IndexIgnore .ftpquota .htaccess
+IndexOptions +FancyIndexing +VersionSort +SuppressDescription +FoldersFirst +XHTML +HTMLTable +NameWidth=* +IgnoreCase +SuppressRules
+ServerSignature Off

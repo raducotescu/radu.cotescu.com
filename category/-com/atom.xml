@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: .com | Radu Cotescu's professional blog]]></title>
+  <link href="http://radu.cotescu.com/category/-com/atom.xml" rel="self"/>
+  <link href="http://radu.cotescu.com/"/>
+  <updated>2012-11-28T12:11:22+02:00</updated>
+  <id>http://radu.cotescu.com/</id>
+  <author>
+    <name><![CDATA[Radu Cotescu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Tools required for opening a MacBook Pro]]></title>
+    <link href="http://radu.cotescu.com/tools-required-for-opening-a-macbook-pro/"/>
+    <updated>2012-06-04T01:45:00+03:00</updated>
+    <id>http://radu.cotescu.com/tools-required-for-opening-a-macbook-pro</id>
+    <content type="html"><![CDATA[<p>Last week my final MacBook Pro arrived. Since at Adobe we are forced to encrypt our hard-drives in order to protect our work (in case our machines get stolen) the IT team decided to provide us with SSD drives for our portable computers. The advantages are numerous:</p>
+
+<ul>
+<li><p>improved IO performance (encryption comes with a cost - I really wouldn't like to use it on a mechanical drive)</p></li>
+<li><p>reduced power consumption</p></li>
+<li><p>reduced operation noise (only the fans and the optical unit contain moving parts)</p></li>
+<li><p>less dissipated heat</p></li>
+</ul>
+
+
+<p>Because I was in hurry to get the new machine set-up I decided to install the new SSD by myself. After all, it wasn't the first time I tore a computer apart. Big mistake...</p>
+
+<!--more-->
+
+
+<p>Apparently Apple uses the tiniest screws available. Most of the guides and forum posts on the subject mention that the only tools you need to access the user-replaceable components (the hard-drive and the RAM DIMMs) are a PH#00 and a T6 screwdriver. For n00bs, that's a Phillips 00 screwdriver (<strong>+</strong> shaped) and a Torx 0.6 (<strong>*</strong> shaped). Wrong!</p>
+
+<p>It seems that the recommended PH#00 screwdriver is too big to safely remove the screws that keep the back lid attached to the body. Using a bigger screwdriver might end up in deforming the screws' heads. However the Phillips PH#000 is a perfect match. If you're looking to buy these two screwdrivers - the PH#000 and the T6 - I suggest you visit your local DIY store and look for precision screwdrivers. Try to buy a set that's made from high carbon steel if you want to use them for a longer time.</p>
+
+<p>A very good guide for changing your Mac's hard-drive can be found <a href="http://www.ifixit.com/Guide/Installing-MacBook-Pro-15-Inch-Unibody-Late-2011-Hard-Drive-Replacement/7513/" title="Installing MacBook Pro 15&quot; Unibody Late 2011 Hard Drive Replacement">here</a>. Keep in mind, though, that you need a PH#000 screwdriver.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Switching to Mac from Ubuntu]]></title>
+    <link href="http://radu.cotescu.com/the-switch-to-mac-from-ubuntu/"/>
+    <updated>2012-05-20T23:39:00+03:00</updated>
+    <id>http://radu.cotescu.com/the-switch-to-mac-from-ubuntu</id>
+    <content type="html"><![CDATA[<p>When I joined Adobe I was given the chance of choosing between using a Lenovo ThinkPad or a MacBook Pro as my
+development machine. Since I really dislike the design of the ThinkPads and also because I really wanted to try a Mac
+for a longer period of time I accepted the challenge. My previous experiences with a Mac were limited to only a few
+occasions when I had to perform some specific tasks - mostly while dishing Apple and Mac because it took me at least
+twice the time I needed to complete the same tasks on a machine running Ubuntu.</p>
+
+<p>After 10 days of using only the MacBook as my main computer (even at home), I can't say that I really miss using Ubuntu.</p>
+
+<!-- more -->
+
+
+<p>Sure, there are some things that aren't as nice on a Mac:</p>
+
+<ul>
+<li><p>the lack of a decent package manager - <strong>MacPorts</strong>, although usable, can't compare with <strong><code>apt-get</code></strong>;</p></li>
+<li><p>the lack of a good default text editing application - <strong>TextEdit</strong> sucks compared to <strong>gedit</strong>; however I have
+discovered <a href="http://www.sublimetext.com/" title="Sublime Text 2"><strong>Sublime Text 2</strong></a> aka <code>vim</code> on steroids with a GUI;</p></li>
+<li><p>the window management system - although I've come to understand why there's no need to maximize a window (hence why
+the third window management button is called "zoom"), I really don't like the fact that if you "hide" a window
+(minimize it in plain English), you have to right-click on its icon from the dock to restore it;</p></li>
+<li><p><strong>Terminal</strong> is not that smart by default - more info <a href="http://blog.macromates.com/2006/word-movement-in-terminal/" title="Word Movement in Terminal">here</a>; also, because I often perform tasks from the terminal I needed a way to make the app on
+the Mac behave more like <a href="http://en.wikipedia.org/wiki/Yakuake" title="Yakuake"><strong>Yakuake</strong></a> and that's how I found out about
+<a href="http://totalterminal.binaryage.com/" title="TotalTerminal"><strong>TotalTerminal</strong></a>;</p></li>
+<li><p><strong>Finder</strong>, the file browser on the Mac, is not really worthy of "the world's most advanced desktop operating system";
+it lacks tabs, the <code>cut</code> function is not enabled (although it is available) and if you enable it anything you "cut" will
+make it to <strong>Trash</strong>.</p></li>
+</ul>
+
+
+<p>I had no problems configuring the system and this was probably helped by the changes that were made in Ubuntu in this
+direction over the previous years. An Ubuntu user would have no problems at all adjusting to the Mac; and the other way
+around. This was a bold decision - to use the Mac as the source of inspiration for Ubuntu - and I really appreciate Mark
+Shuttleworth's leadership in the project. Although I really like the idea of freedom that the Linux ecosystem promotes,
+I do agree that having some restrictions in place - some would call it direction - helps in delivering a product with a
+superior quality.</p>
+
+<p>There are a lot of things that I like about the Mac:</p>
+
+<ul>
+<li><p>the hardware is superior to everything else on the market and by superior I don't mean necessarily performance-wise;
+everything fits together so good that nothing seems out of place; the attention to details was paramount; the fact
+that the body is made from Aluminum helps a lot for the overall system cooling - the fan rarely can be heard and that's
+only when the CPU is very busy;</p></li>
+<li><p>having an illuminated keyboard is really useful when using the laptop in dim light or when you want to work during the
+night - such a simple and efficient idea;</p></li>
+<li><p>the battery life is very good - if you don't use <strong>Skype</strong> or the <strong>GoogleVoiceAndVideo</strong> plug-in; you can easily
+squeeze 4 - 5 hours if you're not performing rocket science; I managed to reach 3.5 hours while coding with Java on top
+of a web application that ran continuously in a Servlets container;</p></li>
+<li><p>the gestures and the track-pad really increase productivity;</p></li>
+<li><p>the GUI - this is where the Mac was, is and will be ahead of the other OSs;</p></li>
+<li><p>using a secondary display is as easy as connecting it to the Mini DisplayPort; no other settings have to be made;</p></li>
+<li><p>it's a widely (?!) supported Unix or it has better support than any Linux distribution anyway;</p></li>
+<li><p>the display (even the one with the 1440x900 resolution) looks sharp from any angle without any colour bleeding.</p></li>
+</ul>
+
+
+<p>If I'd run Mac OS X on any other hardware probably I wouldn't be so amazed (yes, I know about the license). But combine
+the OS with the hardware and you get a killer combination that's easy to accept as the norm. It slowly gets you and it
+becomes harder and harder to go back to what you were using before. Yes, I have become a
+"<a href="http://www.google.com/search?&amp;q=define%3Amactard">mactard</a>".</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Facebook, Pidgin and the "Not authorised" error message]]></title>
+    <link href="http://radu.cotescu.com/facebook-pidgin-not-authorised/"/>
+    <updated>2011-06-15T13:46:58+03:00</updated>
+    <id>http://radu.cotescu.com/facebook-pidgin-not-authorised</id>
+    <content type="html"><![CDATA[<p>I noticed a few days ago that my Facebook XMPP chat account from Pidgin had stopped working, popping up a weird error message: "Not authorised". This happened even though I did not change any of the account's settings.</p>
+
+<p>The resolution is pretty Voodoo or, how <a href="http://web.nastasiu.com">Vlad</a> described it, the error needs a Microsoft-type fix. Apparently if you are logged in on Facebook using your email address instead of the user name, the XMPP protocol might not authenticate you. Therefore, if you'd like to use Facebook's chat on third-party clients while you're still logged on in a browser, make sure you always log in using your user name instead of your email address on Facebook's site. Trying to use your email address in Pidgin for the user name field results in an error, as email addresses are not valid XMPP user names.</p>
+
+<p>Weird!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The art of web feeds]]></title>
+    <link href="http://radu.cotescu.com/the-art-of-web-feeds/"/>
+    <updated>2010-08-31T17:05:31+03:00</updated>
+    <id>http://radu.cotescu.com/the-art-of-web-feeds</id>
+    <content type="html"><![CDATA[<p>Web feeds, as many of you surely know by now, represent a data format under which frequently updated content from various sources is provided to readers (the humans reading the content). The purpose of the web feed is therefore to inform the user of new or updated content originating from a source. Generally speaking web feeds contain HMTL mark-up for the content, on top of an XML document which is parsed by feed readers (the programs used to read web feeds).</p>
+
+<p>Since a web feed is usually a standard feature for any web site that displays articles (by which we understand blog posts, news, press releases, etc.), the number of clients (software programmes) for this job has experienced a constant growth. From web applications, such as Google Reader, to desktop dedicated programs, such as Liferea, or Internet browsers, we have a multitude of ways for accessing web feeds. Because the primary function of the feed is to inform of the new content, the important attributes (sections) of the feed should be the title of the article in question, the author, date of publishing and the full text or the summarized one.</p>
+
+<h2>"To summarize or not to summarize? That is the question."</h2>
+
+<p>What is more important for you and your readers: to serve them the full content (with the risk of them not being necessarily interested) or to give them just a hint of what you've published and let them to decide if they want to read it or not?</p>
+
+<p>The advantage of offering the full content in the web feed is given by the fact that from a user's standpoint the only action that he (or she) should perform is to open the reader and select your feed. Unfortunately this is also a disadvantage. Why? Because some of the content might be extending on a number of pages and some of the readers (the people) might not be interested in it, although the article's category might be of interest. This leads to a cancelling of the benefits a feed might offer. I am sure that there are a lot of users who only read a small portion of the syndicated articles, which means that they have to get past the articles which are of no interest. This usually means scrolling over various amounts of content to select only the articles which are to be read in full.</p>
+
+<p>Summarized feeds though offer only an introductory paragraph from the content itself. Sure, if the user needs to read more he (or she) has to access the source directly. But since the act of subscribing and receiving a feed's content implies having access to the bid bag Internet, one more click for an interesting topic is just a small price to pay (both in effort and in time lost with the action). After all, your website has a nice theme for attracting readers (and probably you have invested time, money and energy on the user interface aspect of your site - web designers, CSS code, JS for user interaction, etc.). By not inviting the user to browse your website you loose not only traffic (although in recent times feeds are counted as an important communication channel with easy to follow traffic indicators), but the purpose of the shiny user interface. If all of your content is available through a web feed, why should we mind to visit it?</p>
+
+<h2>Personal experience</h2>
+
+<p>After several months of using a dedicated desktop application for syndicating the feeds I read I've switched to Google Reader. I won't discuss here the advantages or disadvantages of one over the other. The end result in my case are 14 feeds under 5 categories (from geek stuff to more down to earth information). Out of the hundreds of articles which are published on a daily basis, I probably read about a quarter (maximum). This means that about 75% of the content to which I have access to I choose to skip over: either I am not interested (in which case I skip the content almost without retaining the title for more than 2 seconds) or I don't think that the topic deserves more attention that what a short glimpse at one of its paragraphs might offer me. Imagine now the time lost with scrolling over full content from 75% of about 300 articles. Is it nice? NO! Is it reader-friendly? NO! This is why I prefer summarized feeds: I read the title to decide if the content is relevant and if so I don't mind browsing to the source to read it all. I mean if I have the time to check what's been published I am sure that I will make some time to read what's interesting.</p>
+
+<h2>In conclusion...</h2>
+
+<p>Think of your users before putting the full content of your next article in the feed. There are chances that not all of your articles really hit the spot. By using summarized feeds you'll more often than not win loyal and constant readers. Let them choose what they like from you instead of filling their screens with nonsense. Sure, they still have to click on the title to reach to your website. However, if your content is good, the readers will come by themselves.</p>
+
+<p><em>SUMMARIZE YOUR FEEDS, PLEASE!</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to make Thunderbird connect with Microsoft Exchange]]></title>
+    <link href="http://radu.cotescu.com/thunderbird-microsoft-exchange/"/>
+    <updated>2010-08-16T22:47:33+03:00</updated>
+    <id>http://radu.cotescu.com/thunderbird-microsoft-exchange</id>
+    <content type="html"><![CDATA[<p>After enrolling to the University of Southampton Software Engineering MSc programme the iSolutions department (responsible with the IT infrastructure) provided me with an user account to be able to access all the facilities. The account also has an email address attached, which happens to be hosted by a Microsoft Exchange Server. And here the "conflict" begins. The University advises all its undergraduates or taught postgraduates to use the <a href="http://en.wikipedia.org/wiki/Outlook_Web_Access">OWA</a> web application or the University's portal (which actually uses an iFrame to display the contents of OWA) to access their email accounts while the other students (research ones) and staff are allowed (and by this you must understand that iSolutions offers support for this) to use an email client.</p>
+
+<p>I have never been a fan of using webmail. One of the reasons for this is the inability of such clients to provide all the features a desktop client. Since I use Ubuntu, I also couldn't have accessed the full OWA application because I do not use IE (it's against my beliefs to use such a lousy piece of software), leaving me with a limited webapp. Fortunately, I am a geek. My favourite email client is Thunderbird, which unfortunately cannot connect directly to Microsoft Exchange like Evolution (this is explicable through the partnership between Novell and Microsoft; in this particular case not even Evolution was able to connect to the server - the server version is unsupported). The only protocols available in Thunderbird are POP3 (old, blunt and poor as a solution regarding the number of mail capable devices I own), IMAP and SMTP. Even though I could have checked my University email using IMAP (they have enabled IMAP access on the Exchange Server), I couldn't have accessed the Contacts or the Calendar features. The solution?! <em><strong>DavMail</strong></em>.</p>
+
+<h2>DavMail</h2>
+
+<p><a href="http://davmail.sourceforge.net/">DavMail</a> is a gateway between the OWA and whatever email client one uses. Written in Java, the application maps several ports on the localhost to the services offered by the Exchange Server. Since ports lower than 1024 need root access on UNIX and UNIX-like machines in order to be able to bind applications to them, DavMail usually uses the original protocol's port numbers plus 1000 (e.g. 1110 for POP, 1143 for IMAP, 1025 for SMTP, 1080 for Caldav and 1389 for LDAP) but these settings are fully customizable.</p>
+
+<p><a href="/uploads/wpuploads/2010/08/davmailArchitecture.png"><img src="/uploads/wpuploads/2010/08/davmailArchitecture-300x198.png" alt="" /></a></p>
+
+<p>Other nice features of DavMail include the ability to use the IDLE feature of the IMAP protocol to let the server push the messages to the client (this improves speed and network efficiency by reducing the number of queries made by the client to poll for new messages), the option to bind DavMail to an IP address for remote access for other "Exchange-impaired" clients, the auto-expunge IMAP feature (allowing for faster message deletions), logging and many more... The only Exchange feature that cannot be made available to Thunderbird 3 users is accessing the Contacts saved for one account (the personal address book created on the server). Still, this can be easily overcome by using the local address book from Thunderbird or using the information provided by a LDAP, since in most corporate environments all the needed contacts are stored this way.</p>
+
+<p>What's interesting about DavMail is that being only a layer, all the security is handled by the email client. Therefore you can't compromise your accounts because of it. The setup is pretty straightforward and all of the Exchange features work as if using a dedicated client. I expected LDAP searching to be slow since we have a gateway between the client and the server, but it wasn't the case. All the queries were fast and keep in mind that my University's LDAP database is large (approximately 24000 students plus staff).</p>
+
+<h2>Conclusions</h2>
+
+<p>I wish Thunderbird could have offered Exchange support out of the box. Yes, it's a Microsoft technology, but there seems that there are many adopters. Would I have liked it more if the University of Southampton used Google Apps? You bet! But since the only solution to access my account via a desktop client is using DavMail I actually have no complaints. I am happy that the program works okay, fast and that it is extremely easy to set up. Of course, if the server which holds your account doesn't have the OWA service active you are toasted. Otherwise DavMail is just one cool little Java program.</p>
+]]></content>
+  </entry>
+  
+</feed>
