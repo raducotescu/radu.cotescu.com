@@ -25,29 +25,21 @@
 <body>
     <div class="menu">
         <h3>Overview</h3>
-        <ul>
-            <li><a href="#" title="Summary">SUMMARY</a></li>
+        <ul id="menuitems">
+            <li id="selected"><a href="#" title="Summary">SUMMARY</a></li>
             <li><a href="#skills" title="Skills">SKILLS</a></li>
             <li><a href="#experience" title="Experience">EXPERIENCE</a></li>
+            <li><a href="#projects" title="Projects">PROJECTS</a></li>
             <li><a href="#education" title="Education">EDUCATION</a></li>
             <li><a href="#courses" title="Courses">COURSES</a></li>
             <li><a href="#publications" title="Publications">PUBLICATIONS</a></li>
-
+            <li id="printlink"><a href="#print" onclick="window.print()" title="Print full version">PRINT</a></li>
         </ul>
     </div>
     <div class="wrapper">
         <div class="menu_js">
-            <ul>
-                <li id="selected"><a href="#" title="Summary">SUMMARY</a></li>
-                <li><a href="#skills" title="Skills">SKILLS</a></li>
-                <li><a href="#experience" title="Experience">EXPERIENCE</a></li>
-                <li><a href="#education" title="Education">EDUCATION</a></li>
-                <li><a href="#courses" title="Courses">COURSES</a></li>
-                <li><a href="#publications" title="Publications">PUBLICATIONS</a></li>
-                <li class="print"><a href="#print" onclick="window.print()" title="Print full version">PRINT</a></li>
-            </ul>
         </div>
-            <div class="hresume">
+        <div class="hresume">
             <div class="contact vcard">
                 <div class="nameAndTitle">
                     <h1 class="fn" id="radu-cotescu">
@@ -136,7 +128,14 @@
                         <p class="organization-details">(10,001 or more employees; ADBE; Public Company; Computer Software)</p>
                         <p class="period"><abbr title="2012-05-14" class="dtstart">May 2012</abbr> - <abbr title="present" class="dtstart">present</abbr></p>
                         <div>
-                            <p class="description">Day Product Developer, working on <a href="http://www.adobe.com/products/cq.html" title="Adobe CQ">Adobe CQ</a>.</p>
+                            <p class="description">
+                                Part of the Digital Marketing organisation, I work on developing the
+                                <a href="http://www.adobe.com/products/cq.html" title="Adobe CQ">Adobe CQ</a> (formerly known as Day CQ /
+                                Communiqué) web experience management product and the Adobe Experience Manager solution.
+                            </p>
+                            <p class="description">
+                                I am also reviewing job candidates' technical assignments.
+                            </p>
                         </div>
                     </li>
                     <li class="experience vevent vcard">
@@ -193,6 +192,20 @@
                         </p>
                         <p class="description">
                             As a junior member I have handled various tasks given by the senior members.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+            <div id="projects" class="container">
+                <h3>Projects</h3>
+                <ol class="vcalendar">
+                    <li class="projects vevent vcard">
+                        <h4 class="org fn summary">
+                            <a href="http://github.com/raducotescu/browsermap" title="BrowserMap - client-side JavaScript browser features detection library">BrowserMap</a>
+                        </h4>
+                        <p class="date"><abbr title="2012-06-11" class="dtstart">June 2012</abbr> - <abbr title="present" class="dtend">present</abbr></p>
+                        <p class="description">
+                            BrowserMap is a JavaScript browser features detection library. It uses modular probes - code snippets that detect specific features of the client; these are then used to detect the client's type. Once the client has been identified, BrowserMap can forward it to alternate website versions, which are more suitable for the type of device used to access the application.
                         </p>
                     </li>
                 </ol>
@@ -341,14 +354,14 @@
                 <ol class="vcard">
                     <li>
                         <cite><a href="http://www.linuxidentity.com/us/index.php?name=News&amp;file=article&amp;sid=5048" title="Linux Identity Office – Ubunutu 10.10">Linux Identity Office (Volume four, number four) – Ubuntu 10.10</a></cite>, <a class="fn org url" href="http://www.oxypress.com/" title="OXY PRESS LLC">OXY PRESS LLC</a>, 2010.
-                        <p class="description">I have contributed with the following articles:
+                        <p class="description">I contributed the following articles:
                             <cite>What to do after you install Ubuntu?</cite>,
                             <cite>Online file storage - Dropbox vs. Ubuntu One</cite>
                         </p>
                     </li>
                     <li>
                         <cite><a href="http://www.linuxidentity.com/us/index.php?name=News&amp;file=article&amp;sid=5041" title="Linux Identity Office – OpenOffice.org 3.2">Linux Identity Office (Volume four, number two) – OpenOffice.org 3.2</a></cite>, <a class="fn org url" href="http://www.oxypress.com/" title="OXY PRESS LLC">OXY PRESS LLC</a>, 2010.
-                        <p class="description">I have contributed with the following articles:
+                        <p class="description">I contributed the following articles:
                             <cite>OpenOffice.org 3.2 - What's new?</cite>,
                             <cite>Installing OpenOffice.org 3.2</cite>,
                             <cite>Dictionaries in OpenOffice.org</cite>,
@@ -359,7 +372,7 @@
                     </li>
                     <li>
                         <cite><a href="http://www.linuxidentity.com/us/index.php?name=News&amp;file=article&amp;sid=5038" title="Linux Identity Starter - Ubuntu Family 9.10 Karmic Koala">Linux Identity Starter (Volume two, number two) - Ubuntu Family 9.10 Karmic Koala</a></cite>, <a class="fn org url" href="http://www.oxypress.com/" title="OXY PRESS LLC">OXY PRESS LLC</a>, 2009.
-                        <p class="description">I have contributed with the following articles:
+                        <p class="description">I contributed the following articles:
                             <cite>DVD Contents</cite>,
                             <cite>9.10 vs. 9.04</cite>,
                             <cite>Installing Ubuntu</cite>,
@@ -369,7 +382,7 @@
                     </li>
                     <li>
                         <cite><a href="http://www.linuxidentity.com/us/index.php?name=News&amp;file=article&amp;sid=5037" title="Linux Identity Office - Linux Starter Kit (Ubuntu 9.04)">Linux Identity Office (Volume three, number two) - Linux Starter Kit (Ubuntu 9.04)</a></cite>, <a class="fn org url" href="http://www.oxypress.com/" title="OXY PRESS LLC">OXY PRESS LLC</a>, 2009.
-                        <p class="description">I have contributed with the following articles:
+                        <p class="description">I contributed the following articles:
                             <cite>Editorial</cite>,
                             <cite>Why Ubuntu?</cite>,
                             <cite>CD content</cite>,
@@ -404,21 +417,16 @@
     <script type="text/javascript">
     jQuery(document).ready(function(){
         $('.menu').hide();
+        $('#printlink').show();
+        var menu = $('#menuitems').detach();
+        menu.appendTo('.menu_js');
         $('.menu_js').show();
         $('.hresume').css('margin-top', '0px');
         $('.container').not('#summary').hide();
         if ($(window.location.hash).length > 0) {
             var hash = window.location.hash;
             $('#selected').removeAttr('id');
-            if (hash == '#skills') {
-                $('.menu_js a[href="#skills"]').parent().attr('id', 'selected');
-            } else if (hash == '#experience') {
-                $('.menu_js a[href="#experience"]').parent().attr('id', 'selected');
-            } else if (hash == '#education') {
-                $('.menu_js a[href="#education"]').parent().attr('id', 'selected');
-            } else if (hash == '#publications') {
-                $('.menu_js a[href="#publications"]').parent().attr('id', 'selected');
-            }
+            $('.menu_js a[href="' + hash + '"]').parent().attr('id', 'selected');
             $(hash).slideDown(600);
         }
         $('.menu_js a').click(function(event) {

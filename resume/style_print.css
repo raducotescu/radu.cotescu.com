@@ -4,34 +4,34 @@
 }
 
 html {
-	overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 body {
     color: #333333;
-	font-family: 'Play', sans-serif;
+    font-family: 'Play', sans-serif;
     font-size: 14px;
     font-weight: normal;
 }
 
 .bottom, .menu, .menu_js {
-	display: none !important;
+    display: none !important;
 }
 
 #selected, #selected a {
-	color: #FFFFFF;
-	background-color: #F37421;
-	border: none;
+    color: #FFFFFF;
+    background-color: #F37421;
+    border: none;
 }
 
 .wrapper {
-	margin: 30px auto 0px;
+    margin: 30px auto 0px;
     width: 7.5in;
     overflow: hidden;
 }
 
 .hresume {
-	margin: 10px;
+    margin: 10px;
     text-align: justify;
 }
 
@@ -41,7 +41,7 @@ body {
 }
 
 .org a {
-	color: #333333;
+    color: #333333;
 }
 
 .nameAndTitle {
@@ -50,12 +50,12 @@ body {
 }
 
 .contact {
-	padding: 15px 30px 0px 30px;
-	overflow: hidden;
+    padding: 15px 30px 0px 30px;
+    overflow: hidden;
 }
 
 #summary {
-	padding: 30px 30px 10px 30px;
+    padding: 30px 30px 10px 30px;
 }
 
 .contactData {
@@ -74,8 +74,8 @@ body {
 }
 
 .container ul {
-    margin-left: 30px;   
-	list-style-type: disc;
+    margin-left: 30px;
+    list-style-type: disc;
 }
 
 .container h3 {
@@ -103,25 +103,20 @@ img {
 }
 
 abbr {
-	color: #555555;
-	font-size: 11px;
+    color: #555555;
+    font-size: 11px;
 }
 
 .modules ul li {
-	margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .organization-details {
-	font-size: 11px;
-	color: #555555;
+    font-size: 11px;
+    color: #555555;
 }
 
 a.email {
        direction:rtl;
        unicode-bidi:bidi-override;
-}
-
-.print {
-	position: absolute;
-	right: 10px;
 }
