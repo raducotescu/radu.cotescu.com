@@ -40,7 +40,8 @@ BrowserMap.addProbe('clientWidth', function() {
     return clientWidthDependingOnOrientation;
 }).addProbe('devicePixelRatio', function() {
     var mq = window.matchMedia,
-        ratio = -1;
+        ratio = -1,
+        userAgent;
     if (mq) {
         for (var i = 0.5; i <= 3; i+= 0.05) {
             var r = Math.round(i * 100)/100;
@@ -50,7 +51,10 @@ BrowserMap.addProbe('clientWidth', function() {
             }
         }
     }
-    if (navigator.platform == 'BlackBerry') {
+
+    // hacks for browsers not returning correct answers to the above media queries
+    userAgent = navigator.userAgent;
+    if (userAgent.indexOf('BlackBerry') != -1 || userAgent.indexOf('Windows Phone') != -1) {
         ratio = Math.round(BrowserMap.probe('screenWidthDependingOnOrientation') / BrowserMap.probe('clientWidthDependingOnOrientation') * 100) / 100;
     }
     return ratio;
