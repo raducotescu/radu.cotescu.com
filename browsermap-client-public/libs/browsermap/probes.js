@@ -32,7 +32,7 @@ BrowserMap.addProbe('clientWidth', function() {
     return widthDependingOnOrientation;
 }).addProbe('clientWidthDependingOnOrientation', function () {
     var clientWidthDependingOnOrientation = 0;
-    if (BrowserMap.probe('orientation') === 'portrait') {
+    if (BrowserMap.probe('orientation') == 'portrait') {
         clientWidthDependingOnOrientation = document.documentElement.clientWidth < document.documentElement.clientHeight ? document.documentElement.clientWidth : document.documentElement.clientHeight;
     } else {
         clientWidthDependingOnOrientation = document.documentElement.clientWidth > document.documentElement.clientHeight ? document.documentElement.clientWidth : document.documentElement.clientHeight;
