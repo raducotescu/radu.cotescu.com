@@ -64,7 +64,7 @@ h3 {
 }
 
 </style>
-<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/javascript" src="./libs/browsermap/bmaputil.js"></script>
 <script type="text/javascript" src="./libs/browsermap/bmap.js"></script>
 <script type="text/javascript" src="./libs/externals/modernizr/modernizr.custom.js"></script>
@@ -130,17 +130,24 @@ element = document.getElementById('devicegroups');
 element.innerHTML = dgs.join(', ');
 
 
+BrowserMap.debug('window.devicePixelRatio');
 BrowserMap.debug('window.orientation');
-BrowserMap.debug('window.innerWidth');
-BrowserMap.debug('window.innerHeight');
+BrowserMap.debug('navigator.vendor');
+BrowserMap.debug('navigator.platform');
+
 BrowserMap.debug('screen.width');
+BrowserMap.debug('screen.availWidth');
+BrowserMap.debug('top.window.outerWidth');
 BrowserMap.debug('screen.height');
+BrowserMap.debug('screen.availHeight');
+BrowserMap.debug('top.window.outerHeight');
 
 BrowserMap.debug('Modernizr.touch');
 BrowserMap.debug('Modernizr.csstransforms3d');
 
 BrowserMap.debug('BrowserMap.probe("devicePixelRatio")');
 BrowserMap.debug('BrowserMap.probe("clientWidth")');
+BrowserMap.debug('BrowserMap.probe("clientWidthDependingOnOrientation")');
 BrowserMap.debug('BrowserMap.probe("orientation")');
 BrowserMap.debug('BrowserMap.probe("portrait")');
 BrowserMap.debug('BrowserMap.probe("landscape")');
