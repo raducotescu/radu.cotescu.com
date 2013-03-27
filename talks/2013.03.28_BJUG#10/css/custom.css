@@ -1,0 +1,38 @@
+html.devlist body {
+    background:url('../img/devlist_web.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+html.issue body {
+    background:url('../img/issue.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+html.scm body {
+    background:url('../img/scm.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+html.url body {
+    background:url('../img/url.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+html.archive body {
+    background:url('../img/archive.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+h2 {
+    background-color: rgba(255, 255, 255, 0.8);
+}

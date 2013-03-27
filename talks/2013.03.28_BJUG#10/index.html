@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Open development in 5 minutes</title>
+
+        <meta name="description" content="A short presentation about open development in the enterprise.">
+        <meta name="author" content="Radu Cotescu">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="css/custom.css">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>Open Development in 5 Minutes</h1>
+                    <p style="text-align: center; font-size: 24px">Based on <a href="http://www.slideshare.net/bdelacretaz/open-development-in-the-enterprise-apachecon-na-2013">"Open Development in the enterprise"</a>, by <a href="http://grep.codeconsult.ch/">Bertrand Delacrétaz</a><p>
+                    <br />
+                    <p style="text-align: left;">
+                        <b>Radu Cotescu</b>
+                    </p>
+                    <p style="text-align: left; font-size: 28px">Computer Scientist, Adobe CQ5/AEM R&amp;D team, Bucharest, Romania</p>
+                    <p style="text-align: left; font-size: 28px">
+                        {<a href="http://radu.cotescu.com">http://radu.cotescu.com</a>}
+                        {<a href="mailto:radu@cotescu.com">radu@cotescu.com</a>}
+                        {<a href="http://twitter.com/raducotescu">@raducotescu</a>}
+                    </p>
+                </section>
+
+                <section data-state="devlist">
+                    <h2><b>1.</b> If it didn't happen on the <b>dev@list</b> it didn't happen.</h2>
+                </section>
+
+                <section data-state="issue">
+                    <h2><b>2.</b> Whatever you're working on, it must be backed by an <b>issue in the tracker</b>.</h2>
+                </section>
+
+                <section data-state="scm">
+                    <h2><b>3.</b> If it's not in the <b>SCM system</b>, it doesn't exist.</h2>
+                </section>
+
+                <section data-state="url">
+                    <h2><b>4.</b> If it's important, it needs a <b>permanent URL</b>.</h2>
+                </section>
+
+                <section data-state="archive">
+                    <h2><b>5.</b> What happened when you weren't here? Check the <b>archives</b> or the <b>live feeds</b>!</h2>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: false,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: 'sky', // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
