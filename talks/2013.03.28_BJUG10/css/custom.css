@@ -1,5 +1,5 @@
 html.devlist h2, html.issue h2, html.scm h2, html.url h2, html.archive h2 {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(150,150,150,0.2);
 }
 
 html.devlist body {
@@ -36,13 +36,3 @@ html.archive body {
     background-size: 100%;
     background-repeat: no-repeat;
 }
-
-/*html.thanks .state-background {
-    background-color: rgba(0,0,0, 1);
-}
-
-html.thanks h2 {
-    color: rgb(255,255,255);
-}*/
-
-
