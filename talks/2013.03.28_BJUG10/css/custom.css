@@ -1,3 +1,7 @@
+html.devlist h2, html.issue h2, html.scm h2, html.url h2, html.archive h2 {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 html.devlist body {
     background:url('../img/devlist_web.png');
     background-position: center;
@@ -33,6 +37,12 @@ html.archive body {
     background-repeat: no-repeat;
 }
 
-h2 {
-    background-color: rgba(255, 255, 255, 0.8);
+/*html.thanks .state-background {
+    background-color: rgba(0,0,0, 1);
 }
+
+html.thanks h2 {
+    color: rgb(255,255,255);
+}*/
+
+
