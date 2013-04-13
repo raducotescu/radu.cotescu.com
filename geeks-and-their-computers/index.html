@@ -316,35 +316,21 @@ google_ad_height = 250;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 <section>
-  <h1>Latest Tweets</h1>
-    <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-    <script>
-    new TWTR.Widget({
-      version: 2,
-      type: 'profile',
-      rpp: 5,
-      interval: 30000,
-      width: 250,
-      height: 370,
-      theme: {
-        shell: {
-          background: '#cfcfcf',
-          color: '#ffffff'
-        },
-        tweets: {
-          background: '#e8e8e8',
-          color: '#4b4b4b',
-          links: '#0182eb'
+  <h2>Latest Tweets</h2>
+  <a class="twitter-timeline" href="https://twitter.com/raducotescu" data-widget-id="323192190111203328">Tweets by @raducotescu</a>
+  <script>
+  !function(d,s,id) {
+    var js,
+        fjs = d.getElementsByTagName(s)[0],
+        p = /^http:/.test(d.location) ? 'http' : 'https';
+        if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = p + "://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js,fjs);
         }
-      },
-      features: {
-        scrollbar: false,
-        loop: false,
-        live: true,
-        behavior: 'all'
-      }
-    }).render().setUser('raducotescu').start();
-    </script>
+  }(document,"script","twitter-wjs");
+  </script>
 </section>
 
 
