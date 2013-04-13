@@ -21,10 +21,11 @@
   <link rel="canonical" href="http://radu.cotescu.com/google-adsense-problem">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="http://feeds.cotescu.com/raducotescu" rel="alternate" title="Radu Cotescu's professional blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -52,6 +53,7 @@
         <li><a href="/about/" title="About">About</a></li>
         <li><a href="/privacy-policy/" title="Privacy Policy">Privacy Policy</a></li>
         <li><a href="/calendar/" title="Calendar">Calendar</a></li>
+        <li><a href="/talks/" title="Talks">Talks</a>
         <li><a href="/resume/" title="Resume">Resume</a></li>
     </ul>
   </div>
@@ -125,9 +127,9 @@
 
 <p>Two days ago I wanted to create an AdSense account using my new Google Apps email address. Suprise! It seemed that I already had an AdSense account associated with my previous email (@gmail.com). I received an email that informed me that my request is currently disapproved because of this and that I have two options: to use my old account or to close my old account and resubmit my application. Ok! Let&#8217;s close the old one and resubmit.</p>
 
-<p>After I did close my old AdSense account, when I tried to resubmit my application, it told me that my request cannot be processed as my email address (the new Google Apps one) is associated with a disapproved request which in my opinion was solved by closing that first account. I have tried contacting them using the famous <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#x61;&#x64;&#x73;&#101;&#110;&#x73;&#x65;&#x2d;&#115;&#x75;&#x70;&#112;&#111;&#114;&#x74;&#64;&#103;&#x6f;&#x6f;&#103;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;">&#x61;&#100;&#115;&#101;&#x6e;&#x73;&#x65;&#45;&#x73;&#x75;&#112;&#x70;&#111;&#114;&#116;&#x40;&#103;&#111;&#x6f;&#x67;&#x6c;&#101;&#46;&#99;&#111;&#x6d;</a> but I only received an automated response that told me to check their Help Center for my problem. I had done that before I tried to contact them by email and I couldn&#8217;t find a solution.</p>
+<p>After I did close my old AdSense account, when I tried to resubmit my application, it told me that my request cannot be processed as my email address (the new Google Apps one) is associated with a disapproved request which in my opinion was solved by closing that first account. I have tried contacting them using the famous <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#x61;&#100;&#x73;&#x65;&#110;&#x73;&#101;&#45;&#115;&#x75;&#112;&#x70;&#111;&#114;&#116;&#64;&#x67;&#x6f;&#x6f;&#103;&#108;&#101;&#46;&#x63;&#x6f;&#x6d;">&#x61;&#x64;&#x73;&#x65;&#110;&#115;&#x65;&#x2d;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#x40;&#103;&#x6f;&#x6f;&#103;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a> but I only received an automated response that told me to check their Help Center for my problem. I had done that before I tried to contact them by email and I couldn&#8217;t find a solution.</p>
 
-<p>Does any of you, my readers, know how I could contact a human being that works at Google to handle my problem? If you feel that you cannot post the answer in the comments because of  personal data, please mail me at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#114;&#97;&#100;&#x75;&#x40;&#x63;&#x6f;&#x74;&#x65;&#115;&#x63;&#x75;&#46;&#x63;&#111;&#109;">&#114;&#x61;&#x64;&#117;&#64;&#x63;&#111;&#x74;&#x65;&#x73;&#99;&#117;&#x2e;&#x63;&#x6f;&#x6d;</a>. Thank you!</p>
+<p>Does any of you, my readers, know how I could contact a human being that works at Google to handle my problem? If you feel that you cannot post the answer in the comments because of  personal data, please mail me at <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#114;&#97;&#100;&#117;&#x40;&#99;&#111;&#x74;&#101;&#x73;&#99;&#x75;&#46;&#x63;&#x6f;&#x6d;">&#114;&#x61;&#100;&#x75;&#64;&#x63;&#x6f;&#x74;&#x65;&#x73;&#x63;&#117;&#46;&#99;&#111;&#109;</a>. Thank you!</p>
 </div>
 
 
@@ -155,7 +157,7 @@
 
 <span class="categories">
   
-    <a class='category' href='/category/-com/'>.com</a>
+    <a class='category' href='/category/dot-com/'>.com</a>
   
 </span>
 
@@ -201,7 +203,7 @@
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
+  js = d.createElement(s); js.id = id; js.async = true;
   js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
@@ -301,7 +303,6 @@ google_ad_height = 250;
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
-
 <section>
   <h1>Latest Tweets</h1>
     <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
@@ -336,6 +337,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 
+
 <section class="googleplus">
   <h1>
     <a href="https://plus.google.com/106725941266744510645?rel=author">
@@ -354,7 +356,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     </div>
   </div>
   <footer role="contentinfo"><p>
-  &copy; 2009 - 2012 - Radu Cotescu -
+  &copy; 2009 - 2013 - Radu Cotescu -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

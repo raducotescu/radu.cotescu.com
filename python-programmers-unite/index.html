@@ -21,10 +21,11 @@
   <link rel="canonical" href="http://radu.cotescu.com/python-programmers-unite">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="http://feeds.cotescu.com/raducotescu" rel="alternate" title="Radu Cotescu's professional blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -52,6 +53,7 @@
         <li><a href="/about/" title="About">About</a></li>
         <li><a href="/privacy-policy/" title="Privacy Policy">Privacy Policy</a></li>
         <li><a href="/calendar/" title="Calendar">Calendar</a></li>
+        <li><a href="/talks/" title="Talks">Talks</a>
         <li><a href="/resume/" title="Resume">Resume</a></li>
     </ul>
   </div>
@@ -205,7 +207,7 @@
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
+  js = d.createElement(s); js.id = id; js.async = true;
   js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
@@ -305,7 +307,6 @@ google_ad_height = 250;
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
-
 <section>
   <h1>Latest Tweets</h1>
     <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
@@ -340,6 +341,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 
+
 <section class="googleplus">
   <h1>
     <a href="https://plus.google.com/106725941266744510645?rel=author">
@@ -358,7 +360,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     </div>
   </div>
   <footer role="contentinfo"><p>
-  &copy; 2009 - 2012 - Radu Cotescu -
+  &copy; 2009 - 2013 - Radu Cotescu -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
