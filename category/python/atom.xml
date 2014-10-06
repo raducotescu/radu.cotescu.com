@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Python | Radu Cotescu's professional blog]]></title>
-  <link href="http://radu.cotescu.com/category/python/atom.xml" rel="self"/>
-  <link href="http://radu.cotescu.com/"/>
-  <updated>2014-10-07T02:27:12+03:00</updated>
-  <id>http://radu.cotescu.com/</id>
+  <link href="https://radu.cotescu.com/category/python/atom.xml" rel="self"/>
+  <link href="https://radu.cotescu.com/"/>
+  <updated>2014-10-07T02:46:44+03:00</updated>
+  <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Put your latest tweet as Pidgin's status on Ubuntu (Linux)]]></title>
-    <link href="http://radu.cotescu.com/put-your-latest-tweet-as-pidgin-status-on-ubuntu-linux/"/>
+    <link href="https://radu.cotescu.com/put-your-latest-tweet-as-pidgin-status-on-ubuntu-linux/"/>
     <updated>2009-12-22T01:27:37+02:00</updated>
-    <id>http://radu.cotescu.com/put-your-latest-tweet-as-pidgin-status-on-ubuntu-linux</id>
+    <id>https://radu.cotescu.com/put-your-latest-tweet-as-pidgin-status-on-ubuntu-linux</id>
     <content type="html"><![CDATA[<p>Twitter became a trend nowadays when almost everything important is being found out via this social-networking micro-blogging service. And now with Google's real time search-results that includes tweets too, Twitter is recognised as a powerful platform by even the Internet's giant. Since your (and mine too) online presence might include a few tweets a day, in a moment of total boredom, I decided to write a simple Python script that would update your Pidgin's status with the latest tweet from your account.</p>
 
 <p>Using the same principle as the script I wrote for <a href="http://radu.cotescu.com/python-and-pidgin-status-on-ubuntu-linux/">updating Pidgin's status with a random post from your blog's feed</a>, this new script uses as well a feed (the one provided by Twitter to every user), only that this time only the latest tweet will be set as status. Replies are ignored and therefore if your latest Twitter interaction is a reply, the script will search for the latest tweet which is <em>doh</em> not a reply. Because hash-tags represented a problem when trying to set Pidgin's status the hash signs (#) are eliminated.</p>
@@ -46,9 +46,9 @@
   
   <entry>
     <title type="html"><![CDATA[Python and Pidgin's status on Ubuntu (Linux)]]></title>
-    <link href="http://radu.cotescu.com/python-and-pidgin-status-on-ubuntu-linux/"/>
+    <link href="https://radu.cotescu.com/python-and-pidgin-status-on-ubuntu-linux/"/>
     <updated>2009-08-26T18:01:43+03:00</updated>
-    <id>http://radu.cotescu.com/python-and-pidgin-status-on-ubuntu-linux</id>
+    <id>https://radu.cotescu.com/python-and-pidgin-status-on-ubuntu-linux</id>
     <content type="html"><![CDATA[<p><a href="http://motane.lu">Tudor</a> has found a <a href="http://blog.motane.lu/2009/08/21/advertising-blog-entries-on-pidgins-status/">better solution</a> to advertise one's blog posts with the help of Pidgin and a little bit of Python. I did argue with him a bit regarding the number of requests made (you can see that in the comments on his blog post) but finally I would agree that his solution was better than mine, only that I felt the need to improve it a bit. This still needs to set DBUS session parameters at log in time, and thanks to <a href="http://earlruby.org">Earl Ruby</a> this can be done easily too.</p>
 
 <p>The script is pretty simple and I made it write a log to <code>stdout</code>, which with the help of <code>cron</code> can be piped to any file you want. Knock yourself out:</p>
@@ -146,9 +146,9 @@ DISPLAY=:0.0
   
   <entry>
     <title type="html"><![CDATA[Python programmers, unite!]]></title>
-    <link href="http://radu.cotescu.com/python-programmers-unite/"/>
+    <link href="https://radu.cotescu.com/python-programmers-unite/"/>
     <updated>2009-02-12T10:26:19+02:00</updated>
-    <id>http://radu.cotescu.com/python-programmers-unite</id>
+    <id>https://radu.cotescu.com/python-programmers-unite</id>
     <content type="html"><![CDATA[<p><a href="http://python.org"><img src="http://www.python.org/community/logos/python-logo-master-v3-TM.png?w=300" alt="Python Logo" /></a>I have recently discovered <a href="http://python.org">Python</a> and by recently I mean a few months (3 and a half). The discovery has been made after I was supposed to do a web application for a course at my faculty and it has been based on the fact that I wanted another programming language that would do the trick besides PHP. The only reason for not choosing PHP is its ugly syntax (mixing code with HTML) and the fact that everybody uses it. That might not be a very good criteria to chose from (because of the community support) but I am known to be stubborn as a mule. I have also discovered <a href="http://www.djangoproject.com">Django</a>, a web framework written in Python. The project went smooth and everything turned fine.</p>
 
 <p>My pal <a href="http://motane.lu">Tudor</a> has become a ZCE (Zend Certified Engineer) 2-3 weeks ago and he is very proud of that. He is what some of you may call a PHP guru, working for a great outsourcing company, <a href="http://www.zitec.com/zitec-team.html">Zitec</a> (working as of May 2009 at <a href="http://www.ninespices.com/">Ninespices</a>). We tend to sting ourselves from time to time with geeky remarks like "Python's better than your sucky PHP" or "Gaython is okay for you" but after our egos have cooled down, Tudor said something true and realistic: Python doesn't have a company that invests marketing and money behind it, like Zend does for PHP.</p>

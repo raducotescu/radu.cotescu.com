@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: VirtualBox | Radu Cotescu's professional blog]]></title>
-  <link href="http://radu.cotescu.com/category/virtualbox/atom.xml" rel="self"/>
-  <link href="http://radu.cotescu.com/"/>
-  <updated>2014-10-07T02:27:12+03:00</updated>
-  <id>http://radu.cotescu.com/</id>
+  <link href="https://radu.cotescu.com/category/virtualbox/atom.xml" rel="self"/>
+  <link href="https://radu.cotescu.com/"/>
+  <updated>2014-10-07T02:46:44+03:00</updated>
+  <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ubuntu 10.10 and VirtualBox Guest Additions]]></title>
-    <link href="http://radu.cotescu.com/ubuntu-virtualbox-additions/"/>
+    <link href="https://radu.cotescu.com/ubuntu-virtualbox-additions/"/>
     <updated>2010-10-12T12:00:06+03:00</updated>
-    <id>http://radu.cotescu.com/ubuntu-virtualbox-additions</id>
+    <id>https://radu.cotescu.com/ubuntu-virtualbox-additions</id>
     <content type="html"><![CDATA[<p>Two days ago Ubuntu 10.10 was released. Since I don't want to upgrade yet to the new release - I am currently running 10.04 - I decided to try Maverick (the code name for the latest release) in a VirtualBox virtual machine.</p>
 
 <p>The installation process went fine (it's just point and click) and I do like the new wizard's screens. Usually the next step for any virtual machine would be to install VirtualBox Guest Additions in order to be able to use higher resolutions, mouse integration, seamless integration and all the other geeky goodies. From my previous experiences, to install the Guest Additions into a virtual guest, one was supposed to click on <em>Devices » Install Guest Additions...</em> in VirtualBox's guest window and then to launch the autorun script from the virtual CD. Well, that used to work until now.</p>
@@ -37,9 +37,9 @@ sudo apt-get install build-essential linux-headers-`uname -r`
   
   <entry>
     <title type="html"><![CDATA[Using VirtualBox for virtualizing servers]]></title>
-    <link href="http://radu.cotescu.com/virtualbox-virtual-servers/"/>
+    <link href="https://radu.cotescu.com/virtualbox-virtual-servers/"/>
     <updated>2010-05-27T01:07:56+03:00</updated>
-    <id>http://radu.cotescu.com/virtualbox-virtual-servers</id>
+    <id>https://radu.cotescu.com/virtualbox-virtual-servers</id>
     <content type="html"><![CDATA[<p><a href="http://virtualbox.org"><img src="/uploads/wpuploads/2010/05/vbox-300x225.png" alt="Oracle VirtualBox" /></a>A considerable amount of my diploma project runs on several virtual machines, due to the lack of multiple physical machines required for the job. Of course, <a href="http://radu.cotescu.com/geeks-and-their-computers/">Riker</a> isn't tailored for production regarding this project, but it was built specifically to allow me to develop the code without restrictions. For a load under 10 users I think it would do the job quite okay. You might be asking yourself what kind of project it is if an Intel Core i7 930 processor couldn't handle the job. I'm not going to tell you... Yet.</p>
 
 <p>Because of the way <a href="http://radu.cotescu.com/category/vitualization/vmware/">VMware Server</a> works on the last kernels from Ubuntu this tool couldn't have offered me the stability and performance I need. And because I really like to use my graphics card to decode HD content, Xen or VMware ESXi weren't an option either. What was left? VirtualBox is made for desktop virtualization. Still, the ease of use of this product and the fact that it never ever failed for my needs made me actually consider it could be up for the job. Of course, the only problem I had was daemonizing it somehow so that I could run the virtual machines without necessarily being logged in. It actually crossed my mind a few times to write some scripts which would rely on the CLI tools that VirtualBox provides, but the lack of time always made me think twice before this.</p>
@@ -56,9 +56,9 @@ sudo apt-get install build-essential linux-headers-`uname -r`
   
   <entry>
     <title type="html"><![CDATA[VirtualBox USB support]]></title>
-    <link href="http://radu.cotescu.com/virtualbox-usb-support/"/>
+    <link href="https://radu.cotescu.com/virtualbox-usb-support/"/>
     <updated>2009-07-31T21:44:03+03:00</updated>
-    <id>http://radu.cotescu.com/virtualbox-usb-support</id>
+    <id>https://radu.cotescu.com/virtualbox-usb-support</id>
     <content type="html"><![CDATA[<p>Recently I became a fan of VirtualBox, the virtualization platform from Sun Microsystems. It's robust, it has an extremely small memory foot-print comparing it to other similar virtual managers and it has some great features. You can find more about it on its <a href="http://www.virtualbox.org/">homepage</a>.</p>
 
 <p>Yesterday I have updated VirtualBox from 2.2.4 to 3.1. Unfortunately, the USB support failed to work despite the fact that I did install VirtualBox Guest Additions to my guest machines. The solution to fix it is pretty simple:</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Radu Cotescu's professional blog]]></title>
-  <link href="http://radu.cotescu.com/atom.xml" rel="self"/>
-  <link href="http://radu.cotescu.com/"/>
-  <updated>2014-10-07T02:27:12+03:00</updated>
-  <id>http://radu.cotescu.com/</id>
+  <link href="https://radu.cotescu.com/atom.xml" rel="self"/>
+  <link href="https://radu.cotescu.com/"/>
+  <updated>2014-10-07T02:46:44+03:00</updated>
+  <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Remapping Keys in Ubuntu 14.04]]></title>
-    <link href="http://radu.cotescu.com/remapping-keys-in-ubuntu-14.04/"/>
+    <link href="https://radu.cotescu.com/remapping-keys-in-ubuntu-14.04/"/>
     <updated>2014-09-07T18:30:00+03:00</updated>
-    <id>http://radu.cotescu.com/remapping-keys-in-ubuntu-14.04</id>
+    <id>https://radu.cotescu.com/remapping-keys-in-ubuntu-14.04</id>
     <content type="html"><![CDATA[<p>Ever since I&#8217;ve switched to Mac OS X I liked its shortcut modifiers more than the ones available on Windows / Linux. While I do agree that sometimes
 you lose count of the number of modifier keys that you have to press in order to get something done, most of the cases that claim is just FUD.</p>
 
@@ -33,7 +33,7 @@ One of the nifty features (and there are plenty) is the ability to change the la
 the back. Obviously, it can be configured to a Mac layout. But what do you do when you want to use the same keyboard on your Linux box, from time to
 time? I mean you&#8217;re mostly using <code>Command</code> for your shortcuts. Remapping the shortcuts in your head to <code>Control</code> is not that easy at first.</p>
 
-<p><img src="http://radu.cotescu.com/uploads/2014/09/07/code.jpg" title="CODE 87-Key Mechanical Keyboard with Mac layout" alt="&quot;CODE 87-Key Mechanical Keyboard with Mac layout&quot;" /></p>
+<p><img src="https://radu.cotescu.com/uploads/2014/09/07/code.jpg" title="CODE 87-Key Mechanical Keyboard with Mac layout" alt="&quot;CODE 87-Key Mechanical Keyboard with Mac layout&quot;" /></p>
 
 <h2>XKB</h2>
 
@@ -69,9 +69,9 @@ a lot better than without it.</p>
   
   <entry>
     <title type="html"><![CDATA[Coloured log outputs on Unix/Linux]]></title>
-    <link href="http://radu.cotescu.com/coloured-log-outputs/"/>
+    <link href="https://radu.cotescu.com/coloured-log-outputs/"/>
     <updated>2012-10-29T21:36:00+02:00</updated>
-    <id>http://radu.cotescu.com/coloured-log-outputs</id>
+    <id>https://radu.cotescu.com/coloured-log-outputs</id>
     <content type="html"><![CDATA[<p>There are various times when a software engineer needs to closely monitor log output in real-time. More often than not the engineer is
 actually interested in the output of multiple logs at the same time. Given the amount of information that an application can output to log
 files at any one time, filtering the important information from bogus entries becomes frustrating and tedious.</p>
@@ -287,9 +287,9 @@ Furthermore, <code>ctail</code> can also be used on servers with very little set
   
   <entry>
     <title type="html"><![CDATA[A useful rant on how people write Java code]]></title>
-    <link href="http://radu.cotescu.com/java-common-sense/"/>
+    <link href="https://radu.cotescu.com/java-common-sense/"/>
     <updated>2012-10-21T20:49:00+03:00</updated>
-    <id>http://radu.cotescu.com/java-common-sense</id>
+    <id>https://radu.cotescu.com/java-common-sense</id>
     <content type="html"><![CDATA[<p>During the last months I&#8217;ve had the chance to see a lot of code written by different types of developers. Some of it has definitely made me
 proud of the word &#8220;engineering&#8221; being associated with my profession; the other, not. There are a few basic unwritten rules that more or less
 have become software engineering common sense.</p>
@@ -452,9 +452,9 @@ didn&#8217;t specify that <code>+</code> should be avoided in loops, although th
   
   <entry>
     <title type="html"><![CDATA[Tools required for opening a MacBook Pro]]></title>
-    <link href="http://radu.cotescu.com/tools-required-for-opening-a-macbook-pro/"/>
+    <link href="https://radu.cotescu.com/tools-required-for-opening-a-macbook-pro/"/>
     <updated>2012-06-04T01:45:00+03:00</updated>
-    <id>http://radu.cotescu.com/tools-required-for-opening-a-macbook-pro</id>
+    <id>https://radu.cotescu.com/tools-required-for-opening-a-macbook-pro</id>
     <content type="html"><![CDATA[<p>Last week my final MacBook Pro arrived. Since at Adobe we are forced to encrypt our hard-drives in order to protect our work (in case our machines get stolen) the IT team decided to provide us with SSD drives for our portable computers. The advantages are numerous:</p>
 
 <ul>
@@ -480,9 +480,9 @@ didn&#8217;t specify that <code>+</code> should be avoided in loops, although th
   
   <entry>
     <title type="html"><![CDATA[Switching to Mac from Ubuntu]]></title>
-    <link href="http://radu.cotescu.com/the-switch-to-mac-from-ubuntu/"/>
+    <link href="https://radu.cotescu.com/the-switch-to-mac-from-ubuntu/"/>
     <updated>2012-05-20T23:39:00+03:00</updated>
-    <id>http://radu.cotescu.com/the-switch-to-mac-from-ubuntu</id>
+    <id>https://radu.cotescu.com/the-switch-to-mac-from-ubuntu</id>
     <content type="html"><![CDATA[<p>When I joined Adobe I was given the chance of choosing between using a Lenovo ThinkPad or a MacBook Pro as my
 development machine. Since I really dislike the design of the ThinkPads and also because I really wanted to try a Mac
 for a longer period of time I accepted the challenge. My previous experiences with a Mac were limited to only a few
@@ -548,9 +548,9 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   
   <entry>
     <title type="html"><![CDATA[Migrating your Ubuntu machine to a SSD drive]]></title>
-    <link href="http://radu.cotescu.com/migrating-your-ubuntu-machine-to-a-ssd-drive/"/>
+    <link href="https://radu.cotescu.com/migrating-your-ubuntu-machine-to-a-ssd-drive/"/>
     <updated>2012-05-11T23:10:00+03:00</updated>
-    <id>http://radu.cotescu.com/migrating-your-ubuntu-machine-to-a-ssd-drive</id>
+    <id>https://radu.cotescu.com/migrating-your-ubuntu-machine-to-a-ssd-drive</id>
     <content type="html"><![CDATA[<p>SSD drives have finally become affordable and more reliable than they used to be. Partly this was sure helped by the price boost of the traditional hard-disks manufactured in Thailand (I think everybody still reminds the <a href="http://en.wikipedia.org/wiki/2011_Thailand_flood" title="2011 Thailand flood">floods</a> from the summer of 2011). The competition helped the development of innovative solutions and after 4 years since their mass-consumption breakthrough they have managed to become a standard on ultrabooks and premium laptops.</p>
 
 <p>Because the price / GB of the classic mechanical hard-disk was so low (as low as US$0.05 per GB for 3.5 inch drives and US$0.10 per GB for 2.5 inch drives), producers started to offer larger drives for the same money. Unfortunately SSD technologies cannot and probably will not evolve the same way due to memory degradations once the chip size decreases. In particular this led to higher prices for the same disk size, making SSDs more attractive for boot / OS drives instead of plain storage ones.</p>
@@ -679,9 +679,9 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   
   <entry>
     <title type="html"><![CDATA[Why awk is better than cut]]></title>
-    <link href="http://radu.cotescu.com/why-awk-is-better-than-cut/"/>
+    <link href="https://radu.cotescu.com/why-awk-is-better-than-cut/"/>
     <updated>2011-08-01T12:45:40+03:00</updated>
-    <id>http://radu.cotescu.com/why-awk-is-better-than-cut</id>
+    <id>https://radu.cotescu.com/why-awk-is-better-than-cut</id>
     <content type="html"><![CDATA[<p>I am currently working with some text files from which I have to extract some data. Generally, when you have to do this kind of work on a *nix machine, you use <code>cut</code> or <code>awk</code>. However, even for simple tasks <code>cut</code> is superseded by the mighty <code>awk</code>. Let&#8217;s look at the following examples which are closely related to the data that I&#8217;m working with. Assume we have the following text file:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -768,9 +768,9 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   
   <entry>
     <title type="html"><![CDATA[Bash one-liner for removing old kernel artefacts]]></title>
-    <link href="http://radu.cotescu.com/bash-old-kernel-artefacts/"/>
+    <link href="https://radu.cotescu.com/bash-old-kernel-artefacts/"/>
     <updated>2011-07-29T14:13:57+03:00</updated>
-    <id>http://radu.cotescu.com/bash-old-kernel-artefacts</id>
+    <id>https://radu.cotescu.com/bash-old-kernel-artefacts</id>
     <content type="html"><![CDATA[<p>Since now I have 4 virtual machines to administer for my dissertation project, I have to find ways to do sysadmin stuff as quickly as possible and to concentrate my efforts on software development. If you ever did a kernel update you would know that a kernel upgrade will not remove the old kernel artefacts, specifically the old headers and the Linux image. While this is a good technique for avoiding incompatibilities of some binaries with the new kernel versions, therefore allowing you to test that everything is working as expected, old kernel images occupy an important amount of space (around 256 MB / release). When your system has a limited amount of storage allocated to it, this might become a problem.</p>
 
 <p>The process of removing the unused images requires a few keystrokes and some user input, needing a great deal of attention not to remove the currently running kernel or - in case you are extremely inattentive - all the kernel images from your system. To semi-automate this task, you can use the following Bash one-liner:</p>
@@ -786,9 +786,9 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   
   <entry>
     <title type="html"><![CDATA[Facebook, Pidgin and the "Not authorised" error message]]></title>
-    <link href="http://radu.cotescu.com/facebook-pidgin-not-authorised/"/>
+    <link href="https://radu.cotescu.com/facebook-pidgin-not-authorised/"/>
     <updated>2011-06-15T13:46:58+03:00</updated>
-    <id>http://radu.cotescu.com/facebook-pidgin-not-authorised</id>
+    <id>https://radu.cotescu.com/facebook-pidgin-not-authorised</id>
     <content type="html"><![CDATA[<p>I noticed a few days ago that my Facebook XMPP chat account from Pidgin had stopped working, popping up a weird error message: &#8220;Not authorised&#8221;. This happened even though I did not change any of the account&#8217;s settings.</p>
 
 <p>The resolution is pretty Voodoo or, how <a href="http://web.nastasiu.com">Vlad</a> described it, the error needs a Microsoft-type fix. Apparently if you are logged in on Facebook using your email address instead of the user name, the XMPP protocol might not authenticate you. Therefore, if you&#8217;d like to use Facebook&#8217;s chat on third-party clients while you&#8217;re still logged on in a browser, make sure you always log in using your user name instead of your email address on Facebook&#8217;s site. Trying to use your email address in Pidgin for the user name field results in an error, as email addresses are not valid XMPP user names.</p>
@@ -799,9 +799,9 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   
   <entry>
     <title type="html"><![CDATA[Help needed]]></title>
-    <link href="http://radu.cotescu.com/ubuntu-automated-configuration-tool/"/>
+    <link href="https://radu.cotescu.com/ubuntu-automated-configuration-tool/"/>
     <updated>2011-06-02T20:39:28+03:00</updated>
-    <id>http://radu.cotescu.com/ubuntu-automated-configuration-tool</id>
+    <id>https://radu.cotescu.com/ubuntu-automated-configuration-tool</id>
     <content type="html"><![CDATA[<p>Dear all,</p>
 
 <p>I am running <a href="http://goo.gl/RW4s0">a survey</a> for my dissertation project to collect some useful data that might help me shape the application that I am going to build. If you have previously used <a href="http://www.ubuntu.com/">Ubuntu</a> your input will be much appreciated. It shouldn&#8217;t take you more than 5 - 10 minutes to complete the form.</p>
@@ -812,9 +812,9 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   
   <entry>
     <title type="html"><![CDATA[How to install VMware Server on kernel version 2.6.38]]></title>
-    <link href="http://radu.cotescu.com/vmware-server-kernel-2-6-38/"/>
+    <link href="https://radu.cotescu.com/vmware-server-kernel-2-6-38/"/>
     <updated>2011-05-05T12:18:56+03:00</updated>
-    <id>http://radu.cotescu.com/vmware-server-kernel-2-6-38</id>
+    <id>https://radu.cotescu.com/vmware-server-kernel-2-6-38</id>
     <content type="html"><![CDATA[<h2>Notices:</h2>
 
 <ul>
@@ -829,9 +829,9 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   
   <entry>
     <title type="html"><![CDATA[Ubuntu 64-bit and Flash videos in fullscreen]]></title>
-    <link href="http://radu.cotescu.com/ubuntu-flash-videos-fullscreen/"/>
+    <link href="https://radu.cotescu.com/ubuntu-flash-videos-fullscreen/"/>
     <updated>2011-03-25T00:00:13+02:00</updated>
-    <id>http://radu.cotescu.com/ubuntu-flash-videos-fullscreen</id>
+    <id>https://radu.cotescu.com/ubuntu-flash-videos-fullscreen</id>
     <content type="html"><![CDATA[<p>I have never been an Adobe fan and something tells me that I won&#8217;t change my mind soon. One of the main reasons for which Linux had problems being a &#8220;normal&#8221; operating system for a quite long period of time (although there were other issues as well, but not as visible at this one) was that the Flash Player never really worked very well on this platform. Time passed and things began slowly to advance, however users of the 64-bit version of the Linux kernel had to use various hacks to run a 32-bit browser because of Flash.</p>
 
 <h2>A little bit of history (and personal experience)</h2>
@@ -878,9 +878,9 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   
   <entry>
     <title type="html"><![CDATA[How to secure your SSH server from brute-force attacks]]></title>
-    <link href="http://radu.cotescu.com/ssh-brute-force-attacks/"/>
+    <link href="https://radu.cotescu.com/ssh-brute-force-attacks/"/>
     <updated>2011-02-18T20:13:52+02:00</updated>
-    <id>http://radu.cotescu.com/ssh-brute-force-attacks</id>
+    <id>https://radu.cotescu.com/ssh-brute-force-attacks</id>
     <content type="html"><![CDATA[<p>There are a lot of tutorials online that will tell you how to secure your SSH server. Most of them will tell you not to allow the <code>root</code> account to login, to use only keys for authentication and possibly to change the port on which your server listens from 22 to any other. Although this is valid advice, there are times when due to zealous system administrators you <em>have</em> to use port 22 (because along with 21 and 80 it&#8217;s not blocked and you <em>do</em> like to check your server from time to time). Also, you might still want to use password authentication together with public and private keys just because there are chances that you might lose your keys (it happens to the best of us). Combine these two and you are exposing your server to a lot of brute-force attacks from various script kiddies.</p>
 
 <p>If your SSH server (generally OpenSSH) is compiled to use <a href="http://en.wikipedia.org/wiki/TCP_Wrapper">TCP Wrapper</a> you can use <a href="http://denyhosts.sourceforge.net/">DenyHosts</a> to protect yourself against the annoying attempts to hack the server. However, if you don&#8217;t have the option to use a TCP Wrapper aware SSH server (which happens to be the case on almost all Linux distributions made to operate home-class routers), you&#8217;re pretty much on your own. Unless you&#8217;d like to use another script I wrote while I was bored.</p>
@@ -910,9 +910,9 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   
   <entry>
     <title type="html"><![CDATA[Java, HTTPS and REST web services using Apache CXF]]></title>
-    <link href="http://radu.cotescu.com/java-https-rest-services-apache-cxf/"/>
+    <link href="https://radu.cotescu.com/java-https-rest-services-apache-cxf/"/>
     <updated>2010-12-16T23:39:23+02:00</updated>
-    <id>http://radu.cotescu.com/java-https-rest-services-apache-cxf</id>
+    <id>https://radu.cotescu.com/java-https-rest-services-apache-cxf</id>
     <content type="html"><![CDATA[<p><strong>Securing REST web services</strong> is a very debated topic on the Internet. Because REST represents an architecture, and not a protocol - like SOAP -, there aren&#8217;t any specifications dealing with security, leaving this aspect as a design decision for the software engineers / developers. Still, if you search the web to find out what are the approaches, you&#8217;ll see that most of the results suggest you use <strong><a href="http://en.wikipedia.org/wiki/Basic_access_authentication">basic authentication</a> over <a href="http://en.wikipedia.org/wiki/HTTP_Secure">HTTPS</a></strong>.</p>
 
 <p>The basic authentication is a trivial way of authenticating HTTP requests directly by the web server, without any added effort for the developer. Since REST isn&#8217;t very pretentious (it uses the well known HTTP methods for accessing resources), leaving the authentication to the web server is a natural thing to do. Still, this doesn&#8217;t mean that your REST API is secure. You merely separate users that should have access to your API from users that should be denied access. Enabling HTTPS on the server is the next step that needs to be followed, so that all the requests are secured. This avoids the classical man-in-the-middle attack and also assures that the credentials sent by the users aren&#8217;t visible to the whole world (although they are BASE64 encoded by the basic authentication mechanism, decoding them is a child&#8217;s play).</p>
@@ -1273,9 +1273,9 @@ user: password,role
   
   <entry>
     <title type="html"><![CDATA[Ubuntu and Internet Connection Sharing via a wireless card]]></title>
-    <link href="http://radu.cotescu.com/ubuntu-internet-connection-sharing-wireless/"/>
+    <link href="https://radu.cotescu.com/ubuntu-internet-connection-sharing-wireless/"/>
     <updated>2010-11-27T18:37:46+02:00</updated>
-    <id>http://radu.cotescu.com/ubuntu-internet-connection-sharing-wireless</id>
+    <id>https://radu.cotescu.com/ubuntu-internet-connection-sharing-wireless</id>
     <content type="html"><![CDATA[<p>Sharing your Internet connection is the poor man&#8217;s way of creating an access point using one of your PCs as the gateway. This implies that the PC (gateway) that you want to use for this has two network cards:</p>
 
 <ul>
@@ -1288,11 +1288,11 @@ user: password,role
 
 <ol>
 <li><p>Click on the <em>Network Manager</em> icon and select the <em>Create New Wireless Network&#8230;</em> menu entry
-<a href="http://radu.cotescu.com/uploads/wpuploads/2010/11/wifi-1.png"><img src="http://radu.cotescu.com/uploads/wpuploads/2010/11/wifi-1-300x199.png" alt="Step 1. Create New Wireless Network" /></a></p></li>
+<a href="https://radu.cotescu.com/uploads/wpuploads/2010/11/wifi-1.png"><img src="https://radu.cotescu.com/uploads/wpuploads/2010/11/wifi-1-300x199.png" alt="Step 1. Create New Wireless Network" /></a></p></li>
 <li><p>Enter the details you want for this new &#8220;ad-hoc&#8221; network. WPA is not supported, so your only options for &#8220;Wireless Security&#8221; are &#8220;None&#8221; (although I wouldn&#8217;t call this security) or the WEP settings (not a secure algorithm, but hopefully your neighbours don&#8217;t use WireShark to crack your network). For the WEP 40/128-bit Key option, you key has to be exactly 5/10/13 characters long. If you want to be able to connect <strong><em>Windows clients</em></strong> to your network, the only option that worked for me is <em><strong>WEP 40/128-bit Key with a 13 characters key</strong></em>. <em><strong>An Ubuntu machine won&#8217;t have any problems with either options</strong></em>. Click on <em>Create</em>. <em>Network Manager</em> will automatically connect to this new network you have just created.
-<a href="http://radu.cotescu.com/uploads/wpuploads/2010/11/wifi-2.png"><img src="http://radu.cotescu.com/uploads/wpuploads/2010/11/wifi-2-300x200.png" alt="Step 2. New wireless network" /></a></p></li>
+<a href="https://radu.cotescu.com/uploads/wpuploads/2010/11/wifi-2.png"><img src="https://radu.cotescu.com/uploads/wpuploads/2010/11/wifi-2-300x200.png" alt="Step 2. New wireless network" /></a></p></li>
 <li><p>After your PC has connected (self-connected) to the &#8220;ad-hoc&#8221; network, you have to make sure that this connection is shared to other computers and devices (clients). Right click on the <em>Network Manager</em> icon and select <em>Edit Connections&#8230;</em> Select the <em>Wireless</em> tab, select your recently created connection and click on <em>Edit</em>. Make sure that the <em>Connect automatically</em> check-box is selected and on the <em>IPv4 Settings</em> tab male sure that the <em>Method</em> option is set to <em>Shared to other computers</em>.
-<a href="http://radu.cotescu.com/uploads/wpuploads/2010/11/wifi-3.png"><img src="http://radu.cotescu.com/uploads/wpuploads/2010/11/wifi-3-300x263.png" alt="Step 3. Ad-Hoc network settings" /></a></p></li>
+<a href="https://radu.cotescu.com/uploads/wpuploads/2010/11/wifi-3.png"><img src="https://radu.cotescu.com/uploads/wpuploads/2010/11/wifi-3-300x263.png" alt="Step 3. Ad-Hoc network settings" /></a></p></li>
 <li><p>Ensure that you do have the <code>dnsmasq-base</code> package installed (you can check usiny <em>Synaptic</em>). This is a DNS / DHCP server which will not run as a daemon, but as a background program, launched by the <em>Network Manager</em>.</p></li>
 <li><p>To be sure that your clients will receive an IP check that your firewall allows connections from and to the new network you have just created. Given the following command, you should see a similar output:</p></li>
 </ol>
@@ -1321,9 +1321,9 @@ user: password,role
   
   <entry>
     <title type="html"><![CDATA[How to install VMware Server on 2.6.35 kernels]]></title>
-    <link href="http://radu.cotescu.com/how-to-install-vmware-server-kernel-2-6-35/"/>
+    <link href="https://radu.cotescu.com/how-to-install-vmware-server-kernel-2-6-35/"/>
     <updated>2010-11-01T22:37:59+02:00</updated>
-    <id>http://radu.cotescu.com/how-to-install-vmware-server-kernel-2-6-35</id>
+    <id>https://radu.cotescu.com/how-to-install-vmware-server-kernel-2-6-35</id>
     <content type="html"><![CDATA[<p>Continuing the tradition of my blog this is going to be another post about VMware Server on the latest kernels provided by the most popular distributions. This is actually an example of a paradox because I don&#8217;t use this hypervisor any more, exactly due to the patching that has to be done. Still, there are quite a few people who like the product and it&#8217;s never too late to make another good deed.</p>
 
 <p>The (now famous) script I wrote a year ago (when Ubuntu 9.10 was released) had to be modified just a bit in order to support the 2.6.35 kernel. The change that affected the compilation of the VMware kernel modules was the change of location for two header files which were expected to be in a certain folder. Thanks to symbolic links, this is now handled without any major efforts. All the needed instructions can be found <a href="http://radu.cotescu.com/how-to-install-vmware-server-ubuntu-fedora-opensuse/">here</a>. For comments related to the way VMware works on the 2.6.35 kernels please use the comment form from this post.</p>
@@ -1334,9 +1334,9 @@ user: password,role
   
   <entry>
     <title type="html"><![CDATA[Using two JVMs in Ubuntu]]></title>
-    <link href="http://radu.cotescu.com/using-two-jvm-in-ubuntu/"/>
+    <link href="https://radu.cotescu.com/using-two-jvm-in-ubuntu/"/>
     <updated>2010-10-19T22:15:49+03:00</updated>
-    <id>http://radu.cotescu.com/using-two-jvm-in-ubuntu</id>
+    <id>https://radu.cotescu.com/using-two-jvm-in-ubuntu</id>
     <content type="html"><![CDATA[<p>Today I was faced with the challenge of using two JVMs on the same machine. And let me tell you that whenever you have to do this, things get dirty. Basically I was forced to install an additional 32-bit JVM for <a href="http://www.event-b.org/platform.html">Rodin</a>, the IDE we use at faculty for Event-B modelling, because the developers of the platform (which is actually a modified Eclipse) decided not to support the 64-bit architectures (LAME!).</p>
 
 <p>Installing a 32-bit JVM on a machine that already has a 64-bit JVM installed will change the default JVM to be the last one installed. Since all of my Java programs and application were made for 64-bit, it was a mayhem on my machine. The solution is rather simple (but, oh, so uncomfortable). You would have to change the default JVM back to the 64-bit one and build some wrapper scripts for all the 32-bit apps to use the correct JVM for them.</p>
@@ -1369,9 +1369,9 @@ user: password,role
   
   <entry>
     <title type="html"><![CDATA[Ubuntu 10.10 and VirtualBox Guest Additions]]></title>
-    <link href="http://radu.cotescu.com/ubuntu-virtualbox-additions/"/>
+    <link href="https://radu.cotescu.com/ubuntu-virtualbox-additions/"/>
     <updated>2010-10-12T12:00:06+03:00</updated>
-    <id>http://radu.cotescu.com/ubuntu-virtualbox-additions</id>
+    <id>https://radu.cotescu.com/ubuntu-virtualbox-additions</id>
     <content type="html"><![CDATA[<p>Two days ago Ubuntu 10.10 was released. Since I don&#8217;t want to upgrade yet to the new release - I am currently running 10.04 - I decided to try Maverick (the code name for the latest release) in a VirtualBox virtual machine.</p>
 
 <p>The installation process went fine (it&#8217;s just point and click) and I do like the new wizard&#8217;s screens. Usually the next step for any virtual machine would be to install VirtualBox Guest Additions in order to be able to use higher resolutions, mouse integration, seamless integration and all the other geeky goodies. From my previous experiences, to install the Guest Additions into a virtual guest, one was supposed to click on <em>Devices » Install Guest Additions&#8230;</em> in VirtualBox&#8217;s guest window and then to launch the autorun script from the virtual CD. Well, that used to work until now.</p>
@@ -1393,9 +1393,9 @@ user: password,role
   
   <entry>
     <title type="html"><![CDATA[jQuery .click() and the double submit of a form]]></title>
-    <link href="http://radu.cotescu.com/jquery-click-double-submit/"/>
+    <link href="https://radu.cotescu.com/jquery-click-double-submit/"/>
     <updated>2010-09-07T14:21:41+03:00</updated>
-    <id>http://radu.cotescu.com/jquery-click-double-submit</id>
+    <id>https://radu.cotescu.com/jquery-click-double-submit</id>
     <content type="html"><![CDATA[<p>jQuery is one of the greatest JavaScript frameworks with plenty of documentation for just about everything one can do with it. In my latest project I have used jQuery extensively for any UX aspect: form validations, dialogs, error messages, AJAX, UI, etc.</p>
 
 <p>A feature that I would really like to see implemented on all HTML forms is the ability to submit the form by using the Return key as well. I am sure that there are a lot of users who really like to keep their hands on the keyboard as much as possible, without using the mouse just to click a button or without hitting the TAB key in order to focus on the submit button after which to press Return. Some of the particularities of my project are the fact that it uses Struts2 and the <a href="http://code.google.com/p/struts2-jquery/">Struts2 jQuery plugin</a>. This plugin allows developers either to use the <code>.jar</code> embedded JavaScript libraries or to automatically get the required files from Google&#8217;s servers (CDN). In July, when my project was using Oracle 11G and TopLink everything worked okay. Now, after I have migrated the project to open-source solutions (MySQL and EclipseLink) I have noticed that whenever I tried to create a new account into the application I would get 2 submits for one action. At first I thought that this had something to do with EclipseLink. After some debugging I actually found out that it was a JavaScript issue (it is possible that now I&#8217;m using another jQuery UI release).</p>
@@ -1466,9 +1466,9 @@ user: password,role
   
   <entry>
     <title type="html"><![CDATA[The art of web feeds]]></title>
-    <link href="http://radu.cotescu.com/the-art-of-web-feeds/"/>
+    <link href="https://radu.cotescu.com/the-art-of-web-feeds/"/>
     <updated>2010-08-31T17:05:31+03:00</updated>
-    <id>http://radu.cotescu.com/the-art-of-web-feeds</id>
+    <id>https://radu.cotescu.com/the-art-of-web-feeds</id>
     <content type="html"><![CDATA[<p>Web feeds, as many of you surely know by now, represent a data format under which frequently updated content from various sources is provided to readers (the humans reading the content). The purpose of the web feed is therefore to inform the user of new or updated content originating from a source. Generally speaking web feeds contain HMTL mark-up for the content, on top of an XML document which is parsed by feed readers (the programs used to read web feeds).</p>
 
 <p>Since a web feed is usually a standard feature for any web site that displays articles (by which we understand blog posts, news, press releases, etc.), the number of clients (software programmes) for this job has experienced a constant growth. From web applications, such as Google Reader, to desktop dedicated programs, such as Liferea, or Internet browsers, we have a multitude of ways for accessing web feeds. Because the primary function of the feed is to inform of the new content, the important attributes (sections) of the feed should be the title of the article in question, the author, date of publishing and the full text or the summarized one.</p>

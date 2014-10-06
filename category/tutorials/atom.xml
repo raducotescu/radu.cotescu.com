@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Tutorials | Radu Cotescu's professional blog]]></title>
-  <link href="http://radu.cotescu.com/category/tutorials/atom.xml" rel="self"/>
-  <link href="http://radu.cotescu.com/"/>
-  <updated>2014-10-07T02:27:12+03:00</updated>
-  <id>http://radu.cotescu.com/</id>
+  <link href="https://radu.cotescu.com/category/tutorials/atom.xml" rel="self"/>
+  <link href="https://radu.cotescu.com/"/>
+  <updated>2014-10-07T02:46:44+03:00</updated>
+  <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to install Ubuntu Desktop Edition]]></title>
-    <link href="http://radu.cotescu.com/how-to-install-ubuntu-desktop-edition/"/>
+    <link href="https://radu.cotescu.com/how-to-install-ubuntu-desktop-edition/"/>
     <updated>2009-06-24T23:00:48+03:00</updated>
-    <id>http://radu.cotescu.com/how-to-install-ubuntu-desktop-edition</id>
+    <id>https://radu.cotescu.com/how-to-install-ubuntu-desktop-edition</id>
     <content type="html"><![CDATA[<p>This is tutorial number 1 in the series of <a href="http://radu.cotescu.com/linux-tutorials-for-windows-users/">Linux tutorials for Windows users</a>: <strong>How to install Ubuntu Desktop</strong> <strong>Edition</strong>. Even if the process itself is pretty simple (there are only some clicks to be made and a form to complete), there are some things that need to be made clear for the new user and, of course, there are some useful tips. Let's proceed.</p>
 
 <p>The first step is getting your brand new Linux (<strong>Ubuntu</strong>) <code>.iso</code> image that you will burn on a CD that we are gonna use for the install process. To do that, just go to <a href="http://www.ubuntu.com/getubuntu/download">http://www.ubuntu.com/getubuntu/download</a>. Here you will have several download options. For the purpose of this tutorial, choose the <strong>Desktop Edition</strong> tab, click the radio button for <strong>Ubuntu 9.04 Desktop (the latest version)</strong> and then choose the architecture that fits your machine. Throughout this tutorial I will use the 32bit version, but that mustn't stop you from choosing the 64bit version if your machine is able to cope with that. Choose the nearest mirror and then wait for the download to complete. Check that the md5 hash of the <code>.iso</code> file is the same with the one provided by Canonical <a href="https://help.ubuntu.com/community/UbuntuHashes">here</a>. More details on how to obtain the md5 hash for your file are <a href="https://help.ubuntu.com/community/HowToMD5SUM">here</a>. Burn it!</p>

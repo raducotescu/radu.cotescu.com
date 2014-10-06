@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: .com | Radu Cotescu's professional blog]]></title>
-  <link href="http://radu.cotescu.com/category/dot-com/atom.xml" rel="self"/>
-  <link href="http://radu.cotescu.com/"/>
-  <updated>2014-10-07T02:27:12+03:00</updated>
-  <id>http://radu.cotescu.com/</id>
+  <link href="https://radu.cotescu.com/category/dot-com/atom.xml" rel="self"/>
+  <link href="https://radu.cotescu.com/"/>
+  <updated>2014-10-07T02:46:44+03:00</updated>
+  <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tools required for opening a MacBook Pro]]></title>
-    <link href="http://radu.cotescu.com/tools-required-for-opening-a-macbook-pro/"/>
+    <link href="https://radu.cotescu.com/tools-required-for-opening-a-macbook-pro/"/>
     <updated>2012-06-04T01:45:00+03:00</updated>
-    <id>http://radu.cotescu.com/tools-required-for-opening-a-macbook-pro</id>
+    <id>https://radu.cotescu.com/tools-required-for-opening-a-macbook-pro</id>
     <content type="html"><![CDATA[<p>Last week my final MacBook Pro arrived. Since at Adobe we are forced to encrypt our hard-drives in order to protect our work (in case our machines get stolen) the IT team decided to provide us with SSD drives for our portable computers. The advantages are numerous:</p>
 
 <ul>
@@ -43,9 +43,9 @@
   
   <entry>
     <title type="html"><![CDATA[Switching to Mac from Ubuntu]]></title>
-    <link href="http://radu.cotescu.com/the-switch-to-mac-from-ubuntu/"/>
+    <link href="https://radu.cotescu.com/the-switch-to-mac-from-ubuntu/"/>
     <updated>2012-05-20T23:39:00+03:00</updated>
-    <id>http://radu.cotescu.com/the-switch-to-mac-from-ubuntu</id>
+    <id>https://radu.cotescu.com/the-switch-to-mac-from-ubuntu</id>
     <content type="html"><![CDATA[<p>When I joined Adobe I was given the chance of choosing between using a Lenovo ThinkPad or a MacBook Pro as my
 development machine. Since I really dislike the design of the ThinkPads and also because I really wanted to try a Mac
 for a longer period of time I accepted the challenge. My previous experiences with a Mac were limited to only a few
@@ -111,9 +111,9 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   
   <entry>
     <title type="html"><![CDATA[Facebook, Pidgin and the "Not authorised" error message]]></title>
-    <link href="http://radu.cotescu.com/facebook-pidgin-not-authorised/"/>
+    <link href="https://radu.cotescu.com/facebook-pidgin-not-authorised/"/>
     <updated>2011-06-15T13:46:58+03:00</updated>
-    <id>http://radu.cotescu.com/facebook-pidgin-not-authorised</id>
+    <id>https://radu.cotescu.com/facebook-pidgin-not-authorised</id>
     <content type="html"><![CDATA[<p>I noticed a few days ago that my Facebook XMPP chat account from Pidgin had stopped working, popping up a weird error message: "Not authorised". This happened even though I did not change any of the account's settings.</p>
 
 <p>The resolution is pretty Voodoo or, how <a href="http://web.nastasiu.com">Vlad</a> described it, the error needs a Microsoft-type fix. Apparently if you are logged in on Facebook using your email address instead of the user name, the XMPP protocol might not authenticate you. Therefore, if you'd like to use Facebook's chat on third-party clients while you're still logged on in a browser, make sure you always log in using your user name instead of your email address on Facebook's site. Trying to use your email address in Pidgin for the user name field results in an error, as email addresses are not valid XMPP user names.</p>
@@ -124,9 +124,9 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   
   <entry>
     <title type="html"><![CDATA[The art of web feeds]]></title>
-    <link href="http://radu.cotescu.com/the-art-of-web-feeds/"/>
+    <link href="https://radu.cotescu.com/the-art-of-web-feeds/"/>
     <updated>2010-08-31T17:05:31+03:00</updated>
-    <id>http://radu.cotescu.com/the-art-of-web-feeds</id>
+    <id>https://radu.cotescu.com/the-art-of-web-feeds</id>
     <content type="html"><![CDATA[<p>Web feeds, as many of you surely know by now, represent a data format under which frequently updated content from various sources is provided to readers (the humans reading the content). The purpose of the web feed is therefore to inform the user of new or updated content originating from a source. Generally speaking web feeds contain HMTL mark-up for the content, on top of an XML document which is parsed by feed readers (the programs used to read web feeds).</p>
 
 <p>Since a web feed is usually a standard feature for any web site that displays articles (by which we understand blog posts, news, press releases, etc.), the number of clients (software programmes) for this job has experienced a constant growth. From web applications, such as Google Reader, to desktop dedicated programs, such as Liferea, or Internet browsers, we have a multitude of ways for accessing web feeds. Because the primary function of the feed is to inform of the new content, the important attributes (sections) of the feed should be the title of the article in question, the author, date of publishing and the full text or the summarized one.</p>
@@ -153,9 +153,9 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   
   <entry>
     <title type="html"><![CDATA[How to make Thunderbird connect with Microsoft Exchange]]></title>
-    <link href="http://radu.cotescu.com/thunderbird-microsoft-exchange/"/>
+    <link href="https://radu.cotescu.com/thunderbird-microsoft-exchange/"/>
     <updated>2010-08-16T22:47:33+03:00</updated>
-    <id>http://radu.cotescu.com/thunderbird-microsoft-exchange</id>
+    <id>https://radu.cotescu.com/thunderbird-microsoft-exchange</id>
     <content type="html"><![CDATA[<p>After enrolling to the University of Southampton Software Engineering MSc programme the iSolutions department (responsible with the IT infrastructure) provided me with an user account to be able to access all the facilities. The account also has an email address attached, which happens to be hosted by a Microsoft Exchange Server. And here the "conflict" begins. The University advises all its undergraduates or taught postgraduates to use the <a href="http://en.wikipedia.org/wiki/Outlook_Web_Access">OWA</a> web application or the University's portal (which actually uses an iFrame to display the contents of OWA) to access their email accounts while the other students (research ones) and staff are allowed (and by this you must understand that iSolutions offers support for this) to use an email client.</p>
 
 <p>I have never been a fan of using webmail. One of the reasons for this is the inability of such clients to provide all the features a desktop client. Since I use Ubuntu, I also couldn't have accessed the full OWA application because I do not use IE (it's against my beliefs to use such a lousy piece of software), leaving me with a limited webapp. Fortunately, I am a geek. My favourite email client is Thunderbird, which unfortunately cannot connect directly to Microsoft Exchange like Evolution (this is explicable through the partnership between Novell and Microsoft; in this particular case not even Evolution was able to connect to the server - the server version is unsupported). The only protocols available in Thunderbird are POP3 (old, blunt and poor as a solution regarding the number of mail capable devices I own), IMAP and SMTP. Even though I could have checked my University email using IMAP (they have enabled IMAP access on the Exchange Server), I couldn't have accessed the Contacts or the Calendar features. The solution?! <em><strong>DavMail</strong></em>.</p>

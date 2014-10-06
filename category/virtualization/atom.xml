@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Virtualization | Radu Cotescu's professional blog]]></title>
-  <link href="http://radu.cotescu.com/category/virtualization/atom.xml" rel="self"/>
-  <link href="http://radu.cotescu.com/"/>
-  <updated>2014-10-07T02:27:12+03:00</updated>
-  <id>http://radu.cotescu.com/</id>
+  <link href="https://radu.cotescu.com/category/virtualization/atom.xml" rel="self"/>
+  <link href="https://radu.cotescu.com/"/>
+  <updated>2014-10-07T02:46:44+03:00</updated>
+  <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to install VMware Server on kernel version 2.6.38]]></title>
-    <link href="http://radu.cotescu.com/vmware-server-kernel-2-6-38/"/>
+    <link href="https://radu.cotescu.com/vmware-server-kernel-2-6-38/"/>
     <updated>2011-05-05T12:18:56+03:00</updated>
-    <id>http://radu.cotescu.com/vmware-server-kernel-2-6-38</id>
+    <id>https://radu.cotescu.com/vmware-server-kernel-2-6-38</id>
     <content type="html"><![CDATA[<h2>Notices:</h2>
 
 <ul>
@@ -32,9 +32,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to install VMware Server on 2.6.35 kernels]]></title>
-    <link href="http://radu.cotescu.com/how-to-install-vmware-server-kernel-2-6-35/"/>
+    <link href="https://radu.cotescu.com/how-to-install-vmware-server-kernel-2-6-35/"/>
     <updated>2010-11-01T22:37:59+02:00</updated>
-    <id>http://radu.cotescu.com/how-to-install-vmware-server-kernel-2-6-35</id>
+    <id>https://radu.cotescu.com/how-to-install-vmware-server-kernel-2-6-35</id>
     <content type="html"><![CDATA[<p>Continuing the tradition of my blog this is going to be another post about VMware Server on the latest kernels provided by the most popular distributions. This is actually an example of a paradox because I don't use this hypervisor any more, exactly due to the patching that has to be done. Still, there are quite a few people who like the product and it's never too late to make another good deed.</p>
 
 <p>The (now famous) script I wrote a year ago (when Ubuntu 9.10 was released) had to be modified just a bit in order to support the 2.6.35 kernel. The change that affected the compilation of the VMware kernel modules was the change of location for two header files which were expected to be in a certain folder. Thanks to symbolic links, this is now handled without any major efforts. All the needed instructions can be found <a href="http://radu.cotescu.com/how-to-install-vmware-server-ubuntu-fedora-opensuse/">here</a>. For comments related to the way VMware works on the 2.6.35 kernels please use the comment form from this post.</p>
@@ -45,9 +45,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ubuntu 10.10 and VirtualBox Guest Additions]]></title>
-    <link href="http://radu.cotescu.com/ubuntu-virtualbox-additions/"/>
+    <link href="https://radu.cotescu.com/ubuntu-virtualbox-additions/"/>
     <updated>2010-10-12T12:00:06+03:00</updated>
-    <id>http://radu.cotescu.com/ubuntu-virtualbox-additions</id>
+    <id>https://radu.cotescu.com/ubuntu-virtualbox-additions</id>
     <content type="html"><![CDATA[<p>Two days ago Ubuntu 10.10 was released. Since I don't want to upgrade yet to the new release - I am currently running 10.04 - I decided to try Maverick (the code name for the latest release) in a VirtualBox virtual machine.</p>
 
 <p>The installation process went fine (it's just point and click) and I do like the new wizard's screens. Usually the next step for any virtual machine would be to install VirtualBox Guest Additions in order to be able to use higher resolutions, mouse integration, seamless integration and all the other geeky goodies. From my previous experiences, to install the Guest Additions into a virtual guest, one was supposed to click on <em>Devices » Install Guest Additions...</em> in VirtualBox's guest window and then to launch the autorun script from the virtual CD. Well, that used to work until now.</p>
@@ -67,9 +67,9 @@ sudo apt-get install build-essential linux-headers-`uname -r`
   
   <entry>
     <title type="html"><![CDATA[A few clarifications about VMware Server and the Linux kernels]]></title>
-    <link href="http://radu.cotescu.com/vmware-server-linux-kernels/"/>
+    <link href="https://radu.cotescu.com/vmware-server-linux-kernels/"/>
     <updated>2010-07-02T12:12:11+03:00</updated>
-    <id>http://radu.cotescu.com/vmware-server-linux-kernels</id>
+    <id>https://radu.cotescu.com/vmware-server-linux-kernels</id>
     <content type="html"><![CDATA[<p>Since Ubuntu 9.04 appeared back in April, 2009, I've started building different <a href="http://radu.cotescu.com/category/vitualization/vmware/">scripts</a> that use community supplied patches in order to make the install process of VMware Server as easy as it was supposed to be. Still it seems that many of the users of my scripts misinterpret the help I offered by asking questions which have nothing to do specifically with the scripts but with how VMware Server works. To be clear in this aspect: I<em><strong> do not provide support</strong></em> for any of VMware's products.</p>
 
 <p>When I began offering these scripts I simply tried to ease the process of installing VMware Server on various kernels shipped with the distribution I use. Considering to be a cumbersome job to manually apply patches or to start an install process, stop it in the middle, apply a patch and then continue the install, I thought that I could help by eliminating all these steps. The scripts are released with no kind of guarantee towards the success of using the product. Furthermore, it should be noted that VMware Server is not officially supported on Ubuntu > 8.04, SUSE Linux Enterprise Server  > 10.1, Mandriva Corporate Server > 4, Red Hat Enterprise Linux > 5.1 and two other less popular distributions.</p>
@@ -86,9 +86,9 @@ sudo apt-get install build-essential linux-headers-`uname -r`
   
   <entry>
     <title type="html"><![CDATA[Using VirtualBox for virtualizing servers]]></title>
-    <link href="http://radu.cotescu.com/virtualbox-virtual-servers/"/>
+    <link href="https://radu.cotescu.com/virtualbox-virtual-servers/"/>
     <updated>2010-05-27T01:07:56+03:00</updated>
-    <id>http://radu.cotescu.com/virtualbox-virtual-servers</id>
+    <id>https://radu.cotescu.com/virtualbox-virtual-servers</id>
     <content type="html"><![CDATA[<p><a href="http://virtualbox.org"><img src="/uploads/wpuploads/2010/05/vbox-300x225.png" alt="Oracle VirtualBox" /></a>A considerable amount of my diploma project runs on several virtual machines, due to the lack of multiple physical machines required for the job. Of course, <a href="http://radu.cotescu.com/geeks-and-their-computers/">Riker</a> isn't tailored for production regarding this project, but it was built specifically to allow me to develop the code without restrictions. For a load under 10 users I think it would do the job quite okay. You might be asking yourself what kind of project it is if an Intel Core i7 930 processor couldn't handle the job. I'm not going to tell you... Yet.</p>
 
 <p>Because of the way <a href="http://radu.cotescu.com/category/vitualization/vmware/">VMware Server</a> works on the last kernels from Ubuntu this tool couldn't have offered me the stability and performance I need. And because I really like to use my graphics card to decode HD content, Xen or VMware ESXi weren't an option either. What was left? VirtualBox is made for desktop virtualization. Still, the ease of use of this product and the fact that it never ever failed for my needs made me actually consider it could be up for the job. Of course, the only problem I had was daemonizing it somehow so that I could run the virtual machines without necessarily being logged in. It actually crossed my mind a few times to write some scripts which would rely on the CLI tools that VirtualBox provides, but the lack of time always made me think twice before this.</p>

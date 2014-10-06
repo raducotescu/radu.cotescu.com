@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Oracle | Radu Cotescu's professional blog]]></title>
-  <link href="http://radu.cotescu.com/category/oracle/atom.xml" rel="self"/>
-  <link href="http://radu.cotescu.com/"/>
-  <updated>2014-10-07T02:27:12+03:00</updated>
-  <id>http://radu.cotescu.com/</id>
+  <link href="https://radu.cotescu.com/category/oracle/atom.xml" rel="self"/>
+  <link href="https://radu.cotescu.com/"/>
+  <updated>2014-10-07T02:46:44+03:00</updated>
+  <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Oracle TopLink, the ORA-00900 error and stored procedures]]></title>
-    <link href="http://radu.cotescu.com/oracle-toplink-stored-procedures/"/>
+    <link href="https://radu.cotescu.com/oracle-toplink-stored-procedures/"/>
     <updated>2010-05-31T12:11:29+03:00</updated>
-    <id>http://radu.cotescu.com/oracle-toplink-stored-procedures</id>
+    <id>https://radu.cotescu.com/oracle-toplink-stored-procedures</id>
     <content type="html"><![CDATA[<p>I was introduced to Oracle's TopLink <a href="http://en.wikipedia.org/wiki/Object-relational_mapping">ORM</a> package during my second internship at Oracle. Although the API (because TopLink actually became the reference implementation for the <a href="http://en.wikipedia.org/wiki/Java_Persistence_API">JPA</a> 2.0) seemed a bit overwhelming at first, I've managed to get a grasp of it quite fast, allowing me to finish the assigned projects in time. The familiarity with the API and with Toplink Workbench, a graphical tool designed to help you map database tables into Java classes (basically JavaBeans), made me use this combination for my diploma project (which I've been talking about more or less on my previous posts).</p>
 
 <p>Working on a parser that would extract objects out of some very large text files (about 1.8 million lines) and would then persist them into a DB, I was required to eliminate duplicates. I had two options:</p>
@@ -76,9 +76,9 @@ session.executeQuery(dmq);
   
   <entry>
     <title type="html"><![CDATA[How to install Oracle Database 10g XE and OC4J on Ubuntu]]></title>
-    <link href="http://radu.cotescu.com/oracle-database-10g-xe-oc4j-ubuntu/"/>
+    <link href="https://radu.cotescu.com/oracle-database-10g-xe-oc4j-ubuntu/"/>
     <updated>2009-12-17T22:58:17+02:00</updated>
-    <id>http://radu.cotescu.com/oracle-database-10g-xe-oc4j-ubuntu</id>
+    <id>https://radu.cotescu.com/oracle-database-10g-xe-oc4j-ubuntu</id>
     <content type="html"><![CDATA[<p>Starting to work on my diploma project my setup required that I installed Oracle 10g XE and OC4J. For a while now Oracle has started to offer <code>*.deb</code> packages and to host a repository for Debian-based Linux distributions, which means that they have gained the maturity to be used in enterprise environments.</p>
 
 <p>The installation of both servers is painless, unless you want them on the same machine (which actually should be avoided unless you have powerful hardware). But if that's the only way to have them, you must avoid setting the <code>ORACLE_HOME</code> environment variable required by OC4J because it will mess with the scripts used to start / stop the DB server. Instead create the <code>ORACLE_HOME</code> variable only inside the <code>bin/oc4j</code> script inside OC4J's installation folder.</p>
@@ -153,9 +153,9 @@ session.executeQuery(dmq);
   
   <entry>
     <title type="html"><![CDATA[How to install Oracle Application Express 3.1.2 on Oracle Database 10g XE]]></title>
-    <link href="http://radu.cotescu.com/how-to-install-oracle-application-express-312-on-oracle-database-10g-xe/"/>
+    <link href="https://radu.cotescu.com/how-to-install-oracle-application-express-312-on-oracle-database-10g-xe/"/>
     <updated>2009-05-24T18:16:52+03:00</updated>
-    <id>http://radu.cotescu.com/how-to-install-oracle-application-express-312-on-oracle-database-10g-xe</id>
+    <id>https://radu.cotescu.com/how-to-install-oracle-application-express-312-on-oracle-database-10g-xe</id>
     <content type="html"><![CDATA[<p>Before upgrading to Oracle APEX 3.1.2 from the Oracle APEX 2.1 that comes with Oracle Database 10g XE you should carefully read <a href="http://www.oracle.com/technology/products/database/application_express/html/3.1_and_xe.html">this page</a> to know all the facts that you might loose and win. After that follow the next guide. The Oracle's one has a minor problem.</p>
 
 <ol>

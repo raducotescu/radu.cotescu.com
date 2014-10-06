@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Reviews | Radu Cotescu's professional blog]]></title>
-  <link href="http://radu.cotescu.com/category/reviews/atom.xml" rel="self"/>
-  <link href="http://radu.cotescu.com/"/>
-  <updated>2014-10-07T02:27:12+03:00</updated>
-  <id>http://radu.cotescu.com/</id>
+  <link href="https://radu.cotescu.com/category/reviews/atom.xml" rel="self"/>
+  <link href="https://radu.cotescu.com/"/>
+  <updated>2014-10-07T02:46:44+03:00</updated>
+  <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[OpenX Ad Server: Beginner's Guide - review]]></title>
-    <link href="http://radu.cotescu.com/openx-ad-server-beginners-guide-review/"/>
+    <link href="https://radu.cotescu.com/openx-ad-server-beginners-guide-review/"/>
     <updated>2010-06-16T14:51:55+03:00</updated>
-    <id>http://radu.cotescu.com/openx-ad-server-beginners-guide-review</id>
+    <id>https://radu.cotescu.com/openx-ad-server-beginners-guide-review</id>
     <content type="html"><![CDATA[<p><a href="/uploads/wpuploads/2010/04/0202_MockupCover_Beginers-guide.jpg"><img src="/uploads/wpuploads/2010/04/0202_MockupCover_Beginers-guide-243x300.jpg" alt="OpenX Ad Server: Beginner's Guide" /></a>A few days ago I have finally finished reading the <a href="https://www.packtpub.com/openx-ad-server-beginners-guide/book"><em>OpenX Ad Server: Beginner’s Guide</em></a> book, by Murat Yilmaz, that PACKT publishing sent me for <a href="http://radu.cotescu.com/openx-ad-server-beginners-guide/">review</a>. The book deals with the aspect of installing and configuring the open-source OpenX Ad Server in order to serve advertisement campaigns on your websites. Being a <em>beginner's guide</em>, the book doesn't require advanced IT skills, stating that basic level would be enough to follow the subject. The reader should feel comfortable with using an FTP client, or cPanel's file management features in case of using a managed web hosting service, and creating and administering a MySQL database.</p>
 
 <p>Every chapter is divided into three distinct parts which might repeat: an introductory section with explanations, a "Time for action" section where guided by screenshots (a lot of them actually) the reader is shown how to perform various steps, a "What just happened?" section - which I personally find extremely annoying - that highlights the outcome, a "Pop quiz" section that should help the reader verify his/hers accumulated knowledge and the "Summary".</p>
@@ -46,9 +46,9 @@ radu@webtest:/var/www$ sudo find . -type d -exec chmod 755 '{}' \;
   
   <entry>
     <title type="html"><![CDATA[OpenX Ad Server: Beginner's Guide]]></title>
-    <link href="http://radu.cotescu.com/openx-ad-server-beginners-guide/"/>
+    <link href="https://radu.cotescu.com/openx-ad-server-beginners-guide/"/>
     <updated>2010-04-14T00:10:09+03:00</updated>
-    <id>http://radu.cotescu.com/openx-ad-server-beginners-guide</id>
+    <id>https://radu.cotescu.com/openx-ad-server-beginners-guide</id>
     <content type="html"><![CDATA[<p><a href="/uploads/wpuploads/2010/04/0202_MockupCover_Beginers-guide.jpg"><img src="/uploads/wpuploads/2010/04/0202_MockupCover_Beginers-guide-243x300.jpg" alt="OpenX Ad Server: Beginner's Guide" /></a><strong>UPDATE:</strong> You can find the review <a href="http://radu.cotescu.com/openx-ad-server-beginners-guide-review/">here</a>.</p>
 
 <p>Recently I've been contacted by Packt Publishing to review one of the books they published last month: <a href="https://www.packtpub.com/openx-ad-server-beginners-guide/book"><em>OpenX Ad Server: Beginner's Guide</em></a>, by Murat Yilmaz. The book focuses on teaching web site administrators how to use and configure OpenX Ad Server, the largest publisher-side ad server in the world which has two major advantages: it's an open-source product under the GNU GPL license and it's free.</p>

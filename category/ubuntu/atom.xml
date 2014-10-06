@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: ubuntu | Radu Cotescu's professional blog]]></title>
-  <link href="http://radu.cotescu.com/category/ubuntu/atom.xml" rel="self"/>
-  <link href="http://radu.cotescu.com/"/>
-  <updated>2014-10-07T02:27:12+03:00</updated>
-  <id>http://radu.cotescu.com/</id>
+  <link href="https://radu.cotescu.com/category/ubuntu/atom.xml" rel="self"/>
+  <link href="https://radu.cotescu.com/"/>
+  <updated>2014-10-07T02:46:44+03:00</updated>
+  <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Remapping Keys in Ubuntu 14.04]]></title>
-    <link href="http://radu.cotescu.com/remapping-keys-in-ubuntu-14.04/"/>
+    <link href="https://radu.cotescu.com/remapping-keys-in-ubuntu-14.04/"/>
     <updated>2014-09-07T18:30:00+03:00</updated>
-    <id>http://radu.cotescu.com/remapping-keys-in-ubuntu-14.04</id>
+    <id>https://radu.cotescu.com/remapping-keys-in-ubuntu-14.04</id>
     <content type="html"><![CDATA[<p>Ever since I've switched to Mac OS X I liked its shortcut modifiers more than the ones available on Windows / Linux. While I do agree that sometimes
 you lose count of the number of modifier keys that you have to press in order to get something done, most of the cases that claim is just FUD.</p>
 

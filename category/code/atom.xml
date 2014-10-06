@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Code | Radu Cotescu's professional blog]]></title>
-  <link href="http://radu.cotescu.com/category/code/atom.xml" rel="self"/>
-  <link href="http://radu.cotescu.com/"/>
-  <updated>2014-10-07T02:27:12+03:00</updated>
-  <id>http://radu.cotescu.com/</id>
+  <link href="https://radu.cotescu.com/category/code/atom.xml" rel="self"/>
+  <link href="https://radu.cotescu.com/"/>
+  <updated>2014-10-07T02:46:44+03:00</updated>
+  <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Coloured log outputs on Unix/Linux]]></title>
-    <link href="http://radu.cotescu.com/coloured-log-outputs/"/>
+    <link href="https://radu.cotescu.com/coloured-log-outputs/"/>
     <updated>2012-10-29T21:36:00+02:00</updated>
-    <id>http://radu.cotescu.com/coloured-log-outputs</id>
+    <id>https://radu.cotescu.com/coloured-log-outputs</id>
     <content type="html"><![CDATA[<p>There are various times when a software engineer needs to closely monitor log output in real-time. More often than not the engineer is
 actually interested in the output of multiple logs at the same time. Given the amount of information that an application can output to log
 files at any one time, filtering the important information from bogus entries becomes frustrating and tedious.</p>
@@ -281,9 +281,9 @@ Furthermore, <code>ctail</code> can also be used on servers with very little set
   
   <entry>
     <title type="html"><![CDATA[A useful rant on how people write Java code]]></title>
-    <link href="http://radu.cotescu.com/java-common-sense/"/>
+    <link href="https://radu.cotescu.com/java-common-sense/"/>
     <updated>2012-10-21T20:49:00+03:00</updated>
-    <id>http://radu.cotescu.com/java-common-sense</id>
+    <id>https://radu.cotescu.com/java-common-sense</id>
     <content type="html"><![CDATA[<p>During the last months I've had the chance to see a lot of code written by different types of developers. Some of it has definitely made me
 proud of the word "engineering" being associated with my profession; the other, not. There are a few basic unwritten rules that more or less
 have become software engineering common sense.</p>
@@ -468,9 +468,9 @@ didn't specify that <code>+</code> should be avoided in loops, although that was
   
   <entry>
     <title type="html"><![CDATA[Why awk is better than cut]]></title>
-    <link href="http://radu.cotescu.com/why-awk-is-better-than-cut/"/>
+    <link href="https://radu.cotescu.com/why-awk-is-better-than-cut/"/>
     <updated>2011-08-01T12:45:40+03:00</updated>
-    <id>http://radu.cotescu.com/why-awk-is-better-than-cut</id>
+    <id>https://radu.cotescu.com/why-awk-is-better-than-cut</id>
     <content type="html"><![CDATA[<p>I am currently working with some text files from which I have to extract some data. Generally, when you have to do this kind of work on a *nix machine, you use <code>cut</code> or <code>awk</code>. However, even for simple tasks <code>cut</code> is superseded by the mighty <code>awk</code>. Let's look at the following examples which are closely related to the data that I'm working with. Assume we have the following text file:</p>
 
 <p><code>bash
@@ -529,9 +529,9 @@ radu@riker:~$ cat testFile | awk '{print $2}'</p>
   
   <entry>
     <title type="html"><![CDATA[How to secure your SSH server from brute-force attacks]]></title>
-    <link href="http://radu.cotescu.com/ssh-brute-force-attacks/"/>
+    <link href="https://radu.cotescu.com/ssh-brute-force-attacks/"/>
     <updated>2011-02-18T20:13:52+02:00</updated>
-    <id>http://radu.cotescu.com/ssh-brute-force-attacks</id>
+    <id>https://radu.cotescu.com/ssh-brute-force-attacks</id>
     <content type="html"><![CDATA[<p>There are a lot of tutorials online that will tell you how to secure your SSH server. Most of them will tell you not to allow the <code>root</code> account to login, to use only keys for authentication and possibly to change the port on which your server listens from 22 to any other. Although this is valid advice, there are times when due to zealous system administrators you <em>have</em> to use port 22 (because along with 21 and 80 it's not blocked and you <em>do</em> like to check your server from time to time). Also, you might still want to use password authentication together with public and private keys just because there are chances that you might lose your keys (it happens to the best of us). Combine these two and you are exposing your server to a lot of brute-force attacks from various script kiddies.</p>
 
 <p>If your SSH server (generally OpenSSH) is compiled to use <a href="http://en.wikipedia.org/wiki/TCP_Wrapper">TCP Wrapper</a> you can use <a href="http://denyhosts.sourceforge.net/">DenyHosts</a> to protect yourself against the annoying attempts to hack the server. However, if you don't have the option to use a TCP Wrapper aware SSH server (which happens to be the case on almost all Linux distributions made to operate home-class routers), you're pretty much on your own. Unless you'd like to use another script I wrote while I was bored.</p>
@@ -558,9 +558,9 @@ iptables -A INPUT -p tcp --dport 22 -m state --state NEW -m recent --update --se
   
   <entry>
     <title type="html"><![CDATA[Java, HTTPS and REST web services using Apache CXF]]></title>
-    <link href="http://radu.cotescu.com/java-https-rest-services-apache-cxf/"/>
+    <link href="https://radu.cotescu.com/java-https-rest-services-apache-cxf/"/>
     <updated>2010-12-16T23:39:23+02:00</updated>
-    <id>http://radu.cotescu.com/java-https-rest-services-apache-cxf</id>
+    <id>https://radu.cotescu.com/java-https-rest-services-apache-cxf</id>
     <content type="html"><![CDATA[<p><strong>Securing REST web services</strong> is a very debated topic on the Internet. Because REST represents an architecture, and not a protocol - like SOAP -, there aren't any specifications dealing with security, leaving this aspect as a design decision for the software engineers / developers. Still, if you search the web to find out what are the approaches, you'll see that most of the results suggest you use <strong><a href="http://en.wikipedia.org/wiki/Basic_access_authentication">basic authentication</a> over <a href="http://en.wikipedia.org/wiki/HTTP_Secure">HTTPS</a></strong>.</p>
 
 <p>The basic authentication is a trivial way of authenticating HTTP requests directly by the web server, without any added effort for the developer. Since REST isn't very pretentious (it uses the well known HTTP methods for accessing resources), leaving the authentication to the web server is a natural thing to do. Still, this doesn't mean that your REST API is secure. You merely separate users that should have access to your API from users that should be denied access. Enabling HTTPS on the server is the next step that needs to be followed, so that all the requests are secured. This avoids the classical man-in-the-middle attack and also assures that the credentials sent by the users aren't visible to the whole world (although they are BASE64 encoded by the basic authentication mechanism, decoding them is a child's play).</p>
