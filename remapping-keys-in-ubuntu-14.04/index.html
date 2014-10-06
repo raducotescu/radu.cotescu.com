@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>iOS4 on iPod Touch 2nd generation - Radu Cotescu's professional blog</title>
+  <title>Remapping Keys in Ubuntu 14.04 - Radu Cotescu's professional blog</title>
   <meta name="author" content="Radu Cotescu">
 
   
-  <meta name="description" content="How does your iPod Touch 2nd generation work with iOS4?">
-  <meta name="keywords" content="ipod, touch, 2nd, generation, second, ios, ios4, upgrade, iphone, os, apple">
+  <meta name="description" content="Remapping keys in Ubuntu is not difficult. Read more if you want to find out how to do it.">
+  <meta name="keywords" content="ubuntu,keyboard,remapping,keys,control,super,code,meta,xkb">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://radu.cotescu.com/ios4-ipod-touch-2nd-generation">
+  <link rel="canonical" href="http://radu.cotescu.com/remapping-keys-in-ubuntu-14.04">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="http://feeds.cotescu.com/raducotescu" rel="alternate" title="Radu Cotescu's professional blog" type="application/atom+xml">
@@ -100,7 +100,7 @@
   
   <header>
     
-      <h1 class="entry-title">iOS4 on iPod Touch 2nd Generation</h1>
+      <h1 class="entry-title">Remapping Keys in Ubuntu 14.04</h1>
     
     
       <p class="meta">
@@ -116,20 +116,59 @@
   
 
 
-<time datetime="2010-06-24T00:15:43+03:00" pubdate data-updated="true">Jun 24<span>th</span>, 2010</time>
+<time datetime="2014-09-07T18:30:00+03:00" pubdate data-updated="true">Sep 7<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Yesterday I have updated the OS on my iPod Touch 2nd generation to the latest release: iOS4. Because I have an &#8220;outdated&#8221; model I cannot enjoy the most appealing new features: multitasking and custom home wallpapers. While I can live well without the latter, the former would have been tremendously useful. The UI has changed a bit towards being more flashy (but it&#8217;s a decent kind of flashiness). Also browsing through applications feels snappier. Another nice feature which I&#8217;ll start using soon is the ability to organize your apps into folders.</p>
+<div class="entry-content"><p>Ever since I&#8217;ve switched to Mac OS X I liked its shortcut modifiers more than the ones available on Windows / Linux. While I do agree that sometimes
+you lose count of the number of modifier keys that you have to press in order to get something done, most of the cases that claim is just FUD.</p>
 
-<p>The upgrade has its bad parts as well: a few of the applications I use frequently (AccuWeather amongst others) close unexpectedly. I will wait for another week or so for application upgrades but if they fail to appear in this time period I&#8217;m afraid I&#8217;m going to switch back to iPhone OS 3.1.3.</p>
+<p>The ergonomy of the Mac has also made its way into how shortcuts are defined. The <code>Command</code> key, positioned where <code>Alt</code> is on PC keyboards, is
+definitely better positioned when it comes to using that key as your main modifier for shortcuts. Call it the power of habit, but every time I
+switch to a PC I find myself pressing the <code>Alt</code> key instead of <code>Control</code>. And that&#8217;s because <code>Alt</code> is in a handier position.</p>
 
-<p>I really wonder how the new iPhone works and feels.</p>
+<!--more-->
 
-<p>P.S. I am still drooling after a 15&#8221; MacBook Pro.</p>
+
+<p>A few weeks ago I bought a <a href="http://www.wasdkeyboards.com/index.php/products/code-keyboard/code-87-key-mechanical-keyboard.html" title="CODE 87-Key Mechanical Keyboard ">CODE ten-keyless mechanical keyboard</a>.
+One of the nifty features (and there are plenty) is the ability to change the layout of your keyboard with a combination of DIP switches located on
+the back. Obviously, it can be configured to a Mac layout. But what do you do when you want to use the same keyboard on your Linux box, from time to
+time? I mean you&#8217;re mostly using <code>Command</code> for your shortcuts. Remapping the shortcuts in your head to <code>Control</code> is not that easy at first.</p>
+
+<p><img src="/uploads/2014/09/07/code.jpg" title="CODE 87-Key Mechanical Keyboard with Mac layout" alt="&quot;CODE 87-Key Mechanical Keyboard with Mac layout&quot;" /></p>
+
+<h2>XKB</h2>
+
+<p>Luckily Ubuntu, like many other Linux distros, comes with <code>xkb</code> - the X KeyBoard extension. This extension is responsible for mapping the physical
+keys of your keyboard to their designed function. <code>xkb</code> symbol files can be found in <code>/usr/share/X11/xkb/symbols</code> and it&#8217;s good to know that they&#8217;re
+localised, in case you need to add some language-specific mappings. However, in my case, I need to remap some of the modifier keys.</p>
+
+<p>The modifier keys are mapped in <code>/usr/share/X11/xkb/symbols/pc</code>, a file which is inherited by all other configurations. Since I just want to replace
+<code>Super</code> with <code>Control</code>, the changes are minimal:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>key &lt;LCTL&gt; <span class="o">{</span>    <span class="o">[</span> Super_L       <span class="o">]</span>   <span class="o">}</span>;
+</span><span class='line'>key &lt;LWIN&gt; <span class="o">{</span>    <span class="o">[</span> Control_L     <span class="o">]</span>   <span class="o">}</span>;
+</span><span class='line'>key &lt;RCTL&gt; <span class="o">{</span>    <span class="o">[</span> Super_R       <span class="o">]</span>   <span class="o">}</span>;
+</span><span class='line'>key &lt;RWIN&gt; <span class="o">{</span>    <span class="o">[</span> Control_R     <span class="o">]</span>   <span class="o">}</span>;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In order to apply the new mappings you need to clear out <code>xkb</code>&#8217;s cache from <code>/var/lib/xkb</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rm -rf /var/lib/xkb/*
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Afterwards just restart your X session and you&#8217;re good to go. Even though this small change doesn&#8217;t make all shortcuts to work like on a Mac it&#8217;s still
+a lot better than without it.</p>
 </div>
 
 
@@ -152,12 +191,12 @@
   
 
 
-<time datetime="2010-06-24T00:15:43+03:00" pubdate data-updated="true">Jun 24<span>th</span>, 2010</time>
+<time datetime="2014-09-07T18:30:00+03:00" pubdate data-updated="true">Sep 7<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/category/dot-com/'>.com</a>
+    <a class='category' href='/category/linux/'>linux</a>, <a class='category' href='/category/ubuntu/'>ubuntu</a>
   
 </span>
 
@@ -169,7 +208,7 @@
     <script type="text/javascript" src="http://www.reddit.com/static/button/button3.js"></script>
   
   
-  	<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://radu.cotescu.com/ios4-ipod-touch-2nd-generation/" data-via="raducotescu" data-counturl="http://radu.cotescu.com/ios4-ipod-touch-2nd-generation/" >Tweet</a>
+  	<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://radu.cotescu.com/remapping-keys-in-ubuntu-14.04/" data-via="raducotescu" data-counturl="http://radu.cotescu.com/remapping-keys-in-ubuntu-14.04/" >Tweet</a>
   	
   <script type="text/javascript">
     (function(){
@@ -215,10 +254,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/openx-ad-server-beginners-guide-review/" title="Previous Post: OpenX Ad Server: Beginner's Guide - review">&laquo; OpenX Ad Server: Beginner's Guide - review</a>
+        <a class="basic-alignment left" href="/coloured-log-outputs/" title="Previous Post: Coloured log outputs on Unix/Linux">&laquo; Coloured log outputs on Unix/Linux</a>
       
-      
-        <a class="basic-alignment right" href="/java-4-ever/" title="Next Post: Java 4-Ever">Java 4-Ever &raquo;</a>
       
     </p>
   </footer>
@@ -248,8 +285,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://radu.cotescu.com/ios4-ipod-touch-2nd-generation/';
-        var disqus_url = 'http://radu.cotescu.com/ios4-ipod-touch-2nd-generation/';
+        var disqus_identifier = 'http://radu.cotescu.com/remapping-keys-in-ubuntu-14.04/';
+        var disqus_url = 'http://radu.cotescu.com/remapping-keys-in-ubuntu-14.04/';
         var disqus_script = 'embed.js';
       
     (function () {

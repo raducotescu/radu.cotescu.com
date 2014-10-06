@@ -103,6 +103,141 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/bash-fun/">Bash Fun</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-06-15T22:46:10+03:00" pubdate data-updated="true">Jun 15<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Linux is awesome. I knew that! When you are completely bored and you have access to a terminal (and you are in the sudo-ers group) you can do this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>radu@enterprise:~<span class="nv">$ </span>sudo apt-get install cowsay
+</span><span class='line'>Reading package lists... Done
+</span><span class='line'>Building dependency tree
+</span><span class='line'>Reading state information... Done
+</span><span class='line'>Suggested packages:
+</span><span class='line'>  filters
+</span><span class='line'>The following NEW packages will be installed:
+</span><span class='line'>  cowsay
+</span><span class='line'>0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+</span><span class='line'>Need to get 0B/19.8kB of archives.
+</span><span class='line'>After this operation, 295kB of additional disk space will be used.
+</span><span class='line'>Selecting previously deselected package cowsay.
+</span><span class='line'><span class="o">(</span>Reading database ... 173410 files and directories currently installed.<span class="o">)</span>
+</span><span class='line'>Unpacking cowsay <span class="o">(</span>from .../cowsay_3.03-9.2_all.deb<span class="o">)</span> ...
+</span><span class='line'>Processing triggers <span class="k">for </span>man-db ...
+</span><span class='line'>Setting up cowsay <span class="o">(</span>3.03-9.2<span class="o">)</span> ...
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Afterwards you could issue a command like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>radu@enterprise:~<span class="nv">$ </span>fortune | cowsay -n -f tux.cow
+</span><span class='line'> __________________________________________________________________________
+</span><span class='line'>/ In the first place, God made idiots; this was <span class="k">for </span>practice; <span class="k">then </span>he made <span class="se">\</span>
+</span><span class='line'>| school boards.                                                           |
+</span><span class='line'><span class="se">\ </span>                -- Mark Twain                                            /
+</span><span class='line'> --------------------------------------------------------------------------
+</span><span class='line'>   <span class="se">\</span>
+</span><span class='line'>    <span class="se">\</span>
+</span><span class='line'>        .--.
+</span><span class='line'>       |o_o |
+</span><span class='line'>       |:_/ |
+</span><span class='line'>      //   <span class="se">\ \</span>
+</span><span class='line'>     <span class="o">(</span>|     | <span class="o">)</span>
+</span><span class='line'>    /<span class="err">&#39;</span><span class="se">\_</span>   _/<span class="sb">`</span><span class="se">\</span>
+</span><span class='line'>    <span class="se">\_</span>__<span class="o">)=(</span>___/
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Or, if you have a sick humor:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>radu@enterprise:~<span class="nv">$ </span>fortune | cowsay -n -f sodomized.cow
+</span><span class='line'> ________________________________________________________
+</span><span class='line'>&lt; You will have domestic happiness and faithful friends. &gt;
+</span><span class='line'> --------------------------------------------------------
+</span><span class='line'>      <span class="se">\ </span>               _
+</span><span class='line'>       <span class="se">\ </span>             <span class="o">(</span>_<span class="o">)</span>
+</span><span class='line'>        <span class="se">\ </span>  ^__^       / <span class="se">\</span>
+</span><span class='line'>         <span class="se">\ </span> <span class="o">(</span>oo<span class="o">)</span><span class="se">\_</span>____/_<span class="se">\ \</span>
+</span><span class='line'>            <span class="o">(</span>__<span class="o">)</span><span class="se">\ </span>      <span class="o">)</span> /
+</span><span class='line'>                <span class="o">||</span>----w <span class="o">((</span>
+</span><span class='line'>                <span class="o">||</span>     <span class="o">||</span>&gt;&gt;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Let me see how do you have that fun in Windows, suckers!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/google-adsense-problem/">Google AdSense Problem</a></h1>
     
     
@@ -130,9 +265,9 @@
 
 <p>Two days ago I wanted to create an AdSense account using my new Google Apps email address. Suprise! It seemed that I already had an AdSense account associated with my previous email (@gmail.com). I received an email that informed me that my request is currently disapproved because of this and that I have two options: to use my old account or to close my old account and resubmit my application. Ok! Let&#8217;s close the old one and resubmit.</p>
 
-<p>After I did close my old AdSense account, when I tried to resubmit my application, it told me that my request cannot be processed as my email address (the new Google Apps one) is associated with a disapproved request which in my opinion was solved by closing that first account. I have tried contacting them using the famous <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#97;&#100;&#x73;&#x65;&#x6e;&#115;&#101;&#x2d;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#x40;&#x67;&#111;&#x6f;&#103;&#x6c;&#101;&#x2e;&#99;&#111;&#109;">&#x61;&#100;&#x73;&#x65;&#x6e;&#x73;&#x65;&#x2d;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#64;&#x67;&#111;&#111;&#x67;&#x6c;&#x65;&#x2e;&#x63;&#111;&#109;</a> but I only received an automated response that told me to check their Help Center for my problem. I had done that before I tried to contact them by email and I couldn&#8217;t find a solution.</p>
+<p>After I did close my old AdSense account, when I tried to resubmit my application, it told me that my request cannot be processed as my email address (the new Google Apps one) is associated with a disapproved request which in my opinion was solved by closing that first account. I have tried contacting them using the famous <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x61;&#x64;&#115;&#x65;&#110;&#115;&#x65;&#x2d;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#116;&#x40;&#x67;&#x6f;&#x6f;&#x67;&#x6c;&#x65;&#46;&#x63;&#x6f;&#109;">&#97;&#x64;&#115;&#x65;&#110;&#x73;&#x65;&#45;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#64;&#103;&#x6f;&#111;&#103;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a> but I only received an automated response that told me to check their Help Center for my problem. I had done that before I tried to contact them by email and I couldn&#8217;t find a solution.</p>
 
-<p>Does any of you, my readers, know how I could contact a human being that works at Google to handle my problem? If you feel that you cannot post the answer in the comments because of  personal data, please mail me at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#114;&#x61;&#x64;&#x75;&#64;&#99;&#x6f;&#116;&#x65;&#x73;&#99;&#117;&#46;&#99;&#111;&#109;">&#114;&#x61;&#100;&#x75;&#64;&#x63;&#x6f;&#116;&#101;&#115;&#x63;&#117;&#x2e;&#x63;&#111;&#x6d;</a>. Thank you!</p>
+<p>Does any of you, my readers, know how I could contact a human being that works at Google to handle my problem? If you feel that you cannot post the answer in the comments because of  personal data, please mail me at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#x3a;&#114;&#97;&#x64;&#x75;&#x40;&#x63;&#111;&#116;&#101;&#115;&#x63;&#117;&#x2e;&#99;&#111;&#109;">&#114;&#x61;&#100;&#117;&#64;&#x63;&#111;&#x74;&#101;&#115;&#99;&#117;&#46;&#99;&#x6f;&#x6d;</a>. Thank you!</p>
 </div>
   
   
@@ -279,67 +414,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/how-to-install-oracle-application-express-312-on-oracle-database-10g-xe/">How to Install Oracle Application Express 3.1.2 on Oracle Database 10g XE</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-05-24T18:16:52+03:00" pubdate data-updated="true">May 24<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Before upgrading to Oracle APEX 3.1.2 from the Oracle APEX 2.1 that comes with Oracle Database 10g XE you should carefully read <a href="http://www.oracle.com/technology/products/database/application_express/html/3.1_and_xe.html">this page</a> to know all the facts that you might loose and win. After that follow the next guide. The Oracle&#8217;s one has a minor problem.</p>
-
-<ol>
-<li><p>Download APEX from <a href="http://www.oracle.com/technology/products/database/application_express/download.html">here</a>.</p></li>
-<li><p>Unzip it to a convenient directory (/opt on a Linux machine or C:\oraclexe\apex on a Windows machine)</p></li>
-<li><p>Start an SQL*Plus session from that directory</p>
-
-<pre><code> sqlplus / as sysdba
-</code></pre></li>
-<li><p>Install APEX:</p>
-
-<pre><code> @apexins SYSAUX SYSAUX TEMP /i/
-</code></pre></li>
-<li><p>Reconnect to your database.</p></li>
-<li><p>Set the images PATH for APEX (APEX_HOME is the folder where you have unzipped APEX; e.g.: /opt, C:\oraclexe)</p>
-
-<pre><code> @apxldimg.sql APEX_HOME
-</code></pre></li>
-<li><p>Set the Administrator password for APEX:</p>
-
-<pre><code> @apxxepwd.sql secret
-</code></pre></li>
-<li><p>Restart your XE instance.</p></li>
-<li><p>Your new APEX is available at <a href="http://localhost:port/apex">http://localhost:port/apex</a> or for administration purposes at <a href="http://localhost:port/apex/apex_admin">http://localhost:port/apex/apex_admin</a></p></li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/19/">&larr; Older</a>
@@ -357,6 +431,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/remapping-keys-in-ubuntu-14.04/">Remapping Keys in Ubuntu 14.04</a>
+      </li>
+    
+      <li class="post">
         <a href="/coloured-log-outputs/">Coloured log outputs on Unix/Linux</a>
       </li>
     
@@ -370,10 +448,6 @@
     
       <li class="post">
         <a href="/the-switch-to-mac-from-ubuntu/">Switching to Mac from Ubuntu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/migrating-your-ubuntu-machine-to-a-ssd-drive/">Migrating your Ubuntu machine to a SSD drive</a>
       </li>
     
   </ul>

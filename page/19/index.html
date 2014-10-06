@@ -103,6 +103,67 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/how-to-install-oracle-application-express-312-on-oracle-database-10g-xe/">How to Install Oracle Application Express 3.1.2 on Oracle Database 10g XE</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-05-24T18:16:52+03:00" pubdate data-updated="true">May 24<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Before upgrading to Oracle APEX 3.1.2 from the Oracle APEX 2.1 that comes with Oracle Database 10g XE you should carefully read <a href="http://www.oracle.com/technology/products/database/application_express/html/3.1_and_xe.html">this page</a> to know all the facts that you might loose and win. After that follow the next guide. The Oracle&#8217;s one has a minor problem.</p>
+
+<ol>
+<li><p>Download APEX from <a href="http://www.oracle.com/technology/products/database/application_express/download.html">here</a>.</p></li>
+<li><p>Unzip it to a convenient directory (/opt on a Linux machine or C:\oraclexe\apex on a Windows machine)</p></li>
+<li><p>Start an SQL*Plus session from that directory</p>
+
+<pre><code> sqlplus / as sysdba
+</code></pre></li>
+<li><p>Install APEX:</p>
+
+<pre><code> @apexins SYSAUX SYSAUX TEMP /i/
+</code></pre></li>
+<li><p>Reconnect to your database.</p></li>
+<li><p>Set the images PATH for APEX (APEX_HOME is the folder where you have unzipped APEX; e.g.: /opt, C:\oraclexe)</p>
+
+<pre><code> @apxldimg.sql APEX_HOME
+</code></pre></li>
+<li><p>Set the Administrator password for APEX:</p>
+
+<pre><code> @apxxepwd.sql secret
+</code></pre></li>
+<li><p>Restart your XE instance.</p></li>
+<li><p>Your new APEX is available at <a href="http://localhost:port/apex">http://localhost:port/apex</a> or for administration purposes at <a href="http://localhost:port/apex/apex_admin">http://localhost:port/apex/apex_admin</a></p></li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/vsftpd-and-symbolic-links/">vsFTPd and Symbolic Links</a></h1>
     
     
@@ -336,69 +397,6 @@ Error:    Failed to retrieve directory listing
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/ubuntu-904-jaunty-jackalope-pros-and-cons/">Ubuntu 9.04 Jaunty Jackalope Pros and Cons</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-04-29T18:18:40+03:00" pubdate data-updated="true">Apr 29<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src="/uploads/wpuploads/2009/04/ubuntu-old.png" alt="" /></p>
-
-<p>I am currently running Ubuntu 9.04 on two machines (as the single OS on my personal laptop and dual boot with Windows on my work desktop) and I will soon (by Sunday tops) have it installed on a third (my home desktop). This is probably my largest Ubuntu deployment, if I can call it like that and I would like to share my current user experience.</p>
-
-<h3>Pros:</h3>
-
-<ul>
-<li><p>the upgrade alone (on my laptop) skimmed three to four seconds off my boot time using ext3 partitions, reaching to a merely 21 second boot race. I have decided to not convert my drives to the new ext4 while it doesn&#8217;t become the Ubuntu default installation formatting system. This performance is achieved after setting the concurrency variable to shell, making a profile for my own start-up scripts and after setting my partitions to use the data=writeback option;</p></li>
-<li><p>with the upgrade to the new 2.6.28-11 kernel, my laptop&#8217;s Nvidia graphic card&#8217;s drivers have been successfully updated from 177 to 180.44. Even if the drivers were available before, they wouldn&#8217;t allow me to put my computer to stand-by and afterwards to wake it up;</p></li>
-<li><p>the notifications now are well structured (basically they look decent now), with a plus regarding the wireless connections;</p></li>
-<li><p>on my work desktop I have encountered a problem with the 8.10 version installation CD. My Dell Optiplex 755 has a DVD Writer SATA drive and Ubuntu 8.10 failed to install using a CD. I have tried this with a re-writeable disk burned at different speeds. The same problem was reported by many other on the web and from what I have managed to find out, most of the drives that had this issue were made by Samsung. The only viable way to install Ubuntu was using a stick. For this desktop I have decided that 9.04 should be installed from zero, as 8.10 wasn&#8217;t completely set up (I didn&#8217;t have the time). The installation was made from a CD with no problems. Everything worked like a charm. One nice thing to note is that the installation from a USB stick is done in approximately 6 minutes, comparing to 15 minutes for installing using a CD;</p></li>
-<li><p>the CPU frequency applet that you can add to your panels I think that now has the option of choosing how your processor scales its performance. I say &#8220;I think&#8221; because I don&#8217;t remember if this feature existed before or not;</p></li>
-<li><p>Ubuntu 9.04 comes with OpenOffice 3.0, instead of 2.4 by default. The most important functionality is the ability to open the new Open-XML standard documents from Microsoft Office 2007 (docx, xlsx, pptx).</p></li>
-</ul>
-
-
-<h3>Cons:</h3>
-
-<ul>
-<li><p>last night I experienced a strange stall on my laptop. I still haven&#8217;t found out the cause for that but it was an isolated experience;</p></li>
-<li><p>my laptop has a hardware switch for bluetooth and wifi. I have noticed that if I turn it off in 9.04 while my system is on, when I turn it back on my wireless card doesn&#8217;t reinitialize. It worked ok under 8.10. But if I put my laptop on standby after I set the switch to on and then I wake it up the card works. The bluetooth works ok though;</p></li>
-<li><p>The quick function buttons for starting my browser and my email client don&#8217;t work anymore (one of them worked under 8.10) but this really doesn&#8217;t affect me as I haven&#8217;t used those shortcuts anyway. I am happy that my multimedia buttons still work ok (these are useful, the others mentioned before aren&#8217;t).</p></li>
-</ul>
-
-
-<p>Except for the wifi thing, everything works incredibly well and that is the main reason for which I am using Ubuntu on so many machines. I am actually considering installing a 4th Ubuntu system, but this time in a virtual machine, only for testing purposes. Linux, and Ubuntu especially, has migrated very nicely from the g33kish operating system to a more mainstream market starting with the 8.04 release and continuing to improve in this way up to 9.04.</p>
-
-<p>P.S. The Windows at work is starting to be neglected as I can proudly say something that is written on <a href="http://radu.cotescu.com/wordpresswp-content/uploads/2009/04/UBN11005.jpg">one of the T-Shirts that I would like to have</a>: I do it with Ubuntu. :D</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/20/">&larr; Older</a>
@@ -416,6 +414,10 @@ Error:    Failed to retrieve directory listing
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/remapping-keys-in-ubuntu-14.04/">Remapping Keys in Ubuntu 14.04</a>
+      </li>
+    
+      <li class="post">
         <a href="/coloured-log-outputs/">Coloured log outputs on Unix/Linux</a>
       </li>
     
@@ -429,10 +431,6 @@ Error:    Failed to retrieve directory listing
     
       <li class="post">
         <a href="/the-switch-to-mac-from-ubuntu/">Switching to Mac from Ubuntu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/migrating-your-ubuntu-machine-to-a-ssd-drive/">Migrating your Ubuntu machine to a SSD drive</a>
       </li>
     
   </ul>

@@ -103,6 +103,65 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/how-to-set-nautilus-as-default-ftp-application/">How to Set Nautilus as the Default FTP Handler in Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-22T18:03:51+02:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After I had installed Firefox 3.6 on my Ubuntu machines I noticed that when I would want to open the FTP bookmarks saved in Nautilus those targets would open in tabs from Firefox. The problem with this approach was that I couldn&#8217;t edit files (create, update, delete) the way I could with Nautilus. After some diggings I found out that this change in behavior was due to the fact that at some point I chose Firefox to be the default browser (which was something fully assumed because it&#8217;s my favorite browser). Doing this associates Firefox as the handler for <code>ftp://</code> links instead on relaying that part to Nautilus.</p>
+
+<p>Unfortunately the solution for this problem doesn&#8217;t have a graphical approach. It&#8217;s not something you choose in your Preferred Applications. Instead one has to edit the <code>%gconf.xml</code> file located in the <code>~/.gconf/desktop/gnome/url-handlers/ftp</code> folder and make it look like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+</span><span class='line'><span class="nt">&lt;gconf&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;entry</span> <span class="na">name=</span><span class="s">&quot;needs_terminal&quot;</span> <span class="na">mtime=</span><span class="s">&quot;1264151220&quot;</span> <span class="na">type=</span><span class="s">&quot;bool&quot;</span> <span class="na">value=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;entry</span> <span class="na">name=</span><span class="s">&quot;enabled&quot;</span> <span class="na">mtime=</span><span class="s">&quot;1264151220&quot;</span> <span class="na">type=</span><span class="s">&quot;bool&quot;</span> <span class="na">value=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;entry</span> <span class="na">name=</span><span class="s">&quot;command&quot;</span> <span class="na">mtime=</span><span class="s">&quot;1264151220&quot;</span> <span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>                <span class="nt">&lt;stringvalue&gt;</span>/usr/bin/nautilus<span class="nt">&lt;/stringvalue&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/entry&gt;</span>
+</span><span class='line'><span class="nt">&lt;/gconf&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The important line here is the one located between the <code>stringvalue</code> tags. I just hope that in the next versions of GNOME these kind of things will be easier to maintain by providing a GUI for the user. This is one aspect that Linux still has to improve. It won the servers, but let&#8217;s make it reach the desktops too.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/save-power-when-using-your-pc-with-micromiser/">Save Power When Using Your PC With MicroMiser</a></h1>
     
     
@@ -411,52 +470,6 @@ For a given processor, <em>C</em> is a fixed value. However, <em>V</em> and <em>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/i-have-moved-my-feed/">I Have Moved My Feed</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-12-12T17:28:22+02:00" pubdate data-updated="true">Dec 12<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>My new blog feed is now accessible through the following two addresses:</p>
-
-<ul>
-<li><p><a href="http://feeds.cotescu.com/raducotescu">http://feeds.cotescu.com/raducotescu</a></p></li>
-<li><p><a href="http://radu.cotescu.com/feed">http://radu.cotescu.com/feed</a> (redirect to the first link)</p></li>
-</ul>
-
-
-<p>Please change your RSS links accordingly.</p>
-
-<p>Thank you!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/11/">&larr; Older</a>
@@ -474,6 +487,10 @@ For a given processor, <em>C</em> is a fixed value. However, <em>V</em> and <em>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/remapping-keys-in-ubuntu-14.04/">Remapping Keys in Ubuntu 14.04</a>
+      </li>
+    
+      <li class="post">
         <a href="/coloured-log-outputs/">Coloured log outputs on Unix/Linux</a>
       </li>
     
@@ -487,10 +504,6 @@ For a given processor, <em>C</em> is a fixed value. However, <em>V</em> and <em>
     
       <li class="post">
         <a href="/the-switch-to-mac-from-ubuntu/">Switching to Mac from Ubuntu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/migrating-your-ubuntu-machine-to-a-ssd-drive/">Migrating your Ubuntu machine to a SSD drive</a>
       </li>
     
   </ul>

@@ -103,6 +103,72 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/how-to-install-vmware-server-2-0-2-on-ubuntu-9-04-jaunty-jackalope/">How to Install VMware Server 2.0.2 on Ubuntu 9.04 Jaunty Jackalope</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-28T17:36:53+02:00" pubdate data-updated="true">Oct 28<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The same script I wrote in order to help users <a href="http://radu.cotescu.com/how-to-install-vmware-server-201-on-ubuntu-904-jaunty-jackalope/">install VMware Server 2.0.1 (<strong>build 156745</strong>)</a> on Ubuntu 9.04 can be used for the latest release from VMware: VMware Server 2.0.2 (<strong>build 203138</strong>).</p>
+
+<p>In order to install the server, just follow these instructions:</p>
+
+<ol>
+<li><p>Download your copy of <a href="https://www.vmware.com/tryvmware/p/activate.php?p=server20&amp;lp=1">VMware Server</a> (.gz archive) and obtain your license key. Be aware that now you must configure your license key according to the number of hosts on which you want to install the server.</p></li>
+<li><p>Download <a href="https://github.com/raducotescu/vmware-server-ubuntu-9.04/tarball/master">my script</a>, make it executable and run it (with superuser privileges) from the same folder where you have downloaded VMware Server or provide it the path to that folder:</p></li>
+</ol>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>chmod +x vmware-install-script.sh
+</span><span class='line'>sudo ./vmware-install-script.sh <span class="o">[</span>PATH_TO_VMWARE_ARCHIVE<span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li><p>Follow the on-screen instructions.</p></li>
+<li><p>Drop a Kudos line to me here if everything worked okay.</p></li>
+</ol>
+
+
+<p>According to VMware, the 2.0.2 release is just a maintenance release that <a href="https://www.vmware.com/support/server2/doc/releasenotes_vmserver202.html#resolvedissues">resolves</a> security as well as some known issues.</p>
+
+<p>Geek on!</p>
+
+<p><strong>ATTENTION: Don&#8217;t try to install VMware Server with this script or without it on Ubuntu 9.10 because it won&#8217;t work. Some kernel sources on which VMware Server relied for module compilation have changed, thus resulting in failed attempts to build the corresponding modules.</strong></p>
+
+<p><strong>Click here if you want to <a href="http://radu.cotescu.com/how-to-install-vmware-server-2-0-x-on-ubuntu-9-10-karmic-koala/">install VMware Server 2.0.2 on Ubuntu 9.10</a>.
+</strong></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/linus-torvalds-and-windows-7/">Linus Torvalds and Windows 7</a></h1>
     
     
@@ -290,56 +356,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/why-dont-you-switch-to-linux/">Why Don&#8217;t You Switch to Linux?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-10-15T23:41:00+03:00" pubdate data-updated="true">Oct 15<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If you had time to read my blog before you would notice that I mostly write about technical stuff. Since Google indexes my pages, most of the users that arrive here are more or less above average when it comes to computers. Using the Analytics tool provided by Google, I get the following data when it comes to OS usage:</p>
-
-<ol>
-<li><p>Windows - 56.53 %</p></li>
-<li><p>Linux - 38.30 %</p></li>
-<li><p>Macintosh - 4.67 %</p></li>
-<li><p>Others - 0.5 % (iPod, iPhone, Android, BlackBerry, SymbianOS, NetBSD)</p></li>
-</ol>
-
-
-<p>My curiosity, given the fact that I write most about Linux (especially Ubuntu) here, is what, considering the percent of Windows users reaching here, keeps them from not making the switch. Therefore, I will resort using a poll for finding out the answer.</p>
-
-<p>[poll id=&#8221;3&#8221; type=&#8221;result&#8221;]</p>
-
-<p>If you have other reasons for which you haven&#8217;t switched please write them in the comments. I really want to know what&#8217;s keeping you using Windows and what could be done for Linux to gain more users. Thank you!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/14/">&larr; Older</a>
@@ -357,6 +373,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/remapping-keys-in-ubuntu-14.04/">Remapping Keys in Ubuntu 14.04</a>
+      </li>
+    
+      <li class="post">
         <a href="/coloured-log-outputs/">Coloured log outputs on Unix/Linux</a>
       </li>
     
@@ -370,10 +390,6 @@
     
       <li class="post">
         <a href="/the-switch-to-mac-from-ubuntu/">Switching to Mac from Ubuntu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/migrating-your-ubuntu-machine-to-a-ssd-drive/">Migrating your Ubuntu machine to a SSD drive</a>
       </li>
     
   </ul>

@@ -103,6 +103,56 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/why-dont-you-switch-to-linux/">Why Don&#8217;t You Switch to Linux?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-15T23:41:00+03:00" pubdate data-updated="true">Oct 15<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you had time to read my blog before you would notice that I mostly write about technical stuff. Since Google indexes my pages, most of the users that arrive here are more or less above average when it comes to computers. Using the Analytics tool provided by Google, I get the following data when it comes to OS usage:</p>
+
+<ol>
+<li><p>Windows - 56.53 %</p></li>
+<li><p>Linux - 38.30 %</p></li>
+<li><p>Macintosh - 4.67 %</p></li>
+<li><p>Others - 0.5 % (iPod, iPhone, Android, BlackBerry, SymbianOS, NetBSD)</p></li>
+</ol>
+
+
+<p>My curiosity, given the fact that I write most about Linux (especially Ubuntu) here, is what, considering the percent of Windows users reaching here, keeps them from not making the switch. Therefore, I will resort using a poll for finding out the answer.</p>
+
+<p>[poll id=&#8221;3&#8221; type=&#8221;result&#8221;]</p>
+
+<p>If you have other reasons for which you haven&#8217;t switched please write them in the comments. I really want to know what&#8217;s keeping you using Windows and what could be done for Linux to gain more users. Thank you!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/ubuntu-9-10-karmic-koala-improvements/">Ubuntu&#8217;s 9.10 Improvements</a></h1>
     
     
@@ -375,7 +425,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/python-and-pidgin-status-on-ubuntu-linux/">Python and Pidgin Status on Ubuntu Linux</a></h1>
+      <h1 class="entry-title"><a href="/python-and-pidgin-status-on-ubuntu-linux/">Python and Pidgin&#8217;s Status on Ubuntu (Linux)</a></h1>
     
     
       <p class="meta">
@@ -391,33 +441,14 @@
   
 
 
-<time datetime="2009-08-26T00:00:00+03:00" pubdate data-updated="true">Aug 26<span>th</span>, 2009</time>
+<time datetime="2009-08-26T18:01:43+03:00" pubdate data-updated="true">Aug 26<span>th</span>, 2009</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><hr />
-
-<p>date: &#8216;2009-08-26 18:01:43&#8217;
-layout: post
-slug: python-and-pidgin-status-on-ubuntu-linux
-status: publish
-description: &#8220;This post will show you how you can use Python to change your Pidgin&#8217;s status with your blog&#8217;s post titles taken from your feed.&#8221;
-title: Python and Pidgin&#8217;s status on Ubuntu (Linux)
-comments: true
-wordpress_id: &#8216;801&#8217;
-categories:
-- .com
-- Code
-- How To
-- Linux
-- Python</p>
-
-<h2>- Ubuntu</h2>
-
-<p><a href="http://motane.lu">Tudor</a> has found a <a href="http://blog.motane.lu/2009/08/21/advertising-blog-entries-on-pidgins-status/">better solution</a> to advertise one&#8217;s blog posts with the help of Pidgin and a little bit of Python. I did argue with him a bit regarding the number of requests made (you can see that in the comments on his blog post) but finally I would agree that his solution was better than mine, only that I felt the need to improve it a bit. This still needs to set DBUS session parameters at log in time, and thanks to <a href="http://earlruby.org">Earl Ruby</a> this can be done easily too.</p>
+  <div class="entry-content"><p><a href="http://motane.lu">Tudor</a> has found a <a href="http://blog.motane.lu/2009/08/21/advertising-blog-entries-on-pidgins-status/">better solution</a> to advertise one&#8217;s blog posts with the help of Pidgin and a little bit of Python. I did argue with him a bit regarding the number of requests made (you can see that in the comments on his blog post) but finally I would agree that his solution was better than mine, only that I felt the need to improve it a bit. This still needs to set DBUS session parameters at log in time, and thanks to <a href="http://earlruby.org">Earl Ruby</a> this can be done easily too.</p>
 
 <p>The script is pretty simple and I made it write a log to <code>stdout</code>, which with the help of <code>cron</code> can be piped to any file you want. Knock yourself out:</p>
 
@@ -462,12 +493,12 @@ categories:
 <span class='line-number'>39</span>
 <span class='line-number'>40</span>
 <span class='line-number'>41</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c">#!/usr/bin/python                                                       </span>
-</span><span class='line'><span class="c"># pidgin_status_change.py                                               </span>
-</span><span class='line'><span class="sd">&quot;&quot;&quot;                                                                     </span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c">#!/usr/bin/python</span>
+</span><span class='line'><span class="c"># pidgin_status_change.py</span>
+</span><span class='line'><span class="sd">&quot;&quot;&quot;</span>
 </span><span class='line'><span class="sd">Handy script for changing Pidgin&#39;s status with a post from a feed passed as argument.</span>
-</span><span class='line'><span class="sd">Usage:                                                                               </span>
-</span><span class='line'><span class="sd">        python pidgin_status_change.py your_feed_link                                </span>
+</span><span class='line'><span class="sd">Usage:</span>
+</span><span class='line'><span class="sd">        python pidgin_status_change.py your_feed_link</span>
 </span><span class='line'>
 </span><span class='line'><span class="sd">Authors:</span>
 </span><span class='line'><span class="sd">        Tudor Barbu,    http://motane.lu</span>
@@ -550,55 +581,6 @@ categories:
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/resetting-windows-passwords-for-every-user/">Resetting Windows Passwords for Every User</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-08-17T22:13:19+03:00" pubdate data-updated="true">Aug 17<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I am sure that you all wondered sometime how can a Windows password be broken with physical access to the machine. I know this isn&#8217;t quite hacking, but it is a useful thing in many situations:</p>
-
-<ul>
-<li><p>you have forgotten your administrator password;</p></li>
-<li><p>a zealous/envious system administrator didn&#8217;t want to give you the passwords after he left the company;</p></li>
-<li><p>a company that has put together a system for you but was dismissed in the process refused to offer you the passwords for it.</p></li>
-</ul>
-
-
-<p>And I am sure that there are many other &#8220;good&#8221; situations when you must get those passwords no matter what. For the record, I had to do this finding myself in the third situation (not me, but someone close&#8230;).Anyway, trying to find out if there is a secret and misterious way to boot Windows with administrator privileges - kind of like Linux&#8217;s single user mode - I discovered that this is not possible but that there are tools that can do this for you. Tools that run on Linux. On live Linux sessions.</p>
-
-<p>The simplest and smallest distro to use for this particular job was the one made by <a href="http://home.eunet.no/pnordahl/">Petter Nordahl-Hagen</a> which can be found <a href="http://pogostick.net/~pnh/ntpasswd/">here</a>. Just burn the distro on a rewritable CD (because it only has 3 MB) and boot the computer which, unfortunately, runs Windows from it. A text menu will help you achieve what you want. It shouldn&#8217;t take you more than 2 minutes.</p>
-
-<p>Have fun and use it wisely!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/15/">&larr; Older</a>
@@ -616,6 +598,10 @@ categories:
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/remapping-keys-in-ubuntu-14.04/">Remapping Keys in Ubuntu 14.04</a>
+      </li>
+    
+      <li class="post">
         <a href="/coloured-log-outputs/">Coloured log outputs on Unix/Linux</a>
       </li>
     
@@ -629,10 +615,6 @@ categories:
     
       <li class="post">
         <a href="/the-switch-to-mac-from-ubuntu/">Switching to Mac from Ubuntu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/migrating-your-ubuntu-machine-to-a-ssd-drive/">Migrating your Ubuntu machine to a SSD drive</a>
       </li>
     
   </ul>

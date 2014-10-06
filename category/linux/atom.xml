@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Linux | Radu Cotescu's professional blog]]></title>
+  <title><![CDATA[Category: linux | Radu Cotescu's professional blog]]></title>
   <link href="http://radu.cotescu.com/category/linux/atom.xml" rel="self"/>
   <link href="http://radu.cotescu.com/"/>
-  <updated>2014-05-09T15:36:40+03:00</updated>
+  <updated>2014-10-07T02:22:27+03:00</updated>
   <id>http://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
@@ -14,491 +14,57 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Coloured log outputs on Unix/Linux]]></title>
-    <link href="http://radu.cotescu.com/coloured-log-outputs/"/>
-    <updated>2012-10-29T21:36:00+02:00</updated>
-    <id>http://radu.cotescu.com/coloured-log-outputs</id>
-    <content type="html"><![CDATA[<p>There are various times when a software engineer needs to closely monitor log output in real-time. More often than not the engineer is
-actually interested in the output of multiple logs at the same time. Given the amount of information that an application can output to log
-files at any one time, filtering the important information from bogus entries becomes frustrating and tedious.</p>
+    <title type="html"><![CDATA[Remapping Keys in Ubuntu 14.04]]></title>
+    <link href="http://radu.cotescu.com/remapping-keys-in-ubuntu-14.04/"/>
+    <updated>2014-09-07T18:30:00+03:00</updated>
+    <id>http://radu.cotescu.com/remapping-keys-in-ubuntu-14.04</id>
+    <content type="html"><![CDATA[<p>Ever since I've switched to Mac OS X I liked its shortcut modifiers more than the ones available on Windows / Linux. While I do agree that sometimes
+you lose count of the number of modifier keys that you have to press in order to get something done, most of the cases that claim is just FUD.</p>
 
-<p>One of the solutions I've come across recently is to colorize the log output according to the log entries' severity.</p>
+<p>The ergonomy of the Mac has also made its way into how shortcuts are defined. The <code>Command</code> key, positioned where <code>Alt</code> is on PC keyboards, is
+definitely better positioned when it comes to using that key as your main modifier for shortcuts. Call it the power of habit, but every time I
+switch to a PC I find myself pressing the <code>Alt</code> key instead of <code>Control</code>. And that's because <code>Alt</code> is in a handier position.</p>
 
 <!--more-->
 
 
-<h2>GUI half-baked options</h2>
+<p>A few weeks ago I bought a <a href="http://www.wasdkeyboards.com/index.php/products/code-keyboard/code-87-key-mechanical-keyboard.html" title="CODE 87-Key Mechanical Keyboard ">CODE ten-keyless mechanical keyboard</a>.
+One of the nifty features (and there are plenty) is the ability to change the layout of your keyboard with a combination of DIP switches located on
+the back. Obviously, it can be configured to a Mac layout. But what do you do when you want to use the same keyboard on your Linux box, from time to
+time? I mean you're mostly using <code>Command</code> for your shortcuts. Remapping the shortcuts in your head to <code>Control</code> is not that easy at first.</p>
 
-<p>On GNOME-based Linux distributions there's <em>GNOME System Log Viewer</em>, a GUI application that can be used to monitor logs in real-time.
-One nice functionality that it provides are filters which can be configured to match an expression or a regular expression; the filters
-allow colorizing the output according to what they match. +1 for Linux.</p>
+<p><img src="/uploads/2014/09/07/code.jpg" title="CODE 87-Key Mechanical Keyboard with Mac layout" alt="&quot;CODE 87-Key Mechanical Keyboard with Mac layout&quot;" /></p>
 
-<p>On Mac OS X <em>Console.app</em>, although is able to filter information faster and easier than <em>GNOME System Log Viewer</em>, is not able to highlight
-the lines of interest using colours. Which is a shame, given the fact that more and more developers are migrating to Macs.</p>
+<h2>XKB</h2>
 
-<h2><code>tail</code> and the power of Bash</h2>
+<p>Luckily Ubuntu, like many other Linux distros, comes with <code>xkb</code> - the X KeyBoard extension. This extension is responsible for mapping the physical
+keys of your keyboard to their designed function. <code>xkb</code> symbol files can be found in <code>/usr/share/X11/xkb/symbols</code> and it's good to know that they're
+localised, in case you need to add some language-specific mappings. However, in my case, I need to remap some of the modifier keys.</p>
 
-<p>Every Unix/Linux user has used <a href="http://linux.die.net/man/1/tail" title="tail's man page"><code>tail</code></a> at least once (though I have my doubts regarding
-some of the Mac users :P). The advantage of <code>tail</code> is that it allows piping its output to whatever program able to consume information from
-<code>stdin</code>.</p>
+<p>The modifier keys are mapped in <code>/usr/share/X11/xkb/symbols/pc</code>, a file which is inherited by all other configurations. Since I just want to replace
+<code>Super</code> with <code>Control</code>, the changes are minimal:</p>
 
-<h3>Enter <code>awk</code></h3>
+<p>```bash</p>
 
-<p><a href="http://en.wikipedia.org/wiki/Awk" title="AWK on Wikipedia"><code>awk</code></a> is an interpreted programming language perfect for extracting data from text
-files. Given the fact that <code>awk</code> can read from <code>stdin</code>, it's quite trivial to pipe data to it from which to extract more meaningful
-information. Combine this with a little Bash scripting (needs Bash 4 due to associative arrays) and we have a nice and easy way to analyze
-logs in real-time using colour-coded output.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>ctail with awk</span><a href='https://github.com/raducotescu/ctail'>Clone on GitHub </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-<span class='line-number'>72</span>
-<span class='line-number'>73</span>
-<span class='line-number'>74</span>
-<span class='line-number'>75</span>
-<span class='line-number'>76</span>
-<span class='line-number'>77</span>
-<span class='line-number'>78</span>
-<span class='line-number'>79</span>
-<span class='line-number'>80</span>
-<span class='line-number'>81</span>
-<span class='line-number'>82</span>
-<span class='line-number'>83</span>
-<span class='line-number'>84</span>
-<span class='line-number'>85</span>
-<span class='line-number'>86</span>
-<span class='line-number'>87</span>
-<span class='line-number'>88</span>
-<span class='line-number'>89</span>
-<span class='line-number'>90</span>
-<span class='line-number'>91</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;h1&gt;!/usr/local/bin/bash&lt;/h1&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;TAIL<span class="o">=</span>&lt;code&gt;which tail&lt;/code&gt;
-</span><span class='line'><span class="nv">AWK</span><span class="o">=</span>&lt;code&gt;which awk&lt;/code&gt;
-</span><span class='line'><span class="k">if</span> <span class="o">[[</span> -z <span class="nv">$TAIL</span> <span class="o">]]</span>; <span class="k">then</span>&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;pre&gt;&lt;code&gt;echo -e <span class="s2">&quot;Cannot find tail executable.\n&quot;</span>
-</span><span class='line'><span class="nb">exit </span>1
-</span><span class='line'>&lt;/code&gt;&lt;/pre&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;fi
-</span><span class='line'><span class="k">if</span> <span class="o">[[</span> -z <span class="nv">$AWK</span> <span class="o">]]</span>; <span class="k">then</span>&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;pre&gt;&lt;code&gt;echo -e <span class="s2">&quot;Cannot find awk executable.\n&quot;</span>
-</span><span class='line'><span class="nb">exit </span>1
-</span><span class='line'>&lt;/code&gt;&lt;/pre&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;fi&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;CWD<span class="o">=</span>&lt;code&gt;dirname <span class="nv">$0</span>&lt;/code&gt;&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;declare -A log
-</span><span class='line'>log<span class="o">[</span><span class="s2">&quot;INFO&quot;</span><span class="o">]=</span><span class="s2">&quot;BWhite&quot;</span>
-</span><span class='line'>log<span class="o">[</span><span class="s2">&quot;ERROR&quot;</span><span class="o">]=</span><span class="s2">&quot;BRed&quot;</span>
-</span><span class='line'>log<span class="o">[</span><span class="s2">&quot;WARN&quot;</span><span class="o">]=</span><span class="s2">&quot;BYellow&quot;</span>
-</span><span class='line'>log<span class="o">[</span><span class="s2">&quot;DEBUG&quot;</span><span class="o">]=</span><span class="s2">&quot;BGreen&quot;</span>&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;if <span class="o">[[</span> -f <span class="s2">&quot;$CWD/ctail.config&quot;</span> <span class="o">]]</span>; <span class="k">then</span>&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;pre&gt;&lt;code&gt;source <span class="s2">&quot;$CWD/ctail.config&quot;</span>
-</span><span class='line'>&lt;/code&gt;&lt;/pre&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;fi&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;declare -A colours&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;h1&gt;Regular&lt;/h1&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;colours<span class="o">[</span><span class="s2">&quot;Black&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[0;30m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;Red&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[0;31m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;Green&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[0;32m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;Yellow&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[0;33m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;Blue&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[0;34m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;Purple&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[0;35m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;Cyan&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[0;36m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;White&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[0;37m&quot;</span>&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;h1&gt;Bold&lt;/h1&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;colours<span class="o">[</span><span class="s2">&quot;BBlack&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[1;30m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;BRed&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[1;31m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;BGreen&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[1;32m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;BYellow&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[1;33m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;BBlue&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[1;34m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;BPurple&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[1;35m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;BCyan&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[1;36m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;BWhite&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[1;37m&quot;</span>&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;h1&gt;High Intensity&lt;/h1&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;colours<span class="o">[</span><span class="s2">&quot;IBlack&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[0;90m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;IRed&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[0;91m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;IGreen&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[0;92m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;IYellow&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[0;93m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;IBlue&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[0;94m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;IPurple&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[0;95m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;ICyan&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[0;96m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;IWhite&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[0;97m&quot;</span>&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;h1&gt;Bold High Intensity&lt;/h1&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;colours<span class="o">[</span><span class="s2">&quot;BIBlack&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[1;90m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;BIRed&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[1;91m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;BIGreen&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[1;92m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;BIYellow&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[1;93m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;BIBlue&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[1;94m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;BIPurple&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[1;95m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;BICyan&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[1;96m&quot;</span>
-</span><span class='line'>colours<span class="o">[</span><span class="s2">&quot;BIWhite&quot;</span><span class="o">]=</span><span class="s2">&quot;\033[1;97m&quot;</span>&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;AWK_EXPRESSION<span class="o">=</span><span class="s2">&quot;&quot;</span>
-</span><span class='line'><span class="k">for </span>i in <span class="s2">&quot;${!log[@]}&quot;</span>; <span class="k">do</span>&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;pre&gt;&lt;code&gt;AWK_EXPRESSION<span class="o">=</span><span class="s2">&quot;/$i/ {print \&quot;${colours[${log[$i]}]}\&quot; \$0 \&quot;\033[39m\&quot;} $AWK_EXPRESSION&quot;</span>
-</span><span class='line'>&lt;/code&gt;&lt;/pre&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;done&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;<span class="nv">$TAIL</span> <span class="s2">&quot;$@&quot;</span> | <span class="nv">$AWK</span> <span class="s2">&quot;$AWK_EXPRESSION&quot;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>A <code>ctail.config</code> file can be created in the same folder with <code>ctail</code> to override the default colours and log levels associations.</p>
-
-<p>The advantage of using <code>awk</code> is that it's present on most of the available Linux distributions and UNIX flavours and that it's reasonably
-fast.</p>
-
-<h3>Option no. 2: <code>ack</code></h3>
-
-<p>Another tool used for filtering information is <a href="http://linux.die.net/man/1/ack" title="ack's man page"><code>ack</code></a>, a tool "designed as a replacement
-for 99% of the uses of <code>grep</code>". A similar colorized <code>tail</code> script can be written like:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>ctail with ack </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>&lt;/p&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;h1&gt;!/bin/bash&lt;/h1&gt;
-</span><span class='line'>
-</span><span class='line'>&lt;p&gt;tail <span class="s2">&quot;$@&quot;</span> <span class="se">\</span>
-</span><span class='line'>| ack --flush --passthru --color --color-match<span class="o">=</span>red    <span class="s2">&quot;&lt;sup&gt;.&lt;em&gt;*ERROR*.&lt;/em&gt;&quot;</span>&lt;/sup&gt; <span class="se">\</span>
-</span><span class='line'>| ack --flush --passthru --color --color-match<span class="o">=</span>yellow <span class="s2">&quot;&lt;sup&gt;.&lt;em&gt;*WARN*.&lt;/em&gt;&quot;</span>&lt;/sup&gt; <span class="se">\</span>
-</span><span class='line'>| ack --flush --passthru --color --color-match<span class="o">=</span>green  <span class="s2">&quot;&lt;sup&gt;.&lt;em&gt;*INFO*.&lt;/em&gt;&quot;</span>&lt;/sup&gt; <span class="se">\</span>
-</span><span class='line'>| ack --flush --passthru --color --color-match<span class="o">=</span>white  <span class="s2">&quot;&lt;sup&gt;.&lt;em&gt;*DEBUG*.&lt;/em&gt;&quot;</span>&lt;/sup&gt; <span class="se">\</span>
-</span><span class='line'>| ack --flush --passthru --color --color-match<span class="o">=</span>white  <span class="s2">&quot;&lt;sup&gt;.&lt;em&gt;*TRACE*.&lt;/em&gt;&quot;</span>&lt;/sup&gt;
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Credits for this solution go to <a href="https://twitter.com/alexkli">Alex Klimetschek</a>, one of my colleagues from Adobe. <code>ack</code> does not come
-standard on most Linux distributions, nor on Mac OS X; however, installing it is usually a few commands away with your favourite package
-manager.</p>
-
-<h2>In the end</h2>
-
-<p>Being an avid terminal user, I find the <code>ctail</code> script (in any of its variations) a better tool than its half-baked GUI alternatives.
-Furthermore, <code>ctail</code> can also be used on servers with very little setup.</p>
-
-<p>Do you know of any other interesting ways for highlighting log messages?</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Migrating your Ubuntu machine to a SSD drive]]></title>
-    <link href="http://radu.cotescu.com/migrating-your-ubuntu-machine-to-a-ssd-drive/"/>
-    <updated>2012-05-11T23:10:00+03:00</updated>
-    <id>http://radu.cotescu.com/migrating-your-ubuntu-machine-to-a-ssd-drive</id>
-    <content type="html"><![CDATA[<p>SSD drives have finally become affordable and more reliable than they used to be. Partly this was sure helped by the price boost of the traditional hard-disks manufactured in Thailand (I think everybody still reminds the <a href="http://en.wikipedia.org/wiki/2011_Thailand_flood" title="2011 Thailand flood">floods</a> from the summer of 2011). The competition helped the development of innovative solutions and after 4 years since their mass-consumption breakthrough they have managed to become a standard on ultrabooks and premium laptops.</p>
-
-<p>Because the price / GB of the classic mechanical hard-disk was so low (as low as US$0.05 per GB for 3.5 inch drives and US$0.10 per GB for 2.5 inch drives), producers started to offer larger drives for the same money. Unfortunately SSD technologies cannot and probably will not evolve the same way due to memory degradations once the chip size decreases. In particular this led to higher prices for the same disk size, making SSDs more attractive for boot / OS drives instead of plain storage ones.</p>
-
-<p>Migrating a current OS installation usually has to take into consideration that the SSD destination disk might not be able to fully accommodate the previously stored data. The following paragraphs will describe what solutions can be employed in order to successfully migrate an Ubuntu installation (or any other Linux distribution) to a SSD drive.</p>
-
-<!-- more -->
-
-
-<h1>How To</h1>
-
-<p>Depending on the available storage space of the SSD, there are two available solutions:</p>
-
-<ol>
-<li><p>the destination drive is just as big as the source drive, or larger &ndash; <code>ddrescue</code></p></li>
-<li><p>the destination drive is smaller than the source drive &ndash; <code>rsync</code>, <code>gparted</code>, <code>boot-repair</code></p></li>
-</ol>
-
-
-<p>Tools needed for both solutions:</p>
-
-<ol>
-<li><p>an Ubuntu live CD / live USB stick from which to boot and perform the migration;</p></li>
-<li><p>at least two SATA drives, one for the source and one for the destination disk;</p></li>
-<li><p>at least two SATA data cables and two SATA power cables if you're using a desktop machine to perform the migration, or a SATA to USB adaptor if you're using a laptop;</p></li>
-<li><p>a Philips screwdriver to mount / un-mount the hard drives and possibly the 3.5" adaptor.</p></li>
-</ol>
-
-
-<p>It's time to connect the hard drives to your machine.</p>
-
-<h2>1. Same size or larger SSD</h2>
-
-<p>If the SSD you have installed on your machine is the same size or larger than your current mechanical drive it means that you're rich. Furthermore, the work you have to do to migrate your system to the new drive does not require too much effort. <code>ddrescue</code> is a great tool for restoring information from failing drives but it can also be used to perform bitwise clones.</p>
-
-<p>To start migrating your system from one drive to the other, perform the following steps:</p>
-
-<ol>
-<li><p>boot your machine using the live CD / USB stick;</p></li>
-<li><p>enable the "universe" repositories on Ubuntu and install <code>gddrescue</code>:</p>
-
-<pre><code> sudo apt-get update &amp;&amp; sudo apt-get install gddrescue
-</code></pre></li>
-<li><p>use <code>gddrescue</code> to clone your drive:</p>
-
-<pre><code> sudo ddrescue -v --force /dev/sda /dev/sdb
+<pre><code>key &lt;LCTL&gt; {    [ Super_L       ]   };
+key &lt;LWIN&gt; {    [ Control_L     ]   };
+key &lt;RCTL&gt; {    [ Super_R       ]   };
+key &lt;RWIN&gt; {    [ Control_R     ]   };
 </code></pre>
 
-<p> where <code>/dev/sda</code> is your source drive and <code>/dev/sdb</code> is your destination drive</p></li>
-<li><p>have patience; depending on your disk size and your machine's performance this might take a while.</p></li>
-</ol>
+<p>```</p>
 
+<p>In order to apply the new mappings you need to clear out <code>xkb</code>'s cache from <code>/var/lib/xkb</code>:</p>
 
-<p>At the end you should be able to seamlessly replace the old spinning drive with the SSD and just enjoy the snappiness of your system.</p>
+<p>```bash</p>
 
-<h2>2. Smaller SSD - the usual compromise</h2>
-
-<p>Trying to clone a larger disk to a smaller one using <code>ddrescue</code> is not trivial, even if the total used storage space would be less than the SSD's storage capacity. In this case three software tools of the *nix Swiss Army knife have to be used:</p>
-
-<ol>
-<li><p><code>gparted</code> &ndash; for setting out the partitioning layout;</p></li>
-<li><p><code>rsync</code> &ndash; for selectively synchronising the needed data (you can easily decide what to exclude using patterns);</p></li>
-<li><p><code>boot-repair</code> &ndash; to fix your Grub2 setup.</p></li>
-</ol>
-
-
-<h3>Partitioning with <code>gparted</code></h3>
-
-<p>Boot your system using your live Ubuntu image. Using <code>gparted</code> (it is included on the live image) create the desired partitions on your SSD. Currently only 2 Linux file systems properly support SSDs (making use of native TRIM): <code>btrfs</code> and <code>ext4</code>. Out of these two, only <code>ext4</code> is considered mature enough to be used on production-ready systems, due to its mass-adoption in the Linux world.</p>
-
-<p>In order to align your partitions with the drive's sectors (for optimal performance and longevity) make sure to leave the first MiB of storage unallocated and to align your partitions to MiB, not cylinders. This is fairly intuitive with <code>gparted</code>.</p>
-
-<p>Remember to add the <code>boot</code> flag to the partition where your <code>/boot</code> folder will be stored.</p>
-
-<h3>Syncing with <code>rsync</code></h3>
-
-<p>Once your SSD drive is partitioned, mount the source and destination partitions. This can easily be done from Nautilus, the default file browser from Ubuntu. Just open the home folder and on the left sidebar you can see the unmounted file systems. Click on them to let the system mount them automatically. I strongly recommend to mount them two by two (1 source, 1 destination) in order to avoid any complications. Using <code>rsync</code> selectively sync your partitions:</p>
-
-<pre><code>    sudo rsync -a -v --exclude "excluded_folder_name_or_pattern" /media/&lt;source_uuid&gt;/ /media/&lt;destination_uuid&gt;
+<pre><code>rm -rf /var/lib/xkb/*
 </code></pre>
 
-<h3>Restoring <code>grub</code></h3>
+<p>```</p>
 
-<p>Unfortunately <code>rsync</code> will not be able to handle <code>grub</code>, thus you will not be able to boot your system. Restoring <code>grub</code> is very straight-forward. Again you will need the live CD / live USB stick to boot up your machine. After Ubuntu is up and running from the installation medium, you just need to install and use Boot-Repair. A very good guide is available <a href="https://help.ubuntu.com/community/Boot-Repair" title="Boot-Repair - Ubuntu Community Documentation">here</a>.</p>
-
-<h2>Specific mount options for SSD</h2>
-
-<p>Because of the way SSD drives work, some mount options need to be specified in your <code>/etc/fstab</code> file:</p>
-
-<ul>
-<li><code>discard</code> &ndash; this enables <a href="http://en.wikipedia.org/wiki/TRIM" title="TRIM explained on Wikipedia">TRIM</a>;</li>
-<li><code>noatime</code> &ndash; this disables pointless writes to disk to store the last accessed time for a read file</li>
-</ul>
-
-
-<p>Your <code>fstab</code> file should look more or less like this:
-``` bash</p>
-
-<h1>/etc/fstab: static file system information.</h1>
-
-<p>#</p>
-
-<h1>Use 'blkid -o value -s UUID' to print the universally unique identifier</h1>
-
-<h1>for a device; this may be used with UUID= as a more robust way to name</h1>
-
-<h1>devices that works even if disks are added and removed. See fstab(5).</h1>
-
-<p>#</p>
-
-<h1><file system> <mount point>   <type>  <options>       <dump>  <pass></h1>
-
-<p>proc            /proc           proc    nodev,noexec,nosuid 0       0
-UUID=0765430a-83ae-4530-b1b1-a976cd72ce16 /               ext4    discard,noatime,errors=remount-ro             0 1
-UUID=263bba00-32f4-4bea-966b-ab7ae1fc3e8b /home           ext4    discard,noatime,errors=remount-ro,user_xattr  0 2
-```</p>
-
-<h1>Conclusions</h1>
-
-<p>Migrating from your slow mechanical hard drive was easy. I am pretty sure that  if you have not used a SSD drive until now you will definitely question yourself why it took you so long to switch - I know I do. Sometimes we fail to remember that the hard-disk is still the slowest component in a computing system. A SSD might be the solution to speed up your machine instead of buying the newest and coolest CPU and it's definitely cheaper as long as you can accommodate with less storage space for the drive that should store your OS and applications (and <em>maybe</em> your media workspace).</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Why awk is better than cut]]></title>
-    <link href="http://radu.cotescu.com/why-awk-is-better-than-cut/"/>
-    <updated>2011-08-01T12:45:40+03:00</updated>
-    <id>http://radu.cotescu.com/why-awk-is-better-than-cut</id>
-    <content type="html"><![CDATA[<p>I am currently working with some text files from which I have to extract some data. Generally, when you have to do this kind of work on a *nix machine, you use <code>cut</code> or <code>awk</code>. However, even for simple tasks <code>cut</code> is superseded by the mighty <code>awk</code>. Let's look at the following examples which are closely related to the data that I'm working with. Assume we have the following text file:</p>
-
-<p><code>bash
-radu@riker:~$ cat testFile
-a
-b c
-d
-e f
-</code></p>
-
-<p>What I'd like to do is to extract the strings from each line and assign them to some parameters; obviously the second parameter can be null. To do this with <code>cut</code> you'd have to use two different call types, one for each parameter:</p>
-
-<p><code>bash
-radu@riker:~$ cat testFile | cut -d" " -f1
-a
-b
-d
-e
-radu@riker:~$ cat testFile | cut -d" " -f2 -s
-c
-f
-</code></p>
-
-<p>Notice the <code>-s</code> option in the second call. This tells <code>cut</code> not to print lines not containing delimiters. If by mistake you'd forget to add that flag to the options list, the output would be this:</p>
-
-<p><code>bash
-radu@riker:~$ cat testFile | cut -d" " -f2
-a
-c
-d
-f
-</code></p>
-
-<p>which includes the values for the first parameter too. Not good.</p>
-
-<p>Now let's share some <code>awk</code> love:</p>
-
-<p>``` bash
-radu@riker:~$ cat testFile | awk '{print $1}'
-a
-b
-d
-e
-radu@riker:~$ cat testFile | awk '{print $2}'</p>
-
-<p>c</p>
-
-<p>f
-```</p>
-
-<p>Of course, if your restrictions aren't like mine you can as well use <code>cut</code>. However, you'd be safer with <code>awk</code>.</p>
-
-<p>Happy Bash parsing!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Bash one-liner for removing old kernel artefacts]]></title>
-    <link href="http://radu.cotescu.com/bash-old-kernel-artefacts/"/>
-    <updated>2011-07-29T14:13:57+03:00</updated>
-    <id>http://radu.cotescu.com/bash-old-kernel-artefacts</id>
-    <content type="html"><![CDATA[<p>Since now I have 4 virtual machines to administer for my dissertation project, I have to find ways to do sysadmin stuff as quickly as possible and to concentrate my efforts on software development. If you ever did a kernel update you would know that a kernel upgrade will not remove the old kernel artefacts, specifically the old headers and the Linux image. While this is a good technique for avoiding incompatibilities of some binaries with the new kernel versions, therefore allowing you to test that everything is working as expected, old kernel images occupy an important amount of space (around 256 MB / release). When your system has a limited amount of storage allocated to it, this might become a problem.</p>
-
-<p>The process of removing the unused images requires a few keystrokes and some user input, needing a great deal of attention not to remove the currently running kernel or - in case you are extremely inattentive - all the kernel images from your system. To semi-automate this task, you can use the following Bash one-liner:</p>
-
-<p><code>bash
-sudo apt-get purge $(dpkg -l | grep "^ii" | awk '{print $2}' | egrep -e "^linux-headers-[0-9]|^linux-image-[0-9]" | egrep -v `uname -r | cut -d"-" -f1,2`)
-</code></p>
-
-<p>Run this line only after you have booted into your new kernel, otherwise you'll remove the upgrade.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to install VMware Server on kernel version 2.6.38]]></title>
-    <link href="http://radu.cotescu.com/vmware-server-kernel-2-6-38/"/>
-    <updated>2011-05-05T12:18:56+03:00</updated>
-    <id>http://radu.cotescu.com/vmware-server-kernel-2-6-38</id>
-    <content type="html"><![CDATA[<h2>Notices:</h2>
-
-<ul>
-<li><p>VMware has declared VMware Server End Of Availability on January 2010 with the actual support ending on June 30th, 2011. More details can be read <a href="http://www.vmware.com/support/policies/lifecycle/general/index.html#policy_server">here</a>. Furthermore, VMware Server is not officially supported on Ubuntu releases greater than 8.04.</p></li>
-<li><p>The VMware Server console plug-in won't work on Firefox versions older than 3.6 (I have found no viable solution for this problem).</p></li>
-</ul>
-
-
-<p>The needed instructions for the installation can be found <a href="http://radu.cotescu.com/how-to-install-vmware-server-ubuntu-fedora-opensuse/">here</a>. For comments related to the installation on machines running the 2.6.38 kernel version please post here.</p>
+<p>Afterwards just restart your X session and you're good to go. Even though this small change doesn't make all shortcuts to work like on a Mac it's still
+a lot better than without it.</p>
 ]]></content>
   </entry>
   

@@ -103,6 +103,48 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/openoffice-org-3-ubuntu-and-romanian-fonts/">OpenOffice.org 3, Ubuntu and Romanian Fonts</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-05-16T18:41:18+03:00" pubdate data-updated="true">May 16<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Having to write an article dealing with a part of my diploma project for the <em>Students&#8217; Papers Session</em> in my University, I discovered that some fonts (particularly &#8220;ș&#8221; and &#8220;ț&#8221;) were displayed awkward in Writer, the word processing software from OpenOffice.org. By awkward I mean that &#8220;ș&#8221; and &#8220;ț&#8221; were using other fonts than &#8220;s&#8221; and  &#8220;t&#8221;. The strange thing is that this was happening only on my laptop, while on my desktop everything worked okay. Both these machines have the same software stack (Ubuntu 10.04 x86_64 and OpenOffice.org 3.2).</p>
+
+<p>Browsing the web for a solution I couldn&#8217;t find anything pointing in the right direction. Still, what I&#8217;ve managed to observe was that on my laptop I had a <code>.fonts</code> folder in my home directory which seemed to contain the exact font I was using in Writer (and that was stored in the system fonts folder too). When I looked on my desktop for that specific folder, surprise: there wasn&#8217;t any. While this folder keeps user specific fonts, the main folder where the fonts are kept for the entire system is <code>/usr/share/fonts</code>. I&#8217;ve then decided to delete the <code>.fonts</code> folder from my home directory (I still don&#8217;t know what created it) and then I&#8217;ve regenerated the font cache, using this command:</p>
+
+<p>&#8220;` bash</p>
+
+<p>Now everything is back to normal in my font world. Maybe I&#8217;ll use LaTeX when it&#8217;s time to write the real deal.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/ubuntu-usb-stick/">Booting Ubuntu From an USB Stick</a></h1>
     
     
@@ -392,58 +434,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/sun-java-ubuntu-lucid-lynx-10-04/">Where Has Java Gone From Lucid?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-04-22T20:11:10+03:00" pubdate data-updated="true">Apr 22<span>nd</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Apparently the Java packages coming from Sun (or Oracle for the matter) have been moved to the Partner repositories starting with the 10.04 release of Ubuntu, codenamed Lucid Lynx. The affected packages are:</p>
-
-<ul>
-<li><p>ia32-sun-java6-bin<a href="/uploads/wpuploads/2010/04/software-sources.png"><img src="/uploads/wpuploads/2010/04/software-sources-300x285.png" alt="" /></a></p></li>
-<li><p>ia32-sun-java6-plugin</p></li>
-<li><p>sun-java6-bin</p></li>
-<li><p>sun-java6-demo</p></li>
-<li><p>sun-java6-fonts</p></li>
-<li><p>sun-java6-javadb</p></li>
-<li><p>sun-java6-jdk</p></li>
-<li><p>sun-java6-jre</p></li>
-<li><p>sun-java6-plugin</p></li>
-<li><p>sun-java6-source</p></li>
-</ul>
-
-
-<p>To enable the use of the Partner repositories (which contain several more software packages), go to <em>System » Administration » Software Sources</em> and select the check-box in front of the partner repository line. The repository information will be uploaded and afterwards you can install the desired Java-related packages.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/8/">&larr; Older</a>
@@ -461,6 +451,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/remapping-keys-in-ubuntu-14.04/">Remapping Keys in Ubuntu 14.04</a>
+      </li>
+    
+      <li class="post">
         <a href="/coloured-log-outputs/">Coloured log outputs on Unix/Linux</a>
       </li>
     
@@ -474,10 +468,6 @@
     
       <li class="post">
         <a href="/the-switch-to-mac-from-ubuntu/">Switching to Mac from Ubuntu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/migrating-your-ubuntu-machine-to-a-ssd-drive/">Migrating your Ubuntu machine to a SSD drive</a>
       </li>
     
   </ul>

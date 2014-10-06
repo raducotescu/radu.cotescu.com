@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python | Radu Cotescu's professional blog]]></title>
   <link href="http://radu.cotescu.com/category/python/atom.xml" rel="self"/>
   <link href="http://radu.cotescu.com/"/>
-  <updated>2014-05-09T15:36:40+03:00</updated>
+  <updated>2014-10-07T02:22:27+03:00</updated>
   <id>http://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
@@ -41,6 +41,106 @@
 
 
 <p>Now the only thing that remains to do is to tweet. Have fun!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Python and Pidgin's status on Ubuntu (Linux)]]></title>
+    <link href="http://radu.cotescu.com/python-and-pidgin-status-on-ubuntu-linux/"/>
+    <updated>2009-08-26T18:01:43+03:00</updated>
+    <id>http://radu.cotescu.com/python-and-pidgin-status-on-ubuntu-linux</id>
+    <content type="html"><![CDATA[<p><a href="http://motane.lu">Tudor</a> has found a <a href="http://blog.motane.lu/2009/08/21/advertising-blog-entries-on-pidgins-status/">better solution</a> to advertise one's blog posts with the help of Pidgin and a little bit of Python. I did argue with him a bit regarding the number of requests made (you can see that in the comments on his blog post) but finally I would agree that his solution was better than mine, only that I felt the need to improve it a bit. This still needs to set DBUS session parameters at log in time, and thanks to <a href="http://earlruby.org">Earl Ruby</a> this can be done easily too.</p>
+
+<p>The script is pretty simple and I made it write a log to <code>stdout</code>, which with the help of <code>cron</code> can be piped to any file you want. Knock yourself out:</p>
+
+<p>``` python</p>
+
+<h1>!/usr/bin/python</h1>
+
+<h1>pidgin_status_change.py</h1>
+
+<p>"""
+Handy script for changing Pidgin's status with a post from a feed passed as argument.
+Usage:</p>
+
+<pre><code>    python pidgin_status_change.py your_feed_link
+</code></pre>
+
+<p>Authors:</p>
+
+<pre><code>    Tudor Barbu,    http://motane.lu
+    Radu Cotescu,   http://radu.cotescu.com
+</code></pre>
+
+<p>"""</p>
+
+<p>import commands
+import feedparser
+import random
+import os
+import sys
+import time</p>
+
+<h1>feed url</h1>
+
+<p>FEED = []</p>
+
+<p>def setFeed():</p>
+
+<pre><code>    if sys.argv is not None and len( sys.argv ) &lt; 3:
+            global FEED
+            FEED = sys.argv[1]
+</code></pre>
+
+<p>def changeStatus():</p>
+
+<pre><code>    if len( FEED ) is not None:
+            if commands.getoutput('pidof pidgin') is not None:
+                    feed = feedparser.parse( FEED )
+                    index = random.randint( 0, len( feed['items'] ) - 1 )
+                    print time.strftime("%d-%m-%Y, %H:%M:%S", time.localtime())
+                    print """\tStatus:\n\t%s\n\t%s""" % ( feed['items'][index].title.encode("utf-8"), feed['items'][index].link.encode("utf-8") )
+                    status = 'purple-remote "setstatus?status=available&amp;message=%s %s"' % ( feed['items'][index].title, feed['items'][index].link )
+                    os.system(status.encode("utf-8"))
+</code></pre>
+
+<p>setFeed()
+changeStatus()</p>
+
+<h1>EOF</h1>
+
+<p>```</p>
+
+<p>Setting your DBUS session parameters requires exporting some variables to your environment. Take the script below and add it via <em>System - Preferences - Startup Applications</em> to the list of programs that start at log in. This way you'll always be sure the needed variables are available.</p>
+
+<p>``` bash</p>
+
+<h1>!/bin/bash</h1>
+
+<h1>Export the dbus session address on startup so it can be used by cron</h1>
+
+<p>touch $HOME/.Xdbus
+chmod 600 $HOME/.Xdbus
+env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.Xdbus
+echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.Xdbus</p>
+
+<h1>Export XAUTHORITY value on startup so it can be used by cron</h1>
+
+<p>env | grep XAUTHORITY >> $HOME/.Xdbus
+echo 'export XAUTHORITY' >> $HOME/.Xdbus
+```</p>
+
+<p>Then you only need to set <code>cron</code> to do the job:</p>
+
+<p><code>bash
+SHELL=/bin/bash
+DISPLAY=:0.0
+*/5 * * * * source ~/.Xdbus; /home/radu/scripts/pidgin_python/pidgin_status_change.py http://feeds2.feedburner.com/raducotescu &gt;&gt; /home/radu/crontab.log
+</code></p>
+
+<p>You can download everything from <a href="https://github.com/raducotescu/pidgin-status-scripts/tarball/master">here</a>.</p>
+
+<p>Happy blogging!</p>
 ]]></content>
   </entry>
   

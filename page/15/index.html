@@ -103,6 +103,55 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/resetting-windows-passwords-for-every-user/">Resetting Windows Passwords for Every User</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-08-17T22:13:19+03:00" pubdate data-updated="true">Aug 17<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I am sure that you all wondered sometime how can a Windows password be broken with physical access to the machine. I know this isn&#8217;t quite hacking, but it is a useful thing in many situations:</p>
+
+<ul>
+<li><p>you have forgotten your administrator password;</p></li>
+<li><p>a zealous/envious system administrator didn&#8217;t want to give you the passwords after he left the company;</p></li>
+<li><p>a company that has put together a system for you but was dismissed in the process refused to offer you the passwords for it.</p></li>
+</ul>
+
+
+<p>And I am sure that there are many other &#8220;good&#8221; situations when you must get those passwords no matter what. For the record, I had to do this finding myself in the third situation (not me, but someone close&#8230;).Anyway, trying to find out if there is a secret and misterious way to boot Windows with administrator privileges - kind of like Linux&#8217;s single user mode - I discovered that this is not possible but that there are tools that can do this for you. Tools that run on Linux. On live Linux sessions.</p>
+
+<p>The simplest and smallest distro to use for this particular job was the one made by <a href="http://home.eunet.no/pnordahl/">Petter Nordahl-Hagen</a> which can be found <a href="http://pogostick.net/~pnh/ntpasswd/">here</a>. Just burn the distro on a rewritable CD (because it only has 3 MB) and boot the computer which, unfortunately, runs Windows from it. A text menu will help you achieve what you want. It shouldn&#8217;t take you more than 2 minutes.</p>
+
+<p>Have fun and use it wisely!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/how-to-fix-adobe-air-installation-on-ubuntu-9-04/">How to Fix Adobe AIR&#8217;s Installation on Ubuntu 9.04</a></h1>
     
     
@@ -347,89 +396,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/resolving-vertically-flipped-images-from-webcams-in-ubuntu/">Resolving Vertically Flipped Images From Webcams in Ubuntu</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-07-31T01:53:43+03:00" pubdate data-updated="true">Jul 31<span>st</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>UPDATE 2</strong>: <strong>I strongly recommend against using this patch any more and relaying on the solution provided by UPDATE 1.</strong></p>
-
-<p><strong>UPDATE 1: Please check the solution from <a href="http://radu.cotescu.com/flipped-images-ubuntu-webcam/">here</a> as it represents the correct approach for fixing this problem in Ubuntu (all releases). Also, the patch from this post doesn&#8217;t work for the kernel included in Ubuntu 9.10.
-</strong></p>
-
-<p>Usually I do not use my laptop&#8217;s webcam. Not that I use another webcam. But when I made the radical switch from Windows to Ubuntu, I was disappointed to see that the images from my webcam were vertically flipped and I had no option of turning them 180°. The almost mythical explanation is that somehow some of the webcams mounted on laptops were mounted flipped and the producers have corrected this by pushing the repairs into the Windows drivers. Today luck seemed to be on my side as I have found <a href="http://ubuntuforums.org/showthread.php?t=838210">a patch</a> that now fixes my problem. To correctly apply it in Ubuntu 9.04 you have to browse that topic until the 12th page and check <a href="http://ubuntuforums.org/showpost.php?p=7306338&amp;postcount=118">this post</a>.</p>
-
-<p>Because some of you might not correctly apply the patch, I have built a script that will help you patch the <code>uvcvideo</code> module in order to get the right images from your webcam. There are two patches available (I have chosen only the patches that provide a non-mirrored image) so pick the one that gives you the best image. To be able to compare them you must apply both patches, testing your webcam after each of them and then, for the third time, apply the patch that suites your needs.</p>
-
-<p>To test your webcam, you can use VLC.</p>
-
-<p>Here&#8217;s the short how to:</p>
-
-<ol>
-<li><p>install VLC if you do not have it:</p>
-
-<pre><code> sudo apt-get install vlc
-</code></pre></li>
-<li><p>download my script from <a href="https://github.com/raducotescu/uvcvideo-ubuntu_9.04-patch/tarball/master">here</a> (right click, <em>Save link as&#8230;</em>) and make it executable:</p>
-
-<pre><code> chmod +x flip_webcam
-</code></pre></li>
-<li><p>make sure you have the <code>build-essential</code> package:</p>
-
-<pre><code> sudo apt-get install build-essential
-</code></pre></li>
-<li><p>run the script with super-user privileges from where you have downloaded it, providing the right options:</p>
-
-<pre><code> This script must be run with super-user privileges.
- Usage: ./flip_webcam {OPTION}
-      1      this applies patch1 file
-      2      this applies patch2 file
-     -h, --help  displays this beautiful help section
-</code></pre></li>
-</ol>
-
-
-<p>The script will automatically download the needed files, will apply the patch and then it will push the module into your kernel. Do the tests by opening VLC and then following these steps:</p>
-
-<ol>
-<li>go to <em>Media</em></li>
-<li>then go to <em>Open capture device&#8230;</em></li>
-<li>in the pop-up window that opens, in the &#8220;Video device name&#8221; text field, insert <code>/dev/video0</code></li>
-<li>click on <em>Play</em></li>
-</ol>
-
-
-<p>Remember to run the script whenever your kernel changes. If everything worked okay, drop a Kudos line to me in the comments. :)</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/16/">&larr; Older</a>
@@ -447,6 +413,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/remapping-keys-in-ubuntu-14.04/">Remapping Keys in Ubuntu 14.04</a>
+      </li>
+    
+      <li class="post">
         <a href="/coloured-log-outputs/">Coloured log outputs on Unix/Linux</a>
       </li>
     
@@ -460,10 +430,6 @@
     
       <li class="post">
         <a href="/the-switch-to-mac-from-ubuntu/">Switching to Mac from Ubuntu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/migrating-your-ubuntu-machine-to-a-ssd-drive/">Migrating your Ubuntu machine to a SSD drive</a>
       </li>
     
   </ul>
