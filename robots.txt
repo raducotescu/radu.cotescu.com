@@ -1,4 +1,4 @@
-Sitemap: http://radu.cotescu.com/sitemap.xml
+Sitemap: https://radu.cotescu.com/sitemap.xml
 
 User-agent: *
 Disallow: /page/*
