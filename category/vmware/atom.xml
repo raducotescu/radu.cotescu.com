@@ -4,7 +4,7 @@
   <title><![CDATA[Category: VMware | Radu Cotescu's professional blog]]></title>
   <link href="https://radu.cotescu.com/category/vmware/atom.xml" rel="self"/>
   <link href="https://radu.cotescu.com/"/>
-  <updated>2015-01-26T14:39:38+02:00</updated>
+  <updated>2015-05-30T18:41:56+02:00</updated>
   <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[How to install VMware Server on kernel version 2.6.38]]></title>
     <link href="https://radu.cotescu.com/vmware-server-kernel-2-6-38/"/>
-    <updated>2011-05-05T12:18:56+03:00</updated>
+    <updated>2011-05-05T12:18:56+02:00</updated>
     <id>https://radu.cotescu.com/vmware-server-kernel-2-6-38</id>
     <content type="html"><![CDATA[<h2>Notices:</h2>
 
@@ -33,7 +33,7 @@
   <entry>
     <title type="html"><![CDATA[How to install VMware Server on 2.6.35 kernels]]></title>
     <link href="https://radu.cotescu.com/how-to-install-vmware-server-kernel-2-6-35/"/>
-    <updated>2010-11-01T22:37:59+02:00</updated>
+    <updated>2010-11-01T22:37:59+01:00</updated>
     <id>https://radu.cotescu.com/how-to-install-vmware-server-kernel-2-6-35</id>
     <content type="html"><![CDATA[<p>Continuing the tradition of my blog this is going to be another post about VMware Server on the latest kernels provided by the most popular distributions. This is actually an example of a paradox because I don't use this hypervisor any more, exactly due to the patching that has to be done. Still, there are quite a few people who like the product and it's never too late to make another good deed.</p>
 
@@ -46,7 +46,7 @@
   <entry>
     <title type="html"><![CDATA[A few clarifications about VMware Server and the Linux kernels]]></title>
     <link href="https://radu.cotescu.com/vmware-server-linux-kernels/"/>
-    <updated>2010-07-02T12:12:11+03:00</updated>
+    <updated>2010-07-02T12:12:11+02:00</updated>
     <id>https://radu.cotescu.com/vmware-server-linux-kernels</id>
     <content type="html"><![CDATA[<p>Since Ubuntu 9.04 appeared back in April, 2009, I've started building different <a href="http://radu.cotescu.com/category/vitualization/vmware/">scripts</a> that use community supplied patches in order to make the install process of VMware Server as easy as it was supposed to be. Still it seems that many of the users of my scripts misinterpret the help I offered by asking questions which have nothing to do specifically with the scripts but with how VMware Server works. To be clear in this aspect: I<em><strong> do not provide support</strong></em> for any of VMware's products.</p>
 
@@ -65,7 +65,7 @@
   <entry>
     <title type="html"><![CDATA[How to install VMware Server on 2.6.32 kernels]]></title>
     <link href="https://radu.cotescu.com/how-to-install-vmware-server-kernel-2-6-32/"/>
-    <updated>2010-02-21T00:41:10+02:00</updated>
+    <updated>2010-02-21T00:41:10+01:00</updated>
     <id>https://radu.cotescu.com/how-to-install-vmware-server-kernel-2-6-32</id>
     <content type="html"><![CDATA[<p>Recently I have updated the script and the patch used for installing VMware Server on the 2.6.30 and 2.6.31 kernels to include support for the 2.6.32 release as well. Also I have modified the script so that now the VSOCK module compiles and loads perfectly into the running kernel. All the needed instructions can be found <a href="http://radu.cotescu.com/how-to-install-vmware-server-ubuntu-fedora-opensuse/">here</a>. For comments related to the way VMware works on the 2.6.32 kernels please use the comment form from this post.</p>
 ]]></content>
@@ -74,7 +74,7 @@
   <entry>
     <title type="html"><![CDATA[How to install VMware Server on 2.6.31 kernels]]></title>
     <link href="https://radu.cotescu.com/how-to-install-vmware-server-ubuntu-fedora-opensuse/"/>
-    <updated>2010-01-19T01:20:15+02:00</updated>
+    <updated>2010-01-19T01:20:15+01:00</updated>
     <id>https://radu.cotescu.com/how-to-install-vmware-server-ubuntu-fedora-opensuse</id>
     <content type="html"><![CDATA[<p><strong><strong><strong>UPDATE 3</strong>: </strong>The  script and patches have been updated to also support kernel 2.6.38. For  older kernel releases please download the archive from <a href="https://github.com/raducotescu/vmware-server-linux-2.6.3x-kernel/tree/release-1.5">here</a> (temporary fix until I will unify the solutions).</strong></p>
 

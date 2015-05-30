@@ -4,7 +4,7 @@
   <title><![CDATA[Radu Cotescu's professional blog]]></title>
   <link href="https://radu.cotescu.com/atom.xml" rel="self"/>
   <link href="https://radu.cotescu.com/"/>
-  <updated>2015-01-26T14:39:38+02:00</updated>
+  <updated>2015-05-30T18:41:56+02:00</updated>
   <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Remapping Keys in Ubuntu 14.04]]></title>
     <link href="https://radu.cotescu.com/remapping-keys-in-ubuntu-14.04/"/>
-    <updated>2014-09-07T18:30:00+03:00</updated>
+    <updated>2014-09-07T18:30:00+02:00</updated>
     <id>https://radu.cotescu.com/remapping-keys-in-ubuntu-14.04</id>
     <content type="html"><![CDATA[<p>Ever since I&#8217;ve switched to Mac OS X I liked its shortcut modifiers more than the ones available on Windows / Linux. While I do agree that sometimes
 you lose count of the number of modifier keys that you have to press in order to get something done, most of the cases that claim is just FUD.</p>
@@ -70,7 +70,7 @@ a lot better than without it.</p>
   <entry>
     <title type="html"><![CDATA[Coloured log outputs on Unix/Linux]]></title>
     <link href="https://radu.cotescu.com/coloured-log-outputs/"/>
-    <updated>2012-10-29T21:36:00+02:00</updated>
+    <updated>2012-10-29T21:36:00+01:00</updated>
     <id>https://radu.cotescu.com/coloured-log-outputs</id>
     <content type="html"><![CDATA[<p>There are various times when a software engineer needs to closely monitor log output in real-time. More often than not the engineer is
 actually interested in the output of multiple logs at the same time. Given the amount of information that an application can output to log
@@ -288,7 +288,7 @@ Furthermore, <code>ctail</code> can also be used on servers with very little set
   <entry>
     <title type="html"><![CDATA[A useful rant on how people write Java code]]></title>
     <link href="https://radu.cotescu.com/java-common-sense/"/>
-    <updated>2012-10-21T20:49:00+03:00</updated>
+    <updated>2012-10-21T20:49:00+02:00</updated>
     <id>https://radu.cotescu.com/java-common-sense</id>
     <content type="html"><![CDATA[<p>During the last months I&#8217;ve had the chance to see a lot of code written by different types of developers. Some of it has definitely made me
 proud of the word &#8220;engineering&#8221; being associated with my profession; the other, not. There are a few basic unwritten rules that more or less
@@ -453,7 +453,7 @@ didn&#8217;t specify that <code>+</code> should be avoided in loops, although th
   <entry>
     <title type="html"><![CDATA[Tools required for opening a MacBook Pro]]></title>
     <link href="https://radu.cotescu.com/tools-required-for-opening-a-macbook-pro/"/>
-    <updated>2012-06-04T01:45:00+03:00</updated>
+    <updated>2012-06-04T01:45:00+02:00</updated>
     <id>https://radu.cotescu.com/tools-required-for-opening-a-macbook-pro</id>
     <content type="html"><![CDATA[<p>Last week my final MacBook Pro arrived. Since at Adobe we are forced to encrypt our hard-drives in order to protect our work (in case our machines get stolen) the IT team decided to provide us with SSD drives for our portable computers. The advantages are numerous:</p>
 
@@ -481,7 +481,7 @@ didn&#8217;t specify that <code>+</code> should be avoided in loops, although th
   <entry>
     <title type="html"><![CDATA[Switching to Mac from Ubuntu]]></title>
     <link href="https://radu.cotescu.com/the-switch-to-mac-from-ubuntu/"/>
-    <updated>2012-05-20T23:39:00+03:00</updated>
+    <updated>2012-05-20T23:39:00+02:00</updated>
     <id>https://radu.cotescu.com/the-switch-to-mac-from-ubuntu</id>
     <content type="html"><![CDATA[<p>When I joined Adobe I was given the chance of choosing between using a Lenovo ThinkPad or a MacBook Pro as my
 development machine. Since I really dislike the design of the ThinkPads and also because I really wanted to try a Mac
@@ -549,7 +549,7 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   <entry>
     <title type="html"><![CDATA[Migrating your Ubuntu machine to a SSD drive]]></title>
     <link href="https://radu.cotescu.com/migrating-your-ubuntu-machine-to-a-ssd-drive/"/>
-    <updated>2012-05-11T23:10:00+03:00</updated>
+    <updated>2012-05-11T23:10:00+02:00</updated>
     <id>https://radu.cotescu.com/migrating-your-ubuntu-machine-to-a-ssd-drive</id>
     <content type="html"><![CDATA[<p>SSD drives have finally become affordable and more reliable than they used to be. Partly this was sure helped by the price boost of the traditional hard-disks manufactured in Thailand (I think everybody still reminds the <a href="http://en.wikipedia.org/wiki/2011_Thailand_flood" title="2011 Thailand flood">floods</a> from the summer of 2011). The competition helped the development of innovative solutions and after 4 years since their mass-consumption breakthrough they have managed to become a standard on ultrabooks and premium laptops.</p>
 
@@ -680,7 +680,7 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   <entry>
     <title type="html"><![CDATA[Why awk is better than cut]]></title>
     <link href="https://radu.cotescu.com/why-awk-is-better-than-cut/"/>
-    <updated>2011-08-01T12:45:40+03:00</updated>
+    <updated>2011-08-01T12:45:40+02:00</updated>
     <id>https://radu.cotescu.com/why-awk-is-better-than-cut</id>
     <content type="html"><![CDATA[<p>I am currently working with some text files from which I have to extract some data. Generally, when you have to do this kind of work on a *nix machine, you use <code>cut</code> or <code>awk</code>. However, even for simple tasks <code>cut</code> is superseded by the mighty <code>awk</code>. Let&#8217;s look at the following examples which are closely related to the data that I&#8217;m working with. Assume we have the following text file:</p>
 
@@ -769,7 +769,7 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   <entry>
     <title type="html"><![CDATA[Bash one-liner for removing old kernel artefacts]]></title>
     <link href="https://radu.cotescu.com/bash-old-kernel-artefacts/"/>
-    <updated>2011-07-29T14:13:57+03:00</updated>
+    <updated>2011-07-29T14:13:57+02:00</updated>
     <id>https://radu.cotescu.com/bash-old-kernel-artefacts</id>
     <content type="html"><![CDATA[<p>Since now I have 4 virtual machines to administer for my dissertation project, I have to find ways to do sysadmin stuff as quickly as possible and to concentrate my efforts on software development. If you ever did a kernel update you would know that a kernel upgrade will not remove the old kernel artefacts, specifically the old headers and the Linux image. While this is a good technique for avoiding incompatibilities of some binaries with the new kernel versions, therefore allowing you to test that everything is working as expected, old kernel images occupy an important amount of space (around 256 MB / release). When your system has a limited amount of storage allocated to it, this might become a problem.</p>
 
@@ -787,7 +787,7 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   <entry>
     <title type="html"><![CDATA[Facebook, Pidgin and the "Not authorised" error message]]></title>
     <link href="https://radu.cotescu.com/facebook-pidgin-not-authorised/"/>
-    <updated>2011-06-15T13:46:58+03:00</updated>
+    <updated>2011-06-15T13:46:58+02:00</updated>
     <id>https://radu.cotescu.com/facebook-pidgin-not-authorised</id>
     <content type="html"><![CDATA[<p>I noticed a few days ago that my Facebook XMPP chat account from Pidgin had stopped working, popping up a weird error message: &#8220;Not authorised&#8221;. This happened even though I did not change any of the account&#8217;s settings.</p>
 
@@ -800,7 +800,7 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   <entry>
     <title type="html"><![CDATA[Help needed]]></title>
     <link href="https://radu.cotescu.com/ubuntu-automated-configuration-tool/"/>
-    <updated>2011-06-02T20:39:28+03:00</updated>
+    <updated>2011-06-02T20:39:28+02:00</updated>
     <id>https://radu.cotescu.com/ubuntu-automated-configuration-tool</id>
     <content type="html"><![CDATA[<p>Dear all,</p>
 
@@ -813,7 +813,7 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   <entry>
     <title type="html"><![CDATA[How to install VMware Server on kernel version 2.6.38]]></title>
     <link href="https://radu.cotescu.com/vmware-server-kernel-2-6-38/"/>
-    <updated>2011-05-05T12:18:56+03:00</updated>
+    <updated>2011-05-05T12:18:56+02:00</updated>
     <id>https://radu.cotescu.com/vmware-server-kernel-2-6-38</id>
     <content type="html"><![CDATA[<h2>Notices:</h2>
 
@@ -830,7 +830,7 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   <entry>
     <title type="html"><![CDATA[Ubuntu 64-bit and Flash videos in fullscreen]]></title>
     <link href="https://radu.cotescu.com/ubuntu-flash-videos-fullscreen/"/>
-    <updated>2011-03-25T00:00:13+02:00</updated>
+    <updated>2011-03-25T00:00:13+01:00</updated>
     <id>https://radu.cotescu.com/ubuntu-flash-videos-fullscreen</id>
     <content type="html"><![CDATA[<p>I have never been an Adobe fan and something tells me that I won&#8217;t change my mind soon. One of the main reasons for which Linux had problems being a &#8220;normal&#8221; operating system for a quite long period of time (although there were other issues as well, but not as visible at this one) was that the Flash Player never really worked very well on this platform. Time passed and things began slowly to advance, however users of the 64-bit version of the Linux kernel had to use various hacks to run a 32-bit browser because of Flash.</p>
 
@@ -879,7 +879,7 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   <entry>
     <title type="html"><![CDATA[How to secure your SSH server from brute-force attacks]]></title>
     <link href="https://radu.cotescu.com/ssh-brute-force-attacks/"/>
-    <updated>2011-02-18T20:13:52+02:00</updated>
+    <updated>2011-02-18T20:13:52+01:00</updated>
     <id>https://radu.cotescu.com/ssh-brute-force-attacks</id>
     <content type="html"><![CDATA[<p>There are a lot of tutorials online that will tell you how to secure your SSH server. Most of them will tell you not to allow the <code>root</code> account to login, to use only keys for authentication and possibly to change the port on which your server listens from 22 to any other. Although this is valid advice, there are times when due to zealous system administrators you <em>have</em> to use port 22 (because along with 21 and 80 it&#8217;s not blocked and you <em>do</em> like to check your server from time to time). Also, you might still want to use password authentication together with public and private keys just because there are chances that you might lose your keys (it happens to the best of us). Combine these two and you are exposing your server to a lot of brute-force attacks from various script kiddies.</p>
 
@@ -911,7 +911,7 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   <entry>
     <title type="html"><![CDATA[Java, HTTPS and REST web services using Apache CXF]]></title>
     <link href="https://radu.cotescu.com/java-https-rest-services-apache-cxf/"/>
-    <updated>2010-12-16T23:39:23+02:00</updated>
+    <updated>2010-12-16T23:39:23+01:00</updated>
     <id>https://radu.cotescu.com/java-https-rest-services-apache-cxf</id>
     <content type="html"><![CDATA[<p><strong>Securing REST web services</strong> is a very debated topic on the Internet. Because REST represents an architecture, and not a protocol - like SOAP -, there aren&#8217;t any specifications dealing with security, leaving this aspect as a design decision for the software engineers / developers. Still, if you search the web to find out what are the approaches, you&#8217;ll see that most of the results suggest you use <strong><a href="http://en.wikipedia.org/wiki/Basic_access_authentication">basic authentication</a> over <a href="http://en.wikipedia.org/wiki/HTTP_Secure">HTTPS</a></strong>.</p>
 
@@ -1274,7 +1274,7 @@ user: password,role
   <entry>
     <title type="html"><![CDATA[Ubuntu and Internet Connection Sharing via a wireless card]]></title>
     <link href="https://radu.cotescu.com/ubuntu-internet-connection-sharing-wireless/"/>
-    <updated>2010-11-27T18:37:46+02:00</updated>
+    <updated>2010-11-27T18:37:46+01:00</updated>
     <id>https://radu.cotescu.com/ubuntu-internet-connection-sharing-wireless</id>
     <content type="html"><![CDATA[<p>Sharing your Internet connection is the poor man&#8217;s way of creating an access point using one of your PCs as the gateway. This implies that the PC (gateway) that you want to use for this has two network cards:</p>
 
@@ -1322,7 +1322,7 @@ user: password,role
   <entry>
     <title type="html"><![CDATA[How to install VMware Server on 2.6.35 kernels]]></title>
     <link href="https://radu.cotescu.com/how-to-install-vmware-server-kernel-2-6-35/"/>
-    <updated>2010-11-01T22:37:59+02:00</updated>
+    <updated>2010-11-01T22:37:59+01:00</updated>
     <id>https://radu.cotescu.com/how-to-install-vmware-server-kernel-2-6-35</id>
     <content type="html"><![CDATA[<p>Continuing the tradition of my blog this is going to be another post about VMware Server on the latest kernels provided by the most popular distributions. This is actually an example of a paradox because I don&#8217;t use this hypervisor any more, exactly due to the patching that has to be done. Still, there are quite a few people who like the product and it&#8217;s never too late to make another good deed.</p>
 
@@ -1335,7 +1335,7 @@ user: password,role
   <entry>
     <title type="html"><![CDATA[Using two JVMs in Ubuntu]]></title>
     <link href="https://radu.cotescu.com/using-two-jvm-in-ubuntu/"/>
-    <updated>2010-10-19T22:15:49+03:00</updated>
+    <updated>2010-10-19T22:15:49+02:00</updated>
     <id>https://radu.cotescu.com/using-two-jvm-in-ubuntu</id>
     <content type="html"><![CDATA[<p>Today I was faced with the challenge of using two JVMs on the same machine. And let me tell you that whenever you have to do this, things get dirty. Basically I was forced to install an additional 32-bit JVM for <a href="http://www.event-b.org/platform.html">Rodin</a>, the IDE we use at faculty for Event-B modelling, because the developers of the platform (which is actually a modified Eclipse) decided not to support the 64-bit architectures (LAME!).</p>
 
@@ -1370,7 +1370,7 @@ user: password,role
   <entry>
     <title type="html"><![CDATA[Ubuntu 10.10 and VirtualBox Guest Additions]]></title>
     <link href="https://radu.cotescu.com/ubuntu-virtualbox-additions/"/>
-    <updated>2010-10-12T12:00:06+03:00</updated>
+    <updated>2010-10-12T12:00:06+02:00</updated>
     <id>https://radu.cotescu.com/ubuntu-virtualbox-additions</id>
     <content type="html"><![CDATA[<p>Two days ago Ubuntu 10.10 was released. Since I don&#8217;t want to upgrade yet to the new release - I am currently running 10.04 - I decided to try Maverick (the code name for the latest release) in a VirtualBox virtual machine.</p>
 
@@ -1394,7 +1394,7 @@ user: password,role
   <entry>
     <title type="html"><![CDATA[jQuery .click() and the double submit of a form]]></title>
     <link href="https://radu.cotescu.com/jquery-click-double-submit/"/>
-    <updated>2010-09-07T14:21:41+03:00</updated>
+    <updated>2010-09-07T14:21:41+02:00</updated>
     <id>https://radu.cotescu.com/jquery-click-double-submit</id>
     <content type="html"><![CDATA[<p>jQuery is one of the greatest JavaScript frameworks with plenty of documentation for just about everything one can do with it. In my latest project I have used jQuery extensively for any UX aspect: form validations, dialogs, error messages, AJAX, UI, etc.</p>
 
@@ -1467,7 +1467,7 @@ user: password,role
   <entry>
     <title type="html"><![CDATA[The art of web feeds]]></title>
     <link href="https://radu.cotescu.com/the-art-of-web-feeds/"/>
-    <updated>2010-08-31T17:05:31+03:00</updated>
+    <updated>2010-08-31T17:05:31+02:00</updated>
     <id>https://radu.cotescu.com/the-art-of-web-feeds</id>
     <content type="html"><![CDATA[<p>Web feeds, as many of you surely know by now, represent a data format under which frequently updated content from various sources is provided to readers (the humans reading the content). The purpose of the web feed is therefore to inform the user of new or updated content originating from a source. Generally speaking web feeds contain HMTL mark-up for the content, on top of an XML document which is parsed by feed readers (the programs used to read web feeds).</p>
 

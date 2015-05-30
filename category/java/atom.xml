@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java | Radu Cotescu's professional blog]]></title>
   <link href="https://radu.cotescu.com/category/java/atom.xml" rel="self"/>
   <link href="https://radu.cotescu.com/"/>
-  <updated>2015-01-26T14:39:38+02:00</updated>
+  <updated>2015-05-30T18:41:56+02:00</updated>
   <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[A useful rant on how people write Java code]]></title>
     <link href="https://radu.cotescu.com/java-common-sense/"/>
-    <updated>2012-10-21T20:49:00+03:00</updated>
+    <updated>2012-10-21T20:49:00+02:00</updated>
     <id>https://radu.cotescu.com/java-common-sense</id>
     <content type="html"><![CDATA[<p>During the last months I've had the chance to see a lot of code written by different types of developers. Some of it has definitely made me
 proud of the word "engineering" being associated with my profession; the other, not. There are a few basic unwritten rules that more or less
@@ -203,7 +203,7 @@ didn't specify that <code>+</code> should be avoided in loops, although that was
   <entry>
     <title type="html"><![CDATA[Java, HTTPS and REST web services using Apache CXF]]></title>
     <link href="https://radu.cotescu.com/java-https-rest-services-apache-cxf/"/>
-    <updated>2010-12-16T23:39:23+02:00</updated>
+    <updated>2010-12-16T23:39:23+01:00</updated>
     <id>https://radu.cotescu.com/java-https-rest-services-apache-cxf</id>
     <content type="html"><![CDATA[<p><strong>Securing REST web services</strong> is a very debated topic on the Internet. Because REST represents an architecture, and not a protocol - like SOAP -, there aren't any specifications dealing with security, leaving this aspect as a design decision for the software engineers / developers. Still, if you search the web to find out what are the approaches, you'll see that most of the results suggest you use <strong><a href="http://en.wikipedia.org/wiki/Basic_access_authentication">basic authentication</a> over <a href="http://en.wikipedia.org/wiki/HTTP_Secure">HTTPS</a></strong>.</p>
 
@@ -444,7 +444,7 @@ public class PropertiesLoader {</p>
   <entry>
     <title type="html"><![CDATA[Using two JVMs in Ubuntu]]></title>
     <link href="https://radu.cotescu.com/using-two-jvm-in-ubuntu/"/>
-    <updated>2010-10-19T22:15:49+03:00</updated>
+    <updated>2010-10-19T22:15:49+02:00</updated>
     <id>https://radu.cotescu.com/using-two-jvm-in-ubuntu</id>
     <content type="html"><![CDATA[<p>Today I was faced with the challenge of using two JVMs on the same machine. And let me tell you that whenever you have to do this, things get dirty. Basically I was forced to install an additional 32-bit JVM for <a href="http://www.event-b.org/platform.html">Rodin</a>, the IDE we use at faculty for Event-B modelling, because the developers of the platform (which is actually a modified Eclipse) decided not to support the 64-bit architectures (LAME!).</p>
 
@@ -476,7 +476,7 @@ $WHERE/rodin -vm /usr/lib/jvm/ia32-java-6-sun/bin/java
   <entry>
     <title type="html"><![CDATA[Java 4-Ever]]></title>
     <link href="https://radu.cotescu.com/java-4-ever/"/>
-    <updated>2010-06-25T20:22:06+03:00</updated>
+    <updated>2010-06-25T20:22:06+02:00</updated>
     <id>https://radu.cotescu.com/java-4-ever</id>
     <content type="html"><![CDATA[<p>I have just seen the funniest and geekiest online video ever (via a buddy who sent me the link from the original site). Forget about Intel's last advertising campaigns. Carefully watch the following one.</p>
 
@@ -491,7 +491,7 @@ $WHERE/rodin -vm /usr/lib/jvm/ia32-java-6-sun/bin/java
   <entry>
     <title type="html"><![CDATA[Oracle TopLink, the ORA-00900 error and stored procedures]]></title>
     <link href="https://radu.cotescu.com/oracle-toplink-stored-procedures/"/>
-    <updated>2010-05-31T12:11:29+03:00</updated>
+    <updated>2010-05-31T12:11:29+02:00</updated>
     <id>https://radu.cotescu.com/oracle-toplink-stored-procedures</id>
     <content type="html"><![CDATA[<p>I was introduced to Oracle's TopLink <a href="http://en.wikipedia.org/wiki/Object-relational_mapping">ORM</a> package during my second internship at Oracle. Although the API (because TopLink actually became the reference implementation for the <a href="http://en.wikipedia.org/wiki/Java_Persistence_API">JPA</a> 2.0) seemed a bit overwhelming at first, I've managed to get a grasp of it quite fast, allowing me to finish the assigned projects in time. The familiarity with the API and with Toplink Workbench, a graphical tool designed to help you map database tables into Java classes (basically JavaBeans), made me use this combination for my diploma project (which I've been talking about more or less on my previous posts).</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reviews | Radu Cotescu's professional blog]]></title>
   <link href="https://radu.cotescu.com/category/reviews/atom.xml" rel="self"/>
   <link href="https://radu.cotescu.com/"/>
-  <updated>2015-01-26T14:39:38+02:00</updated>
+  <updated>2015-05-30T18:41:56+02:00</updated>
   <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[OpenX Ad Server: Beginner's Guide - review]]></title>
     <link href="https://radu.cotescu.com/openx-ad-server-beginners-guide-review/"/>
-    <updated>2010-06-16T14:51:55+03:00</updated>
+    <updated>2010-06-16T14:51:55+02:00</updated>
     <id>https://radu.cotescu.com/openx-ad-server-beginners-guide-review</id>
     <content type="html"><![CDATA[<p><a href="/uploads/wpuploads/2010/04/0202_MockupCover_Beginers-guide.jpg"><img src="/uploads/wpuploads/2010/04/0202_MockupCover_Beginers-guide-243x300.jpg" alt="OpenX Ad Server: Beginner's Guide" /></a>A few days ago I have finally finished reading the <a href="https://www.packtpub.com/openx-ad-server-beginners-guide/book"><em>OpenX Ad Server: Beginner’s Guide</em></a> book, by Murat Yilmaz, that PACKT publishing sent me for <a href="http://radu.cotescu.com/openx-ad-server-beginners-guide/">review</a>. The book deals with the aspect of installing and configuring the open-source OpenX Ad Server in order to serve advertisement campaigns on your websites. Being a <em>beginner's guide</em>, the book doesn't require advanced IT skills, stating that basic level would be enough to follow the subject. The reader should feel comfortable with using an FTP client, or cPanel's file management features in case of using a managed web hosting service, and creating and administering a MySQL database.</p>
 
@@ -47,7 +47,7 @@ radu@webtest:/var/www$ sudo find . -type d -exec chmod 755 '{}' \;
   <entry>
     <title type="html"><![CDATA[OpenX Ad Server: Beginner's Guide]]></title>
     <link href="https://radu.cotescu.com/openx-ad-server-beginners-guide/"/>
-    <updated>2010-04-14T00:10:09+03:00</updated>
+    <updated>2010-04-14T00:10:09+02:00</updated>
     <id>https://radu.cotescu.com/openx-ad-server-beginners-guide</id>
     <content type="html"><![CDATA[<p><a href="/uploads/wpuploads/2010/04/0202_MockupCover_Beginers-guide.jpg"><img src="/uploads/wpuploads/2010/04/0202_MockupCover_Beginers-guide-243x300.jpg" alt="OpenX Ad Server: Beginner's Guide" /></a><strong>UPDATE:</strong> You can find the review <a href="http://radu.cotescu.com/openx-ad-server-beginners-guide-review/">here</a>.</p>
 

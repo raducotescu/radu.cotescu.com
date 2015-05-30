@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ubuntu | Radu Cotescu's professional blog]]></title>
   <link href="https://radu.cotescu.com/category/ubuntu/atom.xml" rel="self"/>
   <link href="https://radu.cotescu.com/"/>
-  <updated>2015-01-26T14:39:38+02:00</updated>
+  <updated>2015-05-30T18:41:56+02:00</updated>
   <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Remapping Keys in Ubuntu 14.04]]></title>
     <link href="https://radu.cotescu.com/remapping-keys-in-ubuntu-14.04/"/>
-    <updated>2014-09-07T18:30:00+03:00</updated>
+    <updated>2014-09-07T18:30:00+02:00</updated>
     <id>https://radu.cotescu.com/remapping-keys-in-ubuntu-14.04</id>
     <content type="html"><![CDATA[<p>Ever since I've switched to Mac OS X I liked its shortcut modifiers more than the ones available on Windows / Linux. While I do agree that sometimes
 you lose count of the number of modifier keys that you have to press in order to get something done, most of the cases that claim is just FUD.</p>
@@ -71,7 +71,7 @@ a lot better than without it.</p>
   <entry>
     <title type="html"><![CDATA[Switching to Mac from Ubuntu]]></title>
     <link href="https://radu.cotescu.com/the-switch-to-mac-from-ubuntu/"/>
-    <updated>2012-05-20T23:39:00+03:00</updated>
+    <updated>2012-05-20T23:39:00+02:00</updated>
     <id>https://radu.cotescu.com/the-switch-to-mac-from-ubuntu</id>
     <content type="html"><![CDATA[<p>When I joined Adobe I was given the chance of choosing between using a Lenovo ThinkPad or a MacBook Pro as my
 development machine. Since I really dislike the design of the ThinkPads and also because I really wanted to try a Mac
@@ -139,7 +139,7 @@ becomes harder and harder to go back to what you were using before. Yes, I have 
   <entry>
     <title type="html"><![CDATA[Migrating your Ubuntu machine to a SSD drive]]></title>
     <link href="https://radu.cotescu.com/migrating-your-ubuntu-machine-to-a-ssd-drive/"/>
-    <updated>2012-05-11T23:10:00+03:00</updated>
+    <updated>2012-05-11T23:10:00+02:00</updated>
     <id>https://radu.cotescu.com/migrating-your-ubuntu-machine-to-a-ssd-drive</id>
     <content type="html"><![CDATA[<p>SSD drives have finally become affordable and more reliable than they used to be. Partly this was sure helped by the price boost of the traditional hard-disks manufactured in Thailand (I think everybody still reminds the <a href="http://en.wikipedia.org/wiki/2011_Thailand_flood" title="2011 Thailand flood">floods</a> from the summer of 2011). The competition helped the development of innovative solutions and after 4 years since their mass-consumption breakthrough they have managed to become a standard on ultrabooks and premium laptops.</p>
 
@@ -267,7 +267,7 @@ UUID=263bba00-32f4-4bea-966b-ab7ae1fc3e8b /home           ext4    discard,noatim
   <entry>
     <title type="html"><![CDATA[Why awk is better than cut]]></title>
     <link href="https://radu.cotescu.com/why-awk-is-better-than-cut/"/>
-    <updated>2011-08-01T12:45:40+03:00</updated>
+    <updated>2011-08-01T12:45:40+02:00</updated>
     <id>https://radu.cotescu.com/why-awk-is-better-than-cut</id>
     <content type="html"><![CDATA[<p>I am currently working with some text files from which I have to extract some data. Generally, when you have to do this kind of work on a *nix machine, you use <code>cut</code> or <code>awk</code>. However, even for simple tasks <code>cut</code> is superseded by the mighty <code>awk</code>. Let's look at the following examples which are closely related to the data that I'm working with. Assume we have the following text file:</p>
 
@@ -328,7 +328,7 @@ radu@riker:~$ cat testFile | awk '{print $2}'</p>
   <entry>
     <title type="html"><![CDATA[Bash one-liner for removing old kernel artefacts]]></title>
     <link href="https://radu.cotescu.com/bash-old-kernel-artefacts/"/>
-    <updated>2011-07-29T14:13:57+03:00</updated>
+    <updated>2011-07-29T14:13:57+02:00</updated>
     <id>https://radu.cotescu.com/bash-old-kernel-artefacts</id>
     <content type="html"><![CDATA[<p>Since now I have 4 virtual machines to administer for my dissertation project, I have to find ways to do sysadmin stuff as quickly as possible and to concentrate my efforts on software development. If you ever did a kernel update you would know that a kernel upgrade will not remove the old kernel artefacts, specifically the old headers and the Linux image. While this is a good technique for avoiding incompatibilities of some binaries with the new kernel versions, therefore allowing you to test that everything is working as expected, old kernel images occupy an important amount of space (around 256 MB / release). When your system has a limited amount of storage allocated to it, this might become a problem.</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: How To | Radu Cotescu's professional blog]]></title>
   <link href="https://radu.cotescu.com/category/how-to/atom.xml" rel="self"/>
   <link href="https://radu.cotescu.com/"/>
-  <updated>2015-01-26T14:39:38+02:00</updated>
+  <updated>2015-05-30T18:41:56+02:00</updated>
   <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Tools required for opening a MacBook Pro]]></title>
     <link href="https://radu.cotescu.com/tools-required-for-opening-a-macbook-pro/"/>
-    <updated>2012-06-04T01:45:00+03:00</updated>
+    <updated>2012-06-04T01:45:00+02:00</updated>
     <id>https://radu.cotescu.com/tools-required-for-opening-a-macbook-pro</id>
     <content type="html"><![CDATA[<p>Last week my final MacBook Pro arrived. Since at Adobe we are forced to encrypt our hard-drives in order to protect our work (in case our machines get stolen) the IT team decided to provide us with SSD drives for our portable computers. The advantages are numerous:</p>
 
@@ -44,7 +44,7 @@
   <entry>
     <title type="html"><![CDATA[Migrating your Ubuntu machine to a SSD drive]]></title>
     <link href="https://radu.cotescu.com/migrating-your-ubuntu-machine-to-a-ssd-drive/"/>
-    <updated>2012-05-11T23:10:00+03:00</updated>
+    <updated>2012-05-11T23:10:00+02:00</updated>
     <id>https://radu.cotescu.com/migrating-your-ubuntu-machine-to-a-ssd-drive</id>
     <content type="html"><![CDATA[<p>SSD drives have finally become affordable and more reliable than they used to be. Partly this was sure helped by the price boost of the traditional hard-disks manufactured in Thailand (I think everybody still reminds the <a href="http://en.wikipedia.org/wiki/2011_Thailand_flood" title="2011 Thailand flood">floods</a> from the summer of 2011). The competition helped the development of innovative solutions and after 4 years since their mass-consumption breakthrough they have managed to become a standard on ultrabooks and premium laptops.</p>
 
@@ -172,7 +172,7 @@ UUID=263bba00-32f4-4bea-966b-ab7ae1fc3e8b /home           ext4    discard,noatim
   <entry>
     <title type="html"><![CDATA[Bash one-liner for removing old kernel artefacts]]></title>
     <link href="https://radu.cotescu.com/bash-old-kernel-artefacts/"/>
-    <updated>2011-07-29T14:13:57+03:00</updated>
+    <updated>2011-07-29T14:13:57+02:00</updated>
     <id>https://radu.cotescu.com/bash-old-kernel-artefacts</id>
     <content type="html"><![CDATA[<p>Since now I have 4 virtual machines to administer for my dissertation project, I have to find ways to do sysadmin stuff as quickly as possible and to concentrate my efforts on software development. If you ever did a kernel update you would know that a kernel upgrade will not remove the old kernel artefacts, specifically the old headers and the Linux image. While this is a good technique for avoiding incompatibilities of some binaries with the new kernel versions, therefore allowing you to test that everything is working as expected, old kernel images occupy an important amount of space (around 256 MB / release). When your system has a limited amount of storage allocated to it, this might become a problem.</p>
 
@@ -189,7 +189,7 @@ sudo apt-get purge $(dpkg -l | grep "^ii" | awk '{print $2}' | egrep -e "^linux-
   <entry>
     <title type="html"><![CDATA[How to install VMware Server on kernel version 2.6.38]]></title>
     <link href="https://radu.cotescu.com/vmware-server-kernel-2-6-38/"/>
-    <updated>2011-05-05T12:18:56+03:00</updated>
+    <updated>2011-05-05T12:18:56+02:00</updated>
     <id>https://radu.cotescu.com/vmware-server-kernel-2-6-38</id>
     <content type="html"><![CDATA[<h2>Notices:</h2>
 
@@ -206,7 +206,7 @@ sudo apt-get purge $(dpkg -l | grep "^ii" | awk '{print $2}' | egrep -e "^linux-
   <entry>
     <title type="html"><![CDATA[Ubuntu 64-bit and Flash videos in fullscreen]]></title>
     <link href="https://radu.cotescu.com/ubuntu-flash-videos-fullscreen/"/>
-    <updated>2011-03-25T00:00:13+02:00</updated>
+    <updated>2011-03-25T00:00:13+01:00</updated>
     <id>https://radu.cotescu.com/ubuntu-flash-videos-fullscreen</id>
     <content type="html"><![CDATA[<p>I have never been an Adobe fan and something tells me that I won't change my mind soon. One of the main reasons for which Linux had problems being a "normal" operating system for a quite long period of time (although there were other issues as well, but not as visible at this one) was that the Flash Player never really worked very well on this platform. Time passed and things began slowly to advance, however users of the 64-bit version of the Linux kernel had to use various hacks to run a 32-bit browser because of Flash.</p>
 

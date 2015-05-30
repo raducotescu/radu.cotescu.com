@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Web Services | Radu Cotescu's professional blog]]></title>
   <link href="https://radu.cotescu.com/category/web-services/atom.xml" rel="self"/>
   <link href="https://radu.cotescu.com/"/>
-  <updated>2015-01-26T14:39:38+02:00</updated>
+  <updated>2015-05-30T18:41:56+02:00</updated>
   <id>https://radu.cotescu.com/</id>
   <author>
     <name><![CDATA[Radu Cotescu]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Java, HTTPS and REST web services using Apache CXF]]></title>
     <link href="https://radu.cotescu.com/java-https-rest-services-apache-cxf/"/>
-    <updated>2010-12-16T23:39:23+02:00</updated>
+    <updated>2010-12-16T23:39:23+01:00</updated>
     <id>https://radu.cotescu.com/java-https-rest-services-apache-cxf</id>
     <content type="html"><![CDATA[<p><strong>Securing REST web services</strong> is a very debated topic on the Internet. Because REST represents an architecture, and not a protocol - like SOAP -, there aren't any specifications dealing with security, leaving this aspect as a design decision for the software engineers / developers. Still, if you search the web to find out what are the approaches, you'll see that most of the results suggest you use <strong><a href="http://en.wikipedia.org/wiki/Basic_access_authentication">basic authentication</a> over <a href="http://en.wikipedia.org/wiki/HTTP_Secure">HTTPS</a></strong>.</p>
 
@@ -257,7 +257,7 @@ public class PropertiesLoader {</p>
   <entry>
     <title type="html"><![CDATA[How to send null values in soapUI requests]]></title>
     <link href="https://radu.cotescu.com/how-to-send-null-values-in-soapui-requests/"/>
-    <updated>2009-05-16T00:58:08+03:00</updated>
+    <updated>2009-05-16T00:58:08+02:00</updated>
     <id>https://radu.cotescu.com/how-to-send-null-values-in-soapui-requests</id>
     <content type="html"><![CDATA[<p><a href="http://www.soapui.org/">soapUI</a> is a pretty useful web service testing tool that can help you generate a multitude of tests like load testing, functional testing, data consistency testing and many more. I have started using it for real two days ago when I needed to test some SOAP web services for work. The main issue that kept me from being more productive with this test platform was that nowhere in its documentation one can find how to send null values in a request.</p>
 
