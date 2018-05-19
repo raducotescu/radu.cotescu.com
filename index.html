@@ -1,428 +1,140 @@
-
 <!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Radu Cotescu's professional blog</title>
-  <meta name="author" content="Radu Cotescu">
-
-  
-  <meta name="description" content="A passionate g33k sharing his experience about programming, Linux, virtualization and other computer related stuff.">
-  <meta name="keywords" content="radu,cotescu,java,python,ubuntu,linux,oracle,programming,software,engineering">
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="https://radu.cotescu.com">
-  <link href="/favicon.ico" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="http://feeds.cotescu.com/raducotescu" rel="alternate" title="Radu Cotescu's professional blog" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-8815189-1']);
-    _gaq.push(['_trackPageview']);
-    _gaq.push(['_trackPageLoadTime']);
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-
-
+    <title>Radu Cotescu</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+    <meta name="description" content="a = b + a - (b = a); I do this often. You might call me a geek."/>
+    <meta name="keywords" content="radu, cotescu, java, adobe, oracle, linux, ubuntu, software, developer, engineer, bash, virtualization, python, c, c++"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="assets/terminal.png">
+    <link rel="apple-touch-icon-precomposed" type="image/png" href="assets/terminal.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8815189-1']);
+        _gaq.push(['_trackPageview']);
+        _gaq.push(['_trackPageLoadTime']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 </head>
-
-<body   >
-  <div class="top-nav">
-    <ul>
-        <li><a href="/" title="Home">127.0.0.1</a></li>
-        <li><a href="/about/" title="About">About</a></li>
-        <li><a href="/privacy-policy/" title="Privacy Policy">Privacy Policy</a></li>
-        <li><a href="/calendar/" title="Calendar">Calendar</a></li>
-        <li><a href="/talks/" title="Talks">Talks</a>
-        <li><a href="/resume/" title="Resume">Resume</a></li>
-    </ul>
-  </div>
-  <header role="banner"><hgroup>
-  <h1><a href="/">Radu Cotescu's professional blog</a></h1>
-  
-    <h2>g33k w17h pa45510n</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss email">
-  <li><a href="http://feeds.cotescu.com/raducotescu" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-    <li><a href="https://feedburner.google.com/fb/a/mailverify?uri=raducotescu" rel="subscribe-email" title="subscribe via email">Email</a></li>
-  
-</ul>
-  
-<form action="https://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:radu.cotescu.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/category/dot-com/">.com</a></li>
-  <li><a href="/category/code/">Code</a></li>
-  <li><a href="/category/java/">Java</a></li>
-  <li><a href="/category/python/">Python</a></li>
-  <li><a href="/category/how-to/">How To</a></li>
-  <li><a href="/category/linux/">Linux</a></li>
-  <li><a href="/category/ubuntu/">Ubuntu</a></li>
-  <li><a href="/category/oracle/">Oracle</a></li>
-  <li><a href="/category/reviews/">Reviews</a></li>
-  <li><a href="/category/virtualization/">Virtualization</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/remapping-keys-in-ubuntu-14.04/">Remapping Keys in Ubuntu 14.04</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-07T18:30:00+02:00" pubdate data-updated="true">Sep 7<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Ever since I&#8217;ve switched to Mac OS X I liked its shortcut modifiers more than the ones available on Windows / Linux. While I do agree that sometimes
-you lose count of the number of modifier keys that you have to press in order to get something done, most of the cases that claim is just FUD.</p>
-
-<p>The ergonomy of the Mac has also made its way into how shortcuts are defined. The <code>Command</code> key, positioned where <code>Alt</code> is on PC keyboards, is
-definitely better positioned when it comes to using that key as your main modifier for shortcuts. Call it the power of habit, but every time I
-switch to a PC I find myself pressing the <code>Alt</code> key instead of <code>Control</code>. And that&#8217;s because <code>Alt</code> is in a handier position.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/remapping-keys-in-ubuntu-14.04/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/coloured-log-outputs/">Coloured Log Outputs on Unix/Linux</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-29T21:36:00+01:00" pubdate data-updated="true">Oct 29<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>There are various times when a software engineer needs to closely monitor log output in real-time. More often than not the engineer is
-actually interested in the output of multiple logs at the same time. Given the amount of information that an application can output to log
-files at any one time, filtering the important information from bogus entries becomes frustrating and tedious.</p>
-
-<p>One of the solutions I&#8217;ve come across recently is to colorize the log output according to the log entries&#8217; severity.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/coloured-log-outputs/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/java-common-sense/">A Useful Rant on How People Write Java Code</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-21T20:49:00+02:00" pubdate data-updated="true">Oct 21<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>During the last months I&#8217;ve had the chance to see a lot of code written by different types of developers. Some of it has definitely made me
-proud of the word &#8220;engineering&#8221; being associated with my profession; the other, not. There are a few basic unwritten rules that more or less
-have become software engineering common sense.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/java-common-sense/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/tools-required-for-opening-a-macbook-pro/">Tools Required for Opening a MacBook Pro</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-04T01:45:00+02:00" pubdate data-updated="true">Jun 4<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Last week my final MacBook Pro arrived. Since at Adobe we are forced to encrypt our hard-drives in order to protect our work (in case our machines get stolen) the IT team decided to provide us with SSD drives for our portable computers. The advantages are numerous:</p>
-
-<ul>
-<li><p>improved IO performance (encryption comes with a cost - I really wouldn&#8217;t like to use it on a mechanical drive)</p></li>
-<li><p>reduced power consumption</p></li>
-<li><p>reduced operation noise (only the fans and the optical unit contain moving parts)</p></li>
-<li><p>less dissipated heat</p></li>
-</ul>
-
-
-<p>Because I was in hurry to get the new machine set-up I decided to install the new SSD by myself. After all, it wasn&#8217;t the first time I tore a computer apart. Big mistake&#8230;</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/tools-required-for-opening-a-macbook-pro/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/the-switch-to-mac-from-ubuntu/">Switching to Mac From Ubuntu</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-20T23:39:00+02:00" pubdate data-updated="true">May 20<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When I joined Adobe I was given the chance of choosing between using a Lenovo ThinkPad or a MacBook Pro as my
-development machine. Since I really dislike the design of the ThinkPads and also because I really wanted to try a Mac
-for a longer period of time I accepted the challenge. My previous experiences with a Mac were limited to only a few
-occasions when I had to perform some specific tasks - mostly while dishing Apple and Mac because it took me at least
-twice the time I needed to complete the same tasks on a machine running Ubuntu.</p>
-
-<p>After 10 days of using only the MacBook as my main computer (even at home), I can&#8217;t say that I really miss using Ubuntu.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/the-switch-to-mac-from-ubuntu/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-      <a class="prev" href="/page/2/">&larr; Older</a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/remapping-keys-in-ubuntu-14.04/">Remapping Keys in Ubuntu 14.04</a>
-      </li>
-    
-      <li class="post">
-        <a href="/coloured-log-outputs/">Coloured log outputs on Unix/Linux</a>
-      </li>
-    
-      <li class="post">
-        <a href="/java-common-sense/">A useful rant on how people write Java code</a>
-      </li>
-    
-      <li class="post">
-        <a href="/tools-required-for-opening-a-macbook-pro/">Tools required for opening a MacBook Pro</a>
-      </li>
-    
-      <li class="post">
-        <a href="/the-switch-to-mac-from-ubuntu/">Switching to Mac from Ubuntu</a>
-      </li>
-    
-  </ul>
-</section>
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-8659561010253809";
-/* Sidebar250x250 */
-google_ad_slot = "8430472643";
-google_ad_width = 250;
-google_ad_height = 250;
-//-->
-</script>
-<script type="text/javascript"
-src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-
-<section>
-  <h2>Latest Tweets</h2>
-  <a class="twitter-timeline" href="https://twitter.com/raducotescu" data-widget-id="323192190111203328">Tweets by @raducotescu</a>
-  <script>
-  !function(d,s,id) {
-    var js,
-        fjs = d.getElementsByTagName(s)[0],
-        p = /^http:/.test(d.location) ? 'http' : 'https';
-        if (!d.getElementById(id)) {
-            js = d.createElement(s);
-            js.id = id;
-            js.src = p + "://platform.twitter.com/widgets.js";
-            fjs.parentNode.insertBefore(js,fjs);
-        }
-  }(document,"script","twitter-wjs");
-  </script>
-</section>
-
-
-
-
-<section class="googleplus">
-  <h1>
-    <a href="//plus.google.com/+RaduCotescu?rel=author">
-      <img src="//www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
-</section>
-
-
-
-  
-</aside>
-
+<body>
+    <div class="container my-auto head">
+        <div class="row justify-content-md-center">
+            <div class="col-6 col-md-9">
+                <h1 class="fn" id="radu-cotescu">
+                    <span class="given-name">Radu</span> <span class="family-name">Cotescu</span>
+                </h1>
+                <p class="lead">Computer Scientist @ <a href="https://www.adobe.com">Adobe</a>, working on <a href="https://www.adobe.com/marketing-cloud/experience-manager.html">Adobe Experience Manager</a>, <a href="https://www.apache.org">Apache Software Foundation</a> member, open-source committer.</p>
+                <p class="lead">Geek, Trekkie, diehard Unix user, Apple convert.</p>
+            </div>
+            <div class="col-6 col-md-3 text-right my-auto">
+                <img src="assets/radu.web.png" alt="Radu's portrait photo" class="rounded" width="150" height="150">
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col">
+                <div class="card border-light my-3">
+                    <a class="card-link" href="https://www.linkedin.com/in/raducotescu">
+                    <div class="card-body">
+                        <div class="media">
+                            <img alt="LinkedIn Logo" class="mr-3" src="assets/In-Black-66px-R.png" width="77" height="66">
+                            <div class="media-body text-dark">
+                                <h5 class="card-title">LinkedIn</h5>
+                                <p class="card-text">Keep up-to-date with my professional activity</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div class="card border-light my-3">
+                    <a class="card-link" href="https://www.slideshare.net/raducotescu">
+                    <div class="card-body">
+                        <div class="media">
+                            <img alt="LinkedIn Logo" class="mr-3" src="assets/In-Black-66px-R.png" width="77" height="66">
+                            <div class="media-body text-dark">
+                                <h5 class="card-title">SlideShare</h5>
+                                <p class="card-text">My slides from various conferences</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div class="card border-light my-3">
+                    <a class="card-link" href="https://www.openhub.net/accounts/raducotescu">
+                    <div class="card-body">
+                        <div class="media">
+                            <div class="media-body text-dark">
+                                <h5 class="card-title">OpenHub</h5>
+                                <p class="card-text">Check my open-source contributions</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border-light my-3">
+                    <a class="card-link" href="https://github.com/raducotescu/">
+                    <div class="card-body">
+                        <div class="media">
+                            <img alt="GitHub Logo" class="mr-3" src="assets/GitHub-Mark-66px.png" width="66" height="66">
+                            <div class="media-body text-dark">
+                                <h5 class="card-title">GitHub</h5>
+                                <p class="card-text">Clone or fork my work</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div class="card border-light my-3">
+                    <a class="card-link" href="https://stackoverflow.com/users/380566/radu-cotescu">
+                    <div class="card-body">
+                        <div class="media">
+                            <img alt="Stack Overflow Logo" class="mr-3" src="assets/so-icon-66px.png" width="66" height="66">
+                            <div class="media-body text-dark">
+                                <h5 class="card-title">Stack Overflow</h5>
+                                <p class="card-text">Q&amp;A related to my professional interests</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div class="card border-light my-3">
+                    <a class="card-link" href="https://twitter.com/raducotescu">
+                    <div class="card-body">
+                        <div class="media">
+                            <img alt="Twitter Logo" class="mr-3" src="assets/Twitter_Social_Icon_Rounded_Square_Color-66px.png" width="66" height="66">
+                            <div class="media-body text-dark">
+                                <h5 class="card-title">@raducotescu</h5>
+                                <p class="card-text">140 characters or less</p>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col contact">
+                <h4>Contact information</h4>
+                <address class="adr">
+                    <span class="streed-address">Max Kämpf-Platz 1</span><br>
+                    <span class="locality">Basel</span>, <span class="postal-code">4058</span><br>
+                    <span class="country-name">Switzerland</span><br>
+                    <i class="material-icons">contact_mail</i> <a class="email" href="javascript:mail.noSpam('radu', 'cotescu.com')" title="Send Radu an email"> moc.ucsetoc@udar </a><br>
+                    <a class="d-none" rel="author" href="https://plus.google.com/+RaduCotescu">Google+</a>
+                    <i class="material-icons">contact_phone</i> <span class="tel">+41 78 664 16 33</span>
+                </address>
+            </div>
+        </div>
     </div>
-  </div>
-  <footer role="contentinfo"><p>
-  &copy; 2009 - 2016 - Radu Cotescu -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
+    <script src="s.js"></script>
 </body>
 </html>
