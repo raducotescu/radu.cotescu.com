@@ -41,27 +41,6 @@
   font-feature-settings: 'liga';
 }
 
-@media (min-width: 768px) and (min-height: 768px) { 
-    html, body {
-        background-image: url('./assets/desk-2.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    a, a:hover {
-        color: white;
-    }
-
-    .contact {
-        color: white;
-    }
-
-    .head {
-        color: white;
-    }
-}
-
-
 html, body {
     height:100%;
 }
@@ -88,9 +67,38 @@ i {
 a, a:hover {
     text-decoration: underline dotted;
     border-bottom: 0;
+    color: black;
 }
 
 .email {
        direction:rtl;
        unicode-bidi:bidi-override;
+}
+
+@media (min-width: 768px) and (min-height: 768px) { 
+    html, body {
+        background-image: url('./assets/desk-2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: grey;
+        background-blend-mode: screen;
+    }
+
+    .contact {
+        color: grey;
+        mix-blend-mode: difference;
+    }
+
+    .contact a, .contact a:hover {
+        color: grey;
+    }
+
+    .head {
+        color: white;
+        mix-blend-mode: difference;
+    }
+
+    .head a, .head a:hover {
+        color: white;
+    }
 }
