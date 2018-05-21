@@ -186,7 +186,7 @@ permalink: /404.html
                 found = false,
                 url;
             for (var i =0; i < PAGES.length; i++) {
-                if (requestedPage.indexOf(PAGES[i]) > 0) {
+                if (requestedPage.indexOf(PAGES[i]) >= 0) {
                     
                     if (container) {
                         container.innerHTML += '<p>It seems that you\'re looking for a page that was here before. Luckily, this <a href="https://www.dropbox.com/s/448devt7ykzlp3q/blog.zip?dl=1">archive</a> should provide you with what you need. Sorry for the trouble. ☹️</p>';
