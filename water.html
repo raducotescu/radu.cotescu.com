@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Water Hardness Calculator</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/terminal.png">
+    <link rel="apple-touch-icon-precomposed" type="image/png" href="../assets/terminal.png">
+    <meta name="description" content="Calculate mineral water hardness and alkalinity"/>
+    <meta name="keywords" content="water,hardness,calculator"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./garage-sale/style.css">
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8815189-1']);
+        _gaq.push(['_trackPageview']);
+        _gaq.push(['_trackPageLoadTime']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body>
+    <div class="container justify-content">
+        <form id="calculator" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="calcium">Calcium (mg/L)</label>
+                <input id="calcium" class="form-control" required type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0">
+            </div>
+            <div class="form-group">
+                <label for="magnesium">Magnesium (mg/L)</label>
+                <input id="magnesium" class="form-control" required type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0">
+            </div>
+            <div class="form-group">
+                <label for="hydrogencarbonate">Hydrogencarbonate (mg/L)</label>
+                <input id="hydrogencarbonate" class="form-control" required type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0">
+            </div>
+        </form>
+        <div>Total Water Hardness (ideal: 3-6 °dH)</div>
+        <div id="hardness" class="badge">&nbsp;</div>
+        <div>Alkalinity (ideal: 2-4 °dH)</div>
+        <div id="alkalinity" class="badge">&nbsp;</div>
+        
+    </div>
+    <script src="../s.js"></script>
+    <script>
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            
+            function calculate() {
+                let calcium = document.getElementById('calcium').value;
+                let magnesium = document.getElementById('magnesium').value;
+                let hydrogencarbonate = document.getElementById('hydrogencarbonate').value;
+
+                const hardness = (calcium / 7.1 + magnesium / 4.35).toFixed(2);
+                const alkalinity = (hydrogencarbonate / 21.8).toFixed(2);
+
+                const hardnessNode = document.getElementById('hardness');
+                const alkalinityNode = document.getElementById('alkalinity');
+                hardnessNode.className = 'badge';
+
+                if (hardness < 3 || hardness > 6 && hardness < 7) {
+                    hardnessNode.className += ' badge-warning';
+                } else if (hardness >=3 && hardness <= 6) {
+                    hardnessNode.className += ' badge-success'
+                } else {
+                    hardnessNode.className += ' badge-danger';
+                }
+
+                alkalinityNode.className = 'badge';
+                if (alkalinity < 2 || alkalinity > 4 && alkalinity < 9) {
+                    alkalinityNode.className += ' badge-warning';
+                } else if (alkalinity >=2 && alkalinity <= 4) {
+                    alkalinityNode.className += ' badge-success'
+                } else {
+                    alkalinityNode.className += ' badge-danger';
+                }
+
+                hardnessNode.innerHTML = hardness + ' °dH';
+                alkalinityNode.innerHTML = alkalinity + ' °dH';
+            }
+
+            calculate();
+
+            const form = document.getElementById('calculator');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+              if (form.checkValidity() === false) {
+                event.stopPropagation();
+              } else {
+                form.classList.add('was-validated');
+                calculate();
+              }
+
+            }, false);
+            let inputs = document.getElementsByTagName('input');
+            for (const input of inputs) {
+                if (!input.readonly) {
+                    input.addEventListener(
+                      'input',
+                      function(event) {
+                        event.preventDefault();
+                        form.dispatchEvent(new SubmitEvent('submit'));
+                      },
+                      false
+                   );
+                }
+            }
+        }, false);
+      })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
