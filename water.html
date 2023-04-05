@@ -24,24 +24,78 @@
 </head>
 <body>
     <div class="container justify-content">
-        <form id="calculator" class="needs-validation" novalidate>
+        <h2>Bottled water calculator</h2>
+        <form id="bottled-water-calculator" class="needs-validation" novalidate>
             <div class="form-group">
                 <label for="calcium">Calcium (mg/L)</label>
-                <input id="calcium" class="form-control" onfocus="this.select();" onmouseup="return false;" required type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0">
+                <input id="calcium" class="form-control" onfocus="this.select();" onmouseup="return false;" required type="text" inputmode="decimal" pattern="[0-9.]*" placeholder="0">
             </div>
             <div class="form-group">
                 <label for="magnesium">Magnesium (mg/L)</label>
-                <input id="magnesium" class="form-control" onfocus="this.select();" onmouseup="return false;" required type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0">
+                <input id="magnesium" class="form-control" onfocus="this.select();" onmouseup="return false;" required type="text" inputmode="decimal" pattern="[0-9.]*" placeholder="0">
             </div>
             <div class="form-group">
                 <label for="hydrogencarbonate">Hydrogencarbonate (mg/L)</label>
-                <input id="hydrogencarbonate" class="form-control" onfocus="this.select();" onmouseup="return false;" required type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0">
+                <input id="hydrogencarbonate" class="form-control" onfocus="this.select();" onmouseup="return false;" required type="text" inputmode="decimal" pattern="[0-9.]*" placeholder="0">
             </div>
         </form>
         <div>Total Water Hardness (ideal: 3-6 °dH)</div>
         <div id="hardness" class="badge">&nbsp;</div>
         <div>Alkalinity (ideal: 2-4 °dH)</div>
         <div id="alkalinity" class="badge">&nbsp;</div>
+        <br><br>
+        <h2>Calculator for mixing two different water sources</h2>
+        <form id="mixing-water-calculator" class="needs-validation" novalidate>
+            <div class="form-row">
+                <div class="col">
+                    <label for="hardness-w1">Water 1 Hardness (°dH)</label>
+                    <input id="hardness-w1" class="form-control" onfocus="this.select();" onmouseup="return false;" required type="text" inputmode="decimal" pattern="[0-9.]*" placeholder="0">
+                </div>
+                <div class="col">
+                    <label for="hardness-w2">Water 2 Hardness (°dH)</label>
+                    <input id="hardness-w2" class="form-control" onfocus="this.select();" onmouseup="return false;" required type="text" inputmode="decimal" pattern="[0-9.]*" placeholder="0">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="alkalinity-w1">Water 1 Alkalinity (°dH)</label>
+                    <input id="alkalinity-w1" class="form-control" onfocus="this.select();" onmouseup="return false;" required type="text" inputmode="decimal" pattern="[0-9.]*" placeholder="0">
+                </div>
+                <div class="col">
+                    <label for="alkalinity-w2">Water 2 Alkalinity (°dH)</label>
+                    <input id="alkalinity-w2" class="form-control" onfocus="this.select();" onmouseup="return false;" required type="text" inputmode="decimal" pattern="[0-9.]*" placeholder="0">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="select-target">Target Measure</label>
+                    <select class="form-control" id="target-measure">
+                        <option>alkalinity</option>
+                        <option selected>hardness</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="target-value">Target Value (°dH)</label>
+                    <input id="target-value" class="form-control" onfocus="this.select();" onmouseup="return false;" required type="text" inputmode="decimal" pattern="[0-9.]*" placeholder="0">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="other-value">Resulting Value (°dH)</label>
+                    <input id="other-value" class="form-control" type="number" placeholder="0" readonly>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="proportion-w1">Proportion Water 1</label>
+                    <input id="proportion-w1" class="form-control" type="number" placeholder="0" readonly>
+                </div>
+                <div class="col">
+                    <label for="proportion-w2">Proportion Water 2</label>
+                    <input id="proportion-w2" class="form-control" type="number" placeholder="0" readonly>
+                </div>
+            </div>
+        </form>
         
     </div>
     <script src="../s.js"></script>
@@ -50,10 +104,10 @@
         'use strict';
         window.addEventListener('load', function() {
             
-            function calculate() {
-                let calcium = document.getElementById('calcium').value;
-                let magnesium = document.getElementById('magnesium').value;
-                let hydrogencarbonate = document.getElementById('hydrogencarbonate').value;
+            function calculateBottledWater() {
+                const calcium = Number.parseFloat(document.getElementById('calcium').value);
+                const magnesium = Number.parseFloat(document.getElementById('magnesium').value);
+                const hydrogencarbonate = Number.parseFloat(document.getElementById('hydrogencarbonate').value);
 
                 const hardness = (calcium / 7.1 + magnesium / 4.35).toFixed(2);
                 const alkalinity = (hydrogencarbonate / 21.8).toFixed(2);
@@ -79,36 +133,111 @@
                     alkalinityNode.className += ' badge-danger';
                 }
 
-                hardnessNode.innerHTML = hardness + ' °dH';
-                alkalinityNode.innerHTML = alkalinity + ' °dH';
+                hardnessNode.innerHTML = (isNaN(hardness) ? 0 : hardness) + ' °dH';
+                alkalinityNode.innerHTML = (isNaN(alkalinity) ? 0 : alkalinity) + ' °dH';
             }
 
-            calculate();
+            function calculateProportions() {
+                const w1H = Number.parseFloat(document.getElementById('hardness-w1').value);
+                const w2H = Number.parseFloat(document.getElementById('hardness-w2').value);
+                const w1A = Number.parseFloat(document.getElementById('alkalinity-w1').value);
+                const w2A = Number.parseFloat(document.getElementById('alkalinity-w2').value);
+                const target = document.getElementById('target-measure').value;
+                const targetValue = document.getElementById('target-value').value;
 
-            const form = document.getElementById('calculator');
-            form.addEventListener('submit', function(event) {
+                const proportion1Node = document.getElementById('proportion-w1');
+                const proportion2Node = document.getElementById('proportion-w2');
+                const otherValueNode = document.getElementById('other-value');
+
+                let proportion1 = 0;
+                let proportion2 = 0;
+                let otherValue = 0;
+
+                if (target === 'hardness') {
+                    proportion1 = ((w2H-targetValue)/(w2H-w1H)*100).toFixed(2);
+                    if (isNaN(proportion1) || (targetValue > w1H && targetValue > w2H)) {
+                        proportion1 = 0;
+                        proportion2 = 0;
+                    } else {
+                        proportion2 = (100 - proportion1).toFixed(2);
+                        otherValue = (proportion1/100*w1A+(100-proportion1)/100*w2A).toFixed(2);
+                    }
+                    document.querySelector('label[for=other-value]').innerHTML = 'Resulting Alkalinity (°dH)'
+                } else if (target === 'alkalinity') {
+                    proportion1 = ((w2A-targetValue)/(w2A-w1A)*100).toFixed(2);
+                    if (isNaN(proportion1) || (targetValue > w1A && targetValue > w2A)) {
+                        proportion1 = 0;
+                        proportion2 = 0;
+                    } else {
+                        proportion2 = (100 - proportion1).toFixed(2);
+                        otherValue = (proportion1/100*w1H+(100-proportion1)/100*w2H).toFixed(2);
+                    }
+                    document.querySelector('label[for=other-value]').innerHTML = 'Resulting Hardness (°dH)'
+                }
+                proportion1Node.value = proportion1;
+                proportion2Node.value = proportion2;
+                otherValueNode.value = otherValue;
+            }
+
+            calculateBottledWater();
+            calculateProportions();
+
+            const bottledWaterForm = document.getElementById('bottled-water-calculator');
+            bottledWaterForm.addEventListener('submit', function(event) {
                 event.preventDefault();
-              if (form.checkValidity() === false) {
+              if (bottledWaterForm.checkValidity() === false) {
                 event.stopPropagation();
               } else {
-                form.classList.add('was-validated');
-                calculate();
+                bottledWaterForm.classList.add('was-validated');
+                calculateBottledWater();
               }
 
             }, false);
-            let inputs = document.getElementsByTagName('input');
-            for (const input of inputs) {
+            const bottledWaterInputs = bottledWaterForm.getElementsByTagName('input');
+            for (const input of bottledWaterInputs) {
                 if (!input.readonly) {
                     input.addEventListener(
                       'input',
                       function(event) {
                         event.preventDefault();
-                        form.dispatchEvent(new SubmitEvent('submit'));
+                        bottledWaterForm.dispatchEvent(new SubmitEvent('submit'));
                       },
                       false
                    );
                 }
             }
+
+            const mixWaterForm = document.getElementById('mixing-water-calculator');
+            mixWaterForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+              if (mixWaterForm.checkValidity() === false) {
+                event.stopPropagation();
+              } else {
+                mixWaterForm.classList.add('was-validated');
+                calculateProportions();
+              }
+
+            }, false);
+            const mixWaterInputs = mixWaterForm.getElementsByTagName('input');
+            for (const input of mixWaterInputs) {
+                if (!input.readonly) {
+                    input.addEventListener(
+                      'input',
+                      function(event) {
+                        event.preventDefault();
+                        mixWaterForm.dispatchEvent(new SubmitEvent('submit'));
+                      },
+                      false
+                   );
+                }
+            }
+
+            document.getElementById('target-measure').addEventListener(
+                'input', function(event) {
+                    event.preventDefault();
+                    calculateProportions();
+                }, false
+            );
         }, false);
       })();
     </script>
